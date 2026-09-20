@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-19T11:17:37+00:00",
-  "day": "2026-09-19",
+  "updated": "2026-09-20T11:41:23+00:00",
+  "day": "2026-09-20",
   "days_back": 45,
-  "total": 102,
+  "total": 100,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -1947,32 +1947,6 @@
               "links": {
                 "project": "https://rebarsim.github.io"
               }
-            },
-            {
-              "id": "2608.05326",
-              "title": "QEvict: Recoverable Quantized KV Eviction for Attention-Drift-Robust Long-Context Decoding",
-              "authors": [
-                "Ayushman Garg",
-                "Akshita Gupta",
-                "Shaswata Bhattacharya",
-                "Abhishek Gupta",
-                "Sandeep Kumar",
-                "Manoj Kumar"
-              ],
-              "abstract": "Autoregressive large language model inference is increasingly constrained by the memory footprint of the Key-Value (KV) cache. A dominant line of work reduces this footprint by evicting tokens that appear unimportant under attention-derived scores. However, such policies make an implicit irreversible decision: once a token is evicted, it cannot become useful again. We show that this assumption is brittle during decoding. Token and window importance drift as generated queries evolve, causing standard eviction policies to permanently discard states that later receive substantial attention under the full-cache model. To characterize this behaviour, we introduce Future Missed Mass and Global LIR, two diagnostics that measure future attention assigned to discarded states and the reactivation of historically inactive regions. We propose QEvict, a three-tier KV-cache management scheme that replaces binary retain-or-delete eviction with recoverable eviction. QEvict maintains high-confidence windows in full precision, stores intermediate windows in a quantized recoverable tier, and deletes only the lowest-confidence windows. During decoding, cumulative attention scores update window importance and when a quantized window becomes important again, it is dequantized and promoted to the full-precision. Under a fixed memory budget, this design preserves broader historical context while retaining exact full precision for the most important regions. Across long-context understanding, retrieval, and reasoning benchmarks, QEvict consistently improves over representative eviction and quantization baselines, reducing missed attention and improving information retention",
-              "categories": [
-                "cs.LG",
-                "cs.CL"
-              ],
-              "published": "2026-08-05T18:29:47Z",
-              "url": "https://arxiv.org/abs/2608.05326",
-              "pdf_url": "https://arxiv.org/pdf/2608.05326v1",
-              "comment": "24 pages, 6 figures. The first four authors contributed equally",
-              "figure_url": "https://arxiv.org/html/2608.05326v1/obs1.png",
-              "figure_caption": "(a) FMM over decoding. Window policies reduce attention assigned to discarded states. The dashed curve treats the R3 tier as inaccessible, isolating the contribution of recoverable low-bit windows.",
-              "figure_source": null,
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -1981,7 +1955,7 @@
           "papers": []
         }
       ],
-      "total": 3
+      "total": 2
     },
     {
       "name": "Georgia Tech / UT Austin",
@@ -3551,30 +3525,6 @@
               "figure_source": "pdf",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.04933",
-              "title": "Mimir: A Neuro-Symbolic Memory System with Dynamic Grounding for Embodied Agents in Interactive Environments",
-              "authors": [
-                "Haoming Xu",
-                "Zhenlin He",
-                "Hengyi Wang",
-                "Jiafeng Xu",
-                "Hao Dong"
-              ],
-              "abstract": "Long-horizon embodied task requires agents to act under partial observability while preserving both scene belief and execution progress. Flat histories or implicit policy states may contain past observations, but they do not provide an explicit interface for deciding which world facts support the currently active goal. We introduce Mimir, a neuro-symbolic memory that separates world memory from task memory and dynamically grounds them before each action. World memory maintains object locations, object states, and perceptual evidence, while task memory maintains an ordered goal agenda, progress state, hand state, failures, and execution constraints. A grounding module binds the active goal to recalled world candidates, fills missing source locations, and attaches evidence before planning and embodiment-specific execution. Across tested backbones, Mimir consistently improves on different EB-ALFRED and EB-Habitat tasks, with maximum gains of 42.5% and average gains of 23.0%, respectively. Compared with the best results among prior agent and memory systems evaluated under the same backbone, Mimir improves the overall average success rate by 8.5%. Finally, on the EB-Habitat Long-horizon subset, Mimir achieves 86.0% success rate, substantially outperforming current closed-source models. Our code will be released soon.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-05T14:57:24Z",
-              "url": "https://arxiv.org/abs/2608.04933",
-              "pdf_url": "https://arxiv.org/pdf/2608.04933v1",
-              "comment": "9 pages, 4 figures",
-              "figure_url": "https://arxiv.org/html/2608.04933v1/figure/Motivation.jpg",
-              "figure_caption": "Figure 1: Motivation of Mimir . Long-horizon embodied tasks require memory of both physical world state and task progress. Flat-history agents can retain past observations yet still lose object locations or confuse completed and pending subgoals. Mimir maintains explicit world and task memories, and",
-              "figure_source": null,
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -3620,7 +3570,7 @@
           "papers": []
         }
       ],
-      "total": 34
+      "total": 33
     },
     {
       "name": "工业界研究团队",
