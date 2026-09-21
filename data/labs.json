@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-20T11:41:23+00:00",
-  "day": "2026-09-20",
+  "updated": "2026-09-21T13:06:54+00:00",
+  "day": "2026-09-21",
   "days_back": 45,
-  "total": 100,
+  "total": 99,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -200,7 +200,39 @@
         },
         {
           "name": "Jitendra Malik",
-          "papers": []
+          "papers": [
+            {
+              "id": "2609.21400",
+              "title": "A Scene Language Model for Open-Vocabulary Scene Mapping",
+              "authors": [
+                "Adam Lilja",
+                "Fabio Hübel",
+                "Siming He",
+                "Junsheng Fu",
+                "Claire Tomlin",
+                "Lars Hammarstrand",
+                "Jitendra Malik",
+                "Jonas Frey",
+                "Marco Pavone"
+              ],
+              "abstract": "Open-vocabulary 3D scene mapping aims to build a persistent representation of the objects in an environment. Existing systems typically rely on engineered mapping pipelines to associate observations, merge information across views, and maintain a consistent scene representation over time. Many additionally store feature-rich object representations, such as embeddings or image crops, increasing the size and complexity of the persistent memory. We introduce SceneLM, a Scene-Language Model that directly maintains a textual scene map. The full scene is represented as a structured text list of objects, which serves as the model's only persistent memory. For each input image, the model reads the current scene state and updates the map by adding, editing, and removing objects. To learn this behavior, we introduce supervision tasks for iterative scene map maintenance together with an automatic annotation pipeline that generates training data from images without human labels. We evaluate SceneLM on both a language-grounded retrieval benchmark and a localization benchmark. Across both benchmarks, the model produces a scene map that achieves competitive performance with complete mapping systems built from dedicated perception and geometric modules while producing a scene representation that is 6-12x more compact. We further show that SceneLM can be run online on an edge device through experiments on a quadruped. These results show that a persistent open-vocabulary 3D scene map can be maintained directly by a single vision-language model using only a lightweight text representation. Training and inference code is available on https://goldengait.github.io/scenelm/.",
+              "categories": [
+                "cs.CV",
+                "cs.RO"
+              ],
+              "published": "2026-09-18T07:16:18Z",
+              "url": "https://arxiv.org/abs/2609.21400",
+              "pdf_url": "https://arxiv.org/pdf/2609.21400v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.21400v1/scene_lm_first_lowres_framed_final.png",
+              "figure_caption": "Figure 1: Overview of SceneLM. Given an RGB observation and the current textual scene map, SceneLM predicts ADD , EDIT , and REMOVE operations that update the persistent scene map. The colored point clouds in the top row are for illustration and are obtained by aggregating the posed RGB-D observatio",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://goldengait.github.io/scenelm/"
+              }
+            }
+          ]
         },
         {
           "name": "Koushil Sreenath",
@@ -324,7 +356,7 @@
           ]
         }
       ],
-      "total": 10
+      "total": 11
     },
     {
       "name": "Stanford",
@@ -2119,6 +2151,35 @@
           "name": "Marco Hutter",
           "papers": [
             {
+              "id": "2609.21751",
+              "title": "ForceTwin: Physics-informed Digital Twins for Robotic Manipulation from Instrumented Human Interaction",
+              "authors": [
+                "Tim Engelbracht",
+                "René Zurbrügg",
+                "Mayank Mittal",
+                "Marco Hutter",
+                "Marc Pollefeys",
+                "Hermann Blum",
+                "Zuria Bauer"
+              ],
+              "abstract": "Manipulating objects requires understanding not only their motion, but also the physical properties that determine it. For articulated objects, these include inertia, friction, and mechanisms such as springs or door closers, whose effects can vary with configuration and velocity. Such properties are not directly observable from appearance: visually identical doors may require very different effort to manipulate. Existing digital-twin pipelines recover primarily kinematics or assign static physical parameters from visual and language priors, which can yield physically implausible estimates. As a result, state-dependent mechanism dynamics remain unidentified and are not represented in standard asset formats. We present ForceTwin, a system for identifying physics-informed digital twins of articulated objects from instrumented human interaction. A person probes an object using a handheld force-sensing gripper, providing synchronized poses and interaction forces from which we estimate the articulation, parametric dynamics including inertia, Coulomb friction, viscous damping, and a structured neural residual capturing state-dependent mechanism forces. ForceTwin nearly halves the inertial-parameter error of a VLM prior. As a feedforward dynamics model for impedance control on a Spot and a Franka FR3, ForceTwin achieves 87% goal completion across nine object-embodiment pairs, compared with 60% using VLM-prior and 57% using kinematics-only twins, with the largest gains on objects whose strong mechanisms cause both baselines to stall. We further use the identified twins to train whole-body door-traversal policies and deploy them in the real world. Project Page: https://timengelbracht.github.io/forcetwin-website/",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-09-18T13:26:32Z",
+              "url": "https://arxiv.org/abs/2609.21751",
+              "pdf_url": "https://arxiv.org/pdf/2609.21751v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.21751v1/figures/ForceTwin_PipelineFigure.png",
+              "figure_caption": "Fig. 1: The ForceTwin pipeline. Instrumented human interaction provides synchronized tool poses and contact wrenches from which we identify an articulation model and its generalized-effort dynamics. Geometry is reconstructed from the same recording or supplied independently, and the physical model i",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://timengelbracht.github.io/forcetwin-website/"
+              }
+            },
+            {
               "id": "2609.12677",
               "title": "Size Doesn't Matter: Material-State Reinforcement Learning for Excavator Transferable Soil Manipulation",
               "authors": [
@@ -2276,56 +2337,6 @@
               "figure_source": null,
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.06919",
-              "title": "Vernata: Self-Supervised Learning of LiDAR Point Representations",
-              "authors": [
-                "Oliver Lemke",
-                "Alexander Liniger",
-                "Abel Gawel",
-                "Marco Hutter"
-              ],
-              "abstract": "LiDAR serves as a primary sensing modality for robots operating in outdoor environments. However, the performance of deep learning models in this domain is severely limited by the scarcity of labeled data, a direct result of the high cost of 3D annotation. Self-supervised learning addresses this scarcity by learning general-purpose features from unlabeled data. In this work, we present a multi-modal, multi-teacher distillation framework for self-supervised learning on outdoor LiDAR point clouds. Building upon the Sonata architecture, we introduce Vernata, consisting of three extensions: sparse view augmentation to improve robustness against varying point densities, a memory bank mechanism to stabilize resource-constrained training, and cross-modal distillation utilizing dense, high-resolution 2D image features to enable fine-grained semantic guidance. We evaluate our method on the GrandTour, TartanGround, and Waymo datasets, as well as data collected from our own robotic platforms. Our experiments demonstrate a significant performance improvement over Sonata baselines, yielding mIoU scores of 54.7 on TartanGround (+5.9 points, +12.1%) and 57.1 on Waymo (+7.3 points, +14.7%). Finally, we show that the self-supervised approach maintains strong performance even in reduced-modality settings (lacking color or normals), achieving competitive mIoU scores of 49.4 and 50.2 on the respective datasets.",
-              "categories": [
-                "cs.CV",
-                "cs.RO"
-              ],
-              "published": "2026-08-07T07:51:39Z",
-              "url": "https://arxiv.org/abs/2608.06919",
-              "pdf_url": "https://arxiv.org/pdf/2608.06919v1",
-              "comment": "IROS 2026. Implementation: https://github.com/rai-opensource/vernata",
-              "figure_url": "https://arxiv.org/html/2608.06919v1/images/Vernata_Teaser.png",
-              "figure_caption": "Fig. 1: Visualization of PCA Features in LiDAR Scenes. We visualize the principal components of point representations produced by Sonata [ 31 ] finetuned on LiDAR datasets, as well as our approach. Sonata struggles with separation between distinct semantic classes, as well as consistency across the ",
-              "figure_source": null,
-              "video_url": null,
-              "links": {
-                "code": "https://github.com/rai-opensource/vernata"
-              }
-            },
-            {
-              "id": "2608.06170",
-              "title": "Prior-SG: Task and Prior Driven Region Segmentation for Scene Graphs in Arbitrarily-Structured Environments",
-              "authors": [
-                "Giorgio Tonetti",
-                "Laurent Kneip",
-                "Abel Gawel",
-                "Marco Hutter"
-              ],
-              "abstract": "Hierarchical 3D scene graphs are a promising representation for high-level spatial reasoning in autonomous mobile platforms. However, existing extraction frameworks typically rely on purely local visual clustering or strict geometric heuristics, such as wall-separated rooms, which fail in open-plan or arbitrarily-structured environments. We propose Prior-SG, a task- and prior-driven framework that casts scene graph generation fundamentally as a probabilistic alignment problem. As the robot explores, it continuously aggregates an incoming RGB-D sensor stream into a physically grounded Instance Graph utilizing a multi-scale, open-vocabulary feature fusion strategy. The system then infers the high-level functional semantics of this map through a Maximum A Posteriori (MAP) estimate, guided by a Prior Graph-a logical expectation of the environment's structure and task-relevant vocabulary synthesized dynamically by a Large Language Model. By optimizing a Markov Random Field that fuses heterogeneous experts (visual, geometric, and discrete objects) with these topological priors, the system resolves local perceptual ambiguities. We validate this approach across diverse simulated residential datasets and large, open-plan real-world environments. Prior-SG achieves state-of-the-art semantic region segmentation accuracy compared to recent baselines, robustly delineates distant functional boundaries in the absence of physical walls, and uniquely provides zero-shot ontological flexibility, enabling the robot to entirely restructure its spatial partitioning based on a given high-level task.",
-              "categories": [
-                "cs.RO",
-                "cs.CV"
-              ],
-              "published": "2026-08-06T15:36:12Z",
-              "url": "https://arxiv.org/abs/2608.06170",
-              "pdf_url": "https://arxiv.org/pdf/2608.06170v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.06170v1/prior-sg_main_fig_real.png",
-              "figure_caption": "Fig. 1: System architecture of the Prior-SG framework. As detailed in Section IV , the Prior Graph 𝒢 P \\mathcal{G}_{P} (left) is synthesized by a Large Language Model conditioned on a high-level task and environment. This involves top-down state-space truncation (A) to define the expected hierarchic",
-              "figure_source": null,
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -2476,7 +2487,7 @@
           ]
         }
       ],
-      "total": 13
+      "total": 12
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -3173,36 +3184,6 @@
               "figure_source": null,
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.06967",
-              "title": "Can Language Models Imagine Without Seeing? Ekphrasis: Measuring Visual Creative Ideation in Text-Only LLMs",
-              "authors": [
-                "Hongyu Luo",
-                "He Wang",
-                "Huihao Jing",
-                "Hong Ting Tsang",
-                "Yuxuan Liu",
-                "Wuganjing Song",
-                "Yauwai Yim",
-                "Chunyang Li",
-                "Yangqiu Song"
-              ],
-              "abstract": "Current evaluations do not isolate whether text-only language models can originate visual concepts before image generation. Fluent visual prose can hide visual-plan failures: an answer may appear creative while repeating familiar visual clichés or failing to specify a renderable scene. We define Visual Creative Ideation (VCI) as the ability to produce textual visual plans that are useful, expressive, and population-novel, and introduce Ekphrasis, a 400-task benchmark spanning Abstraction, Combination, Transformation, and Adaptation. Ekphrasis scores anonymized pairwise comparisons with dimension-specific checklists, aggregates preferences with Bradley-Terry models, and uses Typed Idea Graphs to convert task-specific population clichés into novelty references. Across 14 language models, VCI separates usefulness, expressiveness, and novelty rather than reducing to fluency: strong models achieve similar overall scores through different profiles, and useful plans can remain visually clichéd. A cross-modal grounding study further shows that text-level VCI ordering largely survives faithful rendering and blind image-level preference judgment, supporting Ekphrasis as a measure of visual ideation beyond prose quality.",
-              "categories": [
-                "cs.CL"
-              ],
-              "published": "2026-08-07T08:44:00Z",
-              "url": "https://arxiv.org/abs/2608.06967",
-              "pdf_url": "https://arxiv.org/pdf/2608.06967v1",
-              "comment": "25 pages, 4 main figures, with appendices. Code and data: https://github.com/Imhongyu/Ekphrasis",
-              "figure_url": "https://arxiv.org/html/2608.06967v1/figure1_vci_overview.png",
-              "figure_caption": "Figure 1: Construct and evaluation workflow of Ekphrasis . Ekphrasis isolates Visual Creative Ideation as a text-only, pre-image planning construct distinct from image quality, writing quality, and general ideation. The workflow elicits visual blueprints across four brief families, scores plans thro",
-              "figure_source": null,
-              "video_url": null,
-              "links": {
-                "code": "https://github.com/Imhongyu/Ekphrasis"
-              }
             }
           ]
         },
@@ -3570,7 +3551,7 @@
           "papers": []
         }
       ],
-      "total": 33
+      "total": 32
     },
     {
       "name": "工业界研究团队",
