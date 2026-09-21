@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T05:46:32.184Z",
+  "updated": "2026-09-21T08:07:50.381Z",
   "items": [
     {
       "type": "paper",
@@ -69,6 +69,38 @@
       "status": "removed",
       "added_at": "2026-09-10T23:31:56.465Z",
       "updated_at": "2026-09-11T09:24:16.760Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.21572",
+      "title": "SABER: Learning Attention-based Semantic Affordance for Legged Locomotion",
+      "url": "https://arxiv.org/abs/2609.21572",
+      "subtitle": "Hari Prasanth Palanivelu, Samuel Sze, Kennard Garrison Johannes, Albertus Hendrawan Adiwahono, Meng Yee, Chuah",
+      "text": "Perceptive legged locomotion has advanced rapidly by integrating terrain geometry into learned policies, yet the integration of terrain meaning remains sparse: a pipe, a patch of grass, or a fragile box may be geometrically traversable while being inappropriate for contact. In industrial environments, where legged robots increasingly operate, a single misplaced step can damage fragile equipment, destabilize the robot, or endanger the site. To address this, we introduce SABER, a planner-free reinforcement-learning policy that jointly reasons about terrain geometry and semantic contact permission. The policy consumes a unified terrain-affordance map, where each cell encodes local 3D geometry and a semantic contact cost. We augment cross-attention with a learned, signed semantic bias: an additive term on the attention logits, gated by the contact cost, that reweights flagged cells by their distance from the nearest foot. A hazard therefore reshapes attention where it can still affect the next foothold, and its influence fades where it cannot. The resulting policy selects footholds on permitted support and keeps the leg clear of forbidden regions throughout the swing phase. We perform a systematic ablation that isolates the contribution of each architectural component; removing the semantic bias alone increases forbidden contacts by 55% while velocity tracking is unchanged. We validate the policy on a Unitree B2, demonstrating sim-to-real semantic contact selection across indoor and outdoor environments and four semantic obstacle classes.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-09-18",
+      "score": 0.939,
+      "why": "兴趣：reinforcement learning for legged locomotion and sim-to-real transfer",
+      "keywords": [
+        "robot",
+        "legged",
+        "locomotion",
+        "sim-to-real"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.21572v1",
+      "image": "https://arxiv.org/html/2609.21572v1/figures/teaser.jpg",
+      "imageCaption": "Fig. 1 : Semantic contact selection on hardware. The Unitree B2 crosses a flagged pipe without touching it (right); in the corresponding terrain-affordance map (left), the pipe’s cells carry contact cost r = 1 r=1 (red) while geometrically similar unflagged terrain remains available for support.",
+      "video": null,
+      "links": [],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-21T08:07:45.991Z",
+      "updated_at": "2026-09-21T08:07:45.991Z"
     }
   ]
 }
