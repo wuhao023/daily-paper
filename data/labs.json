@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-21T13:06:54+00:00",
-  "day": "2026-09-21",
+  "updated": "2026-09-22T11:58:16+00:00",
+  "day": "2026-09-22",
   "days_back": 45,
-  "total": 99,
+  "total": 110,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -202,6 +202,31 @@
           "name": "Jitendra Malik",
           "papers": [
             {
+              "id": "2609.24487",
+              "title": "AgentSTAR: Agentic Shape Tracking and Reconstruction from Monocular Videos",
+              "authors": [
+                "Kirill Mazur",
+                "Nikita Karaev",
+                "Matthew Chang",
+                "Jitendra Malik",
+                "Nur Muhammad \"Mahi'' Shafiullah"
+              ],
+              "abstract": "In this work, we present a method for shape reconstruction and tracking from video via agentic analysis-by-synthesis. Unlike prior methods which first estimate dense pixel correspondences and then recover object motion from them, our method infers a structured 3D object model, including its geometry and kinematic structure, and uses this model to optimise object track estimates over time. In our optimisation loop, a Vision-Language Model (VLM) agent iteratively refines shape or generalised pose through a render-and-compare loop, combining coarse visual reasoning with numerical pose optimisation for precise state estimation. This structured formulation enables our method to track through large motion, articulation, and severe occlusion without relying on pixel-matching objectives. Quantitatively, on ARCTIC, our method substantially outperforms state-of-the-art 3D point-tracking baselines for articulated objects, and on HOT3D it outperforms all evaluated rigid-object tracking baselines.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-09-21T12:26:13Z",
+              "url": "https://arxiv.org/abs/2609.24487",
+              "pdf_url": "https://arxiv.org/pdf/2609.24487v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.24487v1/teaser_v2.png",
+              "figure_caption": "Figure 1: Agentic shape tracking and reconstruction. Our method jointly reconstructs object geometry and kinematics ( left ) from monocular videos and tracks the resulting 3D model through time ( right ). It recovers complex articulation (first and fourth rows), preserves fine geometric details (sec",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.21400",
               "title": "A Scene Language Model for Open-Vocabulary Scene Mapping",
               "authors": [
@@ -296,6 +321,36 @@
           "name": "Trevor Darrell",
           "papers": [
             {
+              "id": "2609.24976",
+              "title": "DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation",
+              "authors": [
+                "Haoran Yuan",
+                "Zekai Wang",
+                "Boning Shao",
+                "Haoran Lu",
+                "Trevor Darrell",
+                "Ismini Lourentzou",
+                "Wei Zhan"
+              ],
+              "abstract": "Dexterous manipulation depends on contact dynamics that are often only partially observable from vision. Recent World-Action Models (WAMs) couple predictive video world modeling with action generation, but remain largely vision-centric and therefore cannot directly model these contact dynamics. We present DexTacWAM, a visuo-tactile WAM that encodes each fingertip independently, aggregates the resulting features through a finger- and pose-aware tactile compressor, and injects the tactile latent into a video diffusion world model for joint visuo-tactile world modeling. Across six contact-rich dexterous manipulation tasks on a 22-DoF bimanual platform, DexTacWAM achieves the highest score on every task, averaging 70.6 versus 38.0 for the strongest baseline. Ablations attribute the gain to modeling contact evolution as part of the predicted world state rather than tactile conditioning alone: removing tactile world modeling reduces the four-task mean from 74.7 to 26.6 while keeping the same tactile features and action expert. After four hours of tactile-encoder adaptation with a frozen pretrained vision VAE, our continual vision-to-touch learning extends the pretrained video model to touch using roughly 100 demonstrations per task without tactile midtraining, while retaining visual prediction quality within 0.5 dB of vision-only counterparts. The compressor retains 89.4% of pre-fusion contact recall while enabling 2.26x faster training and 1.29x faster inference. Together, these results show that pretrained video priors can be extended to distributed multi-finger contact dynamics in a data- and compute-efficient manner.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-09-21T17:55:24Z",
+              "url": "https://arxiv.org/abs/2609.24976",
+              "pdf_url": "https://arxiv.org/pdf/2609.24976v1",
+              "comment": "22 pages. Project website: https://dextacwam.github.io/",
+              "figure_url": "https://arxiv.org/html/2609.24976v1/architecture.png",
+              "figure_caption": "Figure 1 : Overall architecture of Dex Tac WAM . A two-block transformer design. Left: the World-Model Transformer ( × N \\times N ) fuses vision and bimanual tactile tokens through per-modality self-attention and a shared cross-modality self-attention, producing predictive latents that form a joint ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://dextacwam.github.io/"
+              }
+            },
+            {
               "id": "2609.02885",
               "title": "Discriminative World Models for Web Agents",
               "authors": [
@@ -356,7 +411,7 @@
           ]
         }
       ],
-      "total": 11
+      "total": 13
     },
     {
       "name": "Stanford",
@@ -536,6 +591,31 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2609.24210",
+              "title": "ChartJudgeBench: Evaluating LMM Judges for Chart-to-Code Generation",
+              "authors": [
+                "Lijian Wu",
+                "Henry Hengyuan Zhao",
+                "Zijian Zhang",
+                "Jiahao Tang",
+                "Jiajun Wu",
+                "Alex Jinpeng Wang"
+              ],
+              "abstract": "Building strong chart-to-code systems increasingly relies on reinforcement learning, whose effectiveness depends critically on the quality of the reward signal. Large Multimodal Models (LMMs) play a natural critical role in jointly assessing chart visual appearance and task requirements. They are therefore increasingly used as visual critics and reward models, yet their reliability as judges remains largely unexplored. To this end, we introduce ChartJudgeBench, a diagnostic vision-language benchmark for assessing LMM judges in chart-to-code workflows. It includes 1,003 Chart Perception Alignment (CPA) instances for pairwise chart comparison and 650 Chart Reasoning Judgment (CRJ) instances for binary Accept/Reject verification in Chart Reproduction and Chart Editing. Together, these tasks emulate the core judging decisions required in agentic refinement and RL-based chart optimization. Our evaluation of strong LMMs reveals four systematic limitations: (i) positional bias in pairwise comparison, (ii) a strong tendency to overpredict Accept, (iii) difficulty in matching visual styles and aesthetics, and (iv) an unexpected leniency bias in RL-trained models. These findings show that current LMM judges require explicit reliability validation before being used as critics or reward models in chart-to-code optimization. The code and data are available on ChartJudgeBench.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-09-21T07:29:46Z",
+              "url": "https://arxiv.org/abs/2609.24210",
+              "pdf_url": "https://arxiv.org/pdf/2609.24210v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.24210v1/crop_Teaser_6.png",
+              "figure_caption": "Figure 1: Comparison of chart quality judgment signals. Despite obvious visual flaws, similarity metrics (PSNR ↑ \\uparrow , SSIM ↑ \\uparrow , LPIPS ↓ \\downarrow , CLIP ↑ \\uparrow , DINOv3 ↑ \\uparrow ), rule-based metrics, and LMM evaluators tend to give a high score, failing to identify incorrect ch",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2609.11900",
               "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
@@ -1122,7 +1202,7 @@
           ]
         }
       ],
-      "total": 25
+      "total": 26
     },
     {
       "name": "Carnegie Mellon University",
@@ -1228,6 +1308,31 @@
         {
           "name": "Katerina Fragkiadaki",
           "papers": [
+            {
+              "id": "2609.22611",
+              "title": "HIGenNTO: Scalable Humanoid Interaction Generation via Noise-Space Trajectory Optimization",
+              "authors": [
+                "Lalit Jayanti",
+                "Kashu Yamazaki",
+                "Yuto Shibata",
+                "Kotaro Amaya",
+                "Katerina Fragkiadaki"
+              ],
+              "abstract": "Humanoid robots can acquire complex skills by imitating kinematic humanoid motion references, yet reliable references for contact-rich interactions remain difficult to obtain: motion capture deteriorates under occlusion and close physical contact, while retargeting introduces additional contact and geometric inconsistencies. We present HIGenNTO, a framework that synthesizes humanoid-scene interaction motion references by optimizing the initial noise of a pretrained text-conditioned motion model under sparse spatiotemporal and scene constraints. The same formulation satisfies desired contacts, avoids collisions, and maintains stable support while retaining the prior's realism and temporal coherence, generating interaction motions from scratch and composing long-horizon behaviors stage-wise. Across robot-environment and robot-object tasks, HIGenNTO produces motions that can be executed by tracking policies in simulation and used to train depth-conditioned visuomotor policies operating solely from onboard sensing. We deploy these policies on a Unitree G1 across four contact-rich tasks. Finally, the task specifications themselves can be written by a coding agent, which proposes interaction tasks and compiles them into prompt, constraint, and scene programs, authoring three of our eight evaluated tasks and four further behaviors. Together, these results establish a scalable path from high-level task descriptions to physically executable humanoid interactions.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-09-18T21:52:56Z",
+              "url": "https://arxiv.org/abs/2609.22611",
+              "pdf_url": "https://arxiv.org/pdf/2609.22611v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.22611v1/figure/teaser.png",
+              "figure_caption": "Figure 1: HIGenNTO synthesizes humanoid–scene interaction motion references through constrained optimization over a generative motion prior. Stair traversal, sitting and standing, and box pickup and placement across randomized scenes, without any motion capture of joint human–scene interaction.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2609.13812",
               "title": "GeomVLA: Unifying Scene, Motion, and Action in 3D",
@@ -1378,6 +1483,29 @@
           "name": "Oliver Kroemer",
           "papers": [
             {
+              "id": "2609.22730",
+              "title": "BEACON: Belief-Enabled Adaptive CONtrol for Imitation Learning under Uncertainty",
+              "authors": [
+                "Moonyoung Lee",
+                "Soumojit Bhattacharya",
+                "George Kantor",
+                "Oliver Kroemer"
+              ],
+              "abstract": "Robot manipulation tasks often involve hidden state information that cannot be directly observed and must be inferred through sequential physical interactions. In such partially observable settings, conditioning an imitation learning policy directly on the recent raw observation history leads to poor performance. This is due to state aliasing, wherein identical observations may arise from different hidden states, and the policy receives conflicting action labels for the same input. To enable history-aware disambiguation capability, we propose conditioning a diffusion policy on a structured representation of the hidden states using Bayesian belief that exposes both the current most likely state estimate and the remaining uncertainty. This representation replaces raw history with a structured, compact input, enabling the policy to implicitly modulate between exploratory and exploitative behaviors based on belief uncertainty, without explicit mode switching or reward shaping. We evaluate across two domains with qualitatively different belief representations: a continuous belief for cornstalk gripper alignment via tactile sensing, and a discrete categorical distribution for latched door opening. In both domains, the belief-conditioned policy substantially outperforms the observation-only baseline and approaches privileged ground-truth performance, with ablations illustrating that the policy adapts its exploration behavior depending on the belief uncertainty at inference time.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-09-19T03:26:19Z",
+              "url": "https://arxiv.org/abs/2609.22730",
+              "pdf_url": "https://arxiv.org/pdf/2609.22730v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.22730v1/figures/corn_diagramv2.png",
+              "figure_caption": "Figure 1 : System diagram of the belief-conditioned policy. Varying belief guides the low-level policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.09808",
               "title": "GTA-2: A Multi-VLM Framework for Synthesizing Robot Manipulation Skills via Grounded Task Axes",
               "authors": [
@@ -1406,7 +1534,7 @@
           ]
         }
       ],
-      "total": 9
+      "total": 11
     },
     {
       "name": "MIT",
@@ -1496,6 +1624,31 @@
               "figure_url": "https://arxiv.org/html/2609.20820v1/wsm_teaser_2_cropped.png",
               "figure_caption": "Figure 1 : We propose the Workspace Model , an architecture trained to produce compressed latent representations of history used for downstream policy learning. Workspace Models are trained by encoding raw histories and reconstructing high-level salient information, as judged by a VLM, thus amortizi",
               "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2609.22241",
+              "title": "H2LooP Telecom Model v1: From Telecom Comprehension to Autonomous Issue and PR Resolution",
+              "authors": [
+                "Amit Singh",
+                "Vedant Nipane",
+                "Mayank Goel",
+                "Pulkit Agrawal",
+                "Sairanjan Mishra"
+              ],
+              "abstract": "We present H2LooP Telecom Model v1, a domain-specialized large language models fine-tuned for the telecommunications industry. We release two domain-adapted model variants serving complementary use cases: a comprehension-focused variant for telecom domain question answering and reasoning, and an agentic variant for autonomous telecom code generation, pull request resolution, and code commits on production repositories. H2LooP Telecom achieves strong results on the GSMA Open Telecom Lite (OT-Lite) benchmark and a proprietary telecom code generation benchmark, outperforming frontier closed-source models such as GPT-5 and Claude Opus on independent leaderboard evaluation, while preserving general-purpose capabilities. The Comprehension variant achieves 81.8% weighted average on OT-Lite Pass@3, and, independently, ranks 5th overall on the official community-run Open Telco AI Leaderboard* at only 31B parameters-ahead of frontier closed-source systems including Claude Opus 4.6, GPT-5, Gemini 3 Flash, Grok-4-fast, and Kimi K2.5. Our agentic variant obtains a relative improvement of +8.8% in AST Similarity and +20.0% in Location IoU over the base model on telecom code generation, while maintaining identical MMLU (74.0%) and BFCL v3 multi-turn function calling (79.0%) performance, indicating zero catastrophic forgetting. Domain specialization on curated telecom corpora, spanning 3GPP standards, O-RAN specifications, network telemetry, and real repository commits, yields substantial improvements over general-purpose models of equivalent scale, approaches frontier closed-source models on domain-specific evaluation, and is independently corroborated by our official leaderboard standing.",
+              "categories": [
+                "cs.CL",
+                "cs.AI"
+              ],
+              "published": "2026-09-04T13:27:17Z",
+              "url": "https://arxiv.org/abs/2609.22241",
+              "pdf_url": "https://arxiv.org/pdf/2609.22241v1",
+              "comment": "",
+              "figure_url": "thumbs/2609.22241.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
               "video_url": null,
               "links": {}
             },
@@ -1605,7 +1758,7 @@
           ]
         }
       ],
-      "total": 6
+      "total": 7
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -2151,6 +2304,33 @@
           "name": "Marco Hutter",
           "papers": [
             {
+              "id": "2609.24576",
+              "title": "What do VLM-Based Vision-Language Navigation Models Rely on: Interpreting and Steering Policy Behavior",
+              "authors": [
+                "Débora Oliveira Makowski",
+                "Samiran Gode",
+                "Abhijeet Nayak",
+                "Marco Hutter",
+                "Cordelia Schmid",
+                "Lukas Rosenberger Schmid",
+                "Wolfram Burgard"
+              ],
+              "abstract": "Modern Vision-Language Navigation (VLN) models rely mostly on pre-trained large Vision-Language Models (VLMs) to predict navigation actions. While this fusion of language instructions and visual observations allows multimodal reasoning, it obscures how information is routed across modalities or what mechanisms drive navigation decisions. Thus, it remains unclear whether VLN models ground their predictions in relevant semantic cues or can track task progress. In this work, we study the interpretability and steerability of VLN models. We use intervention-based metrics that measure how visual observations, instructions, and visual memory causally influence navigation decisions. Our results show that these navigation policies are sensitive to all input modalities and do not depend on a single one. We further show that these agents encode navigation progress and retain semantic structure from their VLM backbones, enabling concept-level steering through internal activations. Finally, we extract activation vectors for abstract behaviors to transfer them zero-shot to out-of-distribution real-world scenarios, improving performance without additional fine-tuning.",
+              "categories": [
+                "cs.RO",
+                "cs.CV"
+              ],
+              "published": "2026-09-21T13:42:48Z",
+              "url": "https://arxiv.org/abs/2609.24576",
+              "pdf_url": "https://arxiv.org/pdf/2609.24576v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.24576v1/text-iss.png",
+              "figure_caption": "Fig. 1: Attribution heatmaps generated with ISS [ 10 ] for CorrectNav [ 11 ] . Red indicates higher sensitivity and blue lower. In text, darker tokens indicate higher sensitivity. Active subtask verbs (e.g., stop , through ) and semantic cues (e.g., kitchen , doors , vestibule ) have higher sensitiv",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.21751",
               "title": "ForceTwin: Physics-informed Digital Twins for Robotic Manipulation from Instrumented Human Interaction",
               "authors": [
@@ -2371,6 +2551,38 @@
               }
             },
             {
+              "id": "2609.22319",
+              "title": "Embedding Physics Priors in Robot Learning: A Survey",
+              "authors": [
+                "Mattia Piccinini",
+                "Lucas Schulze",
+                "Alice Plebe",
+                "Matteo Saveriano",
+                "Thomas Beckers",
+                "Yuan Gao",
+                "Oleg Arenz",
+                "Baha Zarrouki",
+                "Dingrui Wang",
+                "Finn Rasmus Schäfer",
+                "Jan Peters",
+                "Johannes Betz",
+                "Gastone Pietro Rosati Papini"
+              ],
+              "abstract": "The rapid progress of artificial intelligence is reshaping robotics and accelerating the adoption of learning-based approaches. While purely data-driven methods have achieved remarkable success in computer vision and natural language processing, robotics remains constrained by limited data, complex real-world interactions, and the need for reliable operation. These challenges have motivated the exploration of physics-embedded robot learning, which embeds physics priors into learning algorithms. By encoding the underlying physical laws and constraints, physics priors can complement limited data with robotics-specific inductive biases, potentially improving generalization, interpretability, and sample efficiency. However, the literature on physics-embedded robot learning remains fragmented across terminology, methodologies, and application domains, making it difficult to assess this growing body of work. This survey reviews physics-embedded robot learning across a broad range of physics priors, robotics applications, and machine learning models, from single-layer perceptrons to generative foundation models. We adopt a unified taxonomy that classifies existing approaches according to their physics embedding: physics-guided inputs, data, and representations; physics-encoded model architectures; and physics-informed training loss functions. Building on this taxonomy, we review methods for robot dynamics learning, trajectory planning, prediction, control, and estimation, together with the corresponding open-source software ecosystem. We identify key open challenges, and outline promising future research directions. Overall, we argue that physics priors provide a particularly relevant robotics-specific inductive bias, complementing rather than replacing data-driven learning, and paving the way toward more generalizable, data-efficient, and trustworthy robotic systems.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-09-15T16:53:06Z",
+              "url": "https://arxiv.org/abs/2609.22319",
+              "pdf_url": "https://arxiv.org/pdf/2609.22319v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2609.22319v1/overview_physics_injection.png",
+              "figure_caption": "Figure 1 : Different levels of embedding physics priors in robot learning: (a) physics-guided inputs, data, and representations; (b) physics-encoded architectures; (c) physics-informed loss functions. While most existing works focus on only one of these levels, we argue that the joint use of complem",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2608.29487",
               "title": "Blind Dexterity: Whole-Body Humanoid Manipulation via Pure Proprioception",
               "authors": [
@@ -2487,7 +2699,7 @@
           ]
         }
       ],
-      "total": 12
+      "total": 14
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -2810,6 +3022,36 @@
         {
           "name": "He Wang",
           "papers": [
+            {
+              "id": "2609.24868",
+              "title": "DualWAM: Dual-System World Action Models for Asynchronous Global Planning and Local Refinement",
+              "authors": [
+                "Yixin Zheng",
+                "Jiangran Lyu",
+                "Yuntian Deng",
+                "Kai Liu",
+                "Yizhou Zhou",
+                "Yizhou Wang",
+                "Xiaoguang Zhao",
+                "He Wang",
+                "Zhizheng Zhang"
+              ],
+              "abstract": "World Action Models (WAMs) jointly generate robot actions and predict future world states, transferring priors from video pretraining to robot control. However, future visual prediction is computationally expensive, so existing WAMs often rely on long action chunks to amortize inference cost across control steps, at the cost of closed-loop responsiveness. We present \\method, a dual-system WAM that preserves broader-horizon world-action generation while enabling high-frequency closed-loop action updates by decoupling global planning and local refinement. \\systwo periodically performs high-noise bidirectional denoising over a broader world-action chunk to establish a global plan, while wrist-only \\sysone extracts a temporally aligned short window from the intermediate denoising state and completes low-noise refinement using the latest wrist observations, which provide action-aligned cues about local geometry, motion, and contact during interaction. The two systems operate asynchronously along a shared denoising trajectory: each global plan is reused across multiple local updates, while \\sysone repeatedly incorporates fresh interaction feedback. Across zero-shot manipulation tasks on Franka and Galbot, \\method improves success over the strongest evaluated baseline by 4.5 percentage points on average, while achieving a 16.6$\\times$ critical-path speedup. Further studies show that role-matched egocentric and UMI data improve success by 14 percentage points, and that the decoupled design naturally supports edge--cloud deployment with substantially lower communication overhead than the baseline.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-09-21T16:37:50Z",
+              "url": "https://arxiv.org/abs/2609.24868",
+              "pdf_url": "https://arxiv.org/pdf/2609.24868v1",
+              "comment": "Project page: https://steveouo.github.io/DualWAM-Web/",
+              "figure_url": "https://arxiv.org/html/2609.24868v1/figures/DualWAM-pipeline.png",
+              "figure_caption": "Figure 1 : DualWAM pipeline. System 2 denoises a complete global world-action state through the high-noise interval. At threshold τ \\tau , temporally aligned wrist-action windows are passed to compact System 1, which completes low-noise local refinement using fresh wrist observations.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://steveouo.github.io/DualWAM-Web/"
+              }
+            },
             {
               "id": "2609.18732",
               "title": "PASSAGE: Scaling Scene-Aligned Motion Learning for Perceptive Humanoid Traversal in Cluttered Environments",
@@ -3191,6 +3433,33 @@
           "name": "Hao Dong",
           "papers": [
             {
+              "id": "2609.23445",
+              "title": "BiRoAD: Learning Shared and Role-Adaptive Representations for Bimanual Manipulation",
+              "authors": [
+                "Yan Shen",
+                "Yuchen Liu",
+                "Feng Jiang",
+                "Hangtian Hu",
+                "Xiaoqi Li",
+                "Shu Chen",
+                "Ruihai Wu",
+                "Hao Dong"
+              ],
+              "abstract": "Bimanual manipulation requires policies that coordinate two arms while adapting their functional roles to scene geometry, object configuration, and task context. Learning such scene-conditioned role adaptation remains challenging, as demonstrations may contain uneven role distributions that limit generalization to underrepresented arm--role configurations. In addition, many bimanual policies predict actions in fixed left- and right-arm action spaces. While this provides a natural parameterization for robot control, it does not explicitly specify how behaviors should transform when functional roles are exchanged across arms. Across different scene initializations, the two arms may follow a similar coordination pattern, but the role-specific behavior assigned to each arm should change with the scene. Therefore, we propose BiRoAD, a Bimanual Role-Adaptive Decomposition framework for learning shared and role-adaptive representations in bimanual policies. Given bimanual trajectory or action-token features, BiRoAD decomposes these features into swap--symmetric and swap--antisymmetric components: the former captures coordination structure invariant to arm exchange, and the latter captures role-specific distinctions that vary consistently with functional role assignment. The two components are then recomposed as residual updates to the original paired arm representations, allowing BiRoAD to serve as a modular feature transformation without changing the policy inputs, imitation-learning objective, or requiring manually defined role labels. Across multiple bimanual manipulation tasks with balanced and imbalanced role distributions, BiRoAD improves robustness across role configurations over corresponding base policies, with notable gains on underrepresented role configurations.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-09-20T08:20:55Z",
+              "url": "https://arxiv.org/abs/2609.23445",
+              "pdf_url": "https://arxiv.org/pdf/2609.23445v1",
+              "comment": "Accepted at CoRL 2026",
+              "figure_url": "https://arxiv.org/html/2609.23445v1/teaser.png",
+              "figure_caption": "Figure 1: Overview of BiRoAD. (a) Bimanual tasks in which scene initializations induce different functional roles for two arms. (b) Under imbalanced training distributions, a base policy may favor frequent arm–role configurations and perform less reliably when the scene induces a less common role as",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.20659",
               "title": "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
               "authors": [
@@ -3513,6 +3782,41 @@
           "name": "Cewu Lu",
           "papers": [
             {
+              "id": "2609.24840",
+              "title": "PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control",
+              "authors": [
+                "Lei Ye",
+                "Haibo Gao",
+                "Yitang Li",
+                "Peng Xu",
+                "Zetong Jing",
+                "Junhan Sun",
+                "Fanrong Dong",
+                "Ziqi Han",
+                "Xue Wang",
+                "Jianhua Sun",
+                "Cewu Lu",
+                "Hao Zhao",
+                "Liang Ding"
+              ],
+              "abstract": "Diffusion models offer flexible motion generation, but translating this flexibility into feedback-responsive humanoid control remains challenging. Hierarchical systems steer motion through references that may exceed a separate tracker's capabilities, leaving recovery and physical execution largely to the tracker. Action-only diffusion generates actions directly but lacks an explicit future-state trajectory for test-time motion objectives. Joint state-action diffusion provides this representation, yet representative controllers often depend on privileged full-body states, and support for learned behavior selection and test-time motion steering remains fragmented. We present PredActor, a predictive action diffusion policy that brings these complementary steering capabilities into one directly executed policy using proprioceptive observations. Conditioned on proprioceptive history and optional task context, PredActor jointly generates executable actions and an internal future-state trajectory. Classifier-free guidance strengthens text-conditioned behavior, while classifier guidance steers predicted states toward test-time objectives. Only actions are executed, without a separate motion-reference tracker or externally estimated full-body states as policy inputs. In simulation, PredActor reaches all 15 destination targets and achieves a text retrieval score of 0.580, compared with 0.373 for conditional action diffusion, with similar observed disturbance survival. To make this guided policy practical onboard, rolling denoising and computation-preserving runtime optimizations reduce the complete callback to 16.790 ms median and 19.383 ms p95 on a Jetson Orin NX, both below the 20 ms control period. We deploy PredActor on a Unitree G1; evaluations across simulation and physical hardware demonstrate text-conditioned motion, disturbance response, joystick control, and semantic interpolation.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-09-21T16:20:25Z",
+              "url": "https://arxiv.org/abs/2609.24840",
+              "pdf_url": "https://arxiv.org/pdf/2609.24840v1",
+              "comment": "Project page: https://masteryip.github.io/predactor.github.io/",
+              "figure_url": "https://arxiv.org/html/2609.24840v1/fig_method_architecture.png",
+              "figure_caption": "Figure 3: Joint predictive architecture of PredActor. Observation history and task commands condition a transformer that jointly denoises interleaved future state and action tokens. Optional steering modifies the predicted state while passing the predicted action through unchanged to the denoising u",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://masteryip.github.io/predactor.github.io/"
+              }
+            },
+            {
               "id": "2609.16815",
               "title": "Rethinking Visual Embodiment Dependence in Visuomotor Policies",
               "authors": [
@@ -3551,7 +3855,7 @@
           "papers": []
         }
       ],
-      "total": 32
+      "total": 35
     },
     {
       "name": "工业界研究团队",
