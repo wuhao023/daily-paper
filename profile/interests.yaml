@@ -9,45 +9,72 @@ arxiv:
     - cs.AI   # Artificial Intelligence
     - cs.LG   # Machine Learning
     - cs.CV   # Computer Vision
+    - cs.GR   # Graphics：AMP/SMP 等物理角色运动控制与运动先验
   # 只看最近 N 天提交的论文（配合 data/seen-papers.json 去重，不会重复推荐）
   days_back: 7
   # 每个分类每次最多拉多少篇（arXiv 单次请求上限 2000，这里保守一些）
   max_results_per_category: 400
 
-# 用自然语言描述你关心的方向，每一条会被 embedding 成一个向量。
-# 写得越具体越好，一条只写一个方向。
+# 研究主线：人形 locomotion / loco-manipulation / sim2real / 通用运动与轨迹跟踪，
+# 同时覆盖视觉跑酷、四足与四轮足运动控制。VLA 保留为次要探索方向。
+# 每条兴趣会独立编码；当前算法不支持逐条权重，条目数量不等于推荐比例。
+# 参考方向：SONIC、BFM-Zero、RGMT、PGMT、Hiking in the Wild。
 interests:
-  - "robot manipulation and grasping with learned policies"
-  - "vision-language-action (VLA) models and foundation models for robots"
-  - "imitation learning and diffusion policies for robot control"
-  - "reinforcement learning for legged locomotion and sim-to-real transfer"
-  - "humanoid robots and whole-body control"
-  - "large language models for robot task planning and reasoning"
-  - "3D perception, point clouds and scene understanding for robotics"
-  - "world models and video prediction for embodied agents"
-  - "dexterous hands and tactile sensing"
-  - "multi-agent systems and LLM agents"
+  - "reinforcement learning for robust humanoid locomotion, bipedal walking and running"
+  - "humanoid loco-manipulation with coordinated whole-body control, walking while carrying and manipulating objects"
+  - "sim-to-real transfer for humanoid and legged robot locomotion through dynamics adaptation, system identification and domain randomization"
+  - "general-purpose whole-body motion and trajectory tracking for humanoid robots, following diverse unseen reference motions"
+  - "scalable humanoid motion tracking and behavioral foundation models for zero-shot whole-body control, as in SONIC, BFM-Zero and RGMT"
+  - "perceptive general motion tracking for humanoid robots on uneven terrain, combining reference motions with visual terrain perception as in PGMT"
+  - "vision-based humanoid locomotion and parkour using depth images for obstacle traversal, foothold planning and outdoor hiking as in Hiking in the Wild"
+  - "agile quadruped robot locomotion and visual parkour on rough terrain with sim-to-real reinforcement learning"
+  - "wheeled quadruped and wheel-legged robot locomotion with coordinated driving, stepping and terrain-adaptive whole-body control"
+  - "physics-based humanoid character control with adversarial motion priors and reusable score-matching motion priors, as in AMP and SMP"
+  # VLA 不屏蔽，但不再给予 VLA / 通用 manipulation 关键词额外加分。
+  - "vision-language-action models for embodied robot control and generalizable manipulation"
 
 keywords:
-  # 命中这些词会加分（标题命中权重更高）
+  # 每个词标题命中 +2，正文命中 +1；不是逐词独立权重。
+  # 优先具体运动控制词，移除 robot / embodied 等过宽加分词。
   boost:
-    - robot
-    - manipulation
-    - grasp
-    - VLA
-    - vision-language-action
-    - imitation learning
-    - diffusion policy
     - humanoid
-    - legged
+    - bipedal
     - locomotion
+    - loco-manipulation
+    - loco manipulation
+    - locomanipulation
+    - whole-body control
+    - whole body control
+    - motion tracking
+    - trajectory tracking
+    - motion imitation
+    - motion retargeting
     - sim-to-real
-    - embodied
-    - dexterous
-    - tactile
-    - world model
-    - LLM agent
-    - task planning
+    - sim2real
+    - sim-to-reality
+    - legged
+    - quadruped
+    - quadrupedal
+    - wheeled quadruped
+    - wheel-legged
+    - wheeled-legged
+    - wheeled-legged locomotion
+    - parkour
+    - perceptive locomotion
+    - visual locomotion
+    - vision-based locomotion
+    - perceptive motion tracking
+    - terrain-adaptive
+    - foothold
+    # 缩写按单词边界、不区分大小写匹配，不能单独保证论文相关性。
+    - SONIC
+    - BFM-Zero
+    - BFM_Zero
+    - RGMT
+    - PGMT
+    - Hiking in the Wild
+    - adversarial motion priors
+    - score-matching motion priors
   # 命中这些词会减分（用来屏蔽你不关心的方向）
   mute:
     - medical imaging
@@ -60,19 +87,30 @@ keywords:
 github:
   # 通过 topic 监控的 GitHub 项目
   topics:
-    - robotics
-    - robot-learning
-    - embodied-ai
-    - reinforcement-learning
-    - imitation-learning
-    - ros2
     - humanoid-robot
-    - llm-agents
-  # 额外的自由搜索词（会拼成 GitHub 搜索语句）
+    - legged-robots
+    - locomotion
+    - quadruped-robot
+    - wheel-legged-robot
+    - motion-tracking
+    - sim-to-real
+    - robot-learning
+  # 聚焦运动控制，同时保留一个 VLA 查询入口。
   queries:
+    - "humanoid motion tracking"
+    - "humanoid loco-manipulation"
+    - "perceptive locomotion parkour"
+    - "wheeled quadruped locomotion"
     - "vision language action robot"
-    - "diffusion policy robot"
-    - "robot foundation model"
+    # 定向发现公开仓库；继续沿用下面的 30 天活跃窗口和 15 star 门槛，参与统一排序。
+    # org / user 是 GitHub 搜索限定符；账号名不作为普通关键词匹配。
+    - "org:Open-X-Humanoid"
+    - "org:LeCAR-Lab"
+    - "user:xbpeng"
+    # InstinctLab 是仓库，所属组织为 project-instinct。
+    - "org:project-instinct"
+    # SONIC 对应仓库，避免泛抓 NVlabs 的所有研究方向。
+    - "repo:NVlabs/GR00T-WholeBodyControl"
   # 新项目至少要有多少 star 才考虑
   min_stars: 15
   # 「新项目」指最近 N 天创建；「活跃项目」指最近 N 天有推送
@@ -84,10 +122,11 @@ scoring:
   # 每天保留多少条进入推荐页和搜索索引
   top_k_papers: 50
   top_k_repos: 30
-  # 相似度和关键词的权重（相加为 1）
+  # 提高具体领域关键词的影响，同时保留语义泛化（相加为 1）。
+  # 这是排序倾向，不保证 VLA 等领域的固定占比。
   weights:
-    embedding: 0.7
-    keyword: 0.3
+    embedding: 0.6
+    keyword: 0.4
 
 # 搜索索引保留最近多少天的数据（越大索引文件越大，120 天约 2~3MB）
 retention_days: 120

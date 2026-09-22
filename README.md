@@ -2,7 +2,7 @@
 
 > 一个完全免费、自动运行的个人「技术站」：每天推荐最新的机器人 / AI 论文（arXiv）与 GitHub 项目，追踪你关心的实验室与学者，并附带一套从零开始的机器人学理论课程。
 
-🌐 **在线站点：<https://zweisteine96.github.io/daily-paper/>**
+🌐 **在线站点：<https://wuhao023.github.io/daily-paper/>**
 
 ## 功能
 
@@ -80,6 +80,10 @@ BASE_PATH=/daily-paper/ PUBLIC_REPO=<用户名>/daily-paper npm run build
 ## 技术栈
 
 Python · [uv](https://docs.astral.sh/uv/) · [fastembed](https://github.com/qdrant/fastembed) · [PyMuPDF](https://pymupdf.readthedocs.io/) · [Astro](https://astro.build/) · [MiniSearch](https://github.com/lucaong/minisearch) · [KaTeX](https://katex.org/) · GitHub Actions · GitHub Pages
+
+## 声明
+
+该项目的原作者是： https://github.com/Zweisteine96/daily-paper 我只是fork了repo进行个性化的调整
 
 ## License
 
