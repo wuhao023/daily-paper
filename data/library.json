@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T06:41:18.582Z",
+  "updated": "2026-09-26T09:44:59.844Z",
   "items": [
     {
       "type": "paper",
@@ -259,6 +259,113 @@
       "status": "liked",
       "added_at": "2026-09-24T06:41:15.590Z",
       "updated_at": "2026-09-24T06:41:15.590Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.27269",
+      "title": "Banana Kick: Response-Informed Skill Evolution for Humanoid Soccer",
+      "url": "https://arxiv.org/abs/2609.27269",
+      "subtitle": "Hao E. Zhang, Ruize Geng, Raihan Haque, Khalil Zbiss, Guanyang Luo, Hui-ping Wang 等",
+      "text": "Humanoid kicking requires coordinated whole-body motion and precise contact, while a banana kick demands contact mechanics that generate ball spin and aerodynamic curvature. Motion imitation provides a reliable ordinary-kick prior, but reinforcement learning may improve shot speed and placement accuracy without changing the underlying kicking technique. Adapting this prior to a qualitatively different contact-rich skill can fail even when the reward is dense and optimization remains stable. The failure occurs when the task objective is locally flat over the current policy's responses. We term this condition first-order learning starvation. To address it, we propose response-informed skill evolution (RISE), a closed-loop objective-continuation method for policy adaptation. RISE ranks bounded objective changes using response sensitivity estimated from cached rollouts and accepts updates only when they produce verified response progress while preserving kicking reliability. Our analysis shows that rescaling a saturated spin reward cannot recover first-order sensitivity at zero spin, whereas adapting coupled contact responses can provide a learnable path to spin generation. We integrate RISE into a humanoid kicking pipeline under calibrated contact and Magnus-force aerodynamics, and sim-to-real transfer. Experiments show that RISE evolves the ordinary kick into a high-spin curved kick with 11.55 rad/s mean ball spin, improves the mean evaluation score by 19.8% over a learning-progress curriculum, and raises joint target attainment from 15.2% to 50.9%. Ablations and response diagnostics support the mechanism, while 30 motion-capture-recorded physical trials demonstrate consistent hardware transfer of the learned curved kick. Project website: https://haozhang-thu.github.io/bananakick/",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-09-23",
+      "score": 0.929,
+      "why": "兴趣：reinforcement learning for robust humanoid locomotion, bipedal walking and running",
+      "keywords": [
+        "humanoid",
+        "motion imitation",
+        "sim-to-real"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.27269v1",
+      "image": "https://arxiv.org/html/2609.27269v1/figures/fig_method_overview.jpg",
+      "imageCaption": "Fig. 2: From motion prior to new physical skill: imitation provides a reliable ordinary kick while RISE evolves its contact regime under calibrated contact dynamics and Magnus-force aerodynamics. Cached response sensitivities guide bounded objective proposals, and response progress with correct-foot",
+      "video": null,
+      "links": [
+        {
+          "label": "项目主页",
+          "url": "https://haozhang-thu.github.io/bananakick/"
+        }
+      ],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-24T06:41:30.746Z",
+      "updated_at": "2026-09-24T06:41:30.746Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.28175",
+      "title": "DAVIS: A Depth-Only End-to-End Active-Vision Framework for Humanoid Soccer Skills",
+      "url": "https://arxiv.org/abs/2609.28175",
+      "subtitle": "Jiakang Jin, Yixiao Huo, Pengyuan Wang, Yinan Han, Tingxuan Zhang, Zhuobing Zhao 等",
+      "text": "Humanoid soccer contact skills require more than producing high-impact foot-ball contacts: the robot must close the loop over perception, approach, alignment, impact, and recovery while its own motion induces substantial viewpoint changes, frequent loss of the ball from view, and uncertain contact outcomes. In this work, we ask a compact yet stricter question: can a humanoid learn soccer contact skills using only a head-mounted depth image, proprioceptive history, and an optional low-dimensional task command, and directly output 25-DoF joint PD targets without extra runtime perception or planning modules? To this end, we propose DAVIS, a depth-only end-to-end framework for humanoid soccer skills that learns visibility-aware auxiliary geometry during training, and combines GT-to-prediction annealing, task curricula, and AMP-style motion priors to smoothly bridge privileged supervision and real deployment. Built on this framework, we instantiate representative soccer contact skills, including goal-directed shooting and directional dribbling, through task-specific definitions of objects, commands, rewards, and curricula, and validate them through simulation, Noetix E1 real-robot experiments, and ablations.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-09-23",
+      "score": 0.8136,
+      "why": "兴趣：perceptive general motion tracking for humanoid robots on uneven terrain, combining reference motions with visual terrain perception as in PGMT",
+      "keywords": [
+        "humanoid"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.28175v1",
+      "image": "https://arxiv.org/html/2609.28175v1/figures/method/framework_overview.jpg",
+      "imageCaption": "Fig. 2: Overview of our DAVIS framework. The observation stream contains the command c t c_{t} , a single 168 × 80 168\\times 80 depth image , proprioceptive history, and privileged simulation states. The structured-depth module encodes the depth input into a 32-D latent, predicts ball/goal geometry ",
+      "video": null,
+      "links": [
+        {
+          "label": "项目主页",
+          "url": "https://thusi-lab.github.io/DAVIS/"
+        }
+      ],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-24T06:41:53.985Z",
+      "updated_at": "2026-09-24T06:41:53.985Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.28378",
+      "title": "ForgetMimic: Motion Unlearning for Reinforcement Learning Humanoid Control",
+      "url": "https://arxiv.org/abs/2609.28378",
+      "subtitle": "Xukun Luan, Zhongxiang Lei, Chen Gong, Shaowei Li, Yuanguo Bi, Jinyan Liu",
+      "text": "Humanoid control, leveraging human demonstrations, has achieved diverse, agile, and natural locomotion behaviors through reinforcement learning (RL). While this paradigm has yielded remarkable performance in physical humanoid control, how to eliminate specific motions from learned policies remains insufficiently explored. Addressing this issue is motivated by pressing safety and privacy concerns: the removal of malicious, poisoned, or suboptimal motions, as well as copyright-protected motions subject to the right to be forgotten under regulations such as the GDPR, is of critical importance. To this end, we propose {ForgetMimic}, the first motion-level unlearning method designed specifically for physical-world humanoid control. The core idea of ForgetMimic is as follows: given a policy $π_θ$ trained on $N$ motions, our method degrades performance on a target subset of $K$ motions while preserving the effectiveness of the remaining $N-K$ motions. Furthermore, we identify and resolve two key training mechanisms in robot control that lead to unlearning failure. We conduct extensive experiments on the Unitree G1 and H2 humanoid robots across 12 motions, including Dance, Fight, Flip, and others. Experimental results demonstrate that ForgetMimic effectively eliminates memory of designated motions while maintaining the normal operation of all other motions.",
+      "tags": [
+        "cs.RO",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "date": "2026-09-23",
+      "score": 0.927,
+      "why": "兴趣：reinforcement learning for robust humanoid locomotion, bipedal walking and running",
+      "keywords": [
+        "humanoid",
+        "locomotion"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.28378v1",
+      "image": "https://arxiv.org/html/2609.28378v1/over1.png",
+      "imageCaption": "Figure 1: Unlearning humanoid control policy via ForgetMimic. Given a pre-trained policy capable of executing 12 motions, ForgetMimic aims to obtain an unlearned policy that forgets the specified target motions (Fight) while preserving the others in simulation and the real world.",
+      "video": null,
+      "links": [
+        {
+          "label": "代码",
+          "url": "https://github.com/Zili1000/ForgetMimic"
+        }
+      ],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-24T06:41:37.889Z",
+      "updated_at": "2026-09-24T06:41:37.889Z"
     }
   ]
 }
