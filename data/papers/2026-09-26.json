@@ -1,0 +1,121 @@
+{
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T11:36:32+00:00",
+  "total_fetched": 682,
+  "total_new": 3,
+  "categories": [
+    "cs.RO",
+    "cs.AI",
+    "cs.LG",
+    "cs.CV",
+    "cs.GR"
+  ],
+  "items": [
+    {
+      "id": "2609.27600",
+      "title": "ARS-Avatar: Animatable and Relightable Surfel Avatars with Learnable Ambient Occlusion",
+      "authors": [
+        "Jiateng Liu",
+        "Hao Gao",
+        "Junxin Sun",
+        "Mengqi Liu",
+        "Jiu-Cheng Xie",
+        "Jucheng Song",
+        "Feng Xu"
+      ],
+      "abstract": "Creating animatable and relightable human avatars from multi-view images remains challenging, as pose-dependent deformation, materials, and light visibility are intrinsically coupled in images. In this paper, we present ARS-Avatar, a novel method using surfel representation for high-quality, animatable, and relightable human avatars from multi-view images captured under unknown illumination. We first extract deformation priors from the template mesh and leverage as additional details beyond driving poses to facilitate faithful estimation of surfel attributes and reconstruction of animatable avatar. To support relighting, the deferred shading is employed to estimate BRDF materials. We further introduce a differentiable screen-space ambient occlusion formulation that enables gradient-based optimization of body-part specific occlusion radii through finite differences, providing an efficient approximation of light visibility that can be jointly optimized with the avatar. Extensive experiments demonstrate that ARS-Avatar achieves high-fidelity appearance reconstruction and physically-based material estimation, while enabling realistic animation and relighting under novel poses and illuminations.",
+      "categories": [
+        "cs.GR"
+      ],
+      "primary_category": "cs.GR",
+      "published": "2026-09-23T09:15:36Z",
+      "updated": "2026-09-23T09:15:36Z",
+      "url": "https://arxiv.org/abs/2609.27600",
+      "pdf_url": "https://arxiv.org/pdf/2609.27600v1",
+      "comment": "",
+      "score": 0.8,
+      "score_embedding": 0.7341,
+      "score_keyword": 0.0,
+      "matched_keywords": [],
+      "muted_keywords": [],
+      "why": "兴趣：physics-based humanoid character control with adversarial motion priors and reusable score-matching motion priors, as in AMP and SMP",
+      "tracked_authors": [],
+      "rank": 1,
+      "figure_url": "https://arxiv.org/html/2609.27600v1/teaser.png",
+      "figure_caption": "Figure 1 : ARS-Avatar creates animatable and relightable human avatars with surfels. Given novel poses and illuminations, it reconstructs high-fidelity appearance , geometry , BRDF materials , and optimizable occlusion for realistic animation and relighting.",
+      "figure_source": "html",
+      "video_url": null,
+      "links": {}
+    },
+    {
+      "id": "2609.28731",
+      "title": "CuACD: A Fully GPU-Resident Approximate Convex Decomposition",
+      "authors": [
+        "Ruoxi Shi",
+        "Xinyue Wei",
+        "Fanbo Xiang",
+        "Zexiang Xu",
+        "Hao Su"
+      ],
+      "abstract": "Approximate convex decomposition (ACD) converts triangle meshes into small sets of convex parts and is a standard preprocessing step for physics simulation, collision detection, and large-scale robot learning. The majority of modern ACD methods produce high-quality decompositions through an expensive search over candidate cutting planes, with per-mesh runtimes of tens of seconds that force game pipelines into overnight bakes and keep articulated-object datasets on CPU clusters for days. Prior work has accelerated isolated stages, most recently VisACD's GPU-based visibility metric, yet the dominant costs -- search, mesh cutting, and convex hull construction -- have remained on the CPU because their natural decomposition into many small homogeneous phases trails off in a fading last wave at every kernel boundary, and the variable-sized output of each phase forces a host round trip simply to allocate the next launch's input. We address these obstacles by adopting the warp, rather than the thread or thread block, as the unit of algorithm design, an idea introduced in the graph-processing community for a different pathology and which we adapt here to fuse the many heterogeneous phases of a computational-geometry pipeline into single warp-resident kernels, paired with a device-side heap allocator that lets the buffers between fused phases be sized and allocated on the device. Building on this template, we present CuACD (CUDA ACD), the first fully GPU-resident ACD system, together with a suite of reusable GPU components, released as open-source standalone CUDA modules that drop into any search-based ACD pipeline. On the V-HACD benchmark, PartNet-Mobility, and an Objaverse subset, CuACD achieves more than an order of magnitude of speedup over CoACD at matched or better quality.",
+      "categories": [
+        "cs.CG",
+        "cs.GR"
+      ],
+      "primary_category": "cs.CG",
+      "published": "2026-09-23T19:17:49Z",
+      "updated": "2026-09-23T19:17:49Z",
+      "url": "https://arxiv.org/abs/2609.28731",
+      "pdf_url": "https://arxiv.org/pdf/2609.28731v1",
+      "comment": "",
+      "score": 0.7254,
+      "score_embedding": 0.7179,
+      "score_keyword": 0.0,
+      "matched_keywords": [],
+      "muted_keywords": [],
+      "why": "你点赞过：HOTICE: Whole-Body Humanoid Object Transportation in Clutter",
+      "tracked_authors": [],
+      "rank": 2,
+      "figure_url": "https://arxiv.org/html/2609.28731v1/teaser.png",
+      "figure_caption": "Figure 1. CuACD is a fully GPU-resident approximate convex decomposition method that delivers more than an order of magnitude of speedup over prior search-based ACD systems while faithfully preserving fine-grained geometric features. The meshes shown here carry dense fine-grained structure and are d",
+      "figure_source": "html",
+      "video_url": null,
+      "links": {}
+    },
+    {
+      "id": "2609.27602",
+      "title": "Efficient Geometry Representation Strategies for the Shape Optimization of Profile Extrusion Dies",
+      "authors": [
+        "Jana Sasse",
+        "Maximilian Esser",
+        "Markus Mügge",
+        "Stefan Turek"
+      ],
+      "abstract": "The design of profile extrusion dies remains a challenging task due to the complex rheological behavior of polymer melts and the geometric intricacies of flow channels. Traditional manual optimization approaches, which rely heavily on human experience, are inefficient and often employ unvalidated heuristics. To address these challenges, we present a deterministic and explainable framework for automatic die design based on adjoint-based shape optimization. This approach enables the computation of sensitivities that directly indicate beneficial modifications to the flow channel geometry. A major difficulty in such optimization processes lies in generating boundary-conforming meshes that evolve consistently with changing geometries. To overcome this issue, we employ non-boundary conforming geometry representation methods that eliminate the need for an explicit surface representation along physical boundaries. A dedicated reconstruction technique is developed to recover accurate sensitivity information at the virtual interface between fluid and solid regions. The proposed algorithm is demonstrated on 3D geometries with varying complexity, including realistic extrusion die flow channels. Several objective functionals relevant to industrial applications, such as flow balance at the outflow, are considered. The results highlight significant improvements in performance metrics while maintaining numerical robustness. This work showcases the potential of adjoint-based techniques for automated die design in a domain still largely governed by manual trial-and-error procedures, establishing a foundation for data-efficient, sustainable manufacturing workflows using computational rheology.",
+      "categories": [
+        "math.NA",
+        "cs.GR",
+        "math.OC"
+      ],
+      "primary_category": "math.NA",
+      "published": "2026-09-23T09:19:41Z",
+      "updated": "2026-09-23T09:19:41Z",
+      "url": "https://arxiv.org/abs/2609.27602",
+      "pdf_url": "https://arxiv.org/pdf/2609.27602v1",
+      "comment": "",
+      "score": 0.2,
+      "score_embedding": 0.6039,
+      "score_keyword": 0.0,
+      "matched_keywords": [],
+      "muted_keywords": [],
+      "why": "你点赞过：Smoothness as a Constraint for Stable Humanoid Locomotion",
+      "tracked_authors": [],
+      "rank": 3,
+      "figure_url": "https://arxiv.org/html/2609.27602v1/images/profileKTP_aligned_surfacesense_000_V2.png",
+      "figure_caption": "(a) Surface sensitivities calculated with aligned mesh.",
+      "figure_source": "html",
+      "video_url": null,
+      "links": {}
+    }
+  ]
+}
