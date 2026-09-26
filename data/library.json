@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T09:44:59.844Z",
+  "updated": "2026-09-26T10:13:24.058Z",
   "items": [
     {
       "type": "paper",
@@ -366,6 +366,155 @@
       "status": "liked",
       "added_at": "2026-09-24T06:41:37.889Z",
       "updated_at": "2026-09-24T06:41:37.889Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.28959",
+      "title": "TactileStep: Sole Tactile Learning for Regulating Foot-Terrain Interaction in Humanoid Locomotion",
+      "url": "https://arxiv.org/abs/2609.28959",
+      "subtitle": "Zizhuo Wang, Ming-ju Lee, Shaoting Zhu, Haozhe Lou, Hang Zhao, Yiming Li",
+      "text": "Humanoid parkour policies can traverse various terrains, but task completion may mask challenges of harsh landings, edge contacts, and unstable stance contacts. Humans naturally regulate foot-terrain interaction through tactile feedback, modulating contact compliance according to terrain stiffness. This highlights a key domain gap between humans and humanoid robots: the absence of rich tactile sensing in most humanoid systems. We address this problem with TactileStep, a deployable tactile learning framework that brings sole pressure sensing into humanoid locomotion control for softer touchdowns and more stable support. TactileStep aligns tactile simulation with the real pressure insole, allowing the policy to learn from the same contact features available on hardware. During training, we use tactile and motion cues to recognize different foot-contact phases and apply phase-aware rewards that encourage safer landing and more stable stance. Evaluated in simulation and on a Unitree G1 humanoid across diverse terrains, TactileStep reduces peak touchdown force by up to 48.8% and peak A-weighted impact noise by up to 30.1 dB over a strong perceptive baseline, while increasing stance contact area by up to 23.8%.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-09-24",
+      "score": 0.904,
+      "why": "追踪学者：Shaoting Zhu、Hang Zhao；兴趣：reinforcement learning for robust humanoid locomotion, bipedal walking and running",
+      "keywords": [
+        "humanoid",
+        "locomotion",
+        "parkour"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.28959v1",
+      "image": "https://arxiv.org/html/2609.28959v1/training_framework_refined_editable.png",
+      "imageCaption": "Figure 2: Overview of TactileStep. Our central design is to turn sole pressure into a deployable contact-state representation for policy learning. We first construct a lightweight tactile simulator that maps rigid foot–terrain contacts to a pressure array, from which contact features are extracted a",
+      "video": null,
+      "links": [],
+      "badges": [
+        "追踪学者 · Shaoting Zhu",
+        "追踪学者 · Hang Zhao"
+      ],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-26T09:45:21.699Z",
+      "updated_at": "2026-09-26T09:45:21.699Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.28960",
+      "title": "Echo in the Steps: Learning Perceptive Humanoid Parkour with Gated Memory",
+      "url": "https://arxiv.org/abs/2609.28960",
+      "subtitle": "Ming-Ju Lee, Zizhuo Wang, Shaoting Zhu, Haozhe Lou, Hang Zhao, Yiming Li",
+      "text": "While recent advances in perceptive locomotion have enabled humanoid robots to traverse structured terrains, agile parkour in highly discontinuous environments remains an open challenge. In particular, crossing sparse footholds and narrow support regions requires precise foothold selection, effective use of visual observations, and consistent alternating foot placement during fast transitions. In this paper, we present a perceptive humanoid parkour framework that enables stable traversal across terrains with limited foothold availability using only onboard depth observations. The framework features a saliency-guided temporal perception module that combines a saliency prior with gated memory. It retains informative depth features across frames, enabling reliable foot placement from partial observations. By introducing an alternation loss, our symmetry regularization encourages alternating gait patterns and improves traversal robustness. Extensive experiments show that our method significantly improves success rate and foothold accuracy on challenging terrains in both simulation and the real world.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-09-24",
+      "score": 1.0483,
+      "why": "追踪学者：Shaoting Zhu、Hang Zhao；兴趣：vision-based humanoid locomotion and parkour using depth images for obstacle traversal, foothold planning and outdoor hiking as in Hiking in the Wild",
+      "keywords": [
+        "humanoid",
+        "locomotion",
+        "parkour",
+        "perceptive locomotion",
+        "foothold"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.28960v1",
+      "image": "https://arxiv.org/html/2609.28960v1/teaser.png",
+      "imageCaption": "Figure 1: Perceptive parkour over challenging terrains. Our method enables a Unitree G1 humanoid robot to perform stable and agile parkour over diverse terrains with sparse footholds and narrow support regions using only onboard depth observations. The resulting policy demonstrates (a) traversal acr",
+      "video": null,
+      "links": [],
+      "badges": [
+        "追踪学者 · Shaoting Zhu",
+        "追踪学者 · Hang Zhao"
+      ],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-26T09:45:27.192Z",
+      "updated_at": "2026-09-26T09:45:27.192Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.29850",
+      "title": "BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video",
+      "url": "https://arxiv.org/abs/2609.29850",
+      "subtitle": "Tianyu Xiong, Yi Lu, Jinrui Wang, Ziqi Liang, Dandan Lei, Xiaoyang Zhou 等",
+      "text": "Learning executable motions from human videos offers a scalable solution for humanoid robots to acquire demonstration motions. However, existing pipelines typically first construct an explicit human motion representation and then convert it into robot motions via motion retargeting. Although such methods can effectively leverage large volumes of existing human data for training, the substantial differences between humans and humanoid robots in locomotion mechanisms and joint degree-of-freedom configurations make motions generated by this human-representation-centric approach difficult to execute on robots. Furthermore, errors introduced during human motion estimation inevitably propagate to the retargeting stage and cannot be eliminated via joint optimization. We propose BeyondRetarget, an end-to-end framework that directly maps monocular RGB videos to robot motions. Discarding the explicit human representation, this framework learns robot-oriented implicit representations directly from visual observations, enabling the model to capture cross-morphology motion structures. To generate motions more suitable for robot execution, we further design a contact-aware motion optimization mechanism to improve temporal consistency and physical plausibility. Experiments show that BeyondRetarget significantly improves the accuracy and robustness of generated robot motions, while achieving higher execution success rates and lower latency in both simulation environments and real humanoid robots.",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "date": "2026-09-24",
+      "score": 0.8666,
+      "why": "兴趣：general-purpose whole-body motion and trajectory tracking for humanoid robots, following diverse unseen reference motions",
+      "keywords": [
+        "humanoid",
+        "locomotion",
+        "motion retargeting"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.29850v1",
+      "image": "https://arxiv.org/html/2609.29850v1/model.png",
+      "imageCaption": "Figure 2: Model architecture. Input RGB video is encoded by the visual and temporal encoders, and the resulting shared motion representation is directly decoded into the target robot motion. Contact-aware refinement further improves support and temporal consistency.",
+      "video": null,
+      "links": [],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-26T09:45:47.648Z",
+      "updated_at": "2026-09-26T09:45:47.648Z"
+    },
+    {
+      "type": "repo",
+      "id": "ASIG-X/JEPLO",
+      "title": "ASIG-X/JEPLO",
+      "url": "https://github.com/ASIG-X/JEPLO",
+      "subtitle": "C++",
+      "text": "First JEPA-based learning framework for mapping-free LiDAR-based perceptive locomotion",
+      "tags": [
+        "isaac-lab",
+        "legged-robots",
+        "lidar",
+        "mujoco",
+        "quadruped",
+        "reinforcement-learning",
+        "rl",
+        "ros",
+        "ros2",
+        "sim2real"
+      ],
+      "date": "2026-09-12",
+      "score": 0.7093,
+      "why": "兴趣：agile quadruped robot locomotion and visual parkour on rough terrain with sim-to-real reinforcement learning",
+      "keywords": [
+        "locomotion",
+        "sim2real",
+        "legged",
+        "quadruped",
+        "perceptive locomotion"
+      ],
+      "stars": 75,
+      "starsDelta": 3,
+      "isNew": true,
+      "image": "https://raw.githubusercontent.com/ASIG-X/JEPLO/main/images/hardware.JPG",
+      "video": null,
+      "links": [
+        {
+          "label": "主页",
+          "url": "https://asig-x.github.io/jeplo_web/"
+        }
+      ],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-26T10:13:21.327Z",
+      "updated_at": "2026-09-26T10:13:21.327Z"
     }
   ]
 }
