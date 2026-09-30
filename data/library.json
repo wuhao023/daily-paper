@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T10:13:24.058Z",
+  "updated": "2026-09-30T05:49:16.801Z",
   "items": [
     {
       "type": "paper",
@@ -468,6 +468,41 @@
       "status": "liked",
       "added_at": "2026-09-26T09:45:47.648Z",
       "updated_at": "2026-09-26T09:45:47.648Z"
+    },
+    {
+      "type": "paper",
+      "id": "2609.31577",
+      "title": "Generate, Track, Improve: Perceptive Multi-Skill Humanoid Locomotion with RL-Fine-Tuned Motion Generators",
+      "url": "https://arxiv.org/abs/2609.31577",
+      "subtitle": "Zachary Olkin, William D. Compton, Aaron D. Ames",
+      "text": "General purpose humanoids require locomotion controllers that are multi-skill, perceptive, dynamic, and robust enough to go anywhere humans can. In this work, we present a two layer locomotion architecture: (1) a perceptive flow matching motion generator plans whole body trajectories from raw depth images while a (2) perceptive tracking policy trained with control-guided RL follows these motions. Both policies are trained on a library of terrain consistent motion clips created with dynamically optimized human data which yields both accurate velocity tracking and terrain consistent references. Our central contribution is a simple yet effective off-policy RL fine tuning loop that improves the motion generator. A structured search method is used with the generator to gather data for advantage weighted regression. This off-policy loop is much more sample efficient than on-policy residual fine tuning and improves terrain consistency on unseen geometries and skill compositions. We find that successful terrain traversals increased by up to 25 percentage points and skill selection improved by up to 80 percentage points. By using raw depth images to perceive the environment no odometry or height maps are needed, and outdoor deployment is easy. With two cameras, the policy can see terrain coming from further away and adjust its velocity regardless of the commanded speed so it can traverse the terrain. A single policy pair enables a Unitree G1 humanoid to walk, run, stand, jump on and off of boxes, and traverse stairs in outdoor environments. Project page: https://zolkin1.github.io/generate-track-improve/",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-09-25",
+      "score": 0.9523,
+      "why": "兴趣：perceptive general motion tracking for humanoid robots on uneven terrain, combining reference motions with visual terrain perception as in PGMT",
+      "keywords": [
+        "humanoid",
+        "locomotion"
+      ],
+      "pdf": "https://arxiv.org/pdf/2609.31577v1",
+      "image": "https://arxiv.org/html/2609.31577v1/architecture.png",
+      "imageCaption": "Fig. 2: Overview of the presented method. First, human data is translated into motion clips to make a motion library through optimization and generative models. Secondly, a perceptive tracking policy is trained using CLF-RL to track the motion library. Then the motion library and the tracking policy",
+      "video": null,
+      "links": [
+        {
+          "label": "项目主页",
+          "url": "https://zolkin1.github.io/generate-track-improve/"
+        }
+      ],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-09-30T05:49:13.896Z",
+      "updated_at": "2026-09-30T05:49:13.896Z"
     },
     {
       "type": "repo",
