@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-02T13:01:00+00:00",
-  "day": "2026-10-02",
+  "updated": "2026-10-03T11:54:25+00:00",
+  "day": "2026-10-03",
   "days_back": 45,
-  "total": 253,
+  "total": 249,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -289,28 +289,6 @@
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.01961v1/Abstract_new2.png",
               "figure_caption": "Figure 1: Debridement pipeline with the dVRK robot and one RGB camera (not shown). Frame 1 illustrates the initial debridement configuration; Frame 2 shows the camera-frame servoing process; Frame 3 shows the MACAW window in blue and images before and after contact; Frame 4 demonstrates a successful",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2608.18227",
-              "title": "Revisiting the \"Push-T\" Robot Manipulation Task with Agentic Robotics",
-              "authors": [
-                "Shuangyu Xie",
-                "Kaiyuan Chen",
-                "Ken Goldberg"
-              ],
-              "abstract": "Push-T is an iconic benchmark for learning manipulation policies from human demonstrations. The robot must use a single point of contact to push a T-shaped block into a target pose. In this short paper, we revisit the Push-T task in the context of emerging advances in Agentic Robotics where an LLM coding agent -- Claude Code with Fable 5 -- is prompted to create an algorithmic solution that does not require any demonstration data. We study how effective the agentic coding loop can solve the Push-T task, and compare the resulting code as policy with the visuomotor imitation learning policy. Results suggest that the agent found the 2D gym simulation online, and used sim experiments to learn push mechanics, iteratively optimizing to achieve 100% success rate using 46% fewer steps than the best diffusion policy trained with 200 human demonstrations. The coding agent also solve extensions from T to the full alphabet (Push-A to Push-Z) using a self generated curriculum and generated simulation code for the Franka and UR5 robot arms in 3D cross-embodiment simulations with visual feedback. Videos, policies and details will be posted online.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-18T18:16:15Z",
-              "url": "https://arxiv.org/abs/2608.18227",
-              "pdf_url": "https://arxiv.org/pdf/2608.18227v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.18227v1/figures/pusht_az_2d.png",
-              "figure_caption": "Figure 1: The agent-written Push A–Z benchmark in the 2D gym. Each tile shows the goal letter pose (green), the block (gray), and the pusher (blue dot); headers give the letter, seed, and final coverage. Red frames mark failures of the pre-MPC baseline controller (B and R at coverage 0.00, S at 0.36",
               "figure_source": "html",
               "video_url": null,
               "links": {}
@@ -789,7 +767,7 @@
           ]
         }
       ],
-      "total": 26
+      "total": 25
     },
     {
       "name": "Stanford",
@@ -2439,28 +2417,6 @@
               "figure_source": "pdf",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.17896",
-              "title": "Dynamic Compression in Recurrent Networks",
-              "authors": [
-                "Jyothish Pari",
-                "Ryan Bahlous-Boldi",
-                "Pulkit Agrawal"
-              ],
-              "abstract": "Recurrent models process long contexts efficiently by compressing their history into a fixed-size state, but modern architectures typically do so in a single causal pass over the sequence. Each input must therefore be compressed before the model knows how it will later be used, forcing a limited state to compromise across possible future demands. We introduce dynamic compression, which allows a recurrent model to selectively revisit past tokens and revise its fixed-size state through additional recurrent updates. The model need not preserve every part of the history at uniformly high fidelity in its recurrent state, because lower-fidelity information can be revisited from the retained raw sequence when it becomes relevant. We study this in a controlled setting where the model first learns multiple functions in-context and, later in the same sequence, encounters a series of few-shot tasks that each require it to identify and reuse one of those functions. A single-pass model must preserve every function at sufficient fidelity for any future task, whereas selective re-scanning allows the model to revisit and refine only the function currently needed. We find that dynamic compression substantially reduces the recurrent state required for accurate reuse and scales more favorably as the number of stored functions grows. These results demonstrate a computation--memory tradeoff in which recurrent models can spend more computation revisiting their history to make more effective use of a fixed-size state.",
-              "categories": [
-                "cs.LG"
-              ],
-              "published": "2026-08-18T15:29:18Z",
-              "url": "https://arxiv.org/abs/2608.17896",
-              "pdf_url": "https://arxiv.org/pdf/2608.17896v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.17896v1/repeat_betas_codebook.png",
-              "figure_caption": "Figure 4: Top: Write strength β \\beta (averaged across heads) across layers and token positions for three repeat-model sequences, each containing K = 3 K=3 bases and one query group. Bottom: A re-scan codebook constructed from the β \\beta patterns of many such sequences. The codebook compresses thes",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -2600,7 +2556,7 @@
           ]
         }
       ],
-      "total": 8
+      "total": 7
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -4058,38 +4014,11 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.17787",
-              "title": "ETHEREAL: A 25.6-$μ$s/inf. Low-latency Event-driven Graph-neural-network Processor for High-resolution Vision at the Edge",
-              "authors": [
-                "Adrian Kneip",
-                "Martin Lefebvre",
-                "Daniel Gehrig",
-                "Victoria Catalán Pastor",
-                "Davide Scaramuzza",
-                "Marian Verhelst",
-                "Charlotte Frenkel"
-              ],
-              "abstract": "Dynamic vision sensors (DVS) are enticing candidates to reach the low-latency, sub-ms target of edge-vision applications, as they generate events with a $μ$s-level time resolution. However, using DVS front ends also calls for novel algorithm/hardware back ends capable of efficiently handling streams of sparse spatiotemporal events. While event-driven graph neural networks (EV-GNNs) have emerged as a solution on the algorithmic side that is both accurate and efficient, there is no dedicated hardware to date capable of efficiently supporting their mixed requirements of dense-regular compute operations and sparse-irregular memory accesses. We therefore introduce ETHEREAL, the first EV-GNN processor chip, capable of bridging this gap by means of a neighbor-parallel spline-convolution engine combined with a split-2D/3D memory hierarchy that introduces a novel spatiotemporal event-caching mechanism. Measurement results demonstrate a 25.6$μ$s latency and a 1.6$μ$J energy per end-to-end event-wise inference on the state-of-the art DAGr-GNN workload and VGA-resolution (640x480 pixels) DSEC dataset.",
-              "categories": [
-                "cs.AR",
-                "cs.CV"
-              ],
-              "published": "2026-08-18T13:49:50Z",
-              "url": "https://arxiv.org/abs/2608.17787",
-              "pdf_url": "https://arxiv.org/pdf/2608.17787v1",
-              "comment": "This work has been submitted to the IEEE JSSC for possible publication",
-              "figure_url": "https://arxiv.org/html/2608.17787v1/Fig_motivation.png",
-              "figure_caption": "Fig. 1: (a) Frame- versus event-based edge-vision platforms, and gap in the state of the art. (b) Working principle of EV-GNNs.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 24
+      "total": 23
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -10613,40 +10542,7 @@
         },
         {
           "name": "Chenran Li",
-          "papers": [
-            {
-              "id": "2608.18077",
-              "title": "Hydra-0: Action Flow for Generalist World Modeling and Control",
-              "authors": [
-                "Hongyu Li",
-                "Bowen Wen",
-                "Xinghao Zhu",
-                "Yixuan Wang",
-                "Yilun Du",
-                "Yunzhu Li",
-                "George Konidaris",
-                "Stan Birchfield",
-                "Soha Pouya",
-                "Chenran Li",
-                "Yan Chang"
-              ],
-              "abstract": "We introduce Hydra-0, a generalist world model conditioned on action flow, which represents robot actions as pixel motion. This shared visual interface enables generalist world modeling and control by learning action consequences across embodiments, tasks, environments, and video-generation backbones. Our best configuration achieves 90.4% lower robot-motion error and 60.2% lower object-motion error than our action-conditioned baseline, while supporting zero-shot composition and data-efficient adaptation. On the RoboLab benchmark, Hydra-0 achieves a Pearson correlation of r=0.96 between replayed and reference success rates. Finally, we uncover an emergent inverse mode of this interface: a world action model that predicts compatible robot motion from desired object flow transferred from a human demonstration. A trained action head maps the resulting latent features to executable actions without requiring task-specific expert robot demonstrations. Together, these results demonstrate the potential of action flow as a shared control interface connecting heterogeneous training data, open-loop policy evaluation, and robot control.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-18T17:59:30Z",
-              "url": "https://arxiv.org/abs/2608.18077",
-              "pdf_url": "https://arxiv.org/pdf/2608.18077v1",
-              "comment": "Project page: https://nvidia-isaac.github.io/video_to_data/hydra-0/",
-              "figure_url": "https://arxiv.org/html/2608.18077v1/method_overview.png",
-              "figure_caption": "Figure 1 : Overview of Hydra-0. During offline training (top) , we recover action flow from interaction videos by tracking both the embodiment and the manipulated object , as detailed in Section 2.1 . The future video is encoded to construct the flow-matching training target. During online deploymen",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://nvidia-isaac.github.io/video_to_data/hydra-0/"
-              }
-            }
-          ]
+          "papers": []
         },
         {
           "name": "Fernando Castañeda",
@@ -11819,40 +11715,7 @@
         },
         {
           "name": "Yan Chang",
-          "papers": [
-            {
-              "id": "2608.18077",
-              "title": "Hydra-0: Action Flow for Generalist World Modeling and Control",
-              "authors": [
-                "Hongyu Li",
-                "Bowen Wen",
-                "Xinghao Zhu",
-                "Yixuan Wang",
-                "Yilun Du",
-                "Yunzhu Li",
-                "George Konidaris",
-                "Stan Birchfield",
-                "Soha Pouya",
-                "Chenran Li",
-                "Yan Chang"
-              ],
-              "abstract": "We introduce Hydra-0, a generalist world model conditioned on action flow, which represents robot actions as pixel motion. This shared visual interface enables generalist world modeling and control by learning action consequences across embodiments, tasks, environments, and video-generation backbones. Our best configuration achieves 90.4% lower robot-motion error and 60.2% lower object-motion error than our action-conditioned baseline, while supporting zero-shot composition and data-efficient adaptation. On the RoboLab benchmark, Hydra-0 achieves a Pearson correlation of r=0.96 between replayed and reference success rates. Finally, we uncover an emergent inverse mode of this interface: a world action model that predicts compatible robot motion from desired object flow transferred from a human demonstration. A trained action head maps the resulting latent features to executable actions without requiring task-specific expert robot demonstrations. Together, these results demonstrate the potential of action flow as a shared control interface connecting heterogeneous training data, open-loop policy evaluation, and robot control.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-18T17:59:30Z",
-              "url": "https://arxiv.org/abs/2608.18077",
-              "pdf_url": "https://arxiv.org/pdf/2608.18077v1",
-              "comment": "Project page: https://nvidia-isaac.github.io/video_to_data/hydra-0/",
-              "figure_url": "https://arxiv.org/html/2608.18077v1/method_overview.png",
-              "figure_caption": "Figure 1 : Overview of Hydra-0. During offline training (top) , we recover action flow from interaction videos by tracking both the embodiment and the manipulated object , as detailed in Section 2.1 . The future video is encoded to construct the flow-matching training target. During online deploymen",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://nvidia-isaac.github.io/video_to_data/hydra-0/"
-              }
-            }
-          ]
+          "papers": []
         },
         {
           "name": "Umar Iqbal",
@@ -11929,7 +11792,7 @@
           ]
         }
       ],
-      "total": 26
+      "total": 24
     }
   ]
 }
