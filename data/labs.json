@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-04T12:39:00+00:00",
-  "day": "2026-10-04",
+  "updated": "2026-10-05T15:08:10+00:00",
+  "day": "2026-10-05",
   "days_back": 45,
-  "total": 246,
+  "total": 256,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -135,7 +135,7 @@
               ],
               "published": "2026-09-30T16:49:40Z",
               "url": "https://arxiv.org/abs/2609.40134",
-              "pdf_url": "https://arxiv.org/pdf/2609.40134v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.40134v2",
               "comment": "16 pages, 6 figures, 1 table. Preprint, under review",
               "figure_url": "https://arxiv.org/html/2609.40134v1/fig_1.png",
               "figure_caption": "Figure 1: Overview of TacEx . The state s s concatenates the fused latent z z , a visual embedding v v , and a tactile embedding ι \\iota , where v v and ι \\iota are produced by separate CNN encoders from RGB and tactile force maps. At each step, the policy π ⁡ ( a | s ) \\pi(a|s) acts in the environm",
@@ -207,6 +207,38 @@
         {
           "name": "Ken Goldberg",
           "papers": [
+            {
+              "id": "2610.03710",
+              "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+              "authors": [
+                "Kush Hari",
+                "Justin Kerr",
+                "Nidhya Shivakumar",
+                "Samarth Mahapatra",
+                "Carmelo Sferrazza",
+                "Jiahui Lei",
+                "Jitendra Malik",
+                "C. Karen Liu",
+                "Ken Goldberg",
+                "Angjoo Kanazawa"
+              ],
+              "abstract": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The resulting images are processed foveally by allocating more visual tokens to the image centers, focusing computation on task-relevant features. Such Active Visual Fixation (AVF) requires carefully coordinated gaze during task execution, which we accomplish hierarchically by first training a low-level gaze servoing policy conditioned on a goal object, then training a target selector which emits fixation goals based on task progress. Both modules are trained with RL on real-world data: the first is trained with a dense geometric reward and the second co-trains with the BC gripper policy which allows it to discover fixation sequences that can resemble a human's fixation sequence while performing the task. EyeRobot 2.0 further takes advantage of fixation by canonicalizing gripper information into a fixation-relative SE(3) frame, which compacts the size of the action distribution to learn. We collect teleoperation data for 7 real-world and 6 simulated tasks, and conduct over 1000 physical and 1800 simulated robot trials comparing EyeRobot 2.0 against passive stereo and ego + wrist camera policies trained on the same data. Removing wrist cameras is costly for standard policies: with only passive stereo, real-world success drops from 52% to 27%. EyeRobot 2.0 closes this gap with only stereo, outperforming passive stereo by 40% in real and 20% in sim. It matches ego + wrist policies when their wrist views are clear (69% vs. 64%), and more than doubles their success when grasped objects occlude the wrist cameras (48% vs. 22%)",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-02T17:57:51Z",
+              "url": "https://arxiv.org/abs/2610.03710",
+              "pdf_url": "https://arxiv.org/pdf/2610.03710v1",
+              "comment": "Project Page: https://eyerobot2.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.03710v1/splash.png",
+              "figure_caption": "Figure 1: EyeRobot 2.0 enables fine-grained bimanual manipulation like inserting a straw into a boba cup using only a fixed stereo camera. It coordinates a sequence of gaze targets, for example here first at the boba cup, then the straw, then the insertion point. Gaze targets are output from a seman",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://eyerobot2.github.io/"
+              }
+            },
             {
               "id": "2609.34823",
               "title": "AGRO-SUVIDE: Agentic Robotics for Surgical Viscoelastic Debridement",
@@ -298,6 +330,38 @@
         {
           "name": "Jitendra Malik",
           "papers": [
+            {
+              "id": "2610.03710",
+              "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+              "authors": [
+                "Kush Hari",
+                "Justin Kerr",
+                "Nidhya Shivakumar",
+                "Samarth Mahapatra",
+                "Carmelo Sferrazza",
+                "Jiahui Lei",
+                "Jitendra Malik",
+                "C. Karen Liu",
+                "Ken Goldberg",
+                "Angjoo Kanazawa"
+              ],
+              "abstract": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The resulting images are processed foveally by allocating more visual tokens to the image centers, focusing computation on task-relevant features. Such Active Visual Fixation (AVF) requires carefully coordinated gaze during task execution, which we accomplish hierarchically by first training a low-level gaze servoing policy conditioned on a goal object, then training a target selector which emits fixation goals based on task progress. Both modules are trained with RL on real-world data: the first is trained with a dense geometric reward and the second co-trains with the BC gripper policy which allows it to discover fixation sequences that can resemble a human's fixation sequence while performing the task. EyeRobot 2.0 further takes advantage of fixation by canonicalizing gripper information into a fixation-relative SE(3) frame, which compacts the size of the action distribution to learn. We collect teleoperation data for 7 real-world and 6 simulated tasks, and conduct over 1000 physical and 1800 simulated robot trials comparing EyeRobot 2.0 against passive stereo and ego + wrist camera policies trained on the same data. Removing wrist cameras is costly for standard policies: with only passive stereo, real-world success drops from 52% to 27%. EyeRobot 2.0 closes this gap with only stereo, outperforming passive stereo by 40% in real and 20% in sim. It matches ego + wrist policies when their wrist views are clear (69% vs. 64%), and more than doubles their success when grasped objects occlude the wrist cameras (48% vs. 22%)",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-02T17:57:51Z",
+              "url": "https://arxiv.org/abs/2610.03710",
+              "pdf_url": "https://arxiv.org/pdf/2610.03710v1",
+              "comment": "Project Page: https://eyerobot2.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.03710v1/splash.png",
+              "figure_caption": "Figure 1: EyeRobot 2.0 enables fine-grained bimanual manipulation like inserting a straw into a boba cup using only a fixed stereo camera. It coordinates a sequence of gaze targets, for example here first at the boba cup, then the straw, then the insertion point. Gaze targets are output from a seman",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://eyerobot2.github.io/"
+              }
+            },
             {
               "id": "2609.38172",
               "title": "Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation",
@@ -767,7 +831,7 @@
           ]
         }
       ],
-      "total": 25
+      "total": 27
     },
     {
       "name": "Stanford",
@@ -871,6 +935,31 @@
           "name": "Shuran Song",
           "papers": [
             {
+              "id": "2610.02339",
+              "title": "NEEDLEWORK: Offline Rewriting of Robot Data with Verified Local Stitches",
+              "authors": [
+                "Juntao Ren",
+                "Yifan Hou",
+                "Shuran Song"
+              ],
+              "abstract": "Robot demonstrations may contain useful behavior even when individual episodes are inefficient or unsuccessful. Trajectory stitching offers a way to compose these behaviors into improved training data, but identifying useful connections and verifying their feasibility is difficult in high-dimensional robot data, where many prior methods rely on low-dimensional state representations. We introduce NEEDLE, an offline dataset-augmentation algorithm that addresses these challenges by adding short, verified action bridges between recorded observations in high-dimensional robot demonstrations. First, NEEDLE identifies and creates connections that bypass suboptimal detours, broaden action coverage, and augment the original dataset with failed trajectories, using only RGB images, proprioception, and episode-level outcomes, without new environment interaction or privileged object state. Next, we present a sampling technique that incorporates accepted bridges into policy training without synthesizing intermediate images or discarding the original demonstrations, allowing policies to learn alternative actions while retaining the original dataset's coverage. On real-robot tasks, NEEDLE improves success rate over the strongest baseline on each task by an average of 21 percentage points. Videos and supplementary materials are on https://needle-work.github.io/.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-01T18:11:32Z",
+              "url": "https://arxiv.org/abs/2610.02339",
+              "pdf_url": "https://arxiv.org/pdf/2610.02339v1",
+              "comment": "Submitted to ICLR 2027. Project page: https://needle-work.github.io",
+              "figure_url": "https://arxiv.org/html/2610.02339v1/teaser-v3.png",
+              "figure_caption": "Figure 1: Needle produces synthetic bridges within trajectories that bypass inefficient detours, cross-trajectory stitches that discover more successful ways to complete the task, and recover useful behavior from failed episodes.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://needle-work.github.io/"
+              }
+            },
+            {
               "id": "2608.26545",
               "title": "Memory Anchors for Continual Robot Learning",
               "authors": [
@@ -902,6 +991,39 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2610.03715",
+              "title": "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes",
+              "authors": [
+                "Ruihong Shen",
+                "Žiga Kovačič",
+                "Peter Kulits",
+                "Xingrui Wang",
+                "Zizhang Li",
+                "Joshua B. Tenenbaum",
+                "Alan Yuille",
+                "Jieneng Chen",
+                "Jiajun Wu"
+              ],
+              "abstract": "We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene structure and dynamics, by implementing abstractions such as physical simulations to reproduce complex behavior. To evaluate this capability, we curate a set of real-world videos and construct synthetic scenes spanning diverse physical phenomena, including deformation, fluid flow, and fracture. We perform extensive benchmarking of frontier models, finding that strong static reconstruction capabilities do not yet translate into reliable reconstruction of complex dynamics. 4DCodeBench provides a testbed for tracking progress toward agents that can interpret the dynamics of the world through code. Our benchmark is available at https://github.com/4DCodeBench/4DCodeBench",
+              "categories": [
+                "cs.CV",
+                "cs.AI",
+                "cs.GR"
+              ],
+              "published": "2026-10-02T17:58:49Z",
+              "url": "https://arxiv.org/abs/2610.03715",
+              "pdf_url": "https://arxiv.org/pdf/2610.03715v1",
+              "comment": "https://4dcodebench.com/",
+              "figure_url": "https://arxiv.org/html/2610.03715v1/elo_alignment.png",
+              "figure_caption": "Figure 2 : Cost–quality trade-off and human– \\tl_set:Ne vlm agreement. The left panel plots each model’s \\tl_set:Ne vlm Elo against its average token use per task, with the Pareto frontier; the right panel plots \\tl_set:Ne vlm Elo against human Elo for the 17 models in the human study. Error bars sh",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/4DCodeBench/4DCodeBench",
+                "project": "https://4dcodebench.com/"
+              }
+            },
             {
               "id": "2610.00801",
               "title": "ECoMEM: Explicit Concept Memory for Memory-Dependent Robot Control",
@@ -1385,32 +1507,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.20518",
-              "title": "FL-MAESTRO: Multi-Agent LLM Orchestration for Resource-Constrained Federated Learning",
-              "authors": [
-                "Jiajun Wu",
-                "Zirui Wang",
-                "Jiayu Zhou",
-                "Qiang Ye",
-                "Steve Drew"
-              ],
-              "abstract": "In Federated Learning (FL), the communication topology is a runtime variable rather than a fixed design choice, since links and edge devices drop in and out during training. Each round, the server must commit three coupled decisions, namely the communication topology, per-client resource allocation, and the aggregation rule for combining local updates. Recent agentic systems have begun bringing large language models (LLM) into FL, but the existing line of work either operates at setup time or handles a single runtime dimension such as client selection. We propose FL-MAESTRO, a multi-agent orchestrator that makes the joint runtime FL decision directly through three specialist LLM agents, one per decision dimension. A coordinator combines their analyses into a single decision, and a non-LLM feasibility check confirms it before the round executes. Because the orchestrator consumes the server's predicted-failure list, it withholds clients whose updates would never be aggregated, which removes the dominant source of wasted round energy in classical FL on volatile edge networks. Because client state is read as natural-text profiles, the same orchestrator extends to heterogeneous device classes without per-class energy models. On a non-IID CIFAR-10 benchmark, FL-MAESTRO matches the accuracy of the strongest energy-aware baseline while cutting wasted round energy from over a third to near zero. Code is available at https://github.com/denoslab/FL-MAESTRO.",
-              "categories": [
-                "cs.AI"
-              ],
-              "published": "2026-08-20T19:27:52Z",
-              "url": "https://arxiv.org/abs/2608.20518",
-              "pdf_url": "https://arxiv.org/pdf/2608.20518v1",
-              "comment": "Accepted at IEEE GLOBECOM 2026",
-              "figure_url": "https://arxiv.org/html/2608.20518v1/deployment.png",
-              "figure_caption": "Fig. 1: FL-MAESTRO deployment overview. The orchestrator coordinates topology, resource allocation, and aggregation decisions across clients.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "code": "https://github.com/denoslab/FL-MAESTRO"
-              }
             }
           ]
         },
@@ -1474,6 +1570,38 @@
         {
           "name": "C. Karen Liu",
           "papers": [
+            {
+              "id": "2610.03710",
+              "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+              "authors": [
+                "Kush Hari",
+                "Justin Kerr",
+                "Nidhya Shivakumar",
+                "Samarth Mahapatra",
+                "Carmelo Sferrazza",
+                "Jiahui Lei",
+                "Jitendra Malik",
+                "C. Karen Liu",
+                "Ken Goldberg",
+                "Angjoo Kanazawa"
+              ],
+              "abstract": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The resulting images are processed foveally by allocating more visual tokens to the image centers, focusing computation on task-relevant features. Such Active Visual Fixation (AVF) requires carefully coordinated gaze during task execution, which we accomplish hierarchically by first training a low-level gaze servoing policy conditioned on a goal object, then training a target selector which emits fixation goals based on task progress. Both modules are trained with RL on real-world data: the first is trained with a dense geometric reward and the second co-trains with the BC gripper policy which allows it to discover fixation sequences that can resemble a human's fixation sequence while performing the task. EyeRobot 2.0 further takes advantage of fixation by canonicalizing gripper information into a fixation-relative SE(3) frame, which compacts the size of the action distribution to learn. We collect teleoperation data for 7 real-world and 6 simulated tasks, and conduct over 1000 physical and 1800 simulated robot trials comparing EyeRobot 2.0 against passive stereo and ego + wrist camera policies trained on the same data. Removing wrist cameras is costly for standard policies: with only passive stereo, real-world success drops from 52% to 27%. EyeRobot 2.0 closes this gap with only stereo, outperforming passive stereo by 40% in real and 20% in sim. It matches ego + wrist policies when their wrist views are clear (69% vs. 64%), and more than doubles their success when grasped objects occlude the wrist cameras (48% vs. 22%)",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-02T17:57:51Z",
+              "url": "https://arxiv.org/abs/2610.03710",
+              "pdf_url": "https://arxiv.org/pdf/2610.03710v1",
+              "comment": "Project Page: https://eyerobot2.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.03710v1/splash.png",
+              "figure_caption": "Figure 1: EyeRobot 2.0 enables fine-grained bimanual manipulation like inserting a straw into a boba cup using only a fixed stereo camera. It coordinates a sequence of gaze targets, for example here first at the boba cup, then the straw, then the insertion point. Gaze targets are output from a seman",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://eyerobot2.github.io/"
+              }
+            },
             {
               "id": "2610.00781",
               "title": "DITTO-X: Forward and Reverse Teleoperation for Dexterous Manipulation and Human Intervention",
@@ -1594,6 +1722,37 @@
           "name": "Jeannette Bohg",
           "papers": [
             {
+              "id": "2610.02338",
+              "title": "SoTa: Soft Tactile Skins for Dexterous Manipulation",
+              "authors": [
+                "Jingyun Yang",
+                "Baiyu Shi",
+                "Timothy Yu",
+                "Haitian Liu",
+                "Alberta Longhini",
+                "Weichen Wang",
+                "Rika Antonova",
+                "Zhenan Bao",
+                "Jeannette Bohg"
+              ],
+              "abstract": "A growing body of work suggests that tactile sensing gives robot policies contact information that complements vision in dexterous manipulation. However, visuo-tactile robot data remains scarce: dexterous demonstrations require teleoperating robots, which limits dataset scale. Human demonstrations are far cheaper to collect and offer a path to scale this data, but only if human and robot hands carry tactile sensors with corresponding signals. This requires sensors that conform to different hand geometries, cover the full hand, and share a common layout across embodiments. We present SoTa, a low-cost capacitive tactile skin that provides full-hand coverage on humans and robots while preserving a shared layout of 202 taxels across corresponding finger and palm regions. Our multilayer design with fabric electrodes enables in-house fabrication of thin, soft skins with customizable geometry for under $10 in materials per skin. The sensor retains over 97% of its initial response span after 10,000 loading-unloading cycles with traces retaining continuity through 1,280 tight-fist folding cycles. The shared taxel layout supports human-robot co-training with a common tactile encoder and no learned cross-sensor mapping. Across three contact-rich manipulation tasks, tactile observations improve in-distribution success over vision-only policies. With a fixed robot demonstration budget, adding human demonstrations more than doubles mean success across eight evaluation conditions, from 22.8% to 45.9%, improving success in all five out-of-distribution conditions. We plan to open-source the resources needed to fabricate and operate these skins.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-01T18:08:59Z",
+              "url": "https://arxiv.org/abs/2610.02338",
+              "pdf_url": "https://arxiv.org/pdf/2610.02338v1",
+              "comment": "The first three authors contributed equally. Project website: https://sota-skin.github.io",
+              "figure_url": "https://arxiv.org/html/2610.02338v1/figs/hardware/sensor-teaser-editable-preview-compressed.jpg",
+              "figure_caption": "Fig. 2 : SoTa tactile skin hardware. (a) Robot (left) and human (right) skins with custom-fit form factors and matched region-level taxel layouts. (b) Exploded view showing stack-up of the multilayer capacitive sensor. (c) Sensor responses over three consecutive cycles per load from 20 mN to 10 N; b",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://sota-skin.github.io"
+              }
+            },
+            {
               "id": "2609.15976",
               "title": "MessyMem: Learning-from-Doing Memory for Mobile Manipulation",
               "authors": [
@@ -1683,6 +1842,39 @@
           "name": "Li Fei-Fei",
           "papers": [
             {
+              "id": "2610.03636",
+              "title": "LoGo: Local-Global Rewards for Consistent Long-Horizon Video Generation",
+              "authors": [
+                "Ziqi Ma",
+                "Shreya Sharma",
+                "Mohamed El Banani",
+                "Katja Schwarz",
+                "Chongjie Ye",
+                "Chao-Yuan Wu",
+                "Li Fei-Fei",
+                "Ben Mildenhall",
+                "Georgia Gkioxari",
+                "Justin Johnson",
+                "Gowthami Somepalli"
+              ],
+              "abstract": "Camera-controlled video models are rapidly advancing toward long generation horizons and complex camera control. A key failure mode is 3D inconsistency: as the camera moves, objects lose permanence and scene structures shift. Existing post-training techniques, which assign a single scalar reward to the entire generation, are poorly suited to correcting these inconsistencies over long horizons. We introduce LoGo, which blends global and spatially localized rewards for camera-controlled video models. The local reward provides fine-grained credit assignment, which substantially improves 3D consistency, while the global reward preserves camera following and video quality. Across three base models, LoGo shows a clear advantage on DL3DV and TrajectoryBench, a new benchmark for long-horizon, complex-camera-control generation that current evaluations lack. LoGo effectively reduces local object shifts, artifacts, and global scene changes, illustrating the importance of credit assignment in post-training video models. Project website: https://ziqi-ma.github.io/logo-website/",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-10-02T17:26:18Z",
+              "url": "https://arxiv.org/abs/2610.03636",
+              "pdf_url": "https://arxiv.org/pdf/2610.03636v1",
+              "comment": "Project website: https://ziqi-ma.github.io/logo-website/",
+              "figure_url": "https://arxiv.org/html/2610.03636v1/motivation.png",
+              "figure_caption": "Figure 2: A scalar reward cannot capture localized failures: the door inconsistency is “washed out” by the overall good structure of the rollout. LoGo catches the localized inconsistency (right).",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://ziqi-ma.github.io/logo-website/"
+              }
+            },
+            {
               "id": "2609.36720",
               "title": "T$^2$Mem: Learning Test-Time Memory for Robotics",
               "authors": [
@@ -1765,7 +1957,7 @@
           ]
         }
       ],
-      "total": 33
+      "total": 37
     },
     {
       "name": "Carnegie Mellon University",
@@ -2627,8 +2819,8 @@
               ],
               "published": "2026-09-29T02:19:19Z",
               "url": "https://arxiv.org/abs/2609.36527",
-              "pdf_url": "https://arxiv.org/pdf/2609.36527v2",
-              "comment": "34 pages, including supplementary material. Code: https://github.com/ru1ch3n/SCOPE. Author affiliation updated",
+              "pdf_url": "https://arxiv.org/pdf/2609.36527v3",
+              "comment": "34 pages, including supplementary material. Code: https://github.com/ru1ch3n/SCOPE. Author affiliation updated. Updated future-work discussion",
               "figure_url": "https://arxiv.org/html/2609.36527v1/Observation_coverage_arrows_ema_centered.png",
               "figure_caption": "Figure 1: Overview of SCOPE. (1) Observation coverage varies across contexts: different densities and layouts provide alternative observations of the same physical realization. (2) Prediction, not equality: predictions may change with additional evidence despite a common complete-field target. (3) F",
               "figure_source": "html",
@@ -3001,6 +3193,37 @@
           "name": "Animesh Garg",
           "papers": [
             {
+              "id": "2610.03717",
+              "title": "Less Decoder is More Encoder: Geometric Representation Learning from Novel View Synthesis",
+              "authors": [
+                "Keerthi Kaashyap",
+                "Dennis Anthony",
+                "Akshay Krishnan",
+                "Nhi Ngoc Nguyen",
+                "Jeremy Collins",
+                "James Hays",
+                "Shreyas Kousik",
+                "Animesh Garg"
+              ],
+              "abstract": "This paper examines the role of Novel View Synthesis (NVS) in geometric representation learning. In principle, NVS should reason about 3D scene structure, thereby enabling transferable multi-view geometric representations. Yet, existing encoder-based NVS methods yield poor representations. This is not because of a lack of supervisory signal, but rather due to inconspicuous architectural choices: spatially expressive decoders that dilute representational capabilities of the scene encoder, and low-level pixel-space targets that hinder feature learning. We present SNAP, a self-supervised encoder-decoder transformer that addresses both through a pose-conditioned local decoder and a latent-space reconstruction objective. SNAP is task agnostic, and we show that it is competitive with special-purpose geometry-supervised methods. SNAP also performs competitively against self-supervised representations across five tasks: visual localization, pose estimation, point correspondence, depth estimation, and robot manipulation. Remarkably, SNAP's patch features exhibit emergent viewpoint invariance that approaches heavily supervised models despite lower compute and data budgets. Under camera shifts where standard 2D representations collapse, SNAP degrades more gracefully, revealing that restricting decoder expressivity actively prevents the suppression of transferable geometric structure. https://snap-nvs.github.io",
+              "categories": [
+                "cs.CV",
+                "cs.AI",
+                "cs.RO"
+              ],
+              "published": "2026-10-02T17:59:14Z",
+              "url": "https://arxiv.org/abs/2610.03717",
+              "pdf_url": "https://arxiv.org/pdf/2610.03717v1",
+              "comment": "Accepted to NeurIPS 2026",
+              "figure_url": "https://arxiv.org/html/2610.03717v1/fig_receptive_field_qualitative.png",
+              "figure_caption": "Figure 3 : Receptive field qualitative comparison. Each row tracks a query point (colored dot) and its feature similarity map across time. While a large receptive field ( RF = 16 × 16 \\text{RF}=16{\\times}16 ) yields more scattered similarity maps, restricting the receptive field to RF = 1 × 1 \\text{",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://snap-nvs.github.io"
+              }
+            },
+            {
               "id": "2609.33007",
               "title": "CAPEX: Efficiently Distilling Foundation Model Behavior into Deployable Robot Policies through Experience-Adaptive Reasoning",
               "authors": [
@@ -3360,7 +3583,7 @@
           ]
         }
       ],
-      "total": 11
+      "total": 12
     },
     {
       "name": "ETH Zürich / TU Darmstadt",
@@ -3370,6 +3593,31 @@
         {
           "name": "Marco Hutter",
           "papers": [
+            {
+              "id": "2610.03395",
+              "title": "Bidirectional Voronoi-biased Exploration Curriculum for Reinforcement Learning",
+              "authors": [
+                "Juri Pfammatter",
+                "Kaixian Qu",
+                "Clemens Schwarke",
+                "Victor Klemm",
+                "Marco Hutter"
+              ],
+              "abstract": "Long-horizon tasks with sparse rewards pose an exploration bottleneck for goal-conditioned reinforcement learning: a policy started from the initial state rarely reaches the goal and receives no learning signal. Reference motions, hand-designed curricula, and shaped rewards supply this signal but require demonstrations or task-specific engineering; automatic start-state and goal curricula avoid this but typically expand from one side only, so the full distance to the target must be covered from that side. We propose the Bidirectional Voronoi-biased Exploration curriculum for Reinforcement learning (BVER), which expands from both ends at once. Inspired by bidirectional RRT planning, BVER grows start states outward from the goal and goals outward from the initial state distribution, biases both toward unexplored task space, and steers them toward each other, training one goal-conditioned policy on both. On point-mass mazes, quadrupedal box climbing, and robot-arm ring-on-peg transfer, BVER learns faster than all compared reference-free curricula. On box climbing, it reaches 95% success on a 0.4 m box in roughly 65% fewer iterations than the best of them, is the only one of them to learn to climb a 0.7 m box, and yields a policy robust to start, goal, and yaw variation. Without a demonstration, it approaches the sample efficiency of reference-based curricula on the 0.4 m box and on ring-on-peg transfer. Ablations show that expanding from both ends outperforms either direction alone.",
+              "categories": [
+                "cs.LG",
+                "cs.RO"
+              ],
+              "published": "2026-10-02T14:44:33Z",
+              "url": "https://arxiv.org/abs/2610.03395",
+              "pdf_url": "https://arxiv.org/pdf/2610.03395v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.03395v1/cover.png",
+              "figure_caption": "Figure 1: BVER grows the curriculum from both ends of the task. Intermediate starts s i s_{i} (blue) grow from the target goal g ⋆ g^{\\star} and intermediate goals g i g_{i} (green) from the initial distribution s 0 ∼ ρ 0 s_{0}\\sim\\rho_{0} ; one policy trains on both (white arrows) with sparse rewar",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2609.34674",
               "title": "HOI-Retarget: Contact-Centric Retargeting for Human-Object Interaction",
@@ -3992,7 +4240,7 @@
           ]
         }
       ],
-      "total": 23
+      "total": 24
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -4002,6 +4250,34 @@
         {
           "name": "Yang Gao",
           "papers": [
+            {
+              "id": "2610.02697",
+              "title": "GeoScaffold: Learning Compact Geometric Latents via Reconstruction for Efficient Vision-Language Navigation",
+              "authors": [
+                "Yixuan Jiang",
+                "Wentong Li",
+                "An Liu",
+                "Zihao Xin",
+                "Fulin Tang",
+                "Cong Leng",
+                "Yang Gao",
+                "Jian Cheng"
+              ],
+              "abstract": "Recent vision-and-language navigation (VLN) systems increasingly adopt streaming Video-LLM policies that map egocentric RGB observations and instructions directly to low-level actions. Yet these policies inherit weak 3D geometric priors from 2D pretraining. Existing geometry-aware extensions charge a persistent inference-time price: depth sensors, 3D encoders, or per-step perception tool calls. We propose GeoScaffold, a geometric supervision framework that pays this price once, at training time, by internalizing geometry into the policy itself. It first learns a compact depth tokenizer on depth maps from the training trajectories and freezes it. It then fine-tunes the policy with a handful of learnable geometry query tokens, training their hidden states to reconstruct navigation-critical geometry such as depth, connectivity, and traversability. This supervision turns the query states into compact geometric latents for action decoding, and through the shared weights also internalizes geometry into the backbone's own representations. Like a scaffold, the tokenizer, target generators, and reconstruction heads are discarded after training, leaving the backbone and action interface unchanged. Extensive experiments show that GeoScaffold consistently outperforms leading vision-only navigators on continuous VLN benchmarks, offering a practical paradigm for lightweight edge deployment of spatially aware embodied navigation models.",
+              "categories": [
+                "cs.RO",
+                "cs.CV"
+              ],
+              "published": "2026-10-02T02:24:02Z",
+              "url": "https://arxiv.org/abs/2610.02697",
+              "pdf_url": "https://arxiv.org/pdf/2610.02697v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.02697v1/x1.png",
+              "figure_caption": "Figure 1: Comparison of end-to-end VLN paradigms. (a) Streaming Video-LLMs act directly from RGB, but lack 3D perception. (b) Geometry-enhanced policies add a spatial encoder, but it stays resident at inference and geometry is never internalized. (c) GeoScaffold internalizes geometry via training-on",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2609.38178",
               "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
@@ -5175,10 +5451,34 @@
         },
         {
           "name": "Huazhe Xu",
-          "papers": []
+          "papers": [
+            {
+              "id": "2610.02706",
+              "title": "AdaTempo: Learning Shared Relative Tempo from Demonstrations for Faster Robot Manipulation",
+              "authors": [
+                "Jiale Cao",
+                "Yike Niu",
+                "Zhengrong Xue",
+                "Huazhe Xu"
+              ],
+              "abstract": "Visuomotor policies trained via imitation learning often inherit the unnecessarily slow timing of teleoperated demonstrations. Yet uniform speedup is unreliable because different phases of a manipulation task tolerate acceleration differently. In this work, we introduce AdaTempo, a self-supervised method that accelerates visuomotor policies by exploiting shared relative-tempo structure in demonstrations. AdaTempo establishes phase correspondence, aggregates the aligned relative tempo into a consensus, and maps it to a continuous speedup profile used to resample demonstrations into accelerated training trajectories. Training standard policies such as ACT or Diffusion Policy on these resampled trajectories directly embeds the desired tempo in the learned behavior, without runtime tempo selection or online retiming. Extensive evaluations show that AdaTempo achieves up to a $3.57\\times$ speedup and yields a stronger success--speed trade-off than the original policies and representative acceleration baselines.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-02T02:42:15Z",
+              "url": "https://arxiv.org/abs/2610.02706",
+              "pdf_url": "https://arxiv.org/pdf/2610.02706v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.02706v1/method_pipeline.png",
+              "figure_caption": "Fig. 2: Pipeline. Demonstrations with different durations are aligned to a canonical phase. Their relative-tempo consensus and agreement determine a continuous speedup profile, which resamples the demonstrations for standard visuomotor policy training.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            }
+          ]
         }
       ],
-      "total": 37
+      "total": 39
     },
     {
       "name": "工业界研究团队",
@@ -5450,7 +5750,7 @@
               ],
               "published": "2026-09-30T16:49:40Z",
               "url": "https://arxiv.org/abs/2609.40134",
-              "pdf_url": "https://arxiv.org/pdf/2609.40134v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.40134v2",
               "comment": "16 pages, 6 figures, 1 table. Preprint, under review",
               "figure_url": "https://arxiv.org/html/2609.40134v1/fig_1.png",
               "figure_caption": "Figure 1: Overview of TacEx . The state s s concatenates the fused latent z z , a visual embedding v v , and a tactile embedding ι \\iota , where v v and ι \\iota are produced by separate CNN encoders from RGB and tactile force maps. At each step, the policy π ⁡ ( a | s ) \\pi(a|s) acts in the environm",
@@ -5593,6 +5893,38 @@
         {
           "name": "Angjoo Kanazawa",
           "papers": [
+            {
+              "id": "2610.03710",
+              "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+              "authors": [
+                "Kush Hari",
+                "Justin Kerr",
+                "Nidhya Shivakumar",
+                "Samarth Mahapatra",
+                "Carmelo Sferrazza",
+                "Jiahui Lei",
+                "Jitendra Malik",
+                "C. Karen Liu",
+                "Ken Goldberg",
+                "Angjoo Kanazawa"
+              ],
+              "abstract": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The resulting images are processed foveally by allocating more visual tokens to the image centers, focusing computation on task-relevant features. Such Active Visual Fixation (AVF) requires carefully coordinated gaze during task execution, which we accomplish hierarchically by first training a low-level gaze servoing policy conditioned on a goal object, then training a target selector which emits fixation goals based on task progress. Both modules are trained with RL on real-world data: the first is trained with a dense geometric reward and the second co-trains with the BC gripper policy which allows it to discover fixation sequences that can resemble a human's fixation sequence while performing the task. EyeRobot 2.0 further takes advantage of fixation by canonicalizing gripper information into a fixation-relative SE(3) frame, which compacts the size of the action distribution to learn. We collect teleoperation data for 7 real-world and 6 simulated tasks, and conduct over 1000 physical and 1800 simulated robot trials comparing EyeRobot 2.0 against passive stereo and ego + wrist camera policies trained on the same data. Removing wrist cameras is costly for standard policies: with only passive stereo, real-world success drops from 52% to 27%. EyeRobot 2.0 closes this gap with only stereo, outperforming passive stereo by 40% in real and 20% in sim. It matches ego + wrist policies when their wrist views are clear (69% vs. 64%), and more than doubles their success when grasped objects occlude the wrist cameras (48% vs. 22%)",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-02T17:57:51Z",
+              "url": "https://arxiv.org/abs/2610.03710",
+              "pdf_url": "https://arxiv.org/pdf/2610.03710v1",
+              "comment": "Project Page: https://eyerobot2.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.03710v1/splash.png",
+              "figure_caption": "Figure 1: EyeRobot 2.0 enables fine-grained bimanual manipulation like inserting a straw into a boba cup using only a fixed stereo camera. It coordinates a sequence of gaze targets, for example here first at the boba cup, then the straw, then the insertion point. Gaze targets are output from a seman",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://eyerobot2.github.io/"
+              }
+            },
             {
               "id": "2610.01742",
               "title": "World Motion Models: Flexible Sequence Modeling of SE(3) Trajectories",
@@ -6071,7 +6403,7 @@
           "papers": []
         }
       ],
-      "total": 24
+      "total": 25
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -6135,7 +6467,7 @@
               ],
               "published": "2026-09-28T03:11:19Z",
               "url": "https://arxiv.org/abs/2609.34199",
-              "pdf_url": "https://arxiv.org/pdf/2609.34199v2",
+              "pdf_url": "https://arxiv.org/pdf/2609.34199v3",
               "comment": "Project Page: https://wb-wam.github.io",
               "figure_url": "https://arxiv.org/html/2609.34199v1/pipeline.png",
               "figure_caption": "Fig. 2: WB-WAM architecture and three-stage training framework. Top: Progressive training integrates heterogeneous supervision, retargeted PICO motion, and real-robot demonstrations. Bottom: Video and action experts jointly model visual dynamics and whole-body actions conditioned on vision, language",
@@ -6370,7 +6702,7 @@
               ],
               "published": "2026-09-28T03:11:19Z",
               "url": "https://arxiv.org/abs/2609.34199",
-              "pdf_url": "https://arxiv.org/pdf/2609.34199v2",
+              "pdf_url": "https://arxiv.org/pdf/2609.34199v3",
               "comment": "Project Page: https://wb-wam.github.io",
               "figure_url": "https://arxiv.org/html/2609.34199v1/pipeline.png",
               "figure_caption": "Fig. 2: WB-WAM architecture and three-stage training framework. Top: Progressive training integrates heterogeneous supervision, retargeted PICO motion, and real-robot demonstrations. Bottom: Video and action experts jointly model visual dynamics and whole-body actions conditioned on vision, language",
@@ -7068,6 +7400,38 @@
         {
           "name": "Han Yu",
           "papers": [
+            {
+              "id": "2610.03007",
+              "title": "AvoKV-E: Payload-Aware KV Cache Eviction for Long Reasoning",
+              "authors": [
+                "Han Yu",
+                "Wenhui Zhu",
+                "Xiwen Chen",
+                "Zhipeng Wang",
+                "Hejian Sang",
+                "Han Shi",
+                "Menglin Zhou",
+                "Xuanzhao Dong",
+                "Minzhou Huang",
+                "Rui Cai",
+                "Hao Wang",
+                "Alborz Geramifard"
+              ],
+              "abstract": "Long-output reasoning shifts the KV-cache bottleneck from the fixed prompt to the generated trace. Existing reasoning-cache eviction methods largely treat cached entries as routing objects, estimating whether an old key will still be read, will recur, or can be replaced. This routing-only view overlooks two effects: low-attention entries can carry large value payloads whose removal changes future predictions, and newly generated states can appear stale before later queries have had a chance to read them. We introduce AvoKV-E, a training-free eviction policy that first delays eligibility for recent states and then ranks eligible entries using candidate-normalized read pressure, key redundancy, and value-payload potential. According to empirical evaluation across different models and datasets, AvoKV-E matches or exceeds redundancy-aware, recurrence-based, and thought-adaptive eviction baselines at matched active-KV budgets, with its largest gains in the tightest-cache regime. Component and counterfactual analyses further connect these gains to delayed observation, payload-aware scoring, redundancy, and scale-robust normalization. Together, the results show that long-reasoning KV eviction should preserve not only keys that are likely to be read, but also the value payloads that sustain the reasoning trajectory.",
+              "categories": [
+                "cs.LG",
+                "cs.AI"
+              ],
+              "published": "2026-10-02T08:37:57Z",
+              "url": "https://arxiv.org/abs/2610.03007",
+              "pdf_url": "https://arxiv.org/pdf/2610.03007v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.03007v1/motivation_aggregate.png",
+              "figure_caption": "Figure 1: Diagnostic evidence for two failure modes of routing-only eviction. (a) Some low-attention entries with large value payloads are nevertheless high-damage to remove, revealing an attention-only blindspot . (b) Some low-attention entries receive strong reads only after the initial observatio",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.00838",
               "title": "SHARPO: Segment-Level Credit Assignment for Agentic Reinforcement Learning",
@@ -7917,6 +8281,29 @@
           "name": "Chi Zhang",
           "papers": [
             {
+              "id": "2610.02597",
+              "title": "GRAFT: Growing Agglomerative Foundation Models via Continual Teacher Distillation",
+              "authors": [
+                "Zhenghao Zhao",
+                "Chi Zhang",
+                "Qingshuang Chen",
+                "Yelin Kim"
+              ],
+              "abstract": "Vision foundation models such as DINOv2, SigLIP2, and MASt3R develop complementary capabilities from different pretraining objectives, yet their knowledge remains distributed across separate, specialized models. Multi-teacher knowledge distillation offers a path toward consolidating these capabilities into a single agglomerative backbone, but existing approaches assume a fixed set of teachers, and incorporating a new teacher requires repeating expensive joint distillation over the entire teacher set. We introduce GRAFT, a continual multi-teacher distillation framework that enables a unified backbone to progressively acquire capabilities from an open-ended sequence of foundation models. When a new teacher arrives, GRAFT treats the previously distilled model as a teacher for preserving learned capabilities, while the current student jointly learns from both the previous model and the incoming teacher. Furthermore, to reconcile the incompatible representation geometries of heterogeneous teachers, we introduce Teacher Specific Readout Tokens, which grant each teacher an independent read-out of the shared encoder, together with Geometry Agnostic Relational Loss that aligns a vision-language teacher by matching image-text similarity structures rather than raw feature values. We provide GRAFT model, which is a single, continually extensible backbone that unifies five domains, including image understanding, 2D dense prediction, 3D human pose estimation, 3D vision, and vision-language, delivering strong performance across all of them while acquiring each new capability at the cost of a single distillation rather than a full re-distillation.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-10-01T23:49:56Z",
+              "url": "https://arxiv.org/abs/2610.02597",
+              "pdf_url": "https://arxiv.org/pdf/2610.02597v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.02597v1/ADE_pca_grid_1.png",
+              "figure_caption": "Figure 2: Per-patch feature geometry across depth. Each cell visualizes the top-3 PCA components of patch tokens (mapped to RGB, fit per cell) at a shallow, deep, and final block for four ViT-L teachers and GRAFT (ViT-B) on three ADE20K images. The teachers diverge from the shallowest blocks: DINOv2",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.01288",
               "title": "Interaction-Stiffness-Guided Basis Allocation in Dynamic Movement Primitives for Efficient Skill Transfer",
               "authors": [
@@ -8042,7 +8429,7 @@
               ],
               "published": "2026-09-28T17:59:14Z",
               "url": "https://arxiv.org/abs/2609.35763",
-              "pdf_url": "https://arxiv.org/pdf/2609.35763v3",
+              "pdf_url": "https://arxiv.org/pdf/2609.35763v4",
               "comment": "Project page: https://shihaoyang0423.github.io/MGFlow-website/",
               "figure_url": "https://arxiv.org/html/2609.35763v1/generation_gallery.png",
               "figure_caption": "Figure 1: One-step text-to-image samples. FLUX.2 [klein] 4B post-trained with MGFlow.",
@@ -8627,7 +9014,7 @@
           "papers": []
         }
       ],
-      "total": 32
+      "total": 34
     },
     {
       "name": "PGMT 合作作者",
