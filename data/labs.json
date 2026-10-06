@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-05T15:08:10+00:00",
-  "day": "2026-10-05",
+  "updated": "2026-10-06T13:35:00+00:00",
+  "day": "2026-10-06",
   "days_back": 45,
-  "total": 256,
+  "total": 268,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -83,6 +83,36 @@
         {
           "name": "Pieter Abbeel",
           "papers": [
+            {
+              "id": "2610.03861",
+              "title": "GOTT: Object-centric Dexterous Manipulation with a Reusable Cross-Embodiment Primitive",
+              "authors": [
+                "Yulin Liu",
+                "Lai Wei",
+                "Yen-Jen Wang",
+                "Akash Sharma",
+                "Pieter Abbeel",
+                "Henrik I. Christensen",
+                "Haozhi Qi"
+              ],
+              "abstract": "Foundation models and large-scale human data provide rich sources of manipulation intent, but translating this intent into multi-fingered robot behavior remains difficult. Dexterous hands still lack a reusable low-level primitive that reliably establishes contact across tasks and embodiments. We propose GOTT, a reach-acquire-move framework built around a single cross-embodiment contact-acquisition primitive. Given a robot-agnostic object trajectory and a reach specification, GOTT first brings the hand near a task-relevant contact region. The shared closed-loop primitive then establishes stable contact from this approximate initialization, and a pose-conditioned controller tracks the desired object motion. Reach specifications may come from future-aware planning, external models, or human demonstrations, while the primitive and tracking backend remain unchanged. Simulation and real-world experiments show that GOTT is able to establish robust contact across diverse objects, arm-hand platforms, and seen and unseen hand morphologies. It also consistently improves end-to-end task success over open-loop grasp execution.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-10-02T17:58:42Z",
+              "url": "https://arxiv.org/abs/2610.03861",
+              "pdf_url": "https://arxiv.org/pdf/2610.03861v1",
+              "comment": "Project page: https://dex-gott.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.03861v1/rl_and_cross.png",
+              "figure_caption": "Figure 1 : Contact-acquisition training and cross-embodiment policy. (A) The RL policy starts from randomized initial configurations and learns to establish stable contact using local hand-object observations. (B) Padding and binary masks map different hands into a shared observation and action spac",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://dex-gott.github.io/"
+              }
+            },
             {
               "id": "2610.02204",
               "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
@@ -540,7 +570,7 @@
               ],
               "published": "2026-09-30T13:03:45Z",
               "url": "https://arxiv.org/abs/2609.39665",
-              "pdf_url": "https://arxiv.org/pdf/2609.39665v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.39665v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.39665v1/teaser.png",
               "figure_caption": "Figure 1: ChronoGraph connects 4D interaction understanding with spatially grounded planning. ChronoGraphVLM generates functional 4D scene graphs linking affordance-level actions to semantic and geometric state changes for interaction-grounded VQA and planning. Its predicted plans and affordance gro",
@@ -831,7 +861,7 @@
           ]
         }
       ],
-      "total": 27
+      "total": 28
     },
     {
       "name": "Stanford",
@@ -841,6 +871,35 @@
         {
           "name": "Chelsea Finn",
           "papers": [
+            {
+              "id": "2610.05882",
+              "title": "Mulligan: Performance-Guided Data Collection for Efficient On-Robot Learning",
+              "authors": [
+                "Lars Ankile",
+                "Perry Dong",
+                "Rohan Bhowmik",
+                "Aneesh Muppidi",
+                "David D. Yuan",
+                "Shuran Song",
+                "Chelsea Finn"
+              ],
+              "abstract": "Learning from human demonstrations is a reliable way to teach robots new tasks, but the gains from each additional demonstration shrink as the policy improves. Continued improvement can instead come from supervised deployment, where an operator places the objects and intervenes when the policy fails. We ask how to maximize improvement from a fixed budget of supervised episodes on high-precision manipulation tasks with wide ranges of object placements. We observe that failures can concentrate in a small subset of initial states, so uniform collection spends much of the operator's time on states the policy already handles. Mulligan makes the initial-state distribution a decision, starting each round's episodes at observed failures and untried states. To further improve data efficiency, we augment interactive imitation learning with a value function trained on all data, including failures that imitation discards. Across three real-world tasks evaluated on 2,550 held-out, blinded episodes and two simulated tasks, Mulligan outperforms uniform initial-state sampling at matched collection budgets, and combined with value-based action selection, HiL-IDQL+Mulligan, improves final real-task success by 10-34 percentage points. With operator interventions, the human-robot team completes 98% of collection episodes, remaining productive while the policy learns. Videos, code, and data are available at https://mulligan.page/.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-05T06:56:13Z",
+              "url": "https://arxiv.org/abs/2610.05882",
+              "pdf_url": "https://arxiv.org/pdf/2610.05882v1",
+              "comment": "Project page: https://mulligan.page/",
+              "figure_url": "https://arxiv.org/html/2610.05882v1/fig-12.png",
+              "figure_caption": "Figure 1: Diverse initial states: We study learning in deployment with wide initial-state distributions. Concentrated failures: Failures are not spread evenly across the initial-state space. Targeted collection: Retry observed failures (red) and fill the rest with the least-explored states (blue), t",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://mulligan.page/"
+              }
+            },
             {
               "id": "2610.02202",
               "title": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
@@ -935,6 +994,35 @@
           "name": "Shuran Song",
           "papers": [
             {
+              "id": "2610.05882",
+              "title": "Mulligan: Performance-Guided Data Collection for Efficient On-Robot Learning",
+              "authors": [
+                "Lars Ankile",
+                "Perry Dong",
+                "Rohan Bhowmik",
+                "Aneesh Muppidi",
+                "David D. Yuan",
+                "Shuran Song",
+                "Chelsea Finn"
+              ],
+              "abstract": "Learning from human demonstrations is a reliable way to teach robots new tasks, but the gains from each additional demonstration shrink as the policy improves. Continued improvement can instead come from supervised deployment, where an operator places the objects and intervenes when the policy fails. We ask how to maximize improvement from a fixed budget of supervised episodes on high-precision manipulation tasks with wide ranges of object placements. We observe that failures can concentrate in a small subset of initial states, so uniform collection spends much of the operator's time on states the policy already handles. Mulligan makes the initial-state distribution a decision, starting each round's episodes at observed failures and untried states. To further improve data efficiency, we augment interactive imitation learning with a value function trained on all data, including failures that imitation discards. Across three real-world tasks evaluated on 2,550 held-out, blinded episodes and two simulated tasks, Mulligan outperforms uniform initial-state sampling at matched collection budgets, and combined with value-based action selection, HiL-IDQL+Mulligan, improves final real-task success by 10-34 percentage points. With operator interventions, the human-robot team completes 98% of collection episodes, remaining productive while the policy learns. Videos, code, and data are available at https://mulligan.page/.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-05T06:56:13Z",
+              "url": "https://arxiv.org/abs/2610.05882",
+              "pdf_url": "https://arxiv.org/pdf/2610.05882v1",
+              "comment": "Project page: https://mulligan.page/",
+              "figure_url": "https://arxiv.org/html/2610.05882v1/fig-12.png",
+              "figure_caption": "Figure 1: Diverse initial states: We study learning in deployment with wide initial-state distributions. Concentrated failures: Failures are not spread evenly across the initial-state space. Targeted collection: Retry observed failures (red) and fill the rest with the least-explored states (blue), t",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://mulligan.page/"
+              }
+            },
+            {
               "id": "2610.02339",
               "title": "NEEDLEWORK: Offline Rewriting of Robot Data with Verified Local Stitches",
               "authors": [
@@ -991,6 +1079,40 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2610.04741",
+              "title": "Robot Learning with Visual Predicted Force",
+              "authors": [
+                "Haonan Chen",
+                "Feiyang Wu",
+                "Yuxiang Ma",
+                "Mustafa Mete",
+                "Pengfei Ye",
+                "Junxuan Shen",
+                "Cheng Zhu",
+                "Aurora Ruggeri",
+                "Kelvin Cheung",
+                "Jiayuan Mao",
+                "Edward Adelson",
+                "Jiajun Wu",
+                "Robert D. Howe",
+                "Yilun Du"
+              ],
+              "abstract": "Force-aware manipulation typically relies on specialized force or tactile sensors. We show that force-aware manipulation can instead be achieved through visual force prediction from the deformation of a compliant Fin Ray gripper. Our approach trains two models. First, we train a visual force estimator on calibration data and use it to annotate task demonstrations with force estimates. Second, we train an action--force proposal policy on these force-augmented demonstrations to jointly generate candidate robot actions and their associated forces. At test time, we sample candidate actions and the forces they are expected to produce, then execute the action whose predicted force is closest to a target from the demonstrations. We evaluate our approach on berry picking, empty-can grasping, in-hand reorientation, and plug insertion. Our results show that visual force prediction can guide inference-time action selection for contact-rich manipulation without requiring force or tactile sensors at deployment.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-03T20:11:33Z",
+              "url": "https://arxiv.org/abs/2610.04741",
+              "pdf_url": "https://arxiv.org/pdf/2610.04741v1",
+              "comment": "9 pages, 8 figures",
+              "figure_url": "https://arxiv.org/html/2610.04741v1/teaser.png",
+              "figure_caption": "Fig. 1: Force-aware manipulation from visual gripper deformation. Humans naturally regulate force when handling fragile objects (left). We use wrist-camera observations of a compliant gripper (right, inset) to infer interaction force from visible deformation and enable gentle robotic manipulation wi",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.03715",
               "title": "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes",
@@ -1069,7 +1191,7 @@
               ],
               "published": "2026-09-30T22:18:17Z",
               "url": "https://arxiv.org/abs/2610.00781",
-              "pdf_url": "https://arxiv.org/pdf/2610.00781v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.00781v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.00781v1/figs/final/ditto_x_hardware_updates.png",
               "figure_caption": "Fig. 2: Design improvements from DITTO. (A) A third finger module instruments middle-finger MCP abduction/adduction, MCP flexion, and PIP flexion, and a simplified thumb reduces weight. (B) Fingertip haptics from 8 mm z-axis LRAs (JYLRA0825Z) driven by DRV2605L drivers.",
@@ -1141,13 +1263,13 @@
                 "Jiajun Wu",
                 "Huang Huang"
               ],
-              "abstract": "Human videos offer a scalable source of demonstrations for dexterous robot manipulation. However, existing human-to-simulation-to-robot (Human2Sim2Robot) pipelines rely on predefined procedures that struggle to accommodate diverse object properties and interactions, particularly those involving articulated and deformable objects. We introduce DexAgent, an agentic Human2Sim2Robot framework that converts a single egocentric human video and a task prompt into physically grounded robot trajectories for policy training. It operates through four stages: semantic understanding of human videos, property-based simulation reconstruction, robot trajectory optimization, and robot data generation. At each stage, DexAgent adapts its approach to the task and object properties by selecting suitable skills from its tool library or developing new ones when needed. Property-specific verifiers assess stage outcomes for physical validity and task-specific requirements and provide feedback for refinement, preventing error propagation through the workflow. This adaptive, verification-guided process allows DexAgent to process diverse objects and long-horizon tasks. In the final stage, DexAgent varies object and robot states in simulation to generate diverse robot trajectories from a single human video, then retextures the rendered observations to facilitate sim-to-real transfer. Newly developed skills and verifiers are retained in its tool library, making it self-evolving to accumulate reusable capabilities. This reduces processing time as DexAgent encounters more human videos. Across eleven real-world tasks, policies trained with DexAgent-generated data achieve a 3.5x higher success rate than competing baselines. Project website: https://dexagent123.github.io/.",
+              "abstract": "Human videos offer a scalable source of demonstrations for dexterous robot manipulation. However, existing human-to-simulation-to-robot (Human2Sim2Robot) pipelines rely on predefined procedures that struggle to accommodate diverse object properties and interactions, particularly those involving articulated and deformable objects. We introduce DexAgent, an agentic Human2Sim2Robot framework that converts a single egocentric human video and a task prompt into physically grounded robot trajectories for policy training. It operates through four stages: semantic understanding of human videos, property-based simulation reconstruction, robot trajectory optimization, and robot data generation. At each stage, DexAgent adapts its approach to the task and object properties by selecting suitable skills from its tool library or developing new ones when needed. Property-specific verifiers assess stage outcomes for physical validity and task-specific requirements and provide feedback for refinement, preventing error propagation through the workflow. This adaptive, verification-guided process allows DexAgent to process diverse objects and long-horizon tasks. In the final stage, DexAgent varies object and robot states in simulation to generate diverse robot trajectories from a single human video, then retextures the rendered observations to facilitate sim-to-real transfer. Newly developed skills and verifiers are retained in its tool library, making it self-evolving to accumulate reusable capabilities. This reduces processing time as DexAgent encounters more human videos. Across eleven real-world tasks, policies trained with DexAgent-generated data achieve a 3.5x higher success rate than competing baselines. Project website: https://dexagent1.github.io/.",
               "categories": [
                 "cs.RO"
               ],
               "published": "2026-09-28T14:49:06Z",
               "url": "https://arxiv.org/abs/2609.35318",
-              "pdf_url": "https://arxiv.org/pdf/2609.35318v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.35318v2",
               "comment": "15 pages, 8 figures, 4 tables. Project website: https://dexagent123.github.io/",
               "figure_url": "https://arxiv.org/html/2609.35318v1/method2.png",
               "figure_caption": "Fig. 2: DexAgent converts a single egocentric human video and a task prompt into robot training data through four stages. Stage 1 decomposes the task into subgoals and identifies the manipulated objects and their key properties. Stage 2 reconstructs the objects in simulation using property-specific ",
@@ -1167,6 +1289,7 @@
                 "Yitao Liu",
                 "Shuo Li",
                 "Jiaru Qian",
+                "Yuxin Wu",
                 "Shanghaoran Quan",
                 "Chuangxin Zhao",
                 "Yangxu Liao",
@@ -1181,7 +1304,7 @@
               ],
               "published": "2026-09-24T12:23:52Z",
               "url": "https://arxiv.org/abs/2609.29465",
-              "pdf_url": "https://arxiv.org/pdf/2609.29465v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.29465v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.29465v1/motivation.png",
               "figure_caption": "Figure 1 : Motivation for SWE-Prometheus . Prior issue-level SWE benchmarks hand the agent a localized defect and score a patch against target tests, leaving test and CI readiness, clean-environment behavior verification, quality and maintainability outside the patch target, and documentation, repro",
@@ -1621,7 +1744,7 @@
               ],
               "published": "2026-09-30T22:18:17Z",
               "url": "https://arxiv.org/abs/2610.00781",
-              "pdf_url": "https://arxiv.org/pdf/2610.00781v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.00781v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.00781v1/figs/final/ditto_x_hardware_updates.png",
               "figure_caption": "Fig. 2: Design improvements from DITTO. (A) A third finger module instruments middle-finger MCP abduction/adduction, MCP flexion, and PIP flexion, and a simplified thumb reduces weight. (B) Fingertip haptics from 8 mm z-axis LRAs (JYLRA0825Z) driven by DRV2605L drivers.",
@@ -1912,13 +2035,13 @@
                 "Jiajun Wu",
                 "Huang Huang"
               ],
-              "abstract": "Human videos offer a scalable source of demonstrations for dexterous robot manipulation. However, existing human-to-simulation-to-robot (Human2Sim2Robot) pipelines rely on predefined procedures that struggle to accommodate diverse object properties and interactions, particularly those involving articulated and deformable objects. We introduce DexAgent, an agentic Human2Sim2Robot framework that converts a single egocentric human video and a task prompt into physically grounded robot trajectories for policy training. It operates through four stages: semantic understanding of human videos, property-based simulation reconstruction, robot trajectory optimization, and robot data generation. At each stage, DexAgent adapts its approach to the task and object properties by selecting suitable skills from its tool library or developing new ones when needed. Property-specific verifiers assess stage outcomes for physical validity and task-specific requirements and provide feedback for refinement, preventing error propagation through the workflow. This adaptive, verification-guided process allows DexAgent to process diverse objects and long-horizon tasks. In the final stage, DexAgent varies object and robot states in simulation to generate diverse robot trajectories from a single human video, then retextures the rendered observations to facilitate sim-to-real transfer. Newly developed skills and verifiers are retained in its tool library, making it self-evolving to accumulate reusable capabilities. This reduces processing time as DexAgent encounters more human videos. Across eleven real-world tasks, policies trained with DexAgent-generated data achieve a 3.5x higher success rate than competing baselines. Project website: https://dexagent123.github.io/.",
+              "abstract": "Human videos offer a scalable source of demonstrations for dexterous robot manipulation. However, existing human-to-simulation-to-robot (Human2Sim2Robot) pipelines rely on predefined procedures that struggle to accommodate diverse object properties and interactions, particularly those involving articulated and deformable objects. We introduce DexAgent, an agentic Human2Sim2Robot framework that converts a single egocentric human video and a task prompt into physically grounded robot trajectories for policy training. It operates through four stages: semantic understanding of human videos, property-based simulation reconstruction, robot trajectory optimization, and robot data generation. At each stage, DexAgent adapts its approach to the task and object properties by selecting suitable skills from its tool library or developing new ones when needed. Property-specific verifiers assess stage outcomes for physical validity and task-specific requirements and provide feedback for refinement, preventing error propagation through the workflow. This adaptive, verification-guided process allows DexAgent to process diverse objects and long-horizon tasks. In the final stage, DexAgent varies object and robot states in simulation to generate diverse robot trajectories from a single human video, then retextures the rendered observations to facilitate sim-to-real transfer. Newly developed skills and verifiers are retained in its tool library, making it self-evolving to accumulate reusable capabilities. This reduces processing time as DexAgent encounters more human videos. Across eleven real-world tasks, policies trained with DexAgent-generated data achieve a 3.5x higher success rate than competing baselines. Project website: https://dexagent1.github.io/.",
               "categories": [
                 "cs.RO"
               ],
               "published": "2026-09-28T14:49:06Z",
               "url": "https://arxiv.org/abs/2609.35318",
-              "pdf_url": "https://arxiv.org/pdf/2609.35318v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.35318v2",
               "comment": "15 pages, 8 figures, 4 tables. Project website: https://dexagent123.github.io/",
               "figure_url": "https://arxiv.org/html/2609.35318v1/method2.png",
               "figure_caption": "Fig. 2: DexAgent converts a single egocentric human video and a task prompt into robot training data through four stages. Stage 1 decomposes the task into subgoals and identifies the manipulated objects and their key properties. Stage 2 reconstructs the objects in simulation using property-specific ",
@@ -1957,7 +2080,7 @@
           ]
         }
       ],
-      "total": 37
+      "total": 40
     },
     {
       "name": "Carnegie Mellon University",
@@ -2769,6 +2892,31 @@
           "name": "Yann LeCun",
           "papers": [
             {
+              "id": "2610.06805",
+              "title": "H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning",
+              "authors": [
+                "Wancong Zhang",
+                "Basile Terver",
+                "Michael Rabbat",
+                "Yann LeCun",
+                "Randall Balestriero"
+              ],
+              "abstract": "Long-horizon planning with latent world models requires reasoning across timescales and levels of abstraction. Existing task-agnostic JEPA world models predict and plan at a single timescale or with multiple horizons in one shared latent space. We introduce H-JEPA, an end-to-end recipe for training a hierarchy of action-conditioned JEPAs in which each level predicts farther ahead in its own learned latent space. Planning proceeds top-down: the top level optimizes progress toward the goal, and each level's predictions become subgoals for the planner below it. When factors in the data evolve at separated timescales, higher levels discard fast, unpredictable detail and retain slower task-relevant state. Across four simulated navigation and manipulation environments, hierarchical planning improves over a flat JEPA; on Visual AntMaze, a three-level hierarchy raises success from 18% to 73% using less planner compute. Ablations attribute these gains to both temporal decomposition and higher-level goal representations. With inverse-dynamics supervision, the approach extends to diverse real-robot videos from DROID, where hierarchy improves offline planning fidelity at lower planner compute.",
+              "categories": [
+                "cs.LG",
+                "cs.RO"
+              ],
+              "published": "2026-10-05T17:53:34Z",
+              "url": "https://arxiv.org/abs/2610.06805",
+              "pdf_url": "https://arxiv.org/pdf/2610.06805v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.06805v1/teaser.png",
+              "figure_caption": "Figure 1: Hierarchical abstractions support planning at multiple timescales. Left: visualization of hierarchical planning in Visual AntMaze. Level 3 plans toward the final goal in the most abstract latent space. Its first predicted state becomes a subgoal for the level-2 planner; this decomposition ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.40127",
               "title": "Learning Functional Subspaces for Neural Network Compression",
               "authors": [
@@ -3069,7 +3217,7 @@
           ]
         }
       ],
-      "total": 10
+      "total": 11
     },
     {
       "name": "University of Washington",
@@ -3115,6 +3263,32 @@
         {
           "name": "Abhishek Gupta",
           "papers": [
+            {
+              "id": "2610.05765",
+              "title": "Bilinear Flow Policy: Distributional Extrapolation for Goal-Conditioned Visuomotor Imitation",
+              "authors": [
+                "Wonsuhk Jung",
+                "Sundhar Vinodh Sangeetha",
+                "Chen Xu",
+                "Abhishek Gupta",
+                "Masha Itkina",
+                "Shreyas Kousik",
+                "Haruki Nishimura"
+              ],
+              "abstract": "Goal-conditioned imitation learning (GCIL) with flow matching is a promising framework that can represent multimodal behaviors while adapting to diverse, user-specified goals, yet often fails when goals lie outside the demonstration support. To extrapolate to such unseen goals without collapsing multimodality - a problem we call distributional extrapolation - we introduce Bilinear Flow Policy (BFP), a generative visuomotor policy that combines transductive retrieval with a bilinear conditional flow. Given an unseen observation-goal pair, BFP retrieves an \"anchor\" training example and transductively reformulates the unseen pair as this familiar anchor plus a residual term. For this decomposition to guide action prediction, the residual must compactly encode how the current observation-goal pair differs from the anchor, and the anchor must be chosen so that this difference is predictive of the corresponding action distribution. BFP achieves this with pretrained visual features and a novel learned anchor-selection algorithm. The novel bilinear flow then models how the anchor and the residual jointly determine the multimodal action distribution. We prove that, for bilinear flow under suitable assumptions, action distribution error at unseen goals is bounded by the in-distribution flow-matching error up to problem-dependent factors. Across five manipulation tasks in simulation, BFP achieves 2.63x the out-of distribution success rate of a GCIL policy and 1.36x that of the strongest extrapolation-targeted baseline. On two real-world tasks, BFP improves over GCIL by 32%. Finally, our theory yields practical, pre deployment diagnostics for predicting which trained policies will extrapolate well and to which unseen goal.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-05T04:11:41Z",
+              "url": "https://arxiv.org/abs/2610.05765",
+              "pdf_url": "https://arxiv.org/pdf/2610.05765v1",
+              "comment": "40 pages",
+              "figure_url": "https://arxiv.org/html/2610.05765v1/figures/teaser_figure.png",
+              "figure_caption": "Figure 1: BFP Overview. BFP learns how changes across observation-goal conditions affect behavior and reuses this relation to extrapolate from a demonstrated anchor to an unseen goal. A bilinear conditional flow generates the resulting multimodal action distribution, while the explicit extrapolation",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2609.28258",
               "title": "Generalizable Robotic Insertion with World Models",
@@ -3182,7 +3356,7 @@
           "papers": []
         }
       ],
-      "total": 3
+      "total": 4
     },
     {
       "name": "Georgia Tech / UT Austin",
@@ -3279,33 +3453,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.21204",
-              "title": "Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning",
-              "authors": [
-                "Varun Giridhar",
-                "Anant Khandelwal",
-                "Jeremy A. Collins",
-                "Ignat Georgiev",
-                "Animesh Garg"
-              ],
-              "abstract": "Behaviour Cloning (BC) has driven remarkable progress in robot manipulation, yet it is fundamentally limited by its inability to self-improve: a policy that fails cannot learn from that failure without additional human demonstrations. Reinforcement Learning fine-tuning offers a path to self-improvement but has proven difficult to scale to the multi-billion-parameter models underpinning modern robot policies. We propose Q-Planning, which equips a large visuomotor BC policy with a small off-policy Q-function. Because a Q-function estimates value rather than imitates actions, it can be trained on the same successful demonstrations as the BC policy and later absorb both successful and failed deployment rollouts, an asymmetry BC does not have. We exploit this asymmetry to enable value-guided action selection at inference (a single-step Q-weighted average over BC draws) and online self-improvement that fine-tunes only the Q-function, leaving the BC weights untouched. On LIBERO and bimanual RoboTwin, ten iterations of self-improvement lift every benchmark score we tested (LIBERO-10 93% to 99%, RoboTwin 83.8% to 91.4%) and shorten successful episodes on the near-ceiling suites (LIBERO-Object, LIBERO-Goal). On two contact-rich bimanual real-robot tasks, the same loop (BC frozen, no human intervention) improves purely from its own deployment rollouts: stack-cups 40% to 90% and insert-wallet 25% to 80% in five iterations, whereas SFT on successful rollouts alone stalls at 55% and 30%. Under an identical online budget Q-Planning is the only method, among Best-of-N, filtered SFT, IBRL, DSRL, and DAWR, that improves stably from failures without training an auxiliary actor.",
-              "categories": [
-                "cs.RO",
-                "cs.LG"
-              ],
-              "published": "2026-08-21T15:18:37Z",
-              "url": "https://arxiv.org/abs/2608.21204",
-              "pdf_url": "https://arxiv.org/pdf/2608.21204v1",
-              "comment": "Project page with videos: https://varungiridhar.github.io/qplanning/",
-              "figure_url": "https://arxiv.org/html/2608.21204v1/img/qplanning_teaser.png",
-              "figure_caption": "Figure 1: Q-Planning overview. Left: at inference, the frozen BC policy samples N N candidate action chunks; the Q-function scores them and the executed chunk is a single-step Q-weighted average. Right: rollouts (successful and failed) are appended to a replay buffer and used to fine-tune only the Q",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://varungiridhar.github.io/qplanning/"
-              }
             }
           ]
         },
@@ -3583,7 +3730,7 @@
           ]
         }
       ],
-      "total": 12
+      "total": 11
     },
     {
       "name": "ETH Zürich / TU Darmstadt",
@@ -3885,6 +4032,30 @@
           "name": "Jan Peters",
           "papers": [
             {
+              "id": "2610.04609",
+              "title": "Exploiting Hierarchical Controller Structure in Contextual Parameter Learning for Humanoid Loco-Manipulation",
+              "authors": [
+                "Sebastian Hirt",
+                "Lukas Theiner",
+                "Jan Peters",
+                "Rolf Findeisen"
+              ],
+              "abstract": "Hierarchical control architectures are widely used to decompose complex control problems into interacting control levels and are particularly important in robotics, where planning, whole-body motion, and lower-level control must be coordinated across different levels of abstraction and time scales. Their overall closed-loop performance, however, depends strongly on parameters distributed across the hierarchy, such that tuning controllers on different levels independently may neglect relevant cross-layer interactions. We propose a contextual Bayesian optimization framework for joint parameter learning in hierarchical control systems. Rather than modeling closed-loop performance only as a scalar black-box function, we retain separate observations of task performance, realization quality, and control effort. A correlated multi-output Gaussian process models these performance components, while their known aggregation into the overall closed-loop objective is evaluated analytically. The formulation exploits three complementary consequences of hierarchical control: informative performance quantities exposed by the hierarchy, coupling between parameters of different controller levels, and variations of these relations with operating conditions. We evaluate the approach for humanoid loco-manipulation, jointly tuning a centroidal predictive controller and a whole-body controller for physical box pushing under varying box mass. The proposed method achieves the lowest mean empirical regret during both training and adaptation among the considered baselines.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-03T15:49:45Z",
+              "url": "https://arxiv.org/abs/2610.04609",
+              "pdf_url": "https://arxiv.org/pdf/2610.04609v1",
+              "comment": "8 pages, 4 figures",
+              "figure_url": "https://arxiv.org/html/2610.04609v1/figures/box_pushing_sequence.png",
+              "figure_caption": "Fig. 2: The simulated humanoid box-pushing task.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.01397",
               "title": "Continue, Abort, or Fall: Viability-Aware Policy Selection (VAPS) for Safe Humanoid Acrobatics",
               "authors": [
@@ -4125,6 +4296,31 @@
           "name": "Davide Scaramuzza",
           "papers": [
             {
+              "id": "2610.06019",
+              "title": "Adaptive Expert Guidance for Efficient On-Policy Reinforcement Learning",
+              "authors": [
+                "Daniele Affinita",
+                "Ming Xu",
+                "Rudolf Reiter",
+                "Davide Scaramuzza",
+                "Pascal Fua"
+              ],
+              "abstract": "With massively parallel simulation, on-policy Reinforcement Learning methods such as PPO have become standard in many domains. However, learning from scratch is sample-inefficient and fails to exploit the potential existence of a suboptimal expert, such as a heuristic, a model-based controller, or a policy trained on a related task. Such an expert is often available and can guide early training, but its sub-optimality limits final performance. The challenge then becomes balancing expert guidance against learning from rewards. Existing methods set the expert's influence through a blending weight, a schedule, or an evaluation-driven curriculum. Alternatively, they adapt it with additional learned components such as critics over expert actions or auxiliary agents. However, none optimizes it using the same on-policy objective as the policy itself. We propose a method in which the learner and the expert alternate control within each training episode, and the expert's share of control is a single learnable parameter optimized jointly with the policy. The learner benefits from the expert early in training, but its share of control declines as the learner becomes more competent, until eventually vanishing completely. This leaves the learner acting alone and better than the suboptimal expert. We evaluate our method on 34 tasks across two benchmarks, spanning discrete and continuous action spaces, using both learned and model-based experts. Our method improves sample efficiency over guided and unguided baselines while requiring minimal hyperparameter variation. The expert's share decays to zero as the learner improves, vanishing when the expert is no longer useful.",
+              "categories": [
+                "cs.LG",
+                "cs.AI"
+              ],
+              "published": "2026-10-05T09:18:27Z",
+              "url": "https://arxiv.org/abs/2610.06019",
+              "pdf_url": "https://arxiv.org/pdf/2610.06019v1",
+              "comment": "21 pages, 12 figures",
+              "figure_url": "https://arxiv.org/html/2610.06019v1/imgs/teaser.png",
+              "figure_caption": "Figure 1: The expert share is learned from block-level performance. The expert (orange) and learner (blue) alternate control in temporally committed blocks, with λ \\lambda determining the expert’s share. The difference between expert- and learner-block advantages drives the update of λ \\lambda : as ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.30947",
               "title": "DAPEVO: Deep Adaptive Patch Frame-Event Visual Odometry",
               "authors": [
@@ -4240,7 +4436,7 @@
           ]
         }
       ],
-      "total": 24
+      "total": 26
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -5085,7 +5281,7 @@
               ],
               "published": "2026-09-24T17:58:03Z",
               "url": "https://arxiv.org/abs/2609.30247",
-              "pdf_url": "https://arxiv.org/pdf/2609.30247v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.30247v2",
               "comment": "10 pages, 7 figures, 5 tables. Under review. Project page: https://rolling-wam.github.io/",
               "figure_url": "https://arxiv.org/html/2609.30247v1/rollingwam-framework.png",
               "figure_caption": "Fig. 2: Rolling-WAM framework. (a) Video and action experts jointly predict flow velocities using masked joint attention and cross-attention to text and state context, conditioned on the current camera observation and per-chunk noise levels shared by video and actions. (b) Rolling inference denoises",
@@ -5325,6 +5521,34 @@
           "name": "Cewu Lu",
           "papers": [
             {
+              "id": "2610.06801",
+              "title": "MC-Sparse: Deconstructing and Closing the Dense-Sparse Attention Gap in Diffusion Transformers",
+              "authors": [
+                "Jiarui Chen",
+                "Zeqiang Lai",
+                "Jiangshan Wang",
+                "Ziheng Ouyang",
+                "Ye Huang",
+                "Xiangyu Yue",
+                "Cewu Lu",
+                "Chunchao Guo"
+              ],
+              "abstract": "Sparse attention is a primary approach to reducing the latency of diffusion transformers in long-sequence generation tasks, such as video and high-resolution 3D asset generation. However, existing methods can degrade generation quality and fidelity at high sparsity levels. Through controlled oracle comparisons, we trace this degradation to three sources: constraints imposed by token grouping, inaccurate interaction selection, and the attention contributions lost when tokens are discarded. Guided by this analysis, we propose Meta-Cached Sparse Attention (MC-Sparse), a training-free framework that selects individual key-value (KV) tokens while organizing similar queries into tile-aligned groups for efficient GPU execution. MC-Sparse caches metadata comprising query groups, KV indices selected using exact attention probabilities, and residuals between dense and sparse attention outputs, and reuses them across subsequent denoising steps. Across video and 3D generation models, MC-Sparse achieves higher fidelity to dense-attention outputs and larger denoising speedups than existing sparse-attention baselines, without visible quality degradation. Relative to dense attention, it delivers a $1.80\\times$ denoising speedup on Minimax-H3-Base and a $2.32\\times$ speedup on 3D asset generation, both with negligible quality loss.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-10-05T17:51:42Z",
+              "url": "https://arxiv.org/abs/2610.06801",
+              "pdf_url": "https://arxiv.org/pdf/2610.06801v1",
+              "comment": "11 pages, 8 figures",
+              "figure_url": "https://arxiv.org/html/2610.06801v1/teaser.png",
+              "figure_caption": "Figure 1: Quality and efficiency of MC-Sparse on Minimax-H3-Base at 768p. Left: quality metrics and DiT denoising latency. At 15% and 25% attention density, MC-Sparse achieves 1.80 × 1.80\\times and 1.61 × 1.61\\times speedup over dense attention (FA3), respectively. Right: frames generated at 15% den",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.37433",
               "title": "FP2: Equipping Robotic Foundation Models with Force Control",
               "authors": [
@@ -5398,14 +5622,14 @@
                 "Hao Zhao",
                 "Liang Ding"
               ],
-              "abstract": "Diffusion models offer flexible motion generation, but translating this flexibility into feedback-responsive humanoid control remains challenging. Hierarchical systems steer motion through references that may exceed a separate tracker's capabilities, leaving recovery and physical execution largely to the tracker. Action-only diffusion generates actions directly but lacks an explicit future-state trajectory for test-time motion objectives. Joint state-action diffusion provides this representation, yet representative controllers often depend on privileged full-body states, and support for learned behavior selection and test-time motion steering remains fragmented. We present PredActor, a predictive action diffusion policy that brings these complementary steering capabilities into one directly executed policy using proprioceptive observations. Conditioned on proprioceptive history and optional task context, PredActor jointly generates executable actions and an internal future-state trajectory. Classifier-free guidance strengthens text-conditioned behavior, while classifier guidance steers predicted states toward test-time objectives. Only actions are executed, without a separate motion-reference tracker or externally estimated full-body states as policy inputs. In simulation, PredActor reaches 44 of 45 destination targets and achieves a text retrieval score of 0.539, compared with 0.424 for conditional action diffusion, with similar observed disturbance survival. To make this guided policy practical onboard, rolling denoising and computation-preserving runtime optimizations reduce the complete callback to 16.790 ms median and 19.383 ms p95 on a Jetson Orin NX, both below the 20 ms control period. We deploy PredActor on a Unitree G1; evaluations across simulation and physical hardware demonstrate text-conditioned motion, disturbance response, joystick control, and semantic interpolation.",
+              "abstract": "Diffusion models provide a flexible framework for motion generation, but turning this flexibility into closed-loop humanoid control remains challenging. Hierarchical generator-tracker systems steer motion through reference trajectories, yet these references may exceed the capabilities of the downstream tracker, leaving physical feasibility and disturbance recovery largely to a separate control module. Action-only diffusion avoids this separation by directly generating executable actions, but provides no explicit future-state trajectory that can be steered toward test-time motion objectives. Joint state-action diffusion offers a natural alternative, but existing controllers often rely on privileged full-body states, while learned behavior selection and test-time motion steering remain only partially integrated. We present PredActor, a predictive action diffusion policy that unifies both steering modes in one directly executed policy using proprioception alone. Given proprioceptive history and optional task context, PredActor jointly predicts actions and an internal future-state trajectory that enables guidance: classifier-free guidance strengthens text-conditioned motion, while classifier guidance steers future states toward test-time objectives. Only actions are executed, requiring neither a motion-reference tracker nor privileged full-body states. In simulation, PredActor reaches 44 of 45 destination targets and achieves a text retrieval score of 0.539 versus 0.424 for conditional action diffusion, with similar disturbance survival. Rolling denoising and computation-preserving runtime optimizations reduce the complete callback to 16.790 ms median and 19.383 ms p95 on a Jetson Orin NX, within the 20 ms control period. Deployed on a Unitree G1, PredActor demonstrates text-conditioned motion, disturbance response, joystick control, and semantic interpolation in simulation and hardware.",
               "categories": [
                 "cs.RO",
                 "cs.LG"
               ],
               "published": "2026-09-21T16:20:25Z",
               "url": "https://arxiv.org/abs/2609.24840",
-              "pdf_url": "https://arxiv.org/pdf/2609.24840v2",
+              "pdf_url": "https://arxiv.org/pdf/2609.24840v3",
               "comment": "Project page: https://masteryip.github.io/predactor.github.io/",
               "figure_url": "https://arxiv.org/html/2609.24840v2/fig_method_architecture.png",
               "figure_caption": "Figure 3: Joint predictive architecture of PredActor. Observation history and task commands condition a transformer that jointly denoises interleaved future state and action tokens. Steering changes the state update, not the current action prediction; the updated state can affect action at the next ",
@@ -5478,7 +5702,7 @@
           ]
         }
       ],
-      "total": 39
+      "total": 40
     },
     {
       "name": "工业界研究团队",
@@ -5698,6 +5922,36 @@
         {
           "name": "Pieter Abbeel",
           "papers": [
+            {
+              "id": "2610.03861",
+              "title": "GOTT: Object-centric Dexterous Manipulation with a Reusable Cross-Embodiment Primitive",
+              "authors": [
+                "Yulin Liu",
+                "Lai Wei",
+                "Yen-Jen Wang",
+                "Akash Sharma",
+                "Pieter Abbeel",
+                "Henrik I. Christensen",
+                "Haozhi Qi"
+              ],
+              "abstract": "Foundation models and large-scale human data provide rich sources of manipulation intent, but translating this intent into multi-fingered robot behavior remains difficult. Dexterous hands still lack a reusable low-level primitive that reliably establishes contact across tasks and embodiments. We propose GOTT, a reach-acquire-move framework built around a single cross-embodiment contact-acquisition primitive. Given a robot-agnostic object trajectory and a reach specification, GOTT first brings the hand near a task-relevant contact region. The shared closed-loop primitive then establishes stable contact from this approximate initialization, and a pose-conditioned controller tracks the desired object motion. Reach specifications may come from future-aware planning, external models, or human demonstrations, while the primitive and tracking backend remain unchanged. Simulation and real-world experiments show that GOTT is able to establish robust contact across diverse objects, arm-hand platforms, and seen and unseen hand morphologies. It also consistently improves end-to-end task success over open-loop grasp execution.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-10-02T17:58:42Z",
+              "url": "https://arxiv.org/abs/2610.03861",
+              "pdf_url": "https://arxiv.org/pdf/2610.03861v1",
+              "comment": "Project page: https://dex-gott.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.03861v1/rl_and_cross.png",
+              "figure_caption": "Figure 1 : Contact-acquisition training and cross-embodiment policy. (A) The RL policy starts from randomized initial configurations and learns to establish stable contact using local hand-object observations. (B) Padding and binary masks map different hands into a shared observation and action spac",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://dex-gott.github.io/"
+              }
+            },
             {
               "id": "2610.02204",
               "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
@@ -6403,7 +6657,7 @@
           "papers": []
         }
       ],
-      "total": 25
+      "total": 26
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -7094,6 +7348,36 @@
           "name": "Yitang Li",
           "papers": [
             {
+              "id": "2610.06129",
+              "title": "I-BFM: Reward-Conditioned Robust Humanoid Interaction via Unsupervised Reinforcement Learning",
+              "authors": [
+                "Ziqi Han",
+                "Yitang Li",
+                "Junhan Sun",
+                "Fanrong Dong",
+                "Yaojie Shen",
+                "Lei Ye",
+                "Zetong Jing",
+                "Yongqi Zhang",
+                "Yiming Zhang",
+                "Xue Wang",
+                "Hao Zhao"
+              ],
+              "abstract": "Behavioral foundation models (BFMs) have recently shown that a single humanoid policy can support diverse whole-body control, but extending such generality to physical interaction remains challenging. We introduce I-BFM, to our knowledge the first BFM for humanoid-object interaction. Rather than relying on task-specific policies or reference tracking, I-BFM learns a shared representation of the coupled dynamics among the humanoid, objects, and their contacts using forward-backward representations and unsupervised reinforcement learning. Given a downstream task reward, the same policy can be directly conditioned on a latent command to execute closed-loop interaction without task-specific policy optimization. To improve interaction control over different time scales, we further train the policy with both short-horizon interaction targets and longer-horizon goal targets. A single I-BFM policy performs carrying, pushing, and kicking, while also supporting goal reaching, motion tracking, stylistic control, and long-horizon task chaining. More importantly, it remains effective after large deviations from nominal execution: on Carry, I-BFM achieves 94.3% nominal success and retains 89.3% success after robot falls, compared with 1.3% for a planning-based baseline. Real-world experiments on a Unitree G1 further demonstrate diverse loco-manipulation behaviors, rapid recovery from interaction failures and external disturbances, and task chaining without task-specific retraining.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-05T11:01:59Z",
+              "url": "https://arxiv.org/abs/2610.06129",
+              "pdf_url": "https://arxiv.org/pdf/2610.06129v1",
+              "comment": "9 pages, including appendix",
+              "figure_url": "https://arxiv.org/html/2610.06129v1/fig.2.png",
+              "figure_caption": "Figure 2 : Overview of I-BFM . During pre-training, I-BFM learns an interaction-aware behavioral embedding and a shared policy in an interactive environment, jointly optimized with forward-backward and discriminator critics. At inference, task rewards retrieve a corresponding latent from the learned",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.24840",
               "title": "PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control",
               "authors": [
@@ -7111,14 +7395,14 @@
                 "Hao Zhao",
                 "Liang Ding"
               ],
-              "abstract": "Diffusion models offer flexible motion generation, but translating this flexibility into feedback-responsive humanoid control remains challenging. Hierarchical systems steer motion through references that may exceed a separate tracker's capabilities, leaving recovery and physical execution largely to the tracker. Action-only diffusion generates actions directly but lacks an explicit future-state trajectory for test-time motion objectives. Joint state-action diffusion provides this representation, yet representative controllers often depend on privileged full-body states, and support for learned behavior selection and test-time motion steering remains fragmented. We present PredActor, a predictive action diffusion policy that brings these complementary steering capabilities into one directly executed policy using proprioceptive observations. Conditioned on proprioceptive history and optional task context, PredActor jointly generates executable actions and an internal future-state trajectory. Classifier-free guidance strengthens text-conditioned behavior, while classifier guidance steers predicted states toward test-time objectives. Only actions are executed, without a separate motion-reference tracker or externally estimated full-body states as policy inputs. In simulation, PredActor reaches 44 of 45 destination targets and achieves a text retrieval score of 0.539, compared with 0.424 for conditional action diffusion, with similar observed disturbance survival. To make this guided policy practical onboard, rolling denoising and computation-preserving runtime optimizations reduce the complete callback to 16.790 ms median and 19.383 ms p95 on a Jetson Orin NX, both below the 20 ms control period. We deploy PredActor on a Unitree G1; evaluations across simulation and physical hardware demonstrate text-conditioned motion, disturbance response, joystick control, and semantic interpolation.",
+              "abstract": "Diffusion models provide a flexible framework for motion generation, but turning this flexibility into closed-loop humanoid control remains challenging. Hierarchical generator-tracker systems steer motion through reference trajectories, yet these references may exceed the capabilities of the downstream tracker, leaving physical feasibility and disturbance recovery largely to a separate control module. Action-only diffusion avoids this separation by directly generating executable actions, but provides no explicit future-state trajectory that can be steered toward test-time motion objectives. Joint state-action diffusion offers a natural alternative, but existing controllers often rely on privileged full-body states, while learned behavior selection and test-time motion steering remain only partially integrated. We present PredActor, a predictive action diffusion policy that unifies both steering modes in one directly executed policy using proprioception alone. Given proprioceptive history and optional task context, PredActor jointly predicts actions and an internal future-state trajectory that enables guidance: classifier-free guidance strengthens text-conditioned motion, while classifier guidance steers future states toward test-time objectives. Only actions are executed, requiring neither a motion-reference tracker nor privileged full-body states. In simulation, PredActor reaches 44 of 45 destination targets and achieves a text retrieval score of 0.539 versus 0.424 for conditional action diffusion, with similar disturbance survival. Rolling denoising and computation-preserving runtime optimizations reduce the complete callback to 16.790 ms median and 19.383 ms p95 on a Jetson Orin NX, within the 20 ms control period. Deployed on a Unitree G1, PredActor demonstrates text-conditioned motion, disturbance response, joystick control, and semantic interpolation in simulation and hardware.",
               "categories": [
                 "cs.RO",
                 "cs.LG"
               ],
               "published": "2026-09-21T16:20:25Z",
               "url": "https://arxiv.org/abs/2609.24840",
-              "pdf_url": "https://arxiv.org/pdf/2609.24840v2",
+              "pdf_url": "https://arxiv.org/pdf/2609.24840v3",
               "comment": "Project page: https://masteryip.github.io/predactor.github.io/",
               "figure_url": "https://arxiv.org/html/2609.24840v2/fig_method_architecture.png",
               "figure_caption": "Figure 3: Joint predictive architecture of PredActor. Observation history and task commands condition a transformer that jointly denoises interleaved future state and action tokens. Steering changes the state update, not the current action prediction; the updated state can affect action at the next ",
@@ -7386,7 +7670,7 @@
           ]
         }
       ],
-      "total": 8
+      "total": 9
     },
     {
       "name": "RGMT 合作作者",
@@ -7400,6 +7684,36 @@
         {
           "name": "Han Yu",
           "papers": [
+            {
+              "id": "2610.06236",
+              "title": "DP-ES: Differentially Private Evolution Strategies for Prompt Optimization",
+              "authors": [
+                "Ziniu Liu",
+                "Aiping Li",
+                "Yue Han",
+                "Han Yu",
+                "Junjian Zhang",
+                "Dong Zhu",
+                "Changjian Li",
+                "Shiqiang Zhang"
+              ],
+              "abstract": "Token-level differentially private (DP) prompt optimization methods such as DP-OPT can become unstable under tight privacy budgets: on GSM8K, DP-OPT obtains $49.5\\pm28.5%$ across 30 runs, and a logged search trajectory reveals prompt-template drift and noise-sensitive irreversible choices. We diagnose these as structural consequences of greedy token-by-token construction over privately aggregated counts. We then propose DP-ES (Differentially Private Evolution Strategies), a structurally cleaner alternative that maintains a population of full prompts, mutates them via LLM calls that never access the private dataset, and spends privacy only on sampled-Gaussian evaluation; deterministic or Gumbel-smoothed selection is post-processing. Under a conservative $(\\varepsilon\\leq1.0,δ=10^{-5})$ guarantee, DP-ES achieves 88.1% on GSM8K (+38.6 pp over DP-OPT, approximately 9 times lower standard deviation), 99.7% on MedQA, 73.5% on BANKING77, and 86.8% on Alpaca. It is also 2.5 times faster in wall-clock time and uses 3.3 times fewer logged private-data call groups than DP-OPT. Selection and population ablations, implementation-level noise checks, and a 200-profile exact-match memorization stress test complement the formal guarantee. Scope: Our experiments establish optimization robustness under DP noise, especially where prompt structure is critical; end-to-end validation on genuinely sensitive, non-saturated deployment data remains future work.",
+              "categories": [
+                "cs.CR",
+                "cs.CL"
+              ],
+              "published": "2026-10-05T12:38:20Z",
+              "url": "https://arxiv.org/abs/2610.06236",
+              "pdf_url": "https://arxiv.org/pdf/2610.06236v1",
+              "comment": "Accepted at EMNLP 2026 (Main Conference). Code: https://github.com/StephCpa/dp-es",
+              "figure_url": "https://arxiv.org/html/2610.06236v1/figures/DPES_Figure1_v8.png",
+              "figure_caption": "Figure 1: DP-ES workflow and mechanism-level contrast with DP-OPT. Only sampled-Gaussian scoring accesses the private dataset. LLM mutation and deterministic or Gumbel-smoothed top- M M parent selection operate without further private-data access and add no privacy loss. Mechanism rows summarize can",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/StephCpa/dp-es"
+              }
+            },
             {
               "id": "2610.03007",
               "title": "AvoKV-E: Payload-Aware KV Cache Eviction for Long Reasoning",
@@ -7451,7 +7765,7 @@
               ],
               "published": "2026-09-30T23:51:11Z",
               "url": "https://arxiv.org/abs/2610.00838",
-              "pdf_url": "https://arxiv.org/pdf/2610.00838v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.00838v2",
               "comment": "13 pages, 3 tables, 2 figures",
               "figure_url": "https://arxiv.org/html/2610.00838v1/figure2_numbered.png",
               "figure_caption": "Figure 2: SHARPO Framework. A successful peer supplies context for a policy-copy teacher. A length-normalized likelihood comparison of each selected segment produces a bounded weight. Length balancing and interpolation with the base advantage then determine the segment’s effective advantage for the ",
@@ -7515,7 +7829,7 @@
                 "Tomas Pfister",
                 "Chen-Yu Lee"
               ],
-              "abstract": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level. However, such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks. We introduce Regularized Recursive Self-Improvement of Agent Harnesses (RRSI), which incorporates the principles of regularizations into harness self-improvement by constraining the evolution candidate proposal and selection. The proposer operates with a temporally annealed budget, limiting how many edits a candidate can bundle, and it encourages unexplored trajectories based on evolution history. The selector is equipped with a critic and a pruner: the critic screens benchmark-specific proposals, while the pruner, removes changes that are too small, too expensive, or no longer useful. Together these constraints favor reusable agent mechanisms over benchmark-specific ones or even noises. Across eight benchmarks spanning coding, agentic workspace and engineering design tasks, RRSI gains up to 14.1 points on the split it evolves against and up to 4.7 points on the five out-of-distribution benchmarks, while producing a harness that runs on 30% fewer policy tokens than the unregularized evolution. Code is available at https://github.com/google-research/rrsi and project page is https://regularized-rsi.com/.",
+              "abstract": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level. However, such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks. We introduce Regularized Recursive Self-Improvement of Agent Harnesses (RRSI), which incorporates the principles of regularizations into harness self-improvement by constraining the evolution candidate proposal and selection. The proposer operates with a temporally annealed budget, limiting how many edits a candidate can bundle, and it encourages unexplored trajectories based on evolution history. The selector is equipped with a critic and a pruner: the critic screens benchmark-specific proposals, while the pruner, removes changes that are too small, too expensive, or no longer useful. Together these constraints favor reusable agent mechanisms over benchmark-specific ones or even noises. Across eight benchmarks spanning coding, agentic workspace and engineering design tasks, RRSI gains up to 6.0 points on the split it evolves against and up to 4.3 points on the five out-of-distribution benchmarks, while producing a harness that runs on 30% fewer policy tokens than the unregularized evolution. Code is available at https://github.com/google-research/rrsi and project page is https://regularized-rsi.com/.",
               "categories": [
                 "cs.LG",
                 "cs.AI",
@@ -7523,7 +7837,7 @@
               ],
               "published": "2026-09-21T17:54:49Z",
               "url": "https://arxiv.org/abs/2609.24972",
-              "pdf_url": "https://arxiv.org/pdf/2609.24972v2",
+              "pdf_url": "https://arxiv.org/pdf/2609.24972v3",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.24972v2/pipeline.png",
               "figure_caption": "Figure 2: Overview of RRSI . RRSI regularizes the search trajectory, not restricting the potential harness edit space: proposal-side constraints control how search capacity is used, while selection-side constraints control which measured improvements are allowed to become a permanent state.",
@@ -8250,36 +8564,37 @@
               "figure_source": "pdf",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.21734",
-              "title": "LMP-GNN: Probabilistic Reconstruction of Missing Lane Counts for Signed Max-Pressure Traffic Signal Control",
-              "authors": [
-                "Zhihao Wan",
-                "Xiangle Pan",
-                "Xinqiang Chen",
-                "Gen Li",
-                "Qiang Luo"
-              ],
-              "abstract": "Missing lane-count observations can distort pressure-based signal decisions even when neighboring detectors remain operational. We propose a lane-movement probabilistic graph neural network (LMP-GNN) that uses the movement relations involved in pressure computation to predict a mean and standard deviation for each lane. Three rules convert these outputs into replacement counts using the mean alone, a fixed uncertainty discount, or a staleness-dependent discount. Observed counts remain unchanged, and the completed state is supplied to an unchanged Signed Max-Pressure controller. Evaluation covers reconstruction and uncertainty calibration, decision-time diagnostics, and closed-loop traffic performance. Across 4,333,392 masked lane events, reconstruction achieved a mean absolute error of 0.7873 vehicles per lane. In a separate stored-trace audit of 372 network-outage-seed cells, pressure-score error was strongly associated with phase disagreement, with a Spearman correlation of 0.929, identifying pressure fidelity as a key decision-level diagnostic. Across five fixed-demand CityFlow networks, the fixed-discount rule reduced accrued average travel time by up to 13.74% relative to road-level mean imputation under correlated missingness. It also reduced travel time at 60% random missingness, whereas mean imputation performed better at 80% and 90%. The selected model has 63,362 parameters and a median single-thread inference time of 0.983 ms on a central processing unit. These results support lightweight probabilistic lane reconstruction as a practical input to pressure-based control, with traffic benefits that depend on the missingness regime.",
-              "categories": [
-                "eess.SY"
-              ],
-              "published": "2026-08-22T02:34:45Z",
-              "url": "https://arxiv.org/abs/2608.21734",
-              "pdf_url": "https://arxiv.org/pdf/2608.21734v2",
-              "comment": "24 pages, 15 figures, 6 tables",
-              "figure_url": "thumbs/2608.21734.jpg",
-              "figure_caption": "论文首页预览",
-              "figure_source": "pdf",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
         {
           "name": "Chi Zhang",
           "papers": [
+            {
+              "id": "2610.05252",
+              "title": "MGPO: Manifold-Guided Diffusion Alignment for Task-Aware Dataset Distillation",
+              "authors": [
+                "Yunyi Chen",
+                "Chenru Wang",
+                "Xinyi Ye",
+                "Zexin Zheng",
+                "Chi Zhang"
+              ],
+              "abstract": "Diffusion-based dataset distillation (DD) suffers from a fundamental objective mismatch: likelihood-driven diffusion models prioritize density approximation over the discriminative decision boundaries required for downstream tasks. Beyond semantic mismatch, relying solely on density also leads to geometric coverage loss, where generated samples collapse into a few high-density modes and fail to cover the manifold's structural diversity. We propose Manifold-Guided Policy Optimization (MGPO), which reformulates DD as a multi-objective reinforcement learning problem and achieves Dual-Space Alignment via a pixel-space discriminative reward and a latent-space geometric reward guided by a class-wise Minimum Spanning Tree (MST). The discriminative reward enforces class separability, while the MST-based geometric reward encourages generated latents to cover a sparse geometric skeleton of each class, jointly addressing both failure modes. We further provide an idealized analysis that motivates the MST-based reward, including a Hausdorff approximation bound and a subsampling bound independent of the dataset size. The reward-modular design extends to structured tasks such as object detection and segmentation by substituting the frozen task reward model. Extensive experiments show MGPO consistently outperforms existing methods, including a +8.0% mIoU gain on segmentation under low-budget settings.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-10-04T14:27:08Z",
+              "url": "https://arxiv.org/abs/2610.05252",
+              "pdf_url": "https://arxiv.org/pdf/2610.05252v1",
+              "comment": "32 pages",
+              "figure_url": "https://arxiv.org/html/2610.05252v1/pipeline.png",
+              "figure_caption": "Figure 2: Overview of the proposed MGPO framework. (a) Pixel Reward ( r disc r_{\\text{disc}} ) is computed from downstream objectives such as classification, detection, and segmentation, encouraging semantic correctness and task consistency. (b) MST Reward ( r geo r_{\\text{geo}} ) is constructed in ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.02597",
               "title": "GRAFT: Growing Agglomerative Foundation Models via Continual Teacher Distillation",
@@ -9014,7 +9329,7 @@
           "papers": []
         }
       ],
-      "total": 34
+      "total": 35
     },
     {
       "name": "PGMT 合作作者",
@@ -10706,6 +11021,42 @@
           "name": "Ye Yuan",
           "papers": [
             {
+              "id": "2610.06342",
+              "title": "MeSD: Multi-Evidence Self-Distillation for VideoLLM",
+              "authors": [
+                "Weijie Zhu",
+                "Han Fang",
+                "Hanyu Fu",
+                "Yuzhe Zhang",
+                "Xin Wei",
+                "Zhaoyan Pan",
+                "Feiran Liu",
+                "Xunjie Jin",
+                "Hongbo Sun",
+                "Zhiyu Lin",
+                "Tianyi Gao",
+                "Tianyi Ding",
+                "Ye Yuan",
+                "Zhongjiang He",
+                "Hao Sun",
+                "Zhiheng Wu"
+              ],
+              "abstract": "While reinforcement learning with verifiable rewards provides reliable outcome supervision for VideoLLMs, sequence-level rewards offer limited token-level guidance. On-policy self-distillation addresses this limitation by conditioning a self-teacher on privileged information to provide dense token-level supervision. However, aggregating heterogeneous evidence within a single teacher context obscures cross-evidence agreement and conflict. A further challenge lies in determining whether teacher guidance should refine reward-based updates or provide corrective supervision for failed trajectories. To address these issues, we propose MeSD, a multi-evidence self-distillation framework for VideoLLMs. MeSD constructs three evidence-conditioned teachers with shared parameters, using the ground-truth answer as a common semantic context while separately incorporating temporal and spatial evidence. Given the same student-generated prefixes, MeSD evaluates evidence-specific preferences relative to the Answer Teacher and fuses teacher-common preferences with gated teacher-specific residuals. Furthermore, MeSD introduces Verification-Guided Optimization to classify trajectories as Success, Failure, or Indeterminate. For Success and Indeterminate trajectories, MeSD refines token-level advantage magnitudes while preserving reward-derived signs. For verified failure trajectories that contain the required evidence, MeSD applies failure-conditioned distillation, using reverse-KL correction toward the fused distribution. Experiments on multiple video benchmarks demonstrate consistent gains over reinforcement learning and self-distillation baselines.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-10-05T13:46:27Z",
+              "url": "https://arxiv.org/abs/2610.06342",
+              "pdf_url": "https://arxiv.org/pdf/2610.06342v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.06342v1/Intro_0924_v2.png",
+              "figure_caption": "Figure 1: (a) Temporal and spatial evidence yield consistent or conflicting token preferences. (b) MeSD combines reward-anchored credit refinement with corrective distillation on verified failures. (c) MeSD leads on selected metrics across six benchmarks. (d) Comparison of training rewards.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2609.38864",
               "title": "AdaOcc: Adaptive 3D Occupancy Prediction for Embodied Tasks",
               "authors": [
@@ -11778,6 +12129,35 @@
           "name": "Jan Kautz",
           "papers": [
             {
+              "id": "2610.06647",
+              "title": "LoGRA: Scaling LLM Reinforcement Learning with Low-Rank Gradient Sketches",
+              "authors": [
+                "Shaokun Zhang",
+                "Yifan Zhang",
+                "Jian Hu",
+                "Yueying Li",
+                "Hao Zhang",
+                "Binfeng Xu",
+                "Jan Kautz",
+                "Yi Dong"
+              ],
+              "abstract": "Reinforcement learning (RL) has greatly advanced the capabilities of large language models (LLMs), but its memory demands remain a barrier to broader adoption. We introduce LoGRA, an approach to RL post-training that reduces memory by retaining useful learning signals in low-rank gradient sketches. These compact representations support both model updates and efficient policy synchronization. To prevent overly large updates from disrupting learning, we complement gradient compression with predicted-KL step control, which estimates policy changes before applying each update and adjusts its magnitude accordingly. Across reasoning tasks, LoGRA reduces average training memory by up to 45.7% without sacrificing performance. It also enables stable training of a 27B-parameter model for over 1,100 steps on a single eight-GPU node, where dense Adam runs out of memory, making previously memory-infeasible RL training practical. Code is available in the \\href{https://github.com/skzhang1/labs-molt/tree/logra/examples/scripts/logra}{Molt library}.",
+              "categories": [
+                "cs.CL"
+              ],
+              "published": "2026-10-05T16:28:11Z",
+              "url": "https://arxiv.org/abs/2610.06647",
+              "pdf_url": "https://arxiv.org/pdf/2610.06647v1",
+              "comment": "16 pages, 6 figures",
+              "figure_url": "https://arxiv.org/html/2610.06647v1/rank_refresh.png",
+              "figure_caption": "Figure 5: Components of gradient compression. (a) Training performance as a function of projection rank; (b) Gradient-reconstruction cosine for fixed and refreshed Rademacher bases. (c) The same diagnostic for refreshed Rademacher and Gaussian bases. Heatmap rows denote Transformer layers and column",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/skzhang1/labs-molt/tree/logra/examples/scripts/logra}{Molt"
+              }
+            },
+            {
               "id": "2610.01178",
               "title": "Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation",
               "authors": [
@@ -11882,7 +12262,7 @@
               ],
               "published": "2026-09-29T07:09:48Z",
               "url": "https://arxiv.org/abs/2609.36875",
-              "pdf_url": "https://arxiv.org/pdf/2609.36875v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.36875v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.36875v1/figures_final/teaser.jpg",
               "figure_caption": "Figure 1 : Overview of S4VY. Left: Given a set of RGB observations, S4VY predicts a consistent 4D mask for every instance in the scene. Right: Any instance can be grounded via either a natural-language prompt or an image-level point/box prompt.",
@@ -11990,7 +12370,42 @@
         },
         {
           "name": "Umar Iqbal",
-          "papers": []
+          "papers": [
+            {
+              "id": "2610.06850",
+              "title": "InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation",
+              "authors": [
+                "Yucheng Zhang",
+                "Sirui Xu",
+                "Jinhong Li",
+                "Liuyu Bian",
+                "Anatulya Nandi",
+                "Derek Zhang",
+                "Xiangchen Liu",
+                "Xueting Li",
+                "Umar Iqbal",
+                "Yu-Xiong Wang",
+                "Liang-Yan Gui"
+              ],
+              "abstract": "Captured human-object interactions provide rich supervision for humanoid loco-manipulation, but they are sparse, heterogeneous, and not directly executable by robots. We introduce InterMimicGen, a self-evolving motion-imitation framework in which robot motion data and a tracking policy improve each other. First, we consolidate motion-captured human-object interaction datasets and retarget them into humanoid robot references while preserving whole-body coordination and dexterous hand-object relationships. This produces a large and diverse humanoid robot reference collection for dexterous whole-body loco-manipulation. Second, we train a physics-based generalist tracker that executes these references in simulation on a humanoid with dexterous hands, covering a scale and diversity beyond prior humanoid tracking systems for loco-manipulation. Third, we close a data flywheel: each round makes small, task-preserving changes to where an interaction takes place and how the body performs it, fine-tunes the tracker on them, and keeps only the variants whose simulated execution completes the task, which seed the next round. With more iterations, these small edits compound into broader coverage around the sparse original demonstrations while preserving task semantics and motion quality. Experiments show contact-preserving retargeting across robot configurations, broad tracking with a single generalist policy, executable motions that keep growing over augmentation rounds, and transfer to real robots. InterMimicGen provides a unified path from heterogeneous human demonstrations to a continually expanding motion resource for humanoid robot learning.",
+              "categories": [
+                "cs.RO",
+                "cs.CV",
+                "cs.GR"
+              ],
+              "published": "2026-10-05T17:59:50Z",
+              "url": "https://arxiv.org/abs/2610.06850",
+              "pdf_url": "https://arxiv.org/pdf/2610.06850v1",
+              "comment": "Project Page: https://sirui-xu.github.io/InterMimicGen",
+              "figure_url": "https://arxiv.org/html/2610.06850v1/teaser_full_scene.png",
+              "figure_caption": "Figure 1: InterMimicGen grows a finite set of human interaction captures into an expanding repertoire of executable robot motions. Left: One formulation turns the captures into executable motions across diverse objects, tasks, and robots, from humanoids to a wheeled mobile manipulator. Top right: Se",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://sirui-xu.github.io/InterMimicGen"
+              }
+            }
+          ]
         },
         {
           "name": "Linxi Jim Fan",
@@ -12063,7 +12478,7 @@
           ]
         }
       ],
-      "total": 24
+      "total": 27
     }
   ]
 }
