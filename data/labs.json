@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-07T13:46:11+00:00",
-  "day": "2026-10-07",
+  "updated": "2026-10-08T13:53:17+00:00",
+  "day": "2026-10-08",
   "days_back": 45,
-  "total": 284,
+  "total": 294,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -133,6 +133,35 @@
         {
           "name": "Pieter Abbeel",
           "papers": [
+            {
+              "id": "2610.09117",
+              "title": "Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data",
+              "authors": [
+                "Songbo Hu",
+                "Qiayuan Liao",
+                "Yufeng Chi",
+                "Kevin Zakka",
+                "Yakun Sophia Shao",
+                "Pieter Abbeel",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Humanoid robots still struggle to plan contact-rich whole-body manipulation from egocentric RGB and proprioception. Workhorse learns such manipulation from robot-free human demonstrations. A visual planner predicts five-link targets: the poses of the torso, both wrists, and both feet. A reinforcement-learning whole-body tracker follows them on the robot. Both policies train separately on the same recorded human poses, without retargeting. We augment the training data of each policy to imitate the errors that the other makes at deployment. On a real Unitree G1, Workhorse sorts boxes with its hands and a kick, catches a thrown box, and topples and climbs a suitcase. During box sorting, we show recoveries after a person pushes the robot or takes the box away. In a simulated copy of the demonstration room, the system completes box sorting in 77% of episodes, and in 64% under 40 N.s pushes. With both policies retrained from the same demonstrations, a simulated second humanoid completes box sorting in 83% of episodes without pushes.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-06T21:06:56Z",
+              "url": "https://arxiv.org/abs/2610.09117",
+              "pdf_url": "https://arxiv.org/pdf/2610.09117v1",
+              "comment": "9 pages, 8 figures, 2 tables. Project page: https://hsb0508.github.io/workhorse/",
+              "figure_url": "https://arxiv.org/html/2610.09117v1/figures/hw_ik.jpg",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://hsb0508.github.io/workhorse/"
+              }
+            },
             {
               "id": "2610.08789",
               "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
@@ -666,6 +695,64 @@
           "name": "Koushil Sreenath",
           "papers": [
             {
+              "id": "2610.09479",
+              "title": "Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control",
+              "authors": [
+                "Joohwan Seo",
+                "Xiaofeng Guo",
+                "Jinkun Cao",
+                "Roberto Horowitz",
+                "Rocky Duan",
+                "Guanya Shi",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Precise end-effector tracking during humanoid whole-body motion is challenging due to floating-base oscillations, gravity, dynamic coupling, and locomotion-induced disturbances. We propose ResGAC, a whole-body humanoid controller for precise end-effector pose tracking that combines geometric admittance control (GAC) with residual reinforcement learning. GAC provides structured $\\SE$ task-space feedback and generates nominal arm joint-position targets, while residual RL compensates for unmodeled dynamics and coordinates locomotion and balance in the shared joint-position action space. The left-invariant geometric formulation allows the same GAC law to be used across manipulation reference frames. This enables the use of a ground-attached heading frame that preserves planar locomotion while removing pelvis roll, pitch, and heave from the manipulation reference, thereby reducing reference-induced end-effector motion during locomotion. ResGAC is validated on a real Unitree G1 humanoid. Across four standing end-effector tracking benchmarks, ResGAC consistently outperforms representative baselines, including SONIC, achieving lower translational and rotational errors. Real-world experiments further demonstrate reduced propagation of pelvis motion to the desired end-effector pose using the proposed ground-attached heading frame. ResGAC achieves $90%$ success in a standing peg-in-hole task compared with $50%$ for SONIC, and accurate world-frame $\\SE$ end-effector pose tracking during lower-body motion. Experimental videos are included in the supplementary material and are also available on the project website: https://resgac.github.io/ResGAC-website/.",
+              "categories": [
+                "cs.RO",
+                "eess.SY"
+              ],
+              "published": "2026-10-07T05:34:26Z",
+              "url": "https://arxiv.org/abs/2610.09479",
+              "pdf_url": "https://arxiv.org/pdf/2610.09479v1",
+              "comment": "",
+              "figure_url": "thumbs/2610.09479.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {
+                "project": "https://resgac.github.io/ResGAC-website/"
+              }
+            },
+            {
+              "id": "2610.09117",
+              "title": "Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data",
+              "authors": [
+                "Songbo Hu",
+                "Qiayuan Liao",
+                "Yufeng Chi",
+                "Kevin Zakka",
+                "Yakun Sophia Shao",
+                "Pieter Abbeel",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Humanoid robots still struggle to plan contact-rich whole-body manipulation from egocentric RGB and proprioception. Workhorse learns such manipulation from robot-free human demonstrations. A visual planner predicts five-link targets: the poses of the torso, both wrists, and both feet. A reinforcement-learning whole-body tracker follows them on the robot. Both policies train separately on the same recorded human poses, without retargeting. We augment the training data of each policy to imitate the errors that the other makes at deployment. On a real Unitree G1, Workhorse sorts boxes with its hands and a kick, catches a thrown box, and topples and climbs a suitcase. During box sorting, we show recoveries after a person pushes the robot or takes the box away. In a simulated copy of the demonstration room, the system completes box sorting in 77% of episodes, and in 64% under 40 N.s pushes. With both policies retrained from the same demonstrations, a simulated second humanoid completes box sorting in 83% of episodes without pushes.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-06T21:06:56Z",
+              "url": "https://arxiv.org/abs/2610.09117",
+              "pdf_url": "https://arxiv.org/pdf/2610.09117v1",
+              "comment": "9 pages, 8 figures, 2 tables. Project page: https://hsb0508.github.io/workhorse/",
+              "figure_url": "https://arxiv.org/html/2610.09117v1/figures/hw_ik.jpg",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://hsb0508.github.io/workhorse/"
+              }
+            },
+            {
               "id": "2609.39665",
               "title": "ChronoGraph: Functional 4D Scene Graphs with Vision-Language Models for Interaction Understanding and Grounded Planning",
               "authors": [
@@ -975,7 +1062,7 @@
           ]
         }
       ],
-      "total": 32
+      "total": 35
     },
     {
       "name": "Stanford",
@@ -1247,6 +1334,65 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2610.09254",
+              "title": "RoboRender: Robot-Oriented Video Generation for Visual Sim-to-Real Transfer",
+              "authors": [
+                "Huang Huang",
+                "Wensi Ai",
+                "Ziyu Chen",
+                "Youhui Wang",
+                "Zijian Du",
+                "Yang Liu",
+                "Jiaolong Yang",
+                "Li Fei-Fei",
+                "Jiajun Wu"
+              ],
+              "abstract": "Simulation enables large-scale, low-cost robot data generation, but policies trained in simulation often fail to transfer to the real world due to the sim-to-real visual discrepancies. Existing approaches often rely on intermediate representations, which can discard rich semantic information or require additional perception modules at deployment. We address this visual sim-to-real gap with RoboRender, a framework that converts simulated trajectories into photorealistic RGB videos for policy learning. RoboRender trains a robot-oriented video generation model conditioned on simulated depth videos, language instructions, and robot RGB mask videos, preserving simulator geometry, robot motion, and action labels while synthesizing realistic textures, backgrounds, and distractors. The generated RGB videos are paired with simulator-provided states and actions to train policies for zero-shot real-world deployment. On robot video test sets, our video model outperforms depth-conditioned video generation baselines in generation quality. In real-world experiments across pick-and-place, articulated-object manipulation, and mobile manipulation tasks, policies trained on RoboRender-generated data achieve a 71% average success rate, outperforming raw simulation renderings and conventional visual domain randomization by approximately 7.1x and 3.6x, respectively. We further show that policy performance improves with more generated videos per simulation trajectory, increasing opening-task success by 65 percentage points. These results demonstrate that generative video rendering mitigates the visual sim-to-real gap for zero-shot policy transfer. Project website: https://robo-render.github.io/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-07T00:39:56Z",
+              "url": "https://arxiv.org/abs/2610.09254",
+              "pdf_url": "https://arxiv.org/pdf/2610.09254v1",
+              "comment": "",
+              "figure_url": "thumbs/2610.09254.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {
+                "project": "https://robo-render.github.io/"
+              }
+            },
+            {
+              "id": "2610.09228",
+              "title": "Co-Evolving Robot Orchestrators and Policies through Deployment",
+              "authors": [
+                "Xilun Zhang",
+                "Maggie Wang",
+                "Erik Bauer",
+                "Hong-Xing Yu",
+                "Huang Huang",
+                "Jiajun Wu",
+                "Marco Pavone"
+              ],
+              "abstract": "Vision-language-action (VLA) policies trained on large datasets are capable within their training domains, yet they still fail to generalize to the variety of situations a robot meets in real-world deployment. Agentic robot systems complement the policy with a vision-language model (VLM) orchestrator that learns when to call the policy, how to instruct it, and when to use scripted skills instead. However, because the harness is built around a frozen policy that has limited language steerability, the orchestrator can avoid the policy's failures but never overcome them. The policy becomes the bottleneck of the whole system. Fine-tuning the policy can remove this bottleneck, but updating it alone decouples it from an orchestrator tuned to its old behavior. We propose Robo-COP, in which the orchestrator and policy co-evolve during deployment. Robo-COP curates skill demonstrations from its own executions, fine-tunes the policy when this data can address recurring failures, and adopts each new policy only after it improves the skills it was trained for. Across ten simulated RoboLab tasks, Robo-COP raises mean held-out success from 64.8% to 73.8% over the same harness with a frozen policy, while fine-tuning on a fixed schedule without verification reaches only 65.8%. On three real-world tasks, Robo-COP raises held-out success from 38.3% to 50.0%. Robo-COP turns deployment into a self-improving flywheel in which robots learn by doing, with each improvement in execution producing better data for the next round of learning. Videos and code are available at https://robo-cop.pages.dev/.",
+              "categories": [
+                "cs.RO",
+                "eess.SY"
+              ],
+              "published": "2026-10-06T23:44:35Z",
+              "url": "https://arxiv.org/abs/2610.09228",
+              "pdf_url": "https://arxiv.org/pdf/2610.09228v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.09228v1/figures/method.png",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://robo-cop.pages.dev/"
+              }
+            },
             {
               "id": "2610.07922",
               "title": "OpenWAM: An Open Framework for Composable World-Action Models",
@@ -1828,39 +1974,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.23181",
-              "title": "CyberFactory: Scaling Cyber Security Capabilities with Instances from the Wild",
-              "authors": [
-                "Jian Yang",
-                "Haau-Sing Li",
-                "Shawn Guo",
-                "Zixi Zhao",
-                "Yibo Tan",
-                "Jiajun Wu",
-                "Aishan Liu",
-                "Zhoujun Li",
-                "Xianglong Liu",
-                "Tianyu Zheng",
-                "Bryan Dai",
-                "Chengran Yang",
-                "Weifeng Lv"
-              ],
-              "abstract": "As large language models (LLMs) continue to advance in coding capabilities, their potential in cybersecurity has drawn increasing research attention, with closed-source LLMs (e.g., Mythos) delivering advanced cybersecurity capabilities. However, existing open-source efforts remain limited: frontier open-weight models do not provide reproducible cybersecurity training solutions, open-source training solutions focus on isolated tasks and lack scalable agentic data, and scaling agentic rollouts requires strong domain priors. In this work, we introduce CyberFactory, a unified open-source framework that connects data construction, trajectory synthesis, and model training across proof-of-concept (PoC) generation, vulnerability patching, and cybersecurity question answering (CyberQA). CyberFactory transforms public vulnerability artifacts, including CVEs from the wild, into executable and verifiable task instances. It further uses a reusable vulnerability-analysis skill to guide the teacher through source inspection, problem solving with domain prior, and evidence-based validation. The resulting supervision is agentic: the model interacts with tools and target environments and revises its solutions according to execution feedback. Using these trajectories, we train and release \\modelname\\footnote{Aegis is, in Greek mythology, the protective shield of Zeus and Athena; the name reflects the model's defensive, security-oriented purpose.}, which internalizes the skill-guided procedure without requiring the skill at inference time. On CyberGym, \\modelname reaches 52.4% Pass@1 under a one-hour budget, improving over its Qwen~3.5 base model by +22.8 points and outperforming the evaluated general-purpose backbones under the same scaffold.",
-              "categories": [
-                "cs.CR",
-                "cs.CL"
-              ],
-              "published": "2026-08-24T12:30:10Z",
-              "url": "https://arxiv.org/abs/2608.23181",
-              "pdf_url": "https://arxiv.org/pdf/2608.23181v3",
-              "comment": "We updated scores with models trained on updated agentic data",
-              "figure_url": "https://arxiv.org/html/2608.23181v3/cybergym-intro.png",
-              "figure_caption": "Figure 1: CyberFactory turns real-world vulnerability evidence into executable, difficulty-calibrated supervision for training OpenAegis on vulnerability detection, patch generation, and CyberQA.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -2105,6 +2218,38 @@
           "name": "Jeannette Bohg",
           "papers": [
             {
+              "id": "2610.10515",
+              "title": "RoboJEPA: Scaling Robotic Latent World Models",
+              "authors": [
+                "Artem Zholus",
+                "Nicolas Beltran-Velez",
+                "Jianhao Yuan",
+                "Sarath Chandar",
+                "Tushar Nagarajan",
+                "Daniel Severo",
+                "Koustuv Sinha",
+                "Michal Drozdzal",
+                "Adriana Romero Soriano",
+                "Jeannette Bohg",
+                "Nicolas Ballas",
+                "Mahmoud Assran"
+              ],
+              "abstract": "Latent world models have shown a remarkable ability to predict future states and to plan in the real world. In practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field. In this work we present RoboJEPA, a world model based on the Joint Embedding Predictive Architecture (JEPA) and trained on a large-scale dataset spanning 12 robotic embodiments. We show that RoboJEPA's imagination error, the error of its latent rollouts, follows a second-order power law in compute, allowing us to predict model quality well beyond the scale at which the law is fit. We further show that downstream robotic planning performance improves predictably with compute, and that imagination error is strongly correlated with it, making it a reliable proxy for real-robot evaluation. Finally, we demonstrate that latent world models can be deployed zero-shot as robotic agents, planning toward a single goal image to solve tasks requiring long-horizon planning on real hardware. We release all model checkpoints together with our training and robot deployment code. To our knowledge, this is the first work to establish scaling laws for multi-embodiment robotic world models trained on real robot data, and RoboJEPA, at 8B parameters, is the largest JEPA predictor model trained to date.",
+              "categories": [
+                "cs.AI",
+                "cs.RO"
+              ],
+              "published": "2026-10-07T17:54:42Z",
+              "url": "https://arxiv.org/abs/2610.10515",
+              "pdf_url": "https://arxiv.org/pdf/2610.10515v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.10515v1/agibot_1005_v1_480x640_k7.png",
+              "figure_caption": "Figure 2: World-model imagination improves with scale. Decoded imagination rollouts on an AgiBot episode for RoboJEPA at 0.3 0.3 B, 2 2 B, and 8 8 B parameters, compared against the ground-truth (GT) video (bottom row). Each row shows the same rollout sampled at equal-time steps; larger models track",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.07681",
               "title": "EigenDEXplore: Structured Exploration for Dexterous Manipulation with Human Priors",
               "authors": [
@@ -2254,6 +2399,36 @@
           "name": "Li Fei-Fei",
           "papers": [
             {
+              "id": "2610.09254",
+              "title": "RoboRender: Robot-Oriented Video Generation for Visual Sim-to-Real Transfer",
+              "authors": [
+                "Huang Huang",
+                "Wensi Ai",
+                "Ziyu Chen",
+                "Youhui Wang",
+                "Zijian Du",
+                "Yang Liu",
+                "Jiaolong Yang",
+                "Li Fei-Fei",
+                "Jiajun Wu"
+              ],
+              "abstract": "Simulation enables large-scale, low-cost robot data generation, but policies trained in simulation often fail to transfer to the real world due to the sim-to-real visual discrepancies. Existing approaches often rely on intermediate representations, which can discard rich semantic information or require additional perception modules at deployment. We address this visual sim-to-real gap with RoboRender, a framework that converts simulated trajectories into photorealistic RGB videos for policy learning. RoboRender trains a robot-oriented video generation model conditioned on simulated depth videos, language instructions, and robot RGB mask videos, preserving simulator geometry, robot motion, and action labels while synthesizing realistic textures, backgrounds, and distractors. The generated RGB videos are paired with simulator-provided states and actions to train policies for zero-shot real-world deployment. On robot video test sets, our video model outperforms depth-conditioned video generation baselines in generation quality. In real-world experiments across pick-and-place, articulated-object manipulation, and mobile manipulation tasks, policies trained on RoboRender-generated data achieve a 71% average success rate, outperforming raw simulation renderings and conventional visual domain randomization by approximately 7.1x and 3.6x, respectively. We further show that policy performance improves with more generated videos per simulation trajectory, increasing opening-task success by 65 percentage points. These results demonstrate that generative video rendering mitigates the visual sim-to-real gap for zero-shot policy transfer. Project website: https://robo-render.github.io/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-07T00:39:56Z",
+              "url": "https://arxiv.org/abs/2610.09254",
+              "pdf_url": "https://arxiv.org/pdf/2610.09254v1",
+              "comment": "",
+              "figure_url": "thumbs/2610.09254.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {
+                "project": "https://robo-render.github.io/"
+              }
+            },
+            {
               "id": "2610.07922",
               "title": "OpenWAM: An Open Framework for Composable World-Action Models",
               "authors": [
@@ -2402,7 +2577,7 @@
           ]
         }
       ],
-      "total": 47
+      "total": 50
     },
     {
       "name": "Carnegie Mellon University",
@@ -2712,6 +2887,64 @@
           "name": "Guanya Shi",
           "papers": [
             {
+              "id": "2610.09479",
+              "title": "Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control",
+              "authors": [
+                "Joohwan Seo",
+                "Xiaofeng Guo",
+                "Jinkun Cao",
+                "Roberto Horowitz",
+                "Rocky Duan",
+                "Guanya Shi",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Precise end-effector tracking during humanoid whole-body motion is challenging due to floating-base oscillations, gravity, dynamic coupling, and locomotion-induced disturbances. We propose ResGAC, a whole-body humanoid controller for precise end-effector pose tracking that combines geometric admittance control (GAC) with residual reinforcement learning. GAC provides structured $\\SE$ task-space feedback and generates nominal arm joint-position targets, while residual RL compensates for unmodeled dynamics and coordinates locomotion and balance in the shared joint-position action space. The left-invariant geometric formulation allows the same GAC law to be used across manipulation reference frames. This enables the use of a ground-attached heading frame that preserves planar locomotion while removing pelvis roll, pitch, and heave from the manipulation reference, thereby reducing reference-induced end-effector motion during locomotion. ResGAC is validated on a real Unitree G1 humanoid. Across four standing end-effector tracking benchmarks, ResGAC consistently outperforms representative baselines, including SONIC, achieving lower translational and rotational errors. Real-world experiments further demonstrate reduced propagation of pelvis motion to the desired end-effector pose using the proposed ground-attached heading frame. ResGAC achieves $90%$ success in a standing peg-in-hole task compared with $50%$ for SONIC, and accurate world-frame $\\SE$ end-effector pose tracking during lower-body motion. Experimental videos are included in the supplementary material and are also available on the project website: https://resgac.github.io/ResGAC-website/.",
+              "categories": [
+                "cs.RO",
+                "eess.SY"
+              ],
+              "published": "2026-10-07T05:34:26Z",
+              "url": "https://arxiv.org/abs/2610.09479",
+              "pdf_url": "https://arxiv.org/pdf/2610.09479v1",
+              "comment": "",
+              "figure_url": "thumbs/2610.09479.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {
+                "project": "https://resgac.github.io/ResGAC-website/"
+              }
+            },
+            {
+              "id": "2610.08863",
+              "title": "Trajectory Planning without Trajectory Data: A Manifold-Guided Approach",
+              "authors": [
+                "Silong Yong",
+                "Anji Liu",
+                "Cunxi Dai",
+                "Carl Busart",
+                "Guanya Shi",
+                "Yilun Du",
+                "Katia Sycara",
+                "Yaqi Xie"
+              ],
+              "abstract": "A common way for trajectory planning is to leverage generative models trained on large collections of expert trajectories. At inference time, the model generates executable trajectories by conditioning on task goal constraints. However, trajectory-based methods rely on costly supervision, scale poorly with sequence length, and often generalize poorly to unseen constraints such as novel start-goal pairs. We propose an alternative to learn the underlying state-space manifold and use the geometry of the manifold for trajectory planning. This approach requires only state observations and enables generalization to unseen constraints by con- structing trajectories on the learned manifold of the state space. Experiments on Maze2D and robotic motion-planning benchmarks show that Ariadne constructs feasible paths from state-only supervision and generalizes to unseen start-goal combinations. On high-dimensional dual-arm planning, it remains competitive with trajectory-supervised and classical planners, while requiring no trajectory data for training.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-05T20:51:54Z",
+              "url": "https://arxiv.org/abs/2610.08863",
+              "pdf_url": "https://arxiv.org/pdf/2610.08863v1",
+              "comment": "Accepted at NeurIPS 2026. Code can be found in https://github.com/SilongYong/Ariadne/",
+              "figure_url": "https://arxiv.org/html/2610.08863v1/002.png",
+              "figure_caption": "Figure 2 : Method overview. We take Uniform Circular Gaussian (UCG) as an example. We assume we have a diffusion model trained on such data and aim to use it for constructing a sequence of states that goes from the red dot to the yellow dot. Left: straight line interpolation between the two points d",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/SilongYong/Ariadne/"
+              }
+            },
+            {
               "id": "2609.38982",
               "title": "SimEX: Simulation-Integrated Robotics AutoResearch",
               "authors": [
@@ -2936,7 +3169,7 @@
           ]
         }
       ],
-      "total": 18
+      "total": 20
     },
     {
       "name": "MIT",
@@ -3101,6 +3334,35 @@
           "name": "Phillip Isola",
           "papers": [
             {
+              "id": "2610.09411",
+              "title": "Shared Geometry As A Rosetta Stone: Cross-Modal Alignment Without Paired Data",
+              "authors": [
+                "Dominik Schnaus",
+                "Thomas Dagès",
+                "Daniel Cremers",
+                "Xi Wang",
+                "Phillip Isola"
+              ],
+              "abstract": "Multimodal representations enable zero-shot classification and retrieval, but aligning independently trained models usually requires large amounts of paired data. Yet, the Platonic Representation Hypothesis suggests that models trained on different modalities may converge spontaneously toward a shared representation geometry. But then, do we even need paired examples for cross-modal alignment? Remarkably, we show that paired examples are unnecessary for coarse cross-modal alignment. Our simple Wasserstein Procrustes method with a coarse geometric initialization aligns two disjoint embedding sets by estimating a single orthogonal map without seeing any pairs. Across datasets, modalities, and unimodal models, we show that we can consistently align independently trained representations without pairs, and standard geometric alignment metrics accurately predict when this is possible. Nevertheless, we can naturally benefit from paired examples. In the very few-pair regime, our method substantially outperforms existing ones, while staying competitive with pair-based methods with more added examples. Finally, we demonstrate that the resulting alignments can enable text-to-image generation without paired examples. These results show that independently trained models often share enough geometry to establish cross-modal correspondence with little or no paired data.",
+              "categories": [
+                "cs.LG",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-10-07T04:12:30Z",
+              "url": "https://arxiv.org/abs/2610.09411",
+              "pdf_url": "https://arxiv.org/pdf/2610.09411v1",
+              "comment": "Project: https://dominik-schnaus.github.io/unpaired-rosetta/, Code: https://github.com/dominik-schnaus/unpaired-rosetta",
+              "figure_url": "https://arxiv.org/html/2610.09411v1/teaser-teaser.png",
+              "figure_caption": "Figure 1: Shared geometry enables unpaired alignment. Across modalities, embedding spaces of independent models share a similar geometry. Prior works require a multimodal “Rosetta Stone” of paired cross-modal examples to align both spaces. In contrast, our Wasserstein Procrustes approach directly ex",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://dominik-schnaus.github.io/unpaired-rosetta/",
+                "code": "https://github.com/dominik-schnaus/unpaired-rosetta"
+              }
+            },
+            {
               "id": "2610.07130",
               "title": "Is this machine playing?",
               "authors": [
@@ -3193,7 +3455,7 @@
           ]
         }
       ],
-      "total": 8
+      "total": 9
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -3505,31 +3767,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.22764",
-              "title": "LpWM: A Case for Sparse Representations in World Models",
-              "authors": [
-                "Yilun Kuang",
-                "Yash Dagade",
-                "Quentin Le Lidec",
-                "Lucas Maes",
-                "Randall Balestriero",
-                "Yann LeCun"
-              ],
-              "abstract": "Joint-embedding predictive architectures (JEPAs) learn latent dynamics for planning and avoid representation collapse by matching features to maximum-entropy distributions such as isotropic Gaussians, yielding dense representations. However, it is unclear whether dense representations are the most favorable geometry for modeling dynamics. In this work, we ask whether a different geometry, sparse representations, can make action-conditioned latent dynamics easier to model, and what dynamical structure emerges from such representations. We first show that nonlinear Lipschitz dynamics can be approximated arbitrarily well by action-conditioned linear dynamics in a sufficiently high-dimensional one-hot latent space, with rollout error vanishing as the dimension grows. This motivates distributed sparse representations as a practical relaxation of one-hot sparsity. We introduce LpWorldModel (LpWM), a JEPA model regularized with Rectified Distribution Matching Regularization (RDMReg) to match encoder features to a Rectified Generalized Gaussian distribution, yielding non-negative sparse codes. Empirically, sparsity lowers the predictor complexity required for successful planning: on PushT, sparse LpWM outperforms dense LeWM by up to 57% in planning success at intermediate predictor capacities. This advantage also extends beyond Gaussian distribution matching, with LpWM outperforming dense VICReg representations across multiple predictor families. We further find that the learned sparse representations are mode-factored, with support encoding discrete dynamical regimes and feature magnitudes capturing continuous within-regime state. Together, these results suggest that sparse representations can reduce the predictor complexity required for control while revealing interpretable structure.",
-              "categories": [
-                "cs.LG"
-              ],
-              "published": "2026-08-24T03:37:39Z",
-              "url": "https://arxiv.org/abs/2608.22764",
-              "pdf_url": "https://arxiv.org/pdf/2608.22764v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.22764v1/fig_piecewise_heatmap_r14c14.png",
-              "figure_caption": "(a) Support Jaccard Heatmap.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -3591,7 +3828,7 @@
           ]
         }
       ],
-      "total": 12
+      "total": 11
     },
     {
       "name": "University of Washington",
@@ -3919,7 +4156,7 @@
               ],
               "published": "2026-09-30T17:35:08Z",
               "url": "https://arxiv.org/abs/2609.40245",
-              "pdf_url": "https://arxiv.org/pdf/2609.40245v2",
+              "pdf_url": "https://arxiv.org/pdf/2609.40245v3",
               "comment": "Conference on Robot Learning (CoRL) 2026. First two authors contributed equally. Project site: https://larg.github.io/stars/",
               "figure_url": "https://arxiv.org/html/2609.40245v1/figures/ds-sns-legend-no-cpt.png",
               "figure_caption": "Figure 2: (A) Dataset Overview. We utilize two human-robot interaction datasets: SEAN-T [ 47 ] for evaluating subjective human ratings of robot navigation and SNS [ 31 ] for downstream relational action classification (e.g., avoid , follow ). (B) Latent Space Analysis (RQ3). 2D Projections of the SN",
@@ -4429,6 +4666,31 @@
           "name": "Jan Peters",
           "papers": [
             {
+              "id": "2610.10302",
+              "title": "Continual Graph Multi-Agent Reinforcement Learning",
+              "authors": [
+                "Tommaso Marzi",
+                "Ahmed Hendawy",
+                "Jan Peters",
+                "Carlo D'Eramo",
+                "Andrea Cini",
+                "Cesare Alippi"
+              ],
+              "abstract": "In Continual Multi-Agent Reinforcement Learning (CMARL), agents learn cooperative policies across sequences of tasks, aiming to adapt effectively to new tasks while preserving the ability to solve previously encountered ones. In many applications, tasks differ in their underlying structure, which can represent, for example, distinct operational conditions or target configurations (e.g., different network topologies in power grids or arrangements in formation control). Existing CMARL methods lack dedicated mechanisms to leverage this structural information when learning new tasks, failing to promote transfer and mitigate forgetting. To fill this gap, we propose Continual Graph Multi-Agent Reinforcement Learning (CGMARL), a novel framework for CMARL problems in which task sequences are mapped into a series of attributed graphs, each modeling a task-specific structure. In CGMARL, each graph determines the environment dynamics (next states and/or rewards) and the number of agents for the corresponding task. Then, we present Graph-based Formation (GRAFO), the first CGMARL benchmark, and show how forgetting arises in this setting. Finally, to address this limitation, we propose Frozen Graph Encoder (FROG), a method that relies on a frozen graph backbone to preserve past structural information in graph-based CMARL policies. Experiments on GRAFO show that pairing FROG with existing CL methods substantially improves performance on multiple CGMARL scenarios.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-10-07T15:56:31Z",
+              "url": "https://arxiv.org/abs/2610.10302",
+              "pdf_url": "https://arxiv.org/pdf/2610.10302v1",
+              "comment": "",
+              "figure_url": "thumbs/2610.10302.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.07686",
               "title": "BluffJAX: Adversarial Imperfect Information Games in JAX",
               "authors": [
@@ -4855,7 +5117,7 @@
           ]
         }
       ],
-      "total": 28
+      "total": 29
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -5219,14 +5481,14 @@
                 "Mehul Motani",
                 "Changsheng Wu"
               ],
-              "abstract": "Surface electromyography (sEMG) provides a wearable, noninvasive interface to neuromuscular activity for movement decoding and human-computer interaction. Population-scale decoding remains difficult because the relationship between sEMG and neuromuscular activity varies across users and sessions, while task-relevant dynamics span channels and multiple timescales. Learning waveform-to-output mappings from task labels leaves the distinction between recording variability and coordinated motor activity implicit. We introduce the Neuromotor Hierarchy Network (NHN), which learns a compact latent neuromotor state from task supervision to represent task-relevant neuromuscular coordination. NHN constructs this latent state through a hierarchy inspired by neuromotor organization.It adapts recording statistics while preserving relative intensity.Its spatiotemporal encoder uses parameter-efficient channel interactions and modulates features with multi-timescale history. The resulting features yield candidate activations of learned motor primitives, which are temporally integrated and continuously weighted to form the state. Theoretical analysis characterizes the efficiency, temporal behavior, and optimization of NHN's core mechanisms. We evaluate the architecture for both continuous hand-pose estimation on emg2pose and touch-typing recognition on emg2qwerty. On emg2pose, NHN reduces user-averaged angular error by 0.52% to 2.84% across all three generalization splits in both Regression and Tracking relative to Hadidi et al.'s best task-specific variants, using 48.42% to 48.51% fewer parameters. On emg2qwerty, NHN reduces beam-search character error rate by 19.40% zero-shot and 30.42% after fine-tuning relative to SplashNet-Upscale, using 65.86% fewer parameters. Physiology-guided inference of a latent neuromotor state supports parameter-efficient sEMG decoding.",
+              "abstract": "Surface electromyography (sEMG) provides a wearable, noninvasive interface to neuromuscular activity for movement decoding and human-computer interaction. Population-scale decoding remains difficult because the relationship between sEMG and neuromuscular activity varies across users and sessions, while task-relevant dynamics span channels and multiple timescales. Learning waveform-to-output mappings from task labels leaves the distinction between recording variability and coordinated motor activity implicit. We introduce the Neuromotor Hierarchy Network (NHN), which learns a compact latent neuromotor state from task supervision to represent task-relevant neuromuscular coordination. NHN constructs this latent state through a hierarchy inspired by neuromotor organization. It adapts recording statistics while preserving relative intensity. Its spatiotemporal encoder uses parameter-efficient channel interactions and modulates features with multi-timescale history. The resulting features yield candidate activations of learned motor primitives, which are temporally integrated and continuously weighted to form the state. Theoretical analysis characterizes the efficiency, temporal behavior, and optimization of NHN's core mechanisms. We evaluate the architecture for both continuous hand-pose estimation on emg2pose and touch-typing recognition on emg2qwerty. On emg2pose, NHN reduces user-averaged angular error by 0.52% to 2.84% across all three generalization splits in both Regression and Tracking relative to Hadidi et al.'s best task-specific variants, using 48.42% to 48.51% fewer parameters. On emg2qwerty, NHN reduces beam-search character error rate by 19.40% zero-shot and 30.42% after fine-tuning relative to SplashNet-Upscale, using 65.86% fewer parameters. Physiology-guided inference of a latent neuromotor state supports parameter-efficient sEMG decoding.",
               "categories": [
                 "cs.LG"
               ],
               "published": "2026-10-06T04:08:41Z",
               "url": "https://arxiv.org/abs/2610.07713",
-              "pdf_url": "https://arxiv.org/pdf/2610.07713v1",
-              "comment": "",
+              "pdf_url": "https://arxiv.org/pdf/2610.07713v2",
+              "comment": "Corrected the abstract metadata. Manuscript unchanged",
               "figure_url": "https://arxiv.org/html/2610.07713v1/figures/Figure1.png",
               "figure_caption": "",
               "figure_source": "html",
@@ -5997,6 +6259,33 @@
           "name": "Cewu Lu",
           "papers": [
             {
+              "id": "2610.10534",
+              "title": "RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input",
+              "authors": [
+                "Yanwen Zou",
+                "Chenyang Shi",
+                "Guoxuan Xu",
+                "Wenye Yu",
+                "Wendi Chen",
+                "Ye Pan",
+                "Cewu Lu",
+                "Chuan Wen"
+              ],
+              "abstract": "End-to-end robot policies trained through imitation learning remain constrained by limited data diversity, making reliable zero-shot deployment in real-world settings challenging. Shared-autonomy methods enable human correction through teleoperation, but specialized hardware and operator training hinder deployment at scale. Other approaches incorporate human guidance as additional policy inputs, often requiring architectural changes and dedicated training for steerability, which limits their applicability across policies. We present RoboPrompt, a general-purpose, lightweight robot policy steering system that enables users to guide policy behavior through intuitive, sparse inputs, including drawn traces, target points, and coarse directional instructions. RoboPrompt decouples human-intention translation from the underlying policy: a reusable module converts human guidance into action drafts, which are refined through the diffusion or flow-matching dynamics of the base policy. By controlling action generation in noise space, RoboPrompt balances human intent with the policy prior without modifying the base policy architecture or fine-tuning it for steerability. Experiments demonstrate effective steering across Diffusion Policy, $π_{0.5}$, and FastWAM. We further use steered rollouts for online policy improvement through DAgger. After 2-3 rounds of iteration, average success rates increase by 15.5% for $π_{0.5}$ across three tasks and by 21.3% across three policies(Diffusion Policy, $π_{0.5}$, FastWAM) on the Insert Bread task, while average human intervention counts decrease by 44.0% (2.86 to 1.60) and 81.9% (2.60 to 0.47), respectively.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-07T17:58:53Z",
+              "url": "https://arxiv.org/abs/2610.10534",
+              "pdf_url": "https://arxiv.org/pdf/2610.10534v1",
+              "comment": "8 pages",
+              "figure_url": "https://arxiv.org/html/2610.10534v1/overview.png",
+              "figure_caption": "Fig. 1 : Overview of RoboPrompt . RoboPrompt aims to enable human-in-the-loop deployment of robot policies, collecting failure-recovery rollout data that can drive continual policy improvement. It supports intuitive multimodal steering through inputs, including points, traces, and coarse directional",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.06801",
               "title": "MC-Sparse: Deconstructing and Closing the Dense-Sparse Attention Gap in Diffusion Transformers",
               "authors": [
@@ -6178,7 +6467,7 @@
           ]
         }
       ],
-      "total": 42
+      "total": 43
     },
     {
       "name": "工业界研究团队",
@@ -6430,6 +6719,35 @@
         {
           "name": "Pieter Abbeel",
           "papers": [
+            {
+              "id": "2610.09117",
+              "title": "Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data",
+              "authors": [
+                "Songbo Hu",
+                "Qiayuan Liao",
+                "Yufeng Chi",
+                "Kevin Zakka",
+                "Yakun Sophia Shao",
+                "Pieter Abbeel",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Humanoid robots still struggle to plan contact-rich whole-body manipulation from egocentric RGB and proprioception. Workhorse learns such manipulation from robot-free human demonstrations. A visual planner predicts five-link targets: the poses of the torso, both wrists, and both feet. A reinforcement-learning whole-body tracker follows them on the robot. Both policies train separately on the same recorded human poses, without retargeting. We augment the training data of each policy to imitate the errors that the other makes at deployment. On a real Unitree G1, Workhorse sorts boxes with its hands and a kick, catches a thrown box, and topples and climbs a suitcase. During box sorting, we show recoveries after a person pushes the robot or takes the box away. In a simulated copy of the demonstration room, the system completes box sorting in 77% of episodes, and in 64% under 40 N.s pushes. With both policies retrained from the same demonstrations, a simulated second humanoid completes box sorting in 83% of episodes without pushes.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-06T21:06:56Z",
+              "url": "https://arxiv.org/abs/2610.09117",
+              "pdf_url": "https://arxiv.org/pdf/2610.09117v1",
+              "comment": "9 pages, 8 figures, 2 tables. Project page: https://hsb0508.github.io/workhorse/",
+              "figure_url": "https://arxiv.org/html/2610.09117v1/figures/hw_ik.jpg",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://hsb0508.github.io/workhorse/"
+              }
+            },
             {
               "id": "2610.08789",
               "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
@@ -7279,7 +7597,7 @@
           "papers": []
         }
       ],
-      "total": 30
+      "total": 31
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -8078,7 +8396,37 @@
         },
         {
           "name": "Cunxi Dai",
-          "papers": []
+          "papers": [
+            {
+              "id": "2610.08863",
+              "title": "Trajectory Planning without Trajectory Data: A Manifold-Guided Approach",
+              "authors": [
+                "Silong Yong",
+                "Anji Liu",
+                "Cunxi Dai",
+                "Carl Busart",
+                "Guanya Shi",
+                "Yilun Du",
+                "Katia Sycara",
+                "Yaqi Xie"
+              ],
+              "abstract": "A common way for trajectory planning is to leverage generative models trained on large collections of expert trajectories. At inference time, the model generates executable trajectories by conditioning on task goal constraints. However, trajectory-based methods rely on costly supervision, scale poorly with sequence length, and often generalize poorly to unseen constraints such as novel start-goal pairs. We propose an alternative to learn the underlying state-space manifold and use the geometry of the manifold for trajectory planning. This approach requires only state observations and enables generalization to unseen constraints by con- structing trajectories on the learned manifold of the state space. Experiments on Maze2D and robotic motion-planning benchmarks show that Ariadne constructs feasible paths from state-only supervision and generalizes to unseen start-goal combinations. On high-dimensional dual-arm planning, it remains competitive with trajectory-supervised and classical planners, while requiring no trajectory data for training.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-05T20:51:54Z",
+              "url": "https://arxiv.org/abs/2610.08863",
+              "pdf_url": "https://arxiv.org/pdf/2610.08863v1",
+              "comment": "Accepted at NeurIPS 2026. Code can be found in https://github.com/SilongYong/Ariadne/",
+              "figure_url": "https://arxiv.org/html/2610.08863v1/002.png",
+              "figure_caption": "Figure 2 : Method overview. We take Uniform Circular Gaussian (UCG) as an example. We assume we have a diffusion model trained on such data and aim to use it for constructing a sequence of states that goes from the red dot to the yellow dot. Left: straight line interpolation between the two points d",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/SilongYong/Ariadne/"
+              }
+            }
+          ]
         },
         {
           "name": "Anssi Kanervisto",
@@ -8170,6 +8518,64 @@
         {
           "name": "Guanya Shi",
           "papers": [
+            {
+              "id": "2610.09479",
+              "title": "Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control",
+              "authors": [
+                "Joohwan Seo",
+                "Xiaofeng Guo",
+                "Jinkun Cao",
+                "Roberto Horowitz",
+                "Rocky Duan",
+                "Guanya Shi",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Precise end-effector tracking during humanoid whole-body motion is challenging due to floating-base oscillations, gravity, dynamic coupling, and locomotion-induced disturbances. We propose ResGAC, a whole-body humanoid controller for precise end-effector pose tracking that combines geometric admittance control (GAC) with residual reinforcement learning. GAC provides structured $\\SE$ task-space feedback and generates nominal arm joint-position targets, while residual RL compensates for unmodeled dynamics and coordinates locomotion and balance in the shared joint-position action space. The left-invariant geometric formulation allows the same GAC law to be used across manipulation reference frames. This enables the use of a ground-attached heading frame that preserves planar locomotion while removing pelvis roll, pitch, and heave from the manipulation reference, thereby reducing reference-induced end-effector motion during locomotion. ResGAC is validated on a real Unitree G1 humanoid. Across four standing end-effector tracking benchmarks, ResGAC consistently outperforms representative baselines, including SONIC, achieving lower translational and rotational errors. Real-world experiments further demonstrate reduced propagation of pelvis motion to the desired end-effector pose using the proposed ground-attached heading frame. ResGAC achieves $90%$ success in a standing peg-in-hole task compared with $50%$ for SONIC, and accurate world-frame $\\SE$ end-effector pose tracking during lower-body motion. Experimental videos are included in the supplementary material and are also available on the project website: https://resgac.github.io/ResGAC-website/.",
+              "categories": [
+                "cs.RO",
+                "eess.SY"
+              ],
+              "published": "2026-10-07T05:34:26Z",
+              "url": "https://arxiv.org/abs/2610.09479",
+              "pdf_url": "https://arxiv.org/pdf/2610.09479v1",
+              "comment": "",
+              "figure_url": "thumbs/2610.09479.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {
+                "project": "https://resgac.github.io/ResGAC-website/"
+              }
+            },
+            {
+              "id": "2610.08863",
+              "title": "Trajectory Planning without Trajectory Data: A Manifold-Guided Approach",
+              "authors": [
+                "Silong Yong",
+                "Anji Liu",
+                "Cunxi Dai",
+                "Carl Busart",
+                "Guanya Shi",
+                "Yilun Du",
+                "Katia Sycara",
+                "Yaqi Xie"
+              ],
+              "abstract": "A common way for trajectory planning is to leverage generative models trained on large collections of expert trajectories. At inference time, the model generates executable trajectories by conditioning on task goal constraints. However, trajectory-based methods rely on costly supervision, scale poorly with sequence length, and often generalize poorly to unseen constraints such as novel start-goal pairs. We propose an alternative to learn the underlying state-space manifold and use the geometry of the manifold for trajectory planning. This approach requires only state observations and enables generalization to unseen constraints by con- structing trajectories on the learned manifold of the state space. Experiments on Maze2D and robotic motion-planning benchmarks show that Ariadne constructs feasible paths from state-only supervision and generalizes to unseen start-goal combinations. On high-dimensional dual-arm planning, it remains competitive with trajectory-supervised and classical planners, while requiring no trajectory data for training.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-05T20:51:54Z",
+              "url": "https://arxiv.org/abs/2610.08863",
+              "pdf_url": "https://arxiv.org/pdf/2610.08863v1",
+              "comment": "Accepted at NeurIPS 2026. Code can be found in https://github.com/SilongYong/Ariadne/",
+              "figure_url": "https://arxiv.org/html/2610.08863v1/002.png",
+              "figure_caption": "Figure 2 : Method overview. We take Uniform Circular Gaussian (UCG) as an example. We assume we have a diffusion model trained on such data and aim to use it for constructing a sequence of states that goes from the red dot to the yellow dot. Left: straight line interpolation between the two points d",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/SilongYong/Ariadne/"
+              }
+            },
             {
               "id": "2609.38982",
               "title": "SimEX: Simulation-Integrated Robotics AutoResearch",
@@ -8292,7 +8698,7 @@
           ]
         }
       ],
-      "total": 9
+      "total": 12
     },
     {
       "name": "RGMT 合作作者",
@@ -11477,6 +11883,34 @@
           "name": "Hongtao Wang",
           "papers": [
             {
+              "id": "2610.10345",
+              "title": "SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing",
+              "authors": [
+                "Hui Zhang",
+                "Yachao Yuan",
+                "Jiayun Wang",
+                "Yuanzhuo Li",
+                "Hongtao Wang",
+                "Yali Yuan"
+              ],
+              "abstract": "Fine-tuning-as-a-service enables users to adapt aligned large language models (LLMs) to specialized tasks, but malicious fine-tuning can erode refusal behavior while preserving task performance on legitimate inputs. We revisit recent layer-wise safety diagnostics and find that safety sensitivity is signed: scaling different layers can strengthen refusal, weaken it, or have little effect. Motivated by this observation, we propose SLDR, a post-fine-tuning defense based on Selective Layers Recovery and Dynamic Routing. SLDR trains a LoRA recovery adapter only on the layers with the maximum and minimum sensitivity scores in the signed spectrum, and uses representation-based dynamic routing inference to activate the adapter only for malicious queries. Across four model architectures, five downstream tasks, and four harmful benchmarks, SLDR substantially reduces harmful outputs while preserving downstream utility. On Llama3.1/SST2, SLDR reduces the average harmful score from 11.54 to 0.08 while maintaining downstream accuracy, and the harmful score remains near zero under poisoning ratios up to 0.9. The code is available at https://github.com/Stardust457/SLDR.",
+              "categories": [
+                "cs.CR",
+                "cs.AI"
+              ],
+              "published": "2026-10-07T16:23:45Z",
+              "url": "https://arxiv.org/abs/2610.10345",
+              "pdf_url": "https://arxiv.org/pdf/2610.10345v1",
+              "comment": "Accepted at NeurIPS 2026",
+              "figure_url": "https://arxiv.org/html/2610.10345v1/framework.png",
+              "figure_caption": "Figure 2: Overview of SLDR. (a) Signed layer selection; (b) two-stage fine-tuning with targeted safety recovery; (c) representation-based dynamic routing for inference-time safety-utility balance.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/Stardust457/SLDR"
+              }
+            },
+            {
               "id": "2609.10844",
               "title": "Expressive Robotic Pianist: Mastering Complex Piano Repertoire with Graph-Mimic and Musical Dynamics",
               "authors": [
@@ -11596,7 +12030,7 @@
           ]
         }
       ],
-      "total": 33
+      "total": 34
     },
     {
       "name": "SONIC 合作作者",
@@ -11811,7 +12245,36 @@
         },
         {
           "name": "Chenran Li",
-          "papers": []
+          "papers": [
+            {
+              "id": "2610.09369",
+              "title": "Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment",
+              "authors": [
+                "Xiao Zhang",
+                "Yuxin Chen",
+                "Zhixuan Liang",
+                "Guojian Zhan",
+                "Chenran Li",
+                "Chenfeng Xu",
+                "Masayoshi Tomizuka",
+                "Yiheng Li"
+              ],
+              "abstract": "When diffusion policies were first introduced, they were expected to recover multi-modal action distributions. However, we find this expectation does not always hold, as diffusion policies often collapse to a single modality even when we guarantee the balance of dataset modalities and exact within-batch symmetry. Our analysis indicates that independent action-noise pairing contributes to this failure by increasing mixing and crossing among diffusion paths, which can produce averaged denoising responses and suppress modality-specific behavior. This issue is especially severe in robot planning, where action spaces are dense and low-dimensional, significantly increasing such mixing and crossing. To alleviate this problem, we propose Immiscible Diffusion Policy, a label-free training-time add-on to diffusion policy that uses action-noise assignment to preserve relatively distinct noise-to-action routes without modifying the policy architecture or inference procedure. Across five simulated and two real-world humanoid manipulation tasks spanning state, RGB, and point-cloud observations, our method significantly improves the policy's preservation of action modalities while maintaining strong task performance. It increases the proportion of the non-dominant modality by 6.0x-14.6x across three two-modality tasks and recovers demonstrated modalities that are entirely absent from vanilla policy rollouts on both four-modality tasks. These results demonstrate that Immiscible Diffusion Policy provides a simple yet robust approach to preserving action multi-modality in general robot learning tasks.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-07T03:22:26Z",
+              "url": "https://arxiv.org/abs/2610.09369",
+              "pdf_url": "https://arxiv.org/pdf/2610.09369v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.09369v1/fig2_noise_space.png",
+              "figure_caption": "Fig. 2: Noise-space organization on Push-T. Noise samples are projected onto modality-related and orthogonal axes and colored by paired-action modality. The orthogonal axis has no specific meaning and is included only for visualization. Hungarian assignment yields clearer modality-dependent structur",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            }
+          ]
         },
         {
           "name": "Fernando Castañeda",
@@ -11969,6 +12432,30 @@
         {
           "name": "Zi Wang",
           "papers": [
+            {
+              "id": "2610.09212",
+              "title": "CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search",
+              "authors": [
+                "Guanhua Ding",
+                "Zi Wang",
+                "Ruichao Li",
+                "Jack Liu"
+              ],
+              "abstract": "The best two-bit weight quantizers for large language models, such as QTIP and Proteus, rotate each weight matrix by a random orthogonal transform, which must be undone at every decoding step, then encode it with a trellis or lattice code under a Euclidean search; the layer Hessian enters only through error feedback between coding blocks. We show that this leaves part of the Hessian unused. Error feedback turns the loss into a weighted sum of per-coordinate rounding errors whose weights, the diagonal of the Hessian's LDL factorization, existing quantizers compute but never read. We put these weights into the Viterbi branch metric, so the search follows the curvature within each coding block. This also explains the rotation: it removes this within-block variation, so weighting in the native basis and rotating are substitutes. On three models the weighted native search matches a full-dimension randomized Hadamard to within about one point of downstream accuracy, and weighting after the rotation gains little. Around this search we build CurveTQ, a trellis codec with no rotation, which handles the weights' amplitude and marginal shape with a factored scale field and a closed-form quantile table, and stores a start state per coding block so the trellis can adapt to the residual that error feedback carries into it. At two bits CurveTQ is 1-3 points higher in mean downstream accuracy than QTIP and Proteus on three 4-8B Instruct models, even after both are given our start state, which alone lifts either baseline by 1-3 points. It also leads on a 35B mixture of experts, to our knowledge the first trellis-coded result on such a model. With no rotation to undo, our decoder is the fastest of the three at all tested batch sizes and bit widths.",
+              "categories": [
+                "cs.LG",
+                "cs.AI"
+              ],
+              "published": "2026-10-06T23:14:06Z",
+              "url": "https://arxiv.org/abs/2610.09212",
+              "pdf_url": "https://arxiv.org/pdf/2610.09212v1",
+              "comment": "",
+              "figure_url": "thumbs/2610.09212.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.07309",
               "title": "The Right Memory in the Wrong Context: Verifying Retrieval Admissibility in Long-Term Agent Memory",
@@ -12816,13 +13303,13 @@
                 "Jan Kautz",
                 "Yi Dong"
               ],
-              "abstract": "Reinforcement learning (RL) has greatly advanced the capabilities of large language models (LLMs), but its memory demands remain a barrier to broader adoption. We introduce LoGRA, an approach to RL post-training that reduces memory by retaining useful learning signals in low-rank gradient sketches. These compact representations support both model updates and efficient policy synchronization. To prevent overly large updates from disrupting learning, we complement gradient compression with predicted-KL step control, which estimates policy changes before applying each update and adjusts its magnitude accordingly. Across reasoning tasks, LoGRA reduces average training memory by up to 45.7% without sacrificing performance. It also enables stable training of a 27B-parameter model for over 1,100 steps on a single eight-GPU node, where dense Adam runs out of memory, making previously memory-infeasible RL training practical. Code is available in the \\href{https://github.com/skzhang1/labs-molt/tree/logra/examples/scripts/logra}{Molt library}.",
+              "abstract": "Reinforcement learning has greatly advanced the capabilities of large language models, but its memory demands remain a barrier to broader adoption. We introduce LoGRA, an approach to RL post-training that reduces memory by retaining useful learning signals in low-rank gradient sketches. These compact representations support both model updates and efficient policy synchronization. To prevent overly large updates from disrupting learning, we complement gradient compression with predicted-KL step control, which estimates policy changes before applying each update and adjusts its magnitude accordingly. With all techniques combined, LoGRA reduces average training memory usage by up to 45.7% across reasoning tasks without compromising performance. It also enables stable training of a 27B-parameter model for over 1,100 steps on a single eight-GPU node, where dense Adam runs out of memory, making previously memory-infeasible RL training practical. Code is available in the \\href{https://github.com/skzhang1/labs-molt/tree/logra/examples/scripts/logra}{Molt library}.",
               "categories": [
                 "cs.CL"
               ],
               "published": "2026-10-05T16:28:11Z",
               "url": "https://arxiv.org/abs/2610.06647",
-              "pdf_url": "https://arxiv.org/pdf/2610.06647v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.06647v2",
               "comment": "16 pages, 6 figures",
               "figure_url": "https://arxiv.org/html/2610.06647v1/rank_refresh.png",
               "figure_caption": "Figure 5: Components of gradient compression. (a) Training performance as a function of projection rank; (b) Gradient-reconstruction cosine for fixed and refreshed Rademacher bases. (c) The same diagnostic for refreshed Rademacher and Gaussian bases. Heatmap rows denote Transformer layers and column",
@@ -13153,7 +13640,7 @@
           ]
         }
       ],
-      "total": 29
+      "total": 31
     }
   ]
 }
