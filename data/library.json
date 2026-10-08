@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T02:31:47.807Z",
+  "updated": "2026-10-08T02:45:46.947Z",
   "items": [
     {
       "type": "paper",
@@ -826,6 +826,96 @@
       "status": "liked",
       "added_at": "2026-10-05T06:13:40.461Z",
       "updated_at": "2026-10-05T06:13:40.461Z"
+    },
+    {
+      "type": "paper",
+      "id": "2610.02341",
+      "title": "Filter-Aware Fine-Tuning for Safe Humanoid Whole-Body Tracking",
+      "url": "https://arxiv.org/abs/2610.02341",
+      "subtitle": "Pranit Mohnot, Christian Helten, Daniele Gammelli, Marco Pavone",
+      "text": "Safe whole-body motion is essential for deploying humanoid robots in unstructured environments. Modern humanoid control commonly separates reference specification from execution, with a planner, teleoperator, or motion generator providing a reference that a reinforcement-learning policy tracks through dynamically feasible whole-body control. Runtime safety filters, such as control barrier functions (CBFs), offer a promising approach for enforcing newly introduced constraints via interventions on the tracker's outputs. We show, however, that treating the tracking policy and safety filter independently induces fundamental mismatches, as filtering alters both the executed actions and the induced state distribution. We study this policy-filter interface through case studies that isolate dynamics, objective, and information mismatches, highlight their root causes, and use these insights to develop CoFiT (Constrained Filter-aware Tuning), a filter-aware fine-tuning method for pretrained trackers. Across diverse constraint scenes, CoFiT reduces violation time relative to filter-only training by 91% on TWIST2 and 21% on SONIC, while requiring smaller safety filter corrections. On Unitree G1 hardware, CoFiT reduces violation time by 83% for TWIST2 and completes every trial without operator intervention, whereas 50% of baseline trials require an operator stop. Together, these results provide actionable insights into policy-filter interactions and establish design principles for integrating learned trackers with runtime safety filters.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-10-01",
+      "score": 0.9523,
+      "why": "兴趣：general-purpose whole-body motion and trajectory tracking for humanoid robots, following diverse unseen reference motions",
+      "keywords": [
+        "humanoid",
+        "whole-body control",
+        "SONIC"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.02341v1",
+      "image": "https://arxiv.org/html/2610.02341v1/hero.png",
+      "imageCaption": "Fig. 1: Whole-body tracking with an active safety filter (avoid the ball). The continued-training baseline (left) and CoFiT (right) track the same reaching reference. Five of ten baseline trials required an operator stop; CoFiT completed all ten. Overlaid poses are successive stills from one trial.",
+      "video": null,
+      "links": [],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:31:51.813Z",
+      "updated_at": "2026-10-08T02:31:51.813Z"
+    },
+    {
+      "type": "paper",
+      "id": "2610.02788",
+      "title": "Skill2Real: Agentic Skill Learning for Zero-Shot Sim-to-Real Robot Manipulation",
+      "url": "https://arxiv.org/abs/2610.02788",
+      "subtitle": "Xincheng He, Siyu Ma, Chang Yu, Yunuo Chen, Yanjia Huang, Ying Nian Wu 等",
+      "text": "Transferring robotic skills from simulation to reality requires task knowledge that remains usable across differences in perception, dynamics, and embodiment. We introduce Skill2Real, an agentic policy framework that learns executable skills through a shared application programming interface (API). A Proposer-Verifier-Governor (PVG) loop uses privileged simulation evidence to diagnose outcomes and validate updates, while keeping learned skills grounded in public observations and API semantics. The Cerebellum first acquires local manipulation skills; the Brain then learns task-level composition with the Cerebellum frozen. Both memories transfer to the real robot without task-policy fine-tuning or skill-memory updates. As GPT-5.6 Sol learns skills on LIBERO-90, evaluating each frozen checkpoint with GPT-6 Astra raises LIBERO-Pro Long success from 2.0% to 56.3%, without training on Pro Long. Independent Robosuite training reaches 85.1% and 89.4% mean success with Sol and Opus 5 across seven tasks, respectively. Frozen Sol-trained LIBERO-90 skills achieve 78.75% mean completion across four real-world manipulation tasks with Astra. Removing the Verifier or Governor during LIBERO-90 training lowers final Pro Long success by 17.3 and 13.3 percentage points, respectively. These results support learning and transferring a hierarchy of executable skills through a common robot interface.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-10-02",
+      "score": 0.794,
+      "why": "你点赞过：ForgetMimic: Motion Unlearning for Reinforcement Learning Hu",
+      "keywords": [
+        "sim-to-real"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.02788v1",
+      "image": "https://arxiv.org/html/2610.02788v1/skill2real_teaser_right_order_print_20260926_194435.png",
+      "imageCaption": "Figure 1: Zero-shot real-world transfer of simulation-learned skills. Skill2Real learns transferable, skill-based knowledge across diverse simulation environments. The resulting frozen skills are evaluated on real-world tasks without additional learning, demonstrating robustness to variations in lig",
+      "video": null,
+      "links": [],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:45:44.300Z",
+      "updated_at": "2026-10-08T02:45:44.300Z"
+    },
+    {
+      "type": "paper",
+      "id": "2610.03196",
+      "title": "Beyond Reward Hacking: Proxy Divergence Across Four Layers of a Staged Humanoid Learning Pipeline",
+      "url": "https://arxiv.org/abs/2610.03196",
+      "subtitle": "Arunabh Bora",
+      "text": "A reinforcement-learning (RL) pipeline for a legged robot is assembled from proxies. A reward stands in for intended behaviour, a curriculum gate stands in for competence, an evaluation statistic stands in for robustness, and a reference motion stands in for an achievable skill. The traditional view treats only the first of these as optimised against, and so locates specification failure (reward hacking) in the reward alone. I argue that all four are proxies in the same formal sense, that each has a characteristic divergence mechanism, and that each admits a reformulation that closes it. For every layer I state the traditional formulation, derive the condition under which it diverges from its target, and give the alternative: first-order (L1) costs where quadratic kernels are flat, peak and outcome statistics where curriculum gates average, gate reachability and information checks, deterministic and phase-desynchronised evaluation, curriculum state treated as part of the model, feasibility-first reference design with residual feed-forward, and function-preserving input widening that lets one policy grow instead of being retrained. The arguments are illustrated by measurements from one continuous lineage of a PPO policy for a simulated 1.91 m humanoid, grown over four stages and 13,500 iterations on a single laptop GPU. Among them, a curriculum gate built on averaged error advanced at its rate limit on every check while the skill it gated was absent, and a batched push test whose synchronised resets aliased the gait phase ranked a 0.5 m/s push as more dangerous than a 2.0 m/s one.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-10-02",
+      "score": 0.9028,
+      "why": "兴趣：reinforcement learning for robust humanoid locomotion, bipedal walking and running",
+      "keywords": [
+        "humanoid",
+        "legged"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.03196v1",
+      "image": "/daily-paper/thumbs/2610.03196.jpg",
+      "imageCaption": "论文首页预览",
+      "video": null,
+      "links": [],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:31:57.292Z",
+      "updated_at": "2026-10-08T02:31:57.292Z"
     },
     {
       "type": "paper",
