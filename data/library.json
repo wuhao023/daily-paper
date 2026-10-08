@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T02:30:42.891Z",
+  "updated": "2026-10-08T02:31:47.807Z",
   "items": [
     {
       "type": "paper",
@@ -826,6 +826,69 @@
       "status": "liked",
       "added_at": "2026-10-05T06:13:40.461Z",
       "updated_at": "2026-10-05T06:13:40.461Z"
+    },
+    {
+      "type": "paper",
+      "id": "2610.03388",
+      "title": "KungfuAthleteBot: learning high-dynamic humanoid motion from video with unified robust recovery",
+      "url": "https://arxiv.org/abs/2610.03388",
+      "subtitle": "Zhongxiang Lei, Lulu Cao, Xuyang Wang, Tianyi Qian, Jinyan Liu, Xuesong Li",
+      "text": "Video is an abundant, inexpensive source of human motion data that is rich in extreme athletic behaviors. Making it usable for humanoid robots, however, is not a matter of simply retargeting a reconstructed trajectory: video-derived motion is physically inconsistent, devoid of actuation information, and says nothing about failure or recovery. We present KungfuAthleteBot (KAB), a framework that treats learning high-dynamic motion from video as the central problem and resolves each of these three failure modes in turn. (C1) We build the KungfuAthlete dataset from videos of national-level martial artists and introduce a physics-guided parabolic trajectory correction that removes height floating, ground penetration, and high-frequency jitter from reconstructed aerial and landing phases. (C2) Because video carries no force information, strict tracking of a reconstructed trajectory is dynamically infeasible, and error-driven initialization keeps re-launching the policy from infeasible aerial poses. We introduce physics-driven pseudo-low-kinetic-energy (LKE) sampling, our central mechanism for making such references learnable: it biases initialization towards dynamically feasible states, letting the policy discover feasible actuation patterns instead of imitating infeasible ones. (C3) Finally, we introduce a direct training paradigm in which disturbance rejection and fall recovery are learned inside the same policy that tracks the video motion, requiring no recovery reference data and no manual mode switching. On a humanoid robot, KAB learns dynamic skills from video and recovers from arbitrary falls in about 0.7 s, the fastest reported recovery for a unified policy. Ablations on the unified policy confirm the necessity of its components, supporting the view that repairing and compensating video data, rather than only collecting more of it, is what unlocks high-dynamic humanoid skills.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-10-02",
+      "score": 0.8719,
+      "why": "你点赞过：BeyondRetarget: Learning Executable Humanoid Motions Directl",
+      "keywords": [
+        "humanoid"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.03388v1",
+      "image": "https://arxiv.org/html/2610.03388v1/intro_v7.png",
+      "imageCaption": "Figure 1: Learning high-dynamic motion from video. (a) A dataset extracted from videos of national-level martial artists. (b) Video-derived motion carries no actuation information, so direct mimic-based tracking (e.g., BeyondMimic) fails on such references. Our curriculum (Sec. 4.3 ) and low-kinetic",
+      "video": null,
+      "links": [],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:31:45.300Z",
+      "updated_at": "2026-10-08T02:31:45.300Z"
+    },
+    {
+      "type": "paper",
+      "id": "2610.06129",
+      "title": "I-BFM: Reward-Conditioned Robust Humanoid Interaction via Unsupervised Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2610.06129",
+      "subtitle": "Ziqi Han, Yitang Li, Junhan Sun, Fanrong Dong, Yaojie Shen, Lei Ye 等",
+      "text": "Behavioral foundation models (BFMs) have recently shown that a single humanoid policy can support diverse whole-body control, but extending such generality to physical interaction remains challenging. We introduce I-BFM, to our knowledge the first BFM for humanoid-object interaction. Rather than relying on task-specific policies or reference tracking, I-BFM learns a shared representation of the coupled dynamics among the humanoid, objects, and their contacts using forward-backward representations and unsupervised reinforcement learning. Given a downstream task reward, the same policy can be directly conditioned on a latent command to execute closed-loop interaction without task-specific policy optimization. To improve interaction control over different time scales, we further train the policy with both short-horizon interaction targets and longer-horizon goal targets. A single I-BFM policy performs carrying, pushing, and kicking, while also supporting goal reaching, motion tracking, stylistic control, and long-horizon task chaining. More importantly, it remains effective after large deviations from nominal execution: on Carry, I-BFM achieves 94.3% nominal success and retains 89.3% success after robot falls, compared with 1.3% for a planning-based baseline. Real-world experiments on a Unitree G1 further demonstrate diverse loco-manipulation behaviors, rapid recovery from interaction failures and external disturbances, and task chaining without task-specific retraining.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-10-05",
+      "score": 1.0297,
+      "why": "追踪学者：Yitang Li；兴趣：reinforcement learning for robust humanoid locomotion, bipedal walking and running",
+      "keywords": [
+        "humanoid",
+        "loco-manipulation",
+        "whole-body control",
+        "motion tracking"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.06129v1",
+      "image": "https://arxiv.org/html/2610.06129v1/fig.2.png",
+      "imageCaption": "Figure 2 : Overview of I-BFM . During pre-training, I-BFM learns an interaction-aware behavioral embedding and a shared policy in an interactive environment, jointly optimized with forward-backward and discriminator critics. At inference, task rewards retrieve a corresponding latent from the learned",
+      "video": null,
+      "links": [],
+      "badges": [
+        "追踪学者 · Yitang Li"
+      ],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:31:21.312Z",
+      "updated_at": "2026-10-08T02:31:21.312Z"
     },
     {
       "type": "paper",
