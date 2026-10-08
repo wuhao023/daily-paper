@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T02:29:29.870Z",
+  "updated": "2026-10-08T02:30:42.891Z",
   "items": [
     {
       "type": "paper",
@@ -859,6 +859,42 @@
       "updated_at": "2026-10-08T02:29:27.858Z"
     },
     {
+      "type": "paper",
+      "id": "2610.08320",
+      "title": "Humanoid Horizon: Extending Task Horizon in Whole-Body Loco-Manipulation via Parallel Training, Dynamic Starting, and Reward Gating",
+      "url": "https://arxiv.org/abs/2610.08320",
+      "subtitle": "Haozhuo Zhang, Qiang Zhang, Jian Tang, Mingzhe Ni, Michele Caprio, Angelo Cangelosi 等",
+      "text": "Cluttered indoor environments, where large and heavy objects are scattered across diverse surfaces, require humanoid robots to sequentially navigate, grasp, transport, and accurately place each item at its target location within a single uninterrupted episode. This long-horizon, whole-body loco-manipulation task remains a significant challenge for current methods. Previous approaches often suffer from two main issues: easy-reward bias, where training overemphasizes early transport stages at the expense of later ones, and catastrophic forgetting, where focusing on later stages leads to a decline in earlier-stage performance. In this work, we introduce Humanoid Horizon, a unified policy framework designed to overcome these limitations through three interrelated mechanisms. The Parallel Training Strategy organizes $N$ scenes into $S$ concurrent stage streams governed by a shared policy, ensuring all transport stages receive continuous gradient updates and removing the bottleneck of sequential optimization. The Dynamic Starting Mechanism updates each environment's initial state with terminal states from upstream rollouts, gradually broadening transition coverage and enhancing robustness at stage boundaries. Reward Gating sets the reward to zero for the rest of the episode in later-stage streams when the immediately preceding object is displaced beyond a set threshold, so the shared policy learns not to disturb a just-placed object and earlier placements are preserved throughout the episode. Collectively, these strategies achieve per-stage success rates exceeding 80% on the two-object LHM-Humanoid benchmark (350 training scenes, 66 held-out scenes). As the number of sequentially transported objects grows beyond two, success declines with the horizon, but the degradation is graceful relative to the sharp drop seen in all baselines.",
+      "tags": [
+        "cs.RO",
+        "cs.GR"
+      ],
+      "date": "2026-10-06",
+      "score": 0.9523,
+      "why": "兴趣：humanoid loco-manipulation with coordinated whole-body control, walking while carrying and manipulating objects",
+      "keywords": [
+        "humanoid",
+        "loco-manipulation"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.08320v1",
+      "image": "https://arxiv.org/html/2610.08320v1/imgs/first_image.png",
+      "imageCaption": "Figure 1: Humanoid Horizon uses a single policy for long-horizon whole-body loco-manipulation across cluttered bedroom, kitchen, living room, and warehouse scenes without resets. Each row shows one uninterrupted multi-object transport episode with sequential navigation, grasping, carrying, and place",
+      "video": null,
+      "links": [
+        {
+          "label": "项目主页",
+          "url": "https://haozhuo-zhang.github.io/Humanoid-Horizon-project-page/"
+        }
+      ],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:29:34.435Z",
+      "updated_at": "2026-10-08T02:29:34.435Z"
+    },
+    {
       "type": "repo",
       "id": "ASIG-X/JEPLO",
       "title": "ASIG-X/JEPLO",
@@ -904,6 +940,75 @@
       "status": "liked",
       "added_at": "2026-09-26T10:13:21.327Z",
       "updated_at": "2026-09-26T10:13:21.327Z"
+    },
+    {
+      "type": "repo",
+      "id": "gentlefress/OMEGA-0",
+      "title": "gentlefress/OMEGA-0",
+      "url": "https://github.com/gentlefress/OMEGA-0",
+      "subtitle": "Python",
+      "text": "The offical code of ω-0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation",
+      "tags": [],
+      "date": "2026-09-29",
+      "score": 0.715,
+      "why": "你点赞过：CrossBFM: Distilling a Shared Latent Behavior Space Across H",
+      "keywords": [
+        "humanoid",
+        "loco-manipulation"
+      ],
+      "stars": 49,
+      "starsDelta": 2,
+      "isNew": true,
+      "image": "https://gentlefress.github.io/OMEGA-0_page/assets/logo/mars_lab_logo.png",
+      "video": null,
+      "links": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:30:40.410Z",
+      "updated_at": "2026-10-08T02:30:40.410Z"
+    },
+    {
+      "type": "repo",
+      "id": "lok-i/vibe",
+      "title": "lok-i/vibe",
+      "url": "https://github.com/lok-i/vibe",
+      "subtitle": "Python",
+      "text": "Post-training humanoid whole-body trackers for perceptive control tasks",
+      "tags": [
+        "humanoid-control",
+        "mjlab",
+        "perceptive-locomotion",
+        "ppo",
+        "reinforcement-learning",
+        "robot-learning",
+        "vibe"
+      ],
+      "date": "2026-09-08",
+      "score": 0.7116,
+      "why": "你点赞过：PGMT: Perceptive General Motion Tracking for Humanoid Robots",
+      "keywords": [
+        "humanoid",
+        "locomotion"
+      ],
+      "stars": 50,
+      "starsDelta": 1,
+      "isNew": true,
+      "image": "https://raw.githubusercontent.com/lok-i/vibe/main/docs/media/repose.gif",
+      "video": null,
+      "links": [
+        {
+          "label": "主页",
+          "url": "https://lok-i.github.io/vibe-control/"
+        }
+      ],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-08T02:30:39.404Z",
+      "updated_at": "2026-10-08T02:30:39.404Z"
     }
   ]
 }
