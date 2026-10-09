@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-08T13:53:17+00:00",
-  "day": "2026-10-08",
+  "updated": "2026-10-09T13:37:57+00:00",
+  "day": "2026-10-09",
   "days_back": 45,
-  "total": 294,
+  "total": 296,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -28,7 +28,7 @@
               ],
               "published": "2026-10-06T05:45:19Z",
               "url": "https://arxiv.org/abs/2610.07796",
-              "pdf_url": "https://arxiv.org/pdf/2610.07796v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.07796v2",
               "comment": "34 pages, 12 figures",
               "figure_url": "https://arxiv.org/html/2610.07796v1/02_skills_as_yardsticks_of_empowerment.png",
               "figure_caption": "",
@@ -85,48 +85,6 @@
               "figure_source": "pdf",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.23831",
-              "title": "Learning to Act While Waiting: RL Finetuning of Generalist Robot Policies Under Inference Latency",
-              "authors": [
-                "Brian Zhu",
-                "Momen Khalil",
-                "E Harrison",
-                "Emanuele Poggi",
-                "Philipp Schmitt",
-                "Bernd Kast",
-                "Philine Meister",
-                "Pranav Atreya",
-                "Qiyang Li",
-                "Finn Ferchau",
-                "Cesar Colmenero",
-                "Yash Shahapurkar",
-                "Gokul Narayanan",
-                "Melih Erdogan",
-                "Kai Wurm",
-                "Georg von Wichert",
-                "Oier Mees",
-                "Eugen Solowjow",
-                "Andrew Wagenmaker",
-                "Sergey Levine"
-              ],
-              "abstract": "While reinforcement learning (RL) allows generalist robot policies to continually improve during deployment, the large model size of modern generalist policies, such as VLAs, poses a fundamental obstacle to effective RL improvement. In particular, their severe inference latency---which can lead to pauses or jerky movements---can alter the effective environment dynamics and, if not correctly accounted for, break the Markov assumption that RL relies on, causing standard RL algorithms to fail completely. In this work, we introduce a latency-aware framework, Asynchronous RL with Intermediate Information (ARLI), that enables RL-based improvement of generalist policies under inference delays. Our framework builds on asynchronous inference approaches, which interleave action generation with execution to hide latency, and addresses its incompatibility with RL by providing a low-latency RL policy design that maximizes reactivity within the inference window through two contributions: state augmentations that restore near-Markovian structure by incorporating committed actions and a mid-inference observation. We evaluate our approach across simulated and real-world manipulation tasks, and find that it enables effective finetuning under inference delays where standard RL fails entirely, even matching or exceeding the performance of standard RL in idealized no-latency settings.",
-              "categories": [
-                "cs.RO",
-                "cs.LG"
-              ],
-              "published": "2026-08-24T21:19:50Z",
-              "url": "https://arxiv.org/abs/2608.23831",
-              "pdf_url": "https://arxiv.org/pdf/2608.23831v2",
-              "comment": "25 pages, 12 figures, project website: https://async-rl-intermediate-information.github.io/",
-              "figure_url": "https://arxiv.org/html/2608.23831v2/body/figures/arli_teaser.png",
-              "figure_caption": "Figure 1: Enabling RL improvement of generalist robot policies under inference latency: Generalist policies incur significant action inference latency delays, either forcing pauses during inference or relying on stale observations, making RL improvement brittle. Arli uses intermediate actions and up",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://async-rl-intermediate-information.github.io/"
-              }
             }
           ]
         },
@@ -1062,7 +1020,7 @@
           ]
         }
       ],
-      "total": 35
+      "total": 34
     },
     {
       "name": "Stanford",
@@ -1334,6 +1292,67 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2610.12452",
+              "title": "BrickBench: Evaluating Agentic Brick Design",
+              "authors": [
+                "Peter Kulits",
+                "Yiqing Xu",
+                "R. Kenny Jones",
+                "Cordelia Schmid",
+                "Jiajun Wu"
+              ],
+              "abstract": "We propose BrickBench, a benchmark for agentic text-conditioned LEGO-set design. Given a prompt, an agent is tasked with producing an assembly that not only satisfies semantic and design criteria, but that can also be physically built. To do so, it must select parts from a discrete library and reason jointly about local and global constraints. We score validity, alignment, and design across three settings that vary in scale and part availability. We provide BrickAgent, an environment for coding agents to construct, inspect, and validate their designs. We find that leading agents largely satisfy verifiable physical and semantic requirements, but fall short of human designs. We release our benchmark and environment at http://www.brickben.ch",
+              "categories": [
+                "cs.AI",
+                "cs.CV",
+                "cs.GR"
+              ],
+              "published": "2026-10-08T17:58:56Z",
+              "url": "https://arxiv.org/abs/2610.12452",
+              "pdf_url": "https://arxiv.org/pdf/2610.12452v1",
+              "comment": "Project page: http://www.brickben.ch",
+              "figure_url": "https://arxiv.org/html/2610.12452v1/fig/images/teaser_model.jpg",
+              "figure_caption": "Figure 1 : We evaluate coding agents on their ability to design LEGO assemblies from a text prompt. We introduce three settings with varying constraints: Model ( ≤ \\leq 400 parts), Set (400–4000 parts), and Alt-Build (the part inventory of set 10698). Each assembly above can be built.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "http://www.brickben.ch"
+              }
+            },
+            {
+              "id": "2610.10846",
+              "title": "Cross-Embodiment Robot Foundation World Models with Latent Actions",
+              "authors": [
+                "Huang Huang",
+                "Sriram Yenamandra",
+                "Arjun Majumdar",
+                "Elie Aljalbout",
+                "Tushar Nagarajan",
+                "Tsung-Yen Yang",
+                "Akshara Rai",
+                "Michael Rabbat",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Tingfan Wu",
+                "Franziska Meier"
+              ],
+              "abstract": "The diversity of robot embodiments and action spaces makes it challenging to build robot world models that generalize across different embodiments. We introduce the Latent Action-Conditioned Robot World Model (LAC-WM), which operates within a learned unified latent action space shared across diverse embodiments. This unified action space improves the world model's performance when adapted to previously unseen robot embodiments. We compare LAC-WM with an Explicit Action-Conditioned World Model (EAC-WM), which conditions on explicit motion labels. Our results show that explicit action conditioning leads to disjoint action representations across embodiments, limiting downstream performance when adapting to new robots. We evaluate both models on dexterous manipulation tasks and a modified LIBERO benchmark. LAC-WM improves downstream performance over EAC-WM by up to 46.7% on dexterous manipulation and 11.7% on LIBERO. Crucially, the unified latent action space allows LAC-WM's downstream performance to scale positively with the number of embodiments used during pretraining. In contrast, the disjoint action space in EAC-WM leads to decreased performance as the number of pretraining embodiments increases. These results highlight the importance of a unified action space for efficient cross-embodiment learning, addressing a key challenge in robotics. Project website: https://lacwm.github.io/",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-07T19:51:22Z",
+              "url": "https://arxiv.org/abs/2610.10846",
+              "pdf_url": "https://arxiv.org/pdf/2610.10846v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.10846v1/figs/model.png",
+              "figure_caption": "Figure 1 : LAC-WM Architecture . During pretraining (yellow area), the inverse dynamics model (IDM) encodes cross-embodiment image observations into a unified latent action space, as the condition for the forward dynamics model (FDM). A motion decoder translates the latent actions into motion labels",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://lacwm.github.io/"
+              }
+            },
             {
               "id": "2610.09254",
               "title": "RoboRender: Robot-Oriented Video Generation for Visual Sim-to-Real Transfer",
@@ -1948,32 +1967,6 @@
               "figure_source": "pdf",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.24101",
-              "title": "TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks",
-              "authors": [
-                "Zhi Cao",
-                "Howard Ji",
-                "Kevin Zhang",
-                "Kuangzhi Ge",
-                "Li Fei-Fei",
-                "Jiajun Wu",
-                "Huang Huang"
-              ],
-              "abstract": "Robot actions are inherently embodiment-specific and only weakly aligned with image-space visual changes, limiting their effectiveness as conditioning signals for robot world models. In contrast, visual tracks provide an embodiment-agnostic representation of how task-relevant points move through a scene, offering dense image-space guidance for accurate and spatially precise future video prediction. Building on this observation, we propose TrAct, a world-model-based robot decision-making framework that uses visual tracks as an intermediate interface between control and prediction. TrAct consists of three components: a Vision-Language-Action-and-Track model (VLAT) that jointly predicts candidate actions and corresponding visual tracks from the current observation and language instruction; a track-conditioned world model (TWM) that predicts future visual outcomes conditioned on the proposed tracks; and a vision-language reward model (VLAC) that scores the predicted outcomes. At inference time, VLAT generates candidate action-track pairs, TWM rolls out their visual consequences, and VLAC selects the track whose predicted outcome best satisfies the instruction; the action paired with the selected track is then executed by the robot. Experiments on the proposed LIBERO-INTEGRAL benchmark and real-world Franka manipulation show that TrAct improves success rates from 27% to 55% in simulation and from 49% to 76% on real-world tasks compared with the strong VLA baseline $π_{0.5}$. Furthermore, TWM consistently improves video prediction quality over the action-conditioned world model (AWM). These results demonstrate that visual tracks provide an effective shared interface between robot control and visual prediction, enabling more accurate world modeling and stronger robot generalization.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-25T06:00:01Z",
-              "url": "https://arxiv.org/abs/2608.24101",
-              "pdf_url": "https://arxiv.org/pdf/2608.24101v3",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.24101v3/img/splash.png",
-              "figure_caption": "Figure 1: Overview of TrAct. TrAct uses VLAT (left, purple), pretrained on large-scale cross-embodiment data, to propose candidate action–track pairs. TWM (middle, gray) rolls out the visual outcome for each candidate conditioned on the tracks, and VLAC (middle, green) selects the highest-reward rol",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -2399,6 +2392,39 @@
           "name": "Li Fei-Fei",
           "papers": [
             {
+              "id": "2610.10846",
+              "title": "Cross-Embodiment Robot Foundation World Models with Latent Actions",
+              "authors": [
+                "Huang Huang",
+                "Sriram Yenamandra",
+                "Arjun Majumdar",
+                "Elie Aljalbout",
+                "Tushar Nagarajan",
+                "Tsung-Yen Yang",
+                "Akshara Rai",
+                "Michael Rabbat",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Tingfan Wu",
+                "Franziska Meier"
+              ],
+              "abstract": "The diversity of robot embodiments and action spaces makes it challenging to build robot world models that generalize across different embodiments. We introduce the Latent Action-Conditioned Robot World Model (LAC-WM), which operates within a learned unified latent action space shared across diverse embodiments. This unified action space improves the world model's performance when adapted to previously unseen robot embodiments. We compare LAC-WM with an Explicit Action-Conditioned World Model (EAC-WM), which conditions on explicit motion labels. Our results show that explicit action conditioning leads to disjoint action representations across embodiments, limiting downstream performance when adapting to new robots. We evaluate both models on dexterous manipulation tasks and a modified LIBERO benchmark. LAC-WM improves downstream performance over EAC-WM by up to 46.7% on dexterous manipulation and 11.7% on LIBERO. Crucially, the unified latent action space allows LAC-WM's downstream performance to scale positively with the number of embodiments used during pretraining. In contrast, the disjoint action space in EAC-WM leads to decreased performance as the number of pretraining embodiments increases. These results highlight the importance of a unified action space for efficient cross-embodiment learning, addressing a key challenge in robotics. Project website: https://lacwm.github.io/",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-07T19:51:22Z",
+              "url": "https://arxiv.org/abs/2610.10846",
+              "pdf_url": "https://arxiv.org/pdf/2610.10846v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.10846v1/figs/model.png",
+              "figure_caption": "Figure 1 : LAC-WM Architecture . During pretraining (yellow area), the inverse dynamics model (IDM) encodes cross-embodiment image observations into a unified latent action space, as the condition for the forward dynamics model (FDM). A motion decoder translates the latent actions into motion labels",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://lacwm.github.io/"
+              }
+            },
+            {
               "id": "2610.09254",
               "title": "RoboRender: Robot-Oriented Video Generation for Visual Sim-to-Real Transfer",
               "authors": [
@@ -2547,37 +2573,11 @@
               "links": {
                 "project": "https://dexagent123.github.io/"
               }
-            },
-            {
-              "id": "2608.24101",
-              "title": "TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks",
-              "authors": [
-                "Zhi Cao",
-                "Howard Ji",
-                "Kevin Zhang",
-                "Kuangzhi Ge",
-                "Li Fei-Fei",
-                "Jiajun Wu",
-                "Huang Huang"
-              ],
-              "abstract": "Robot actions are inherently embodiment-specific and only weakly aligned with image-space visual changes, limiting their effectiveness as conditioning signals for robot world models. In contrast, visual tracks provide an embodiment-agnostic representation of how task-relevant points move through a scene, offering dense image-space guidance for accurate and spatially precise future video prediction. Building on this observation, we propose TrAct, a world-model-based robot decision-making framework that uses visual tracks as an intermediate interface between control and prediction. TrAct consists of three components: a Vision-Language-Action-and-Track model (VLAT) that jointly predicts candidate actions and corresponding visual tracks from the current observation and language instruction; a track-conditioned world model (TWM) that predicts future visual outcomes conditioned on the proposed tracks; and a vision-language reward model (VLAC) that scores the predicted outcomes. At inference time, VLAT generates candidate action-track pairs, TWM rolls out their visual consequences, and VLAC selects the track whose predicted outcome best satisfies the instruction; the action paired with the selected track is then executed by the robot. Experiments on the proposed LIBERO-INTEGRAL benchmark and real-world Franka manipulation show that TrAct improves success rates from 27% to 55% in simulation and from 49% to 76% on real-world tasks compared with the strong VLA baseline $π_{0.5}$. Furthermore, TWM consistently improves video prediction quality over the action-conditioned world model (AWM). These results demonstrate that visual tracks provide an effective shared interface between robot control and visual prediction, enabling more accurate world modeling and stronger robot generalization.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-25T06:00:01Z",
-              "url": "https://arxiv.org/abs/2608.24101",
-              "pdf_url": "https://arxiv.org/pdf/2608.24101v3",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.24101v3/img/splash.png",
-              "figure_caption": "Figure 1: Overview of TrAct. TrAct uses VLAT (left, purple), pretrained on large-scale cross-embodiment data, to propose candidate action–track pairs. TWM (middle, gray) rolls out the visual outcome for each candidate conditioned on the tracks, and VLAC (middle, green) selects the highest-reward rol",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 50
+      "total": 51
     },
     {
       "name": "Carnegie Mellon University",
@@ -3351,7 +3351,7 @@
               ],
               "published": "2026-10-07T04:12:30Z",
               "url": "https://arxiv.org/abs/2610.09411",
-              "pdf_url": "https://arxiv.org/pdf/2610.09411v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.09411v2",
               "comment": "Project: https://dominik-schnaus.github.io/unpaired-rosetta/, Code: https://github.com/dominik-schnaus/unpaired-rosetta",
               "figure_url": "https://arxiv.org/html/2610.09411v1/teaser-teaser.png",
               "figure_caption": "Figure 1: Shared geometry enables unpaired alignment. Across modalities, embedding spaces of independent models share a similar geometry. Prior works require a multimodal “Rosetta Stone” of paired cross-modal examples to align both spaces. In contrast, our Wasserstein Procrustes approach directly ex",
@@ -3875,6 +3875,35 @@
           "name": "Abhishek Gupta",
           "papers": [
             {
+              "id": "2610.12465",
+              "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
+              "authors": [
+                "Octi Zhang",
+                "Mateo Guaman Castro",
+                "Patrick Yin",
+                "Ignacio Dagnino",
+                "Abhishek Gupta",
+                "Rosario Scalise",
+                "Byron Boots"
+              ],
+              "abstract": "General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such as shaped rewards and demonstrations. Recent work has shown that diverse simulator resets, combined with massively parallel simulation, can alleviate much of this engineering burden on several manipulation problems. However, we find that naively scaling this paradigm to more precise or dynamic problems remains non-trivial. While simulator resets can help with exploration, uniformly sampling over this distribution wastes a growing fraction of learning experience on task configurations the policy has already mastered or cannot yet attempt. This makes it challenging to see the expected benefits of scaling parallel environments for RL, since much of the learning signal in a batch is wasted during learning. To mitigate this, we introduce Success Guided Sampling (SGS), a simple adaptive sampler that concentrates RL training on task configurations around the frontier of the policy's capabilities. Doing so allows large-scale simulated RL to make the most out of the experience in a batch, enabling much more effective scaling to large-scale parallel simulation. Across experiments using up to $2^{20}$ (over one million) parallel environments, SGS enables RL to solve challenging multi-terrain quadruped locomotion and contact-rich assembly tasks that prior methods fail to solve. Finally, we distill the learned manipulation policies into RGB-based policies and demonstrate zero-shot transfer to several challenging assembly tasks on real hardware. Project website: https://sgs-rl.github.io/.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-08T17:59:50Z",
+              "url": "https://arxiv.org/abs/2610.12465",
+              "pdf_url": "https://arxiv.org/pdf/2610.12465v1",
+              "comment": "CoRL 2026. Project website: https://sgs-rl.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.12465v1/FIGS/figure1-all-purple.jpg",
+              "figure_caption": "Figure 1: SGS enables large-scale RL to learn challenging robotic behaviors, from traversing custom-designed difficult terrains to dexterous, contact-rich assembly. By focusing training on configurations at the frontier of the policy’s capabilities, SGS solves tasks that prior sampling methods strug",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://sgs-rl.github.io/"
+              }
+            },
+            {
               "id": "2610.05765",
               "title": "Bilinear Flow Policy: Distributional Extrapolation for Goal-Conditioned Visuomotor Imitation",
               "authors": [
@@ -3892,8 +3921,8 @@
               ],
               "published": "2026-10-05T04:11:41Z",
               "url": "https://arxiv.org/abs/2610.05765",
-              "pdf_url": "https://arxiv.org/pdf/2610.05765v1",
-              "comment": "40 pages",
+              "pdf_url": "https://arxiv.org/pdf/2610.05765v2",
+              "comment": "40 pages, 18 figures",
               "figure_url": "https://arxiv.org/html/2610.05765v1/figures/teaser_figure.png",
               "figure_caption": "Figure 1: BFP Overview. BFP learns how changes across observation-goal conditions affect behavior and reuses this relation to extrapolate from a demonstrated anchor to an unseen goal. A bilinear conditional flow generates the resulting multimodal action distribution, while the explicit extrapolation",
               "figure_source": "html",
@@ -3964,10 +3993,40 @@
         },
         {
           "name": "Byron Boots",
-          "papers": []
+          "papers": [
+            {
+              "id": "2610.12465",
+              "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
+              "authors": [
+                "Octi Zhang",
+                "Mateo Guaman Castro",
+                "Patrick Yin",
+                "Ignacio Dagnino",
+                "Abhishek Gupta",
+                "Rosario Scalise",
+                "Byron Boots"
+              ],
+              "abstract": "General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such as shaped rewards and demonstrations. Recent work has shown that diverse simulator resets, combined with massively parallel simulation, can alleviate much of this engineering burden on several manipulation problems. However, we find that naively scaling this paradigm to more precise or dynamic problems remains non-trivial. While simulator resets can help with exploration, uniformly sampling over this distribution wastes a growing fraction of learning experience on task configurations the policy has already mastered or cannot yet attempt. This makes it challenging to see the expected benefits of scaling parallel environments for RL, since much of the learning signal in a batch is wasted during learning. To mitigate this, we introduce Success Guided Sampling (SGS), a simple adaptive sampler that concentrates RL training on task configurations around the frontier of the policy's capabilities. Doing so allows large-scale simulated RL to make the most out of the experience in a batch, enabling much more effective scaling to large-scale parallel simulation. Across experiments using up to $2^{20}$ (over one million) parallel environments, SGS enables RL to solve challenging multi-terrain quadruped locomotion and contact-rich assembly tasks that prior methods fail to solve. Finally, we distill the learned manipulation policies into RGB-based policies and demonstrate zero-shot transfer to several challenging assembly tasks on real hardware. Project website: https://sgs-rl.github.io/.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-10-08T17:59:50Z",
+              "url": "https://arxiv.org/abs/2610.12465",
+              "pdf_url": "https://arxiv.org/pdf/2610.12465v1",
+              "comment": "CoRL 2026. Project website: https://sgs-rl.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.12465v1/FIGS/figure1-all-purple.jpg",
+              "figure_caption": "Figure 1: SGS enables large-scale RL to learn challenging robotic behaviors, from traversing custom-designed difficult terrains to dexterous, contact-rich assembly. By focusing training on configurations at the frontier of the policy’s capabilities, SGS solves tasks that prior sampling methods strug",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://sgs-rl.github.io/"
+              }
+            }
+          ]
         }
       ],
-      "total": 4
+      "total": 6
     },
     {
       "name": "Georgia Tech / UT Austin",
@@ -4351,6 +4410,34 @@
         {
           "name": "Marco Hutter",
           "papers": [
+            {
+              "id": "2610.12276",
+              "title": "Toward Lunar Legged Robots: Field Deployment Lessons at LUNA",
+              "authors": [
+                "Adrian Fuhrer",
+                "Joseph Church",
+                "Oliver Fischer",
+                "William Talbot",
+                "Nicolas Faesch",
+                "Yannic Hofmann",
+                "Hendrik Kolvenbach",
+                "Yusuke Tanaka",
+                "Marco Hutter"
+              ],
+              "abstract": "Legged robots are promising candidates for future lunar surface missions because they can traverse steep, loose, and obstacle-rich terrain that challenges conventional wheeled rovers. However, readiness for lunar deployment is limited by uncertainties in foot-regolith interaction, dust generation, illumination-driven perception degradation, and operational constraints. This paper reports lessons from the 2025 LUNA analogue campaign, where ANYmal-D and Magnecko traversed loose regolith simulant and crater-like terrain and collected long-horizon navigation and visual-inertial data under challenging lighting. We show that quadrupedal robots can traverse regolith simulant, but performance is affected by sinkage and slip, dust-generating contacts, and perception failures caused by overexposure, shadows, and low-texture regions. These results motivate tighter integration of regolith-aware locomotion policies, illumination-robust perception, repeatable analogue testing, and mission-level operational validation for future lunar legged robots.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-08T16:37:09Z",
+              "url": "https://arxiv.org/abs/2610.12276",
+              "pdf_url": "https://arxiv.org/pdf/2610.12276v1",
+              "comment": "Proceeding to the IEEE iSparo Conference 2026",
+              "figure_url": "https://arxiv.org/html/2610.12276v1/figures/Overview_image_terrain1.jpg",
+              "figure_caption": "(a) High-angle illumination (only one row on during testing.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.08003",
               "title": "Reactive Task-Oriented Robot-Human Handovers via Generative Hypothesis Selection",
@@ -5117,7 +5204,7 @@
           ]
         }
       ],
-      "total": 29
+      "total": 30
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -5127,6 +5214,33 @@
         {
           "name": "Yang Gao",
           "papers": [
+            {
+              "id": "2610.12231",
+              "title": "Residual Modeling Closes the Regression and Generative Policy Gap in Robot Learning",
+              "authors": [
+                "Yuchen Zhou",
+                "Jiacheng You",
+                "Weikang Wan",
+                "Weijun Dong",
+                "Yang Gao",
+                "Jiayuan Mao"
+              ],
+              "abstract": "Learning from demonstration has enabled impressive robot behaviors. A common choice for policy learning is to use diffusion or flow matching (Flow-Policies), which often outperforms direct action regression trained with mean squared error (MSE-Policies). This gap is commonly attributed to multimodal demonstrations. We revisit this gap from the perspective of statistical modeling: how action-prediction residuals shape policy optimization. Our analysis of real-world robot demonstration data reveals substantial state-dependent variation in residual scales and heavier-than-Gaussian tails. While both MSE-Policies and Flow-Policies exhibit heavy-tailed action residuals, their training gradients behave differently: MSE allocates more gradient magnitude to observations with large action residuals, which hurts optimization. Motivated by these findings, we introduce heteroscedastic Student-t action regression (HT-Policies), which learns input-dependent residual scales and reduces the influence of heavy tails. HT-Policies predict action chunks with a single feed-forward pass and can reuse pretrained flow-matching-based policy networks as the backbone. Across four simulation benchmarks and real-robot evaluations, HT-Policies achieves success rates competitive with generative policy baselines, both when trained from scratch and from pretrained vision-language-action and world-action models, despite being faster in training and inference. Together, these findings shed light on the practical advantages of generative objectives in robot learning from demonstrations and offer an efficient direct-regression alternative for a range of architectures and tasks. Project page: https://the-labone.github.io/regression-policy-project/",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-08T16:16:09Z",
+              "url": "https://arxiv.org/abs/2610.12231",
+              "pdf_url": "https://arxiv.org/pdf/2610.12231v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.12231v1/teaser.png",
+              "figure_caption": "Figure 1: (a) We attribute the performance gap between MSE- and Flow-Policies to different statistical modeling of prediction residuals. (b) We found observation-dependent and heavy-tailed residuals for MSE-Policies on multiple benchmarks. (c) Benchmark success rates (%) for different policy classes",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://the-labone.github.io/regression-policy-project/"
+              }
+            },
             {
               "id": "2610.07110",
               "title": "MoonGS: High-quality Representation of the Lunar Surface via Gaussian Splatting Using Robust Depth Features from Image Pairs",
@@ -5470,6 +5584,30 @@
           "name": "He Wang",
           "papers": [
             {
+              "id": "2610.10989",
+              "title": "Multi-Bandwidth Distribution Matching Distillation: On the Equivalence of Distribution Matching Distillation and Drifting Models",
+              "authors": [
+                "Jialin Zhu",
+                "Xing Liu",
+                "Feixiang He",
+                "He Wang"
+              ],
+              "abstract": "Researchers are exploring effective one-step generative model continuously, and, Drifting Models (Deng et al., 2026), demonstrate great potential in one-step generation recently. There are works that reveal the connection between Diffusion & Flow Style Generative Models (DFSGMs) (Ho et al., 2020; Song et al., 2020a;b; Lipman et al., 2022; Liu et al., 2022) and Drifting Models (Li & Zhu, 2026; Lai et al., 2026; Turan et al., 2026). But no one has yet established a precise correspondence between the Drifting Model and the widely used distillation method- Distribution Matching Distillation (DMD/DMD2) (Yin et al., 2024b;a) to the best of our knowledge, even though their optimization objective formulas are virtually identical. In this paper, we prove that by converting the velocity-field / noise-field from the pre-trained DFSGMs into the attraction force field in Drifting Models and estimating the repulsion force field from the generative distribution, training the Drifting Model is naturally equivalent to the Distribution Matching Distillation. With this equivalent concept, we propose an improved method based on DMD from the Drifting Model's perspective- Multi-Bandwidth Distribution Matching Distillation (MBDMD).",
+              "categories": [
+                "cs.LG",
+                "cs.CV"
+              ],
+              "published": "2026-10-07T23:21:55Z",
+              "url": "https://arxiv.org/abs/2610.10989",
+              "pdf_url": "https://arxiv.org/pdf/2610.10989v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.10989v1/x1.png",
+              "figure_caption": "Figure 1 : A 2D toy experiments to show that Fake Score Model can be replaced by the repulsion kernel function calculation. In this figure, (a) is the ground-truth; (b) is the results generated by pure kernel calculation for both attraction and repulsion; (c) shows the result by transferring velocit",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.07713",
               "title": "Neuromotor Hierarchy Network: Physiological Inductive Biases for Robust Generalization in sEMG Decoding",
               "authors": [
@@ -5487,8 +5625,8 @@
               ],
               "published": "2026-10-06T04:08:41Z",
               "url": "https://arxiv.org/abs/2610.07713",
-              "pdf_url": "https://arxiv.org/pdf/2610.07713v2",
-              "comment": "Corrected the abstract metadata. Manuscript unchanged",
+              "pdf_url": "https://arxiv.org/pdf/2610.07713v3",
+              "comment": "Adjust the authors info",
               "figure_url": "https://arxiv.org/html/2610.07713v1/figures/Figure1.png",
               "figure_caption": "",
               "figure_source": "html",
@@ -5889,58 +6027,6 @@
               "links": {
                 "project": "https://RoboGesture.github.io"
               }
-            },
-            {
-              "id": "2608.24471",
-              "title": "Implicit Q-learning-bootstrapped ant colony optimization for maritime moving-target observation scheduling with agile satellites",
-              "authors": [
-                "He Wang",
-                "Junyu Wu",
-                "Yeye Liu",
-                "Yifan Zhou",
-                "Jie Zhang",
-                "Hui Li",
-                "Yanjie Song",
-                "Liang Li"
-              ],
-              "abstract": "Maritime moving-target observation scheduling with agile Earth observation satellites is a dynamic, sequence-dependent combinatorial optimization problem. Sea-surface targets move continuously, causing feasible observation windows to vary with target motion and satellite orbital geometry. The scheduler must jointly determine task selection, satellite assignment, observation-window selection, and observation ordering under time-window, attitude-maneuvering, and onboard-resource constraints. This paper proposes an implicit Q-learning-bootstrapped ant colony optimization method, termed IQACO, for multi-satellite maritime moving-target observation scheduling. Rather than directly learning a task-selection policy, IQACO embeds an offline implicit Q-learning module into constructive ant colony optimization to adaptively adjust the pheromone factor, heuristic factor, and evaporation rate. A compact search-state representation captures pheromone distribution, current and historical-best solution quality, and iteration progress. During online scheduling, ant colony optimization constructs feasible observation sequences, while the learned policy adjusts the search behavior according to the current search state. Experiments on 14 scenarios with different scales and satellite configurations show that IQACO consistently outperforms the compared algorithms, improving the mean objective value over conventional ant colony optimization by 2.86%-9.41%. Further comparative and supplementary experiments demonstrate its effectiveness and robustness across different scheduling conditions and problem settings. These results indicate that offline value learning provides an effective adaptive search-control mechanism for constrained maritime moving-target observation scheduling.",
-              "categories": [
-                "cs.AI"
-              ],
-              "published": "2026-08-25T12:17:25Z",
-              "url": "https://arxiv.org/abs/2608.24471",
-              "pdf_url": "https://arxiv.org/pdf/2608.24471v2",
-              "comment": "Revised manuscript incorporating changes made during peer review. Published in Aerospace Science and Technology",
-              "figure_url": "https://arxiv.org/html/2608.24471v1/fig01_01.png",
-              "figure_caption": "Figure 1: Schematic illustration of multi-satellite maritime moving target scheduling with time-varying observation windows, operational constraints, and IQL-guided adaptive ACO optimization.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2608.24470",
-              "title": "Reinforcement Learning-Guided Evolutionary Policy Optimization for Preference-Adjustable Heterogeneous Agile Earth Observation Satellite Scheduling",
-              "authors": [
-                "He Wang",
-                "Junyu Wu",
-                "Hui Li",
-                "Yanjie Song",
-                "Witold Pedrycz",
-                "Liang Li"
-              ],
-              "abstract": "Heterogeneous agile Earth observation satellite (AEOS) scheduling requires task selection, satellite assignment, and observation sequencing under satellite-dependent visibility windows, attitude maneuvering requirements, energy consumption, and onboard storage constraints. Since satellites differ in orbital access, maneuvering capability, and payload resources, the same task may have different feasible windows, transition costs, and resource-consumption patterns on different platforms, which increases the difficulty of unified modeling and efficient optimization. To address this problem, this paper proposes an evolutionary policy optimization framework for heterogeneous AEOS scheduling with preference-adjustable weighted objectives. In the modeling layer, assignment-based indirect encoding is combined with decoder-based equivalent-cost evaluation to retain satellite-dependent constraints while integrating task gain, energy saving, and load balance into an interpretable scalar utility. In the optimization layer, schedule decoding, population-based search, and online actor-critic operator control are decoupled, so that reinforcement learning selects high-level search operators rather than constructing schedules directly. Based on this framework, a reinforcement-learning-assisted operator-selection memetic evolutionary algorithm (RLOSMEA) is developed to coordinate global exploration, feasibility recovery, and local refinement under a limited function-evaluation budget. Experiments on different heterogeneous AEOS scenarios show that RLOSMEA achieves higher overall weighted utility and more stable convergence than representative metaheuristic baselines. Sensitivity and learning-behavior analyses further confirm the robustness of the proposed method and the effectiveness of reinforcement-learning-guided operator selection.",
-              "categories": [
-                "cs.AI"
-              ],
-              "published": "2026-08-25T12:16:28Z",
-              "url": "https://arxiv.org/abs/2608.24470",
-              "pdf_url": "https://arxiv.org/pdf/2608.24470v1",
-              "comment": "14 pages, 8 figures",
-              "figure_url": "https://arxiv.org/html/2608.24470v1/fig01.png",
-              "figure_caption": "Fig. 1: Overall scheduling process for heterogeneous AEOS systems, including visibility analysis, satellite–task assignment, scheduling optimization, and final schedule generation.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -6080,7 +6166,7 @@
               ],
               "published": "2026-09-17T16:38:37Z",
               "url": "https://arxiv.org/abs/2609.20659",
-              "pdf_url": "https://arxiv.org/pdf/2609.20659v1",
+              "pdf_url": "https://arxiv.org/pdf/2609.20659v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.20659v1/framework.png",
               "figure_caption": "Fig. 2: Overview of HIL-UMI. In each round, we first run advantage OOD detector online to collect advantage data. We then run the current policy OOD detector and collect policy data from segments. Next, we update the advantage estimator then using it to construct the advantage-labeled training datas",
@@ -6258,6 +6344,39 @@
         {
           "name": "Cewu Lu",
           "papers": [
+            {
+              "id": "2610.12424",
+              "title": "RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments",
+              "authors": [
+                "Zimo Wen",
+                "Yijin Chen",
+                "Yuxuan Cao",
+                "Wendi Chen",
+                "Yanwen Zou",
+                "Wenye Yu",
+                "Fuhang Kuang",
+                "Han Xue",
+                "Jun Lv",
+                "Chuan Wen",
+                "Cewu Lu"
+              ],
+              "abstract": "A generalist robot should not only perform diverse tasks but also improve through experience, turning what it learns during execution into capabilities that later tasks can reuse. Robot agents that act through code can already repair programs from execution feedback, yet it remains a central challenge to organize this experience around the task structure that gives it meaning, so that each repair is attributed to the responsible capability, supported by execution evidence, and validated before it is reused. We introduce RoboRSI, a robot self-improvement system built on Top-Down Skill Refinement (TSR). TSR decomposes tasks into compound, atomic, and base skills with scoped responsibilities and explicit input--output contracts, attributes each execution outcome to the responsible branch, and confines revision to that branch. Building upon this structure, a Manager, Planner, Engineer, and Reviewer coordinate planning, execution, diagnosis, and the validated release of new skills, while people steer the process through objectives and corrections; stable skill sequences are further consolidated into reusable compound skills. On a mobile manipulator, RoboRSI develops multi-object household cleanup over 104 rounds. In simulation, it achieves the highest success rate on LIBERO, LIBERO-PRO, LIBERO-Plus, and RoboTwin, exceeding the strongest baseline by 2.7 to 11.0 percentage points.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-08T17:55:12Z",
+              "url": "https://arxiv.org/abs/2610.12424",
+              "pdf_url": "https://arxiv.org/pdf/2610.12424v1",
+              "comment": "project page:https://lab.noematrix.ai/blog/2-roborsi/",
+              "figure_url": "https://arxiv.org/html/2610.12424v1/2027_ICLR_Teaser1.0.png",
+              "figure_caption": "Figure 1: RoboRSI at a glance. The multi-agent self-improvement loop (center), real-world mobile manipulation and compound-skill gains (left), and simulation results (right).",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://lab.noematrix.ai/blog/2-roborsi/"
+              }
+            },
             {
               "id": "2610.10534",
               "title": "RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input",
@@ -6467,7 +6586,7 @@
           ]
         }
       ],
-      "total": 43
+      "total": 44
     },
     {
       "name": "工业界研究团队",
@@ -6950,7 +7069,7 @@
               ],
               "published": "2026-10-06T05:45:19Z",
               "url": "https://arxiv.org/abs/2610.07796",
-              "pdf_url": "https://arxiv.org/pdf/2610.07796v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.07796v2",
               "comment": "34 pages, 12 figures",
               "figure_url": "https://arxiv.org/html/2610.07796v1/02_skills_as_yardsticks_of_empowerment.png",
               "figure_caption": "",
@@ -7007,48 +7126,6 @@
               "figure_source": "pdf",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.23831",
-              "title": "Learning to Act While Waiting: RL Finetuning of Generalist Robot Policies Under Inference Latency",
-              "authors": [
-                "Brian Zhu",
-                "Momen Khalil",
-                "E Harrison",
-                "Emanuele Poggi",
-                "Philipp Schmitt",
-                "Bernd Kast",
-                "Philine Meister",
-                "Pranav Atreya",
-                "Qiyang Li",
-                "Finn Ferchau",
-                "Cesar Colmenero",
-                "Yash Shahapurkar",
-                "Gokul Narayanan",
-                "Melih Erdogan",
-                "Kai Wurm",
-                "Georg von Wichert",
-                "Oier Mees",
-                "Eugen Solowjow",
-                "Andrew Wagenmaker",
-                "Sergey Levine"
-              ],
-              "abstract": "While reinforcement learning (RL) allows generalist robot policies to continually improve during deployment, the large model size of modern generalist policies, such as VLAs, poses a fundamental obstacle to effective RL improvement. In particular, their severe inference latency---which can lead to pauses or jerky movements---can alter the effective environment dynamics and, if not correctly accounted for, break the Markov assumption that RL relies on, causing standard RL algorithms to fail completely. In this work, we introduce a latency-aware framework, Asynchronous RL with Intermediate Information (ARLI), that enables RL-based improvement of generalist policies under inference delays. Our framework builds on asynchronous inference approaches, which interleave action generation with execution to hide latency, and addresses its incompatibility with RL by providing a low-latency RL policy design that maximizes reactivity within the inference window through two contributions: state augmentations that restore near-Markovian structure by incorporating committed actions and a mid-inference observation. We evaluate our approach across simulated and real-world manipulation tasks, and find that it enables effective finetuning under inference delays where standard RL fails entirely, even matching or exceeding the performance of standard RL in idealized no-latency settings.",
-              "categories": [
-                "cs.RO",
-                "cs.LG"
-              ],
-              "published": "2026-08-24T21:19:50Z",
-              "url": "https://arxiv.org/abs/2608.23831",
-              "pdf_url": "https://arxiv.org/pdf/2608.23831v2",
-              "comment": "25 pages, 12 figures, project website: https://async-rl-intermediate-information.github.io/",
-              "figure_url": "https://arxiv.org/html/2608.23831v2/body/figures/arli_teaser.png",
-              "figure_caption": "Figure 1: Enabling RL improvement of generalist robot policies under inference latency: Generalist policies incur significant action inference latency delays, either forcing pauses during inference or relying on stale observations, making RL improvement brittle. Arli uses intermediate actions and up",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://async-rl-intermediate-information.github.io/"
-              }
             }
           ]
         },
@@ -7344,30 +7421,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.24229",
-              "title": "A Theory of Finite-Noise Optima and Generalization in Quantum Machine Learning",
-              "authors": [
-                "Ziyu Zhang",
-                "Zikang Jia",
-                "Xiaosong Li",
-                "Yulong Dong"
-              ],
-              "abstract": "Quantum noise is expected to degrade quantum machine learning by driving circuits away from their noiseless implementations. Yet recent studies show moderate noise can reduce testing error, a behavior unexplained by weak-noise perturbative error accumulation or strong-noise trainability collapse. Here we develop a statistical learning theory connecting microscopic noise processes to macroscopic learning performance. At its heart is a noise-order purity parameter, derived from a surrogate model analysis, that predicts the noise-induced reduction in model complexity and the consequent reduction in the generalization gap. Noise simultaneously increases prediction bias. Their competition explains the intermediate-noise regime left open between these limits. It produces a finite-noise optimum whose location depends on the learning setup and can disappear in the large-sample limit. Numerical experiments validate these predictions. Noise programming can move a model towards this optimum. These results make the non-monotonic effect of noise predictable and provide a route to harness it.",
-              "categories": [
-                "quant-ph",
-                "cs.LG"
-              ],
-              "published": "2026-08-25T08:32:46Z",
-              "url": "https://arxiv.org/abs/2608.24229",
-              "pdf_url": "https://arxiv.org/pdf/2608.24229v1",
-              "comment": "36 pages, 11 figures",
-              "figure_url": "https://arxiv.org/html/2608.24229v1/qnir_figure6.png",
-              "figure_caption": "Figure 4: Testing error across physical noise rates and noise-programming levels. Mean testing MSE after training at physical noise rate β \\beta and programming level k k , corresponding to a parameter-perturbation strength σ = 2 − k \\sigma=2^{-k} . The row labelled “none” is the unprogrammed baseli",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -7563,32 +7616,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.24155",
-              "title": "Coverage Planning for Robotic Tooth Preparation in Densely Constrained Environments",
-              "authors": [
-                "Yunwen Li",
-                "Chen Chen",
-                "Xiangjie Yan",
-                "Chang Shu",
-                "Jianxia Hou",
-                "Shiji Song",
-                "Xiang Li"
-              ],
-              "abstract": "Tooth preparation refers to the controlled removal of tooth structure to create an optimal substrate for fixed restorations and is a core procedure in restorative dentistry. Automating this task is particularly challenging for robots because the dental bur must operate within a densely constrained intraoral workspace, where even sub-millimeter deviations can compromise outcomes or damage adjacent structures. This paper presents a novel robotic system for autonomous full-crown tooth preparation. The proposed framework includes: 1) an anatomy-aware toolpath planning algorithm that conforms precisely to a technician-designed preparation model while protecting adjacent teeth, and 2) a clearance-oriented end-effector yaw assignment strategy that allows intraoral access while reducing the risk of soft-tissue interference. Together, these features enable the robot to accurately mill the irregular tooth surface with an average geometric deviation of 0.117 mm (RMSE), achieving both restoration quality and clinical safety. A series of simulations and phantom-head experiments validate the system's feasibility and effectiveness.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-25T07:16:53Z",
-              "url": "https://arxiv.org/abs/2608.24155",
-              "pdf_url": "https://arxiv.org/pdf/2608.24155v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.24155v1/framework.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -7597,7 +7624,7 @@
           "papers": []
         }
       ],
-      "total": 31
+      "total": 28
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -9599,6 +9626,32 @@
           "name": "Chi Zhang",
           "papers": [
             {
+              "id": "2610.12282",
+              "title": "Slot3R: Set-Associative Spatial Memory for Streaming 3D Reconstruction",
+              "authors": [
+                "Xiyuan Zhang",
+                "Yanming Yang",
+                "Kaiyuan Xu",
+                "Ruibo Li",
+                "Chi Zhang"
+              ],
+              "abstract": "Streaming 3D reconstruction must preserve evidence from each frame while processing an expanding scene online. Spatial memory is a natural fit because it organizes history by reconstructed 3D location. Yet Point3R uses spatial proximity both to associate a new observation with an existing memory entry and to decide whether to fuse it, conflating co-location with state identity. Because pointers summarize image patches, nearby pointers may encode distinct surfaces, viewpoints, or visibility conditions; averaging them can destroy complementary evidence before later frames disambiguate it. We argue that location should determine address, not whether observations must merge. Slot3R realizes this principle as a training-free, set-associative retrofit that lets multiple states coexist at a shared address while keeping the pretrained Point3R backbone frozen. A bounded sparse readout further decouples persistent storage from per-frame decoder access. At 300-500 sampled frames, Slot3R reduces Point3R's point-cloud accuracy error (Acc) by 57.1%-63.1% on 7Scenes and 64.0%-72.0% on NeuralRGBD, lowers Sim(3)-aligned absolute trajectory error (ATE) on all three pose benchmarks, and remains competitive on video-depth estimation. It completes all evaluated settings from 600 to 1000 sampled frames at about 19 FPS under the same protocol, whereas Point3R and InfiniteVGGT run out of memory at 800 frames and beyond.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-10-08T16:39:39Z",
+              "url": "https://arxiv.org/abs/2610.12282",
+              "pdf_url": "https://arxiv.org/pdf/2610.12282v1",
+              "comment": "Project Page: https://ashleyxyz.github.io/Slot-3R/",
+              "figure_url": "https://arxiv.org/html/2610.12282v1/Slot3R_teaser.png",
+              "figure_caption": "Fig. 1 : Reconstruction quality, viewpoint-guided pose estimation, and streaming scalability. (a) Local point-cloud comparison with Point3R. (b) Indoor and outdoor reconstructions produced by Ours. (c) Relative to Point3R, both VPC variants reduce all three pose errors on Sintel and TUM-Dynamic; Our",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://ashleyxyz.github.io/Slot-3R/"
+              }
+            },
+            {
               "id": "2610.05252",
               "title": "MGPO: Manifold-Guided Diffusion Alignment for Task-Aware Dataset Distillation",
               "authors": [
@@ -10267,31 +10320,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2608.24111",
-              "title": "Trajectory-Level Continuous Action Representation for Robotic Manipulation",
-              "authors": [
-                "Tong Yang",
-                "Jingkai Jia",
-                "Yuecheng Xu",
-                "Xueyao Chen",
-                "Chi Zhang",
-                "Wenqiang Zhang"
-              ],
-              "abstract": "We propose CAT, a trajectory-level continuous action representation framework for robotic manipulation. Existing visuomotor systems often entangle action representation with control frequency or rely on fixed temporal parameterizations. This leads to representational redundancy at high sampling rates and limits the modeling of critical motion. CAT instead encodes action trajectories within a fixed real-time interval into a set of continuous latent tokens. To ensure temporal consistency across varying control frequencies, we further incorporate a frequency-aware positional encoding that establishs a shared temporal coordinate system. Trajectory-level regularization further stabilizes the latent representation. This approach prevents representation growth with timestep density and avoids reliance on predefined temporal parameterizations. Extensive system-level evaluations on LIBERO, MimicGen, and real-world long-horizon manipulation tasks demonstrate that CAT-based policies consistently outperform both competitive VQ-based and continuous visuomotor baselines under matched training settings. Across various model backbones and control frequencies, CAT consistently improves success rates. These results highlight the advantages of trajectory-level continuous action modeling for scalable robotic manipulation across varying control rates.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-08-25T06:19:00Z",
-              "url": "https://arxiv.org/abs/2608.24111",
-              "pdf_url": "https://arxiv.org/pdf/2608.24111v2",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2608.24111v2/overview.png",
-              "figure_caption": "Figure 1 : Overview of CAT. CAT performs trajectory-level continuous action modeling over action sequences defined within a fixed real-time window. A frequency-aware transformer encoder with F-RoPE injection maps each action sequence to a fixed set of continuous latent variables. An asymmetric causa",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -10331,14 +10359,14 @@
                 "Hongming Li",
                 "Yuchen Zhu"
               ],
-              "abstract": "Large-scale vision--language--action (VLA) policies have advanced generalist robot control, yet most remain stimulus-to-action black boxes: actions are exposed, but their explanatory state is not. They provide no native account of three explanatory signals: task progress, the next semantic transition, or local command reliability. Prior work shows that progress and event structure aid long-horizon control and that uncertainty supports monitoring; however, such capabilities are typically added or extracted only after action pretraining. The field therefore lacks a VLA foundation model whose explanatory state is jointly pretrained with control. Drawing on biological sensorimotor organization, in which outcome-sensitive, event-segmented, and probabilistic predictions structure behavior, we introduce LM-X. LM-X learns three directly supervised online signals: return-to-go (RTG) estimates visible progress and state quality; event-to-go (ETG) predicts the action sequence to the next semantic event; and heteroscedastic action-flow variance reports local command reliability. RTG conditions ETG and both condition action generation; uncertainty is estimated inside the action expert, making explanation part of control rather than a post-hoc description. We pretrain LM-X on more than 20,000 hours of heterogeneous real-robot trajectories, including over 1,000 hours of failed rollouts. A controlled gate favors joint over post-hoc training. LM-X achieves 74.1% success on 50 randomized-hard RoboTwin2.0 tasks and 73.5% on seven real-robot tasks, compared with 55.4% and 50.7% for GR00T N1.7. Its signals track progress and regression, anticipate event-scale motion, detect high-error actions, and provide advance failure warning. These results establish LM-X as an explainable VLA foundation model that couples transparent predictive state with stronger generalist control.",
+              "abstract": "Large-scale vision--language--action (VLA) policies have advanced generalist robot control, yet most remain stimulus-to-action black boxes: actions are exposed, but their explanatory state is not. They provide no native account of three explanatory signals: task progress, the next semantic transition, or local command reliability. Prior work shows that progress and event structure aid long-horizon control and that uncertainty supports monitoring; however, such capabilities are typically added or extracted only after action pretraining. The field therefore lacks a VLA foundation model whose explanatory state is jointly pretrained with control. Drawing on biological sensorimotor organization, in which outcome-sensitive, event-segmented, and probabilistic predictions structure behavior, we introduce LM-X. LM-X learns three directly supervised online signals: return-to-go (RTG) estimates visible progress and state quality; event-to-go (ETG) predicts the action sequence to the next semantic event; and heteroscedastic action-flow variance reports local command reliability. RTG conditions ETG and both condition action generation; uncertainty is estimated inside the action expert, making explanation part of control rather than a post-hoc description. We pretrain LM-X on more than 20,000 hours of heterogeneous real-robot trajectories, including over 1,000 hours of failed rollouts. LM-X achieves 74.1% success on 50 randomized-hard RoboTwin2.0 tasks and 73.5% on seven real-robot tasks, compared with 55.4% and 50.7% for GR00T N1.7. Its signals track progress and regression, anticipate event-scale motion, detect high-error actions, and provide advance failure warning. These results establish LM-X as an explainable VLA foundation model that couples transparent predictive state with stronger generalist control. Github: https://github.com/loongOpen/LoongWu-LM-X-VLA",
               "categories": [
                 "cs.RO",
                 "cs.LG"
               ],
               "published": "2026-08-26T13:05:29Z",
               "url": "https://arxiv.org/abs/2608.25757",
-              "pdf_url": "https://arxiv.org/pdf/2608.25757v4",
+              "pdf_url": "https://arxiv.org/pdf/2608.25757v5",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2608.25757v4/polished_algorithm_overview_v18.png",
               "figure_caption": "Figure 1 : Explainable, brain-inspired multi-timescale organization of LM-X . Return-to-go (RTG), event-to-go (ETG), and variance explicitly expose progress, intermediate intention, and local action reliability. RTG conditions the event head; its event representation and RTG then condition fine-grai",
@@ -11693,6 +11721,35 @@
           "name": "Guillaume Sartoretti",
           "papers": [
             {
+              "id": "2610.12194",
+              "title": "MiniWAM: Learning Compact Future Targets for Efficient World-Action Modeling",
+              "authors": [
+                "Jie Chen",
+                "Ruofei Bai",
+                "Yuxin Cai",
+                "Yifeng Zhang",
+                "Chengyang He",
+                "Jun Li",
+                "Wei-Yun Yau",
+                "Guillaume Sartoretti"
+              ],
+              "abstract": "World modeling has emerged as an effective co-training objective for robot policies, giving rise to World Action Models (WAMs) that jointly predict actions and future states. However, most WAMs predict future states in the native representation space of pretrained visual backbones, resulting in high-dimensional targets with substantial training cost. We introduce MiniWAM, which instead predicts compact future representations learned from privileged current-future transitions. To construct these targets, we propose Predictive Representations via Inverse Spatiotemporal Modeling (PRISM), which combines inverse-dynamics supervision with feature reconstruction to emphasize control-relevant transition information while preserving useful future-state information. With the learned PRISM encoder frozen, MiniWAM is trained to jointly predict the resulting targets and robot actions from current observations. With 65$\\times$ fewer native future feature tokens, MiniWAM consistently outperforms native future-feature prediction with both DINOv3 and WAN2.1 VAE features, while achieving up to an 8$\\times$ speedup in world-action training. At 0.25B parameters, MiniWAM is already competitive with substantially larger WAMs on LIBERO, LIBERO-Plus, and RoboTwin 2.0 simulation benchmarks. Representation analyses further show that PRISM contributes behavioral structure beyond feature reconstruction alone. These results demonstrate that effective world-action modeling does not require predicting native visual futures, and that compact predictive representations provide a strong and substantially more efficient target for policy learning. The project page is available at: https://j1dan.github.io/MiniWAM.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-08T15:51:53Z",
+              "url": "https://arxiv.org/abs/2610.12194",
+              "pdf_url": "https://arxiv.org/pdf/2610.12194v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.12194v1/imgs/headline.png",
+              "figure_caption": "Figure 1: MiniWAM replaces costly native future prediction with compact predictive representations. (a) While conventional WAMs predict high-dimensional native future features, MiniWAM jointly predicts actions and compact PRISM targets learned from the same visual features via inverse dynamics and r",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://j1dan.github.io/MiniWAM"
+              }
+            },
+            {
               "id": "2610.00487",
               "title": "ScaffoldM3C: A Multimodal Sequential Monte Carlo Framework for Generative Stable Construction Planning",
               "authors": [
@@ -12030,7 +12087,7 @@
           ]
         }
       ],
-      "total": 34
+      "total": 35
     },
     {
       "name": "SONIC 合作作者",
