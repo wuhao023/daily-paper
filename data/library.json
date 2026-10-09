@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T00:46:40.034Z",
+  "updated": "2026-10-09T10:28:39.640Z",
   "items": [
     {
       "type": "paper",
@@ -1118,6 +1118,72 @@
       "status": "liked",
       "added_at": "2026-10-09T00:46:38.012Z",
       "updated_at": "2026-10-09T00:46:38.012Z"
+    },
+    {
+      "type": "paper",
+      "id": "2610.10465",
+      "title": "LLA-MPPI: Rapidly Adaptive Whole-body Control of Legged Robots with GPU-Accelerated Parallel Simulations",
+      "url": "https://arxiv.org/abs/2610.10465",
+      "subtitle": "Sebin Jung, Maitham F. AL-Sunni, Juan Alvarez-Padilla, Zachary Manchester, Changliu Liu, John M. Dolan",
+      "text": "Real-time whole-body controllers for legged robots typically plan through a fixed nominal model and degrade when the deployed dynamics change. Adaptive methods typically require a model structure that contact dynamics do not provide, or they need offline training for each anticipated condition. We present Look-back and Look-ahead Adaptive Model Predictive Path Integral control (LLA-MPPI). The method converts whole-body adaptation into selection over a bank of GPU-batched contact simulators with different physical or structural parameters. Windowed prediction errors select the simulator that best explains recent motion. A whole-body MPPI planner optimizes controls through the selected model. The framework requires no offline training, and its selected hypotheses are physically interpretable. Across four simulated tasks, it achieves 97.5% success while the strongest baseline reaches 74% and an oracle with the true model reaches 98.5%. Hardware validation on a Unitree Go2 shows the robot walking under a payload added mid-run, walking after one leg is disabled, and pushing a box to its goal while increasing its mass on the fly. Code, videos, and project details are available at: https://lla-control.github.io",
+      "tags": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "date": "2026-10-07",
+      "score": 0.8878,
+      "why": "你点赞过：ReCo: Response-Consistent Locomotion with Policy-Aware MPC f",
+      "keywords": [
+        "whole-body control",
+        "legged"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.10465v1",
+      "image": "https://arxiv.org/html/2610.10465v1/llamppi_pipeline.png",
+      "imageCaption": "Fig. 2: Overview of the LLA-MPPI framework. The GPU-parallel look-back stage selects the model that best explains recent state transitions, while the CPU-parallel look-ahead stage uses the selected model to solve the MPPI. The two stages operate asynchronously to provide real-time adaptive control.",
+      "video": null,
+      "links": [
+        {
+          "label": "项目主页",
+          "url": "https://lla-control.github.io"
+        }
+      ],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-09T00:47:00.271Z",
+      "updated_at": "2026-10-09T00:47:00.271Z"
+    },
+    {
+      "type": "paper",
+      "id": "2610.10489",
+      "title": "HuMBLE: Human Motion-Driven Behavior Learning for Embodied Locomotion",
+      "url": "https://arxiv.org/abs/2610.10489",
+      "subtitle": "Mike Zhang, Dongho Kang, Kevin Bergamin, Nicola Burger, Robin Deits, Jonathan Foster 等",
+      "text": "Despite recent advances in humanoid locomotion, controllers optimized for command tracking and robustness tend to produce mechanical gaits, whereas controllers tied to human motion data often fail to generalize to commands outside the data distribution. This work introduces a learning framework that balances these competing objectives to synthesize real-time steerable, robust, and biomimetic locomotion policies from human data. Using an in-house curated locomotion dataset covering diverse speeds and directions, we first learn a natural locomotion prior policy through a teacher-student distillation process. Specifically, we train a full-body reference-conditioned policy with Reinforcement Learning (RL), then distill it into a lightweight prior policy conditioned solely on proprioception and a planar torso-velocity steering command. Next, we fine-tune the prior policy with multi-task RL to expand command coverage and robustness beyond the data distribution, pairing a goal-conditioned task that tracks arbitrary commands with a reference-guided task that tracks the human data as an explicit style regularizer. We validate our framework on three humanoid robots: the Boston Dynamics Atlas R1, Atlas D1, and Unitree G1. Experimental results demonstrate robust performance across real-world scenarios, including direct user-controlled locomotion in indoor and outdoor environments, and integration as the locomotion layer within hierarchical control stacks. Benchmarks against Tabula Rasa RL policies trained without human data and ablation studies confirm that our framework yields a lightweight, deployable policy that reconstructs coordinated whole-body behavior from a steering command, retaining the human gait characteristics while remaining robust and fully steerable.",
+      "tags": [
+        "cs.RO"
+      ],
+      "date": "2026-10-07",
+      "score": 0.927,
+      "why": "兴趣：reinforcement learning for robust humanoid locomotion, bipedal walking and running",
+      "keywords": [
+        "humanoid",
+        "locomotion"
+      ],
+      "pdf": "https://arxiv.org/pdf/2610.10489v1",
+      "image": "https://arxiv.org/html/2610.10489v1/teaser_v8.png",
+      "imageCaption": "Figure 1 : Summary of hardware results from HuMBLE . (A) Human-like steerable locomotion on the Boston Dynamics Atlas R1 was demonstrated live to the public on stage. (B) The Atlas R1 robot following real-time user steering commands that vary continuously in speed and direction while maintaining sty",
+      "video": null,
+      "links": [],
+      "badges": [],
+      "liked": true,
+      "later": false,
+      "disliked": false,
+      "status": "liked",
+      "added_at": "2026-10-09T00:46:48.982Z",
+      "updated_at": "2026-10-09T00:46:48.982Z"
     },
     {
       "type": "repo",
