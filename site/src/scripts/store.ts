@@ -7,6 +7,7 @@
  * - 合并规则：按 id 合并，updated_at 新的一方胜出；删除用 status='removed' 墓碑表示。
  */
 import type { CardItem, LibraryFile, LibraryItem, LibraryStatus } from '../lib/types';
+import { b64encode, b64decode } from '../lib/base64';
 
 const LIB_KEY = 'ts:library:v1';
 const SYNC_KEY = 'ts:sync:v1';
@@ -159,16 +160,6 @@ function headers(s: SyncSettings): HeadersInit {
     Accept: 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28',
   };
-}
-
-// UTF-8 安全的 base64
-function b64encode(str: string): string {
-  return btoa(String.fromCharCode(...new TextEncoder().encode(str)));
-}
-function b64decode(b64: string): string {
-  const bin = atob(b64.replace(/\n/g, ''));
-  const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
-  return new TextDecoder().decode(bytes);
 }
 
 async function fetchRemote(s: SyncSettings): Promise<{ items: LibraryItem[]; sha: string | null }> {
