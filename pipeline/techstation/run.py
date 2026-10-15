@@ -13,12 +13,13 @@ from __future__ import annotations
 import argparse
 import logging
 import math
+import re
 from datetime import date, datetime, timedelta, timezone
 
 import numpy as np
 
 from . import arxiv, github, labs, media, store
-from .config import Config
+from .config import Config, REPO_ROOT
 from .scoring import Embedder, KeywordScorer, build_profile, score_items
 
 log = logging.getLogger("techstation")
@@ -28,7 +29,8 @@ def _parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser(description="每日论文 / 项目推荐管道")
     ap.add_argument("--date", help="覆盖今天的日期（YYYY-MM-DD），默认取 UTC 今天")
     ap.add_argument("--skip-arxiv", action="store_true")
-    ap.add_argument("--skip-github", action="store_true")
+    ap.add_argument("--skip-github", action="store_true", help="跳过机器人与 Agent 项目")
+    ap.add_argument("--agents-only", action="store_true", help="只更新 Agent 项目及搜索索引")
     ap.add_argument("--skip-labs", action="store_true", help="不更新学者追踪")
     ap.add_argument("--skip-media", action="store_true", help="不抓配图（省时间）")
     ap.add_argument("--quick", action="store_true", help="快速模式：只更新论文与项目推荐，跳过学者追踪（约省 3 分钟）")
@@ -100,9 +102,21 @@ def run_papers(cfg: Config, day: str, profile, embedder, kw, labs_profile: dict,
     return len(top)
 
 
-def run_repos(cfg: Config, day: str, profile, embedder, kw, args) -> int:
+def run_repos(cfg: Config, day: str, profile, embedder, kw, args, kind: str = "repos") -> int:
     repos = [r.to_dict() for r in github.fetch_repos(cfg.github_topics, cfg.github_queries, cfg.github_min_stars, cfg.github_days_back)]
-    snapshot = store.load_repo_snapshot()
+    if kind == "agents":
+        # 仅保留有明确许可证的实现，降低资源清单和普通软件 agent 的干扰。
+        agent_pattern = re.compile(r"\b(?:agents?|agentic|multiagent)\b", re.I)
+        repos = [
+            r for r in repos
+            if r.get("license") not in (None, "", "NOASSERTION", "OTHER")
+            and agent_pattern.search(f"{r['name']} {r['description']} {' '.join(r['topics'])}")
+            and not r['name'].lower().startswith("awesome-")
+        ]
+        if not repos:
+            log.warning("Agent 候选为空，保留已有推荐和 Star 快照")
+            return 0
+    snapshot = store.load_repo_snapshot(kind)
     now = datetime.now(timezone.utc)
     new_cutoff = now - timedelta(days=cfg.github_days_back)
 
@@ -149,7 +163,7 @@ def run_repos(cfg: Config, day: str, profile, embedder, kw, args) -> int:
         r["rank"] = rank
 
     if not args.skip_media:
-        existing = {r["id"]: r for r in store.read_daily("repos", day).get("items", [])}
+        existing = {r["id"]: r for r in store.read_daily(kind, day).get("items", [])}
         todo = []
         for r in top:
             old = existing.get(r["id"])
@@ -160,7 +174,7 @@ def run_repos(cfg: Config, day: str, profile, embedder, kw, args) -> int:
                 todo.append(r)
         media.enrich_repos(todo)
 
-    store.write_daily("repos", day, top, {"total_fetched": len(repos), "topics": cfg.github_topics})
+    store.write_daily(kind, day, top, {"total_fetched": len(repos), "topics": cfg.github_topics, "new_days": cfg.github_days_back})
 
     for r in repos:
         prev = snapshot.get(r["id"])
@@ -169,12 +183,16 @@ def run_repos(cfg: Config, day: str, profile, embedder, kw, args) -> int:
         else:
             delta = (prev or {}).get("delta")
         snapshot[r["id"]] = {"stars": r["stars"], "date": day, "first_seen": r["first_seen"], "delta": delta}
-    store.save_repo_snapshot(snapshot, cfg.retention_days)
+    store.save_repo_snapshot(snapshot, cfg.retention_days, kind)
     return len(top)
 
 
 def main() -> None:
     args = _parse_args()
+    if args.agents_only and args.skip_github:
+        raise SystemExit("--agents-only 不能与 --skip-github 同时使用")
+    if args.agents_only:
+        args.skip_arxiv = args.skip_labs = True
     if args.quick:
         args.skip_labs = True
     logging.basicConfig(
@@ -199,14 +217,25 @@ def main() -> None:
         n = run_papers(cfg, day, profile, embedder, kw, labs_profile, args)
         log.info("论文推荐写入 %d 篇", n)
     if not args.skip_github:
-        n = run_repos(cfg, day, profile, embedder, kw, args)
-        log.info("项目推荐写入 %d 个", n)
+        if not args.agents_only:
+            n = run_repos(cfg, day, profile, embedder, kw, args)
+            log.info("项目推荐写入 %d 个", n)
+        agent_cfg = Config.load(REPO_ROOT / "profile" / "agents.yaml")
+        agent_cfg.retention_days = cfg.retention_days
+        # 独立兴趣画像，避免机器人收藏影响 Agent 排名。
+        agent_profile = build_profile(agent_cfg, [], embedder)
+        agent_kw = KeywordScorer(agent_cfg.boost_keywords, agent_cfg.mute_keywords)
+        n = run_repos(agent_cfg, day, agent_profile, embedder, agent_kw, args, kind="agents")
+        log.info("Agent 项目推荐写入 %d 个", n)
     if not args.skip_labs and labs_profile["labs"]:
         labs.run_labs(labs_profile, day, fetch_media=not args.skip_media)
 
-    store.prune_daily_files("papers", cfg.retention_days)
-    store.prune_daily_files("repos", cfg.retention_days)
-    store.prune_thumbnails()
+    if not args.agents_only:
+        store.prune_daily_files("papers", cfg.retention_days)
+        store.prune_daily_files("repos", cfg.retention_days)
+        store.prune_thumbnails()
+    if not args.skip_github:
+        store.prune_daily_files("agents", cfg.retention_days)
     store.rebuild_search_index(cfg.retention_days)
     log.info("完成")
 

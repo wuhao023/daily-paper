@@ -2,19 +2,20 @@
 import Base from '../../layouts/Base.astro';
 import { withBase } from '../../lib/base';
 import { mediaHtml } from '../../lib/card';
-import { allRepos, repoToCard } from '../../lib/data';
+import { allRepos, repoToCard, agentDays } from '../../lib/data';
 
 export function getStaticPaths() {
   return allRepos().map(({ repo, day }) => ({ params: { id: repo.id }, props: { repo, day } }));
 }
 
 const { repo, day } = Astro.props;
+const isAgent = agentDays.some((d) => d.items.some((r) => r.id === repo.id));
 const item = repoToCard(repo);
 const payload = JSON.stringify(item);
 const fmt = (n: number) => (n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n));
 ---
 
-<Base title={repo.full_name} description={repo.description} image={item.image} active="repos">
+<Base title={repo.full_name} description={repo.description} image={item.image} active={isAgent ? 'agents' : 'repos'}>
   <p class="hint" style="margin-top:22px">
     <a href={withBase(`archive/${day}/`)}>← {day} 的推荐</a>
   </p>

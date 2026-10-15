@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { withBase } from '../../lib/base';
-import { allDates, papersOn, reposOn } from '../../lib/data';
+import { allDates, papersOn, reposOn, agentsOn } from '../../lib/data';
 ---
 
 <Base title="归档" active="archive">
@@ -16,10 +16,11 @@ import { allDates, papersOn, reposOn } from '../../lib/data';
       {allDates.map((d) => {
         const p = papersOn(d)?.items.length ?? 0;
         const r = reposOn(d)?.items.length ?? 0;
+        const a = agentsOn(d)?.items.length ?? 0;
         return (
           <li>
             <a class="d" href={withBase(`archive/${d}/`)}>{d}</a>
-            <div class="c">{p} 篇论文 · {r} 个项目</div>
+            <div class="c">{p} 篇论文 · {r} 个 GitHub 项目 · {a} 个 Agent 项目</div>
           </li>
         );
       })}

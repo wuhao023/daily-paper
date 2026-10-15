@@ -1,0 +1,42 @@
+# Agent 栏目独立配置，不改变机器人论文和项目的偏好。
+# 许可证、Agent 主题、Star 与活跃度用于初筛，不代表代码质量审计。
+interests:
+  - "open source LLM agent frameworks with reliable tool calling, planning and memory"
+  - "coding agents for software engineering, automated debugging and repository level tasks"
+  - "browser and computer use agents for practical workflow automation"
+  - "multi-agent collaboration and orchestration for complex tasks"
+  - "agent evaluation, observability, sandbox execution and model context protocol tools"
+keywords:
+  boost:
+    - agent
+    - agents
+    - agentic
+    - multi-agent
+    - coding agent
+    - browser automation
+    - tool calling
+    - model context protocol
+    - evaluation
+    - sandbox
+  mute:
+    - awesome list
+    - trading bot
+    - cryptocurrency
+    - monitoring agent
+    - user agent
+github:
+  topics: [ai-agents, llm-agent, agentic-ai, coding-agent]
+  queries:
+    - '"LLM agent"'
+    - '"coding agent"'
+    - '"browser agent"'
+    - '"multi-agent" "LLM"'
+  min_stars: 100
+  days_back: 90
+scoring:
+  # embedding 模型使用 interests.yaml 的设置，共享模型实例。
+  top_k_repos: 20
+  weights:
+    embedding: 0.6
+    keyword: 0.4
+# 历史保留期使用 interests.yaml 的 retention_days。

@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import RefreshButton from '../components/RefreshButton.astro';
+import { latestAgents, repoToCard } from '../lib/data';
+const repos = latestAgents?.items ?? [];
+---
+
+<Base title="Agent 项目" active="agents" description="发现值得关注的 Agent 开源项目：开发框架、编程助手、浏览器操作、多 Agent 协作与评测工具。">
+  <div class="page-head">
+    <h1>Agent 项目</h1>
+    {latestAgents && <span class="sub">{latestAgents.date} · {repos.length} 个精选项目</span>}
+    <span class="grow"></span>
+    <RefreshButton />
+  </div>
+  <p class="hint">关注 Agent 框架、编程助手、浏览器操作、多 Agent 协作与评测工具。结合方向相关性、Star 热度和近期活跃度排序。</p>
+  <p class="hint">优先收录有明确许可证的活跃开源实现；Star 和推荐分仅作参考。显示最近一次有效推荐的日期。</p>
+  {repos.length === 0 ? (
+    <div class="empty">Agent 项目正在等待首次更新，更新完成后会在这里展示。</div>
+  ) : (
+    <div class="cards">{repos.map((r) => <Card item={repoToCard(r)} rank={r.rank} />)}</div>
+  )}
+</Base>

@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import { withBase } from '../../lib/base';
-import { allDates, papersOn, paperToCard, reposOn, repoToCard } from '../../lib/data';
+import { allDates, agentsOn, papersOn, paperToCard, reposOn, repoToCard } from '../../lib/data';
 
 export function getStaticPaths() {
   return allDates.map((date) => ({ params: { date } }));
@@ -11,6 +11,7 @@ export function getStaticPaths() {
 const { date } = Astro.params;
 const papers = papersOn(date!)?.items ?? [];
 const repos = reposOn(date!)?.items ?? [];
+const agents = agentsOn(date!)?.items ?? [];
 const idx = allDates.indexOf(date!);
 const newer = idx > 0 ? allDates[idx - 1] : null;
 const older = idx < allDates.length - 1 ? allDates[idx + 1] : null;
@@ -19,7 +20,7 @@ const older = idx < allDates.length - 1 ? allDates[idx + 1] : null;
 <Base title={`${date} 归档`} active="archive">
   <div class="page-head">
     <h1>{date}</h1>
-    <span class="sub">{papers.length} 篇论文 · {repos.length} 个项目</span>
+    <span class="sub">{papers.length} 篇论文 · {repos.length} 个 GitHub 项目 · {agents.length} 个 Agent 项目</span>
     <span class="spacer" style="flex:1"></span>
     <span class="sub">
       {older && <a href={withBase(`archive/${older}/`)}>← {older}</a>}
@@ -38,6 +39,12 @@ const older = idx < allDates.length - 1 ? allDates[idx + 1] : null;
     <>
       <div class="section-head"><h2>GitHub 项目</h2></div>
       <div class="cards">{repos.map((r) => <Card item={repoToCard(r)} rank={r.rank} />)}</div>
+    </>
+  )}
+  {agents.length > 0 && (
+    <>
+      <div class="section-head"><h2>Agent 项目</h2></div>
+      <div class="cards">{agents.map((r) => <Card item={repoToCard(r)} rank={r.rank} />)}</div>
     </>
   )}
 </Base>

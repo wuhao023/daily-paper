@@ -10,6 +10,7 @@ const repoFiles = import.meta.glob<DailyFile<Repo>>('../../../data/repos/*.json'
   eager: true,
   import: 'default',
 });
+const agentFiles = import.meta.glob<DailyFile<Repo>>('../../../data/agents/*.json', { eager: true, import: 'default' });
 const labsFiles = import.meta.glob<LabsFile>('../../../data/labs.json', { eager: true, import: 'default' });
 
 function byDateDesc<T extends { date: string }>(files: Record<string, T>): T[] {
@@ -18,6 +19,11 @@ function byDateDesc<T extends { date: string }>(files: Record<string, T>): T[] {
 
 export const paperDays: DailyFile<Paper>[] = byDateDesc(paperFiles);
 export const repoDays: DailyFile<Repo>[] = byDateDesc(repoFiles);
+export const agentDays: DailyFile<Repo>[] = byDateDesc(agentFiles);
+export const latestAgents = agentDays.find((d) => d.items.length > 0);
+export function agentsOn(date: string): DailyFile<Repo> | undefined {
+  return agentDays.find((d) => d.date === date);
+}
 export const labsData: LabsFile | undefined = Object.values(labsFiles)[0];
 
 /* ---------- 学者追踪：嵌套页面用的 slug 工具 ---------- */
@@ -47,7 +53,7 @@ export const latestRepos = repoDays[0];
 
 /** 所有出现过的日期（论文或项目任一有数据） */
 export const allDates: string[] = Array.from(
-  new Set([...paperDays.map((d) => d.date), ...repoDays.map((d) => d.date)]),
+  new Set([...paperDays.map((d) => d.date), ...repoDays.map((d) => d.date), ...agentDays.map((d) => d.date)]),
 ).sort((a, b) => (a < b ? 1 : -1));
 
 export function papersOn(date: string): DailyFile<Paper> | undefined {
@@ -92,7 +98,7 @@ export function allPapers(): { paper: Paper; day: string | null }[] {
 }
 export function allRepos(): { repo: Repo; day: string }[] {
   const seen = new Map<string, { repo: Repo; day: string }>();
-  for (const d of repoDays) for (const r of d.items) if (!seen.has(r.id)) seen.set(r.id, { repo: r, day: d.date });
+  for (const d of [...agentDays, ...repoDays].sort((a, b) => b.date.localeCompare(a.date))) for (const r of d.items) if (!seen.has(r.id)) seen.set(r.id, { repo: r, day: d.date });
   return Array.from(seen.values());
 }
 

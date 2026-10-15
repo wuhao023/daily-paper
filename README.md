@@ -88,3 +88,25 @@ Python · [uv](https://docs.astral.sh/uv/) · [fastembed](https://github.com/qdr
 ## License
 
 [MIT](LICENSE)
+
+## Agent 项目栏目
+
+导航中的「Agent 项目」位于「GitHub 项目」之后，独立推荐 Agent 框架、Coding Agent、浏览器操作、多 Agent 协作及评测工具，不占用机器人项目名额。
+
+- 配置：`profile/agents.yaml`，可修改兴趣、关键词、GitHub topics / queries、Star 门槛和推荐数量。
+- 默认：至少 100 Star、最近 90 天活跃、最多 20 个；topic 活跃查询沿用四倍 Star 门槛。优先保留有明确许可证、含 Agent 主题的实现，排除 `awesome-*` 清单；这些指标不等同于代码质量审计。
+- 排序：独立 Agent 兴趣相关性，加上 Star 热度与近期活跃度；不使用机器人收藏画像。模型和历史保留期沿用 `interests.yaml`。
+- 数据：`data/agents/YYYY-MM-DD.json` 与独立的 `data/agents-seen.json`。复用项目详情、收藏、分享、搜索和归档；空结果保留最后有效推荐。
+- 完整管道和快速刷新均更新此栏目；`--skip-github` 同时跳过两类项目。
+
+仅更新 Agent 数据（在 `pipeline/` 下执行，仍访问 GitHub 并写入数据）：
+
+```bash
+uv run techstation --agents-only
+# 无模型、无 README 配图的轻量更新
+uv run techstation --agents-only --no-embedding --skip-media
+# 无网络回归测试
+uv run python -m unittest discover -s tests
+```
+
+完成后按常规流程构建、部署站点即可发布 `/agents/` 页面。

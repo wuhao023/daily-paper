@@ -9,6 +9,8 @@ from pathlib import Path
 
 from .config import (
     DATA_DIR,
+    AGENTS_DIR,
+    AGENT_SNAPSHOT_PATH,
     LIBRARY_PATH,
     PAPERS_DIR,
     REPO_SNAPSHOT_PATH,
@@ -82,14 +84,14 @@ def save_seen_papers(seen: dict[str, str], retention_days: int) -> None:
 # ---------------------------------------------------------------------------
 
 
-def load_repo_snapshot() -> dict[str, dict]:
-    return read_json(REPO_SNAPSHOT_PATH, {})
+def load_repo_snapshot(kind: str = "repos") -> dict[str, dict]:
+    return read_json(AGENT_SNAPSHOT_PATH if kind == "agents" else REPO_SNAPSHOT_PATH, {})
 
 
-def save_repo_snapshot(snapshot: dict[str, dict], retention_days: int) -> None:
+def save_repo_snapshot(snapshot: dict[str, dict], retention_days: int, kind: str = "repos") -> None:
     cutoff = (date.today() - timedelta(days=retention_days)).isoformat()
     pruned = {k: v for k, v in snapshot.items() if v.get("date", "") >= cutoff}
-    write_json(REPO_SNAPSHOT_PATH, pruned, compact=True)
+    write_json(AGENT_SNAPSHOT_PATH if kind == "agents" else REPO_SNAPSHOT_PATH, pruned, compact=True)
 
 
 # ---------------------------------------------------------------------------
@@ -98,19 +100,19 @@ def save_repo_snapshot(snapshot: dict[str, dict], retention_days: int) -> None:
 
 
 def write_daily(kind: str, day: str, items: list[dict], meta: dict) -> Path:
-    directory = PAPERS_DIR if kind == "papers" else REPOS_DIR
+    directory = {"papers": PAPERS_DIR, "repos": REPOS_DIR, "agents": AGENTS_DIR}[kind]
     path = directory / f"{day}.json"
     write_json(path, {"date": day, "generated_at": now_iso(), **meta, "items": items})
     return path
 
 
 def read_daily(kind: str, day: str) -> dict:
-    directory = PAPERS_DIR if kind == "papers" else REPOS_DIR
+    directory = {"papers": PAPERS_DIR, "repos": REPOS_DIR, "agents": AGENTS_DIR}[kind]
     return read_json(directory / f"{day}.json", {})
 
 
 def list_daily_files(kind: str) -> list[Path]:
-    directory = PAPERS_DIR if kind == "papers" else REPOS_DIR
+    directory = {"papers": PAPERS_DIR, "repos": REPOS_DIR, "agents": AGENTS_DIR}[kind]
     if not directory.exists():
         return []
     return sorted(directory.glob("????-??-??.json"))
@@ -200,7 +202,7 @@ def rebuild_search_index(retention_days: int) -> None:
         for p in read_json(path, {}).get("items", []):
             papers[p["id"]] = _compact_paper(p, path.stem)
 
-    for path in list_daily_files("repos"):
+    for path in sorted(list_daily_files("repos") + list_daily_files("agents"), key=lambda p: p.stem):
         if path.stem < cutoff:
             continue
         for r in read_json(path, {}).get("items", []):

@@ -8,7 +8,7 @@ interface Props {
   description?: string;
   /** 分享预览图（详情页用） */
   image?: string | null;
-  active?: 'today' | 'repos' | 'labs' | 'foundations' | 'archive' | 'search' | 'library' | 'settings';
+  active?: 'today' | 'repos' | 'agents' | 'labs' | 'foundations' | 'archive' | 'search' | 'library' | 'settings';
   /** 不让搜索引擎收录（设置、书库等只对本人有意义的页面） */
   noindex?: boolean;
 }
@@ -21,6 +21,7 @@ const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION || ''
 const nav = [
   { key: 'today', label: '📄 今日论文', href: withBase('') },
   { key: 'repos', label: '🐙 GitHub 项目', href: withBase('repos/') },
+  { key: 'agents', label: '🧠 Agent 项目', href: withBase('agents/') },
   { key: 'labs', label: '🎓 学者追踪', href: withBase('labs/') },
   { key: 'foundations', label: '📐 理论基础', href: withBase('foundations/') },
   { key: 'archive', label: '🗂️ 归档', href: withBase('archive/') },
