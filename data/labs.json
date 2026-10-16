@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-15T11:53:10+00:00",
-  "day": "2026-10-15",
+  "updated": "2026-10-16T11:48:26+00:00",
+  "day": "2026-10-16",
   "days_back": 45,
-  "total": 329,
+  "total": 330,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -569,6 +569,32 @@
           "name": "Jitendra Malik",
           "papers": [
             {
+              "id": "2610.22340",
+              "title": "Dexterity from Supervised Play",
+              "authors": [
+                "Botao He",
+                "Yiming Dou",
+                "Yiannis Aloimonos",
+                "Jitendra Malik",
+                "Akash Sharma",
+                "Ruoshi Liu"
+              ],
+              "abstract": "How can robots autonomously collect the contact-rich experience needed to learn dexterous manipulation? We present DSP: Dexterity from supervised play, a framework in which a robot learns a play policy from minutes of human play through behavior cloning, then deploys it autonomously to collect hours of interaction data to train a world model. During inference, the same play policy then guides model-predictive control (MPC) by proposing candidate action sequences for evaluation under the learned world model. To accelerate inference, we also introduce a method for distilling a closed-loop, goal-conditioned policy through self-play within the learned world model. We evaluate this framework on underactuated pushing and any-to-any in-hand pose reorientation with a multifingered hand, in simulation and real world. In real world experiment, our method outperforms hindsight behavior cloning by 69.6% in success rate and achieves comparable success to reinforcement learning with 490 times less interaction data. These results demonstrate that supervised play can autonomously collect interaction data, guide model-based planning, and enable policy learning without any task-specific demonstrations or sim-to-real transfer.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-15T17:55:50Z",
+              "url": "https://arxiv.org/abs/2610.22340",
+              "pdf_url": "https://arxiv.org/pdf/2610.22340v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.22340v1/teaser.png",
+              "figure_caption": "Fig. 1: \\dspfont DSP Pipeline Overview. (1) Human teleoperation trains a goal-agnostic play policy. (2) The policy collects interaction data through autonomous play. (3) These data train a world model to predict future states from past observations and proposed actions. (4) MPC uses the model to sel",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.17161",
               "title": "Force-Modulated Dexterity: Unified Compliance for Contact-Rich Manipulation",
               "authors": [
@@ -1056,6 +1082,34 @@
           "name": "Trevor Darrell",
           "papers": [
             {
+              "id": "2610.21179",
+              "title": "Judging the Judges: Confidence and Disagreement in Rubrics as Rewards",
+              "authors": [
+                "Michael Tian-Yue Liu",
+                "Anne Harrington",
+                "Trevor Darrell",
+                "Yutong Bai"
+              ],
+              "abstract": "Rubrics as Rewards (RaR) extends reinforcement learning to non-verifiable domains by using an LLM judge to score responses against a structured rubric. Prior work has focused on improving the rubric or strengthening the single judge, with comparatively little attention to how different single or multiple judges might be used during RaR training. We first show that judge identity alone produces a substantial spread in scores when training Qwen3-4B-Base on RaR-Medicine and RaR-Science across five frontier and open-weight judges. Building on this, we propose RaRE (Rubrics as Rewards with Ensembles), a novel judge ensemble strategy for RaR with two mechanisms: a soft-Likert reward that uses judge logprobs to weight more confident judges more heavily, and a drop-on-disagreement mask that excludes high-disagreement rollouts from the GRPO update. We find that this design is critical: while a naive average of judge scores fails to outperform the best single judge, RaRE outperforms every single-judge RaR variant on both HealthBench and GPQA Diamond, with per-theme analysis showing that it inherits the complementary strengths of its constituent judges. Our findings establish judge ensembling as a compelling axis for improving RaR.",
+              "categories": [
+                "cs.LG",
+                "cs.AI",
+                "cs.CL"
+              ],
+              "published": "2026-10-15T03:35:00Z",
+              "url": "https://arxiv.org/abs/2610.21179",
+              "pdf_url": "https://arxiv.org/pdf/2610.21179v1",
+              "comment": "Project page: https://anneharrington.github.io/judging-the-judges/ Code: https://github.com/michael-tyl/RaRE",
+              "figure_url": "https://arxiv.org/html/2610.21179v1/teaser_pptx.png",
+              "figure_caption": "Figure 1: Overview of RaRE (Rubrics as Rewards with Ensembles), instantiated with two judges. (1) Inputs: the user prompt, rubric, and a model rollout sampled from the policy (Qwen3-4B-Base) are passed to the judges. (2) Two-judge ensemble: we use an ensemble of two diverse LLM judges (selected from",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://anneharrington.github.io/judging-the-judges/",
+                "code": "https://github.com/michael-tyl/RaRE"
+              }
+            },
+            {
               "id": "2610.19495",
               "title": "Robota-Embed: Unified VLA Embeddings for Robot In-Context Learning and Evolution",
               "authors": [
@@ -1223,7 +1277,7 @@
           ]
         }
       ],
-      "total": 41
+      "total": 43
     },
     {
       "name": "Stanford",
@@ -1233,6 +1287,33 @@
         {
           "name": "Chelsea Finn",
           "papers": [
+            {
+              "id": "2610.22273",
+              "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+              "authors": [
+                "Anikait Singh",
+                "Teresa Zhang",
+                "Yoonho Lee",
+                "Roshen Sanjay Nair",
+                "Aviral Kumar",
+                "Chelsea Finn"
+              ],
+              "abstract": "Reasoning over long document contexts remains a challenge for large language models (LLMs). Standard retrieval methods are inherently reactive, bottlenecking agents with complex, cross-document reasoning at inference time, while precomputed structures like knowledge graphs often fall short because they rely on rigid heuristics. Instead, can we allow agents to perform anticipatory directed curation: learning to proactively reorganize unstructured corpora prior to inference to efficiently serve diverse future queries. We build on a key asymmetry in modern agentic harnesses (e.g., Claude Code): while LLM agents are adept at navigating existing filesystems to solve an immediate task, they are rarely trained to construct reusable workspaces for future use. To instantiate this capability, we introduce Librarian Agents, a framework in which a builder agent transforms raw documents into a hierarchical filesystem of synthetic files and reference links, which forms a workspace tailored for a downstream answering agent. We formulate workspace construction as a Markov decision process and optimize the builder policy via reinforcement learning to directly maximize downstream answering accuracy. Empirically, Librarian Agents outperforms the strongest retrieval and precomputation baselines by 33 percentage points on BrowseComp-Plus, amortizes upfront construction costs across repeated queries, and generalizes zero-shot to unseen domains on BRIGHT with a 31-point average accuracy improvement.",
+              "categories": [
+                "cs.LG",
+                "cs.AI",
+                "cs.CL"
+              ],
+              "published": "2026-10-15T17:35:17Z",
+              "url": "https://arxiv.org/abs/2610.22273",
+              "pdf_url": "https://arxiv.org/pdf/2610.22273v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.22273v1/teaser_v2_workspace.png",
+              "figure_caption": "Figure 1 : Overview of Librarian Agents. (Left) We train a builder agent to construct a workspace consisting of synthetic files and directories that anticipates future queries for a downstream answering agent. (Right) This workspace is built once and repeatedly used to answer different queries.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.05882",
               "title": "Mulligan: Performance-Guided Data Collection for Efficient On-Robot Learning",
@@ -1321,33 +1402,6 @@
               "video_url": null,
               "links": {
                 "project": "https://pd-perry.github.io/real-time-expo-ft"
-              }
-            },
-            {
-              "id": "2609.00196",
-              "title": "WHALE: A Simple Recipe for Joint Harness-Weight Optimization",
-              "authors": [
-                "Haechan Kim",
-                "Yoonho Lee",
-                "Gisang Lee",
-                "Chelsea Finn",
-                "Kangwook Lee"
-              ],
-              "abstract": "Agent performance depends jointly on the model parameters and the executable harness code that manages context and control flow. Optimizing either component in isolation can leave the system bottlenecked by its frozen counterpart: weight updates can change which harness is effective, while harness updates can change which model capabilities are exposed. Existing joint-adaptation methods optimize weights and textual prompts but leave the broader harness fixed. We propose Weight-Harness Alternating LEarning (WHALE), a simple recipe that alternates two phases: updating the model under the current harness, then searching for a better harness under the updated model. We instantiate these two phases with online rejection-sampling fine-tuning and Meta-Harness, respectively. When to switch is a key design choice: to separate real improvements from noise without over-optimizing against a changing counterpart, WHALE uses either fixed phase durations or an adaptive patience rule over training signals. Using Qwen3.5-2B/4B agents across three domains (search question answering, mathematical reasoning, and chess puzzles), WHALE outperforms weight-only, harness-only, and Fast-Slow Training by 4.15-24.38 percentage points in best mean@8 accuracy. Either component can be the bottleneck: harness search matches peak weight-only accuracy with far fewer rollouts in SearchQA, but improves math accuracy only after a weight update. Small interleaved updates also outperform stagewise weight-then-harness optimization in accuracy and rollout cost. The code is available at https://github.com/krafton-ai/WHALE.",
-              "categories": [
-                "cs.LG",
-                "cs.AI"
-              ],
-              "published": "2026-08-31T18:12:55Z",
-              "url": "https://arxiv.org/abs/2609.00196",
-              "pdf_url": "https://arxiv.org/pdf/2609.00196v1",
-              "comment": "",
-              "figure_url": "thumbs/2609.00196.jpg",
-              "figure_caption": "论文首页预览",
-              "figure_source": "pdf",
-              "video_url": null,
-              "links": {
-                "code": "https://github.com/krafton-ai/WHALE"
               }
             }
           ]
@@ -1523,6 +1577,39 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2610.22364",
+              "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+              "authors": [
+                "Chenyuan Zhou",
+                "Yining Hong",
+                "Huang Huang",
+                "Yunfan Jiang",
+                "Wenlong Huang",
+                "David Held",
+                "Vitor Campagnolo Guizilini",
+                "Yue Wang",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Leonidas Guibas",
+                "Yejin Choi"
+              ],
+              "abstract": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules. We introduce T2-Z for test-time optimization of environment latents, which augments a robotic world model with a learnable environment latent to condition world predictions. This compact latent captures underlying environmental variation without supervision of what environmental factors exist or what values they take. During training, T2-Z alternates between two stages: a world-model optimization stage that fixes the latents and learns general action-conditioned dynamics across environments; and an environment-latent optimization stage that freezes the world model and optimizes the conditioning latents, allowing latent structure to emerge purely through world prediction. At test time, the world model remains frozen and a newly initialized environment latent is optimized from one or more test-time interactions, adapting the model to previously unseen environmental configurations. Across 7 simulated settings and 4 real-world robotic tasks, T2-Z reduces object prediction error metric from 15.20 to 7.00 and raises action success from 33.73% to 72.96%. Its emergent latents capture structured representations of individual and compounded factors across diverse visual scenes. Ablations further show that T2-Z can efficiently infer environment latents from as little as a single test-time interaction trajectory.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-10-15T17:59:11Z",
+              "url": "https://arxiv.org/abs/2610.22364",
+              "pdf_url": "https://arxiv.org/pdf/2610.22364v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.22364v1/elo-teaser_v19.png",
+              "figure_caption": "Figure 1: T2-z for Test-Time Environment Latent Optimization. (a) Given the same observation and action, T2-z directly optimizes environment latents to capture different environmental conditions ( e.g., ball mass), leading the world model to predict different outcomes. (b) Without knowing how many f",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.19155",
               "title": "FACT: A Multimodal Force-Action-Track Foundation Model for Human-to-Robot Dexterity",
@@ -2714,6 +2801,75 @@
           "name": "Li Fei-Fei",
           "papers": [
             {
+              "id": "2610.22364",
+              "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+              "authors": [
+                "Chenyuan Zhou",
+                "Yining Hong",
+                "Huang Huang",
+                "Yunfan Jiang",
+                "Wenlong Huang",
+                "David Held",
+                "Vitor Campagnolo Guizilini",
+                "Yue Wang",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Leonidas Guibas",
+                "Yejin Choi"
+              ],
+              "abstract": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules. We introduce T2-Z for test-time optimization of environment latents, which augments a robotic world model with a learnable environment latent to condition world predictions. This compact latent captures underlying environmental variation without supervision of what environmental factors exist or what values they take. During training, T2-Z alternates between two stages: a world-model optimization stage that fixes the latents and learns general action-conditioned dynamics across environments; and an environment-latent optimization stage that freezes the world model and optimizes the conditioning latents, allowing latent structure to emerge purely through world prediction. At test time, the world model remains frozen and a newly initialized environment latent is optimized from one or more test-time interactions, adapting the model to previously unseen environmental configurations. Across 7 simulated settings and 4 real-world robotic tasks, T2-Z reduces object prediction error metric from 15.20 to 7.00 and raises action success from 33.73% to 72.96%. Its emergent latents capture structured representations of individual and compounded factors across diverse visual scenes. Ablations further show that T2-Z can efficiently infer environment latents from as little as a single test-time interaction trajectory.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-10-15T17:59:11Z",
+              "url": "https://arxiv.org/abs/2610.22364",
+              "pdf_url": "https://arxiv.org/pdf/2610.22364v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.22364v1/elo-teaser_v19.png",
+              "figure_caption": "Figure 1: T2-z for Test-Time Environment Latent Optimization. (a) Given the same observation and action, T2-z directly optimizes environment latents to capture different environmental conditions ( e.g., ball mass), leading the world model to predict different outcomes. (b) Without knowing how many f",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2610.21266",
+              "title": "TRACER: A Multimodal Harness for Patient Care in Hospitals",
+              "authors": [
+                "Zane Durante",
+                "Paul Tang",
+                "Keshigeyan Chandrasegaran",
+                "Amit Kaushal",
+                "Shrinidhi Kowshika Lakshmikanth",
+                "Feolu Kolawole",
+                "Yu Jun Zheng",
+                "Yifan Geng",
+                "Shobhit Agarwal",
+                "Kevin Schulman",
+                "Juan Carlos Niebles",
+                "Ehsan Adeli",
+                "Arnold Milstein",
+                "Li Fei-Fei"
+              ],
+              "abstract": "Continuous video and clinical records provide complementary information for understanding how patient behavior evolves over a hospital stay. A central challenge is how to represent behavior across the entire stay while preserving access to fine-grained visual and clinical evidence. We introduce TRACER, a training-free multimodal harness that constructs minute-level action records from video and combines them with clinical records into hourly reports. The harness equips an LLM agent with tools to query this hierarchy, inspect relevant video, and retrieve clinical records. To evaluate TRACER, we construct two benchmarks. The first contains 397 annotated one-minute clips spanning 15 atomic actions; the second poses 144 clinician-informed multiple-choice questions, grounded in 264 hours of video and clinical records from two ICU patients. TRACER achieves up to 84.8% accuracy for action detection and 61.0% QA accuracy versus 49.3% for the strongest baseline using the same backbone. Across 280 patients spanning approximately 60,000 camera-hours, TRACER identifies significantly less purposeful activity in patients with a positive delirium assessment during their stay than in those without (p < 0.0001). Our results show that combining continuous video with clinical records can support understanding of patient behavior over time and across patient cohorts without training on protected health data.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-10-15T05:00:47Z",
+              "url": "https://arxiv.org/abs/2610.21266",
+              "pdf_url": "https://arxiv.org/pdf/2610.21266v1",
+              "comment": "37 pages, 4 figures. Code: https://github.com/zanedurante/tracer-harness",
+              "figure_url": "https://arxiv.org/html/2610.21266v1/figure_harness.png",
+              "figure_caption": "Figure 1: Overview of TRACER. TRACER equips an agent model with hierarchical behavioral representations and tools for understanding multi-day ICU patient trajectories. Vision–language models analyze one-minute bedside video segments to detect atomic actions defined by a clinically informed taxonomy ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/zanedurante/tracer-harness"
+              }
+            },
+            {
               "id": "2610.20533",
               "title": "Generative Representation Learning for Scalable Latent Tokenization",
               "authors": [
@@ -2984,7 +3140,7 @@
           ]
         }
       ],
-      "total": 59
+      "total": 62
     },
     {
       "name": "Carnegie Mellon University",
@@ -3564,37 +3720,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.00641",
-              "title": "AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning",
-              "authors": [
-                "Yutong Wang",
-                "Dongjae Lee",
-                "Xiaofeng Guo",
-                "Yuanzhu Zhan",
-                "Yufei Jiang",
-                "Bavin Saravanan",
-                "Muqing Cao",
-                "Jia Xie",
-                "Chenyang Mao",
-                "Sebastian Scherer",
-                "Junyi Geng",
-                "Guanya Shi"
-              ],
-              "abstract": "Standardized benchmarks have played a central role in advancing robot manipulation learning, yet most focus on ground-supported manipulation systems, which limits their applicability to dynamics-critical domains such as aerial manipulation (AM). AM presents distinct system-level challenges, including environmental disturbances, coupled dynamics between the manipulator and floating base, and constrained degrees of freedom. Consequently, task performance depends jointly on robot embodiment, low-level control, and high-level policy design. We introduce AM-Bench, a modular simulation suite and benchmark for multirotor-based AM policy learning. AM-Bench includes representative embodiments spanning underactuated, fully actuated, and overactuated systems, 12 tasks across contact, transport, and constrained interaction, configurable aerodynamic disturbances and actuator saturation, standard low-level controllers, and baseline policy-learning algorithms. Unlike prior manipulation benchmarks that primarily emphasize end-to-end policy performance, AM-Bench enables system-level evaluation of how embodiment, control, disturbances, and policy choices interact. We demonstrate its diagnostic value through three simulation studies spanning high-level policies, policy--control interfaces, and embodiments, together with real-world validation of modeled effects and a hardware test of the learning pipeline.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-01T03:20:24Z",
-              "url": "https://arxiv.org/abs/2609.00641",
-              "pdf_url": "https://arxiv.org/pdf/2609.00641v1",
-              "comment": "28 pages, 7 figures, 15 tables",
-              "figure_url": "https://arxiv.org/html/2609.00641v1/figure1_v7.png",
-              "figure_caption": "Figure 1: Overview of AM-Bench : AM-Bench is designed to systematically evaluate aerial manipulation along several dimensions: (left) robot platforms, including underactuated (UA-Quad, UA-Hexa), fully actuated (FA-Hexa), and overactuated (Omni-Hexa) systems, together with different low-level control",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -3702,7 +3827,7 @@
           ]
         }
       ],
-      "total": 24
+      "total": 23
     },
     {
       "name": "MIT",
@@ -3744,6 +3869,31 @@
         {
           "name": "Pulkit Agrawal",
           "papers": [
+            {
+              "id": "2610.22119",
+              "title": "Compliant GMT: Making General Motion Tracking Compliant via Residual Reference Adaptation",
+              "authors": [
+                "Venki Parsuram",
+                "Michelle Wang",
+                "Jin-Hyuk Hong",
+                "Pulkit Agrawal"
+              ],
+              "abstract": "We propose Compliant GMT (C-GMT), a modular framework for full-body compliant responses in general motion tracking. As humanoid robots move into real world deployment, they not only need to perform any motion but also respond safely and robustly to interaction forces. Existing general motion tracking policies can imitate diverse motions but are trained to be stiff, leading to unexpected and unsafe behaviors under disturbance. Prior work in compliant humanoid control trades off compliance and generality. There exist examples of full-body compliant responses, but these are heavily curated to single-reference policies. On the other hand, general motion trackers (GMT) are trained to rigidly imitate massive motion capture datasets. Our key insight is to leverage the generality of pretrained GMTs for motion tracking while introducing compliance from a residual adapter that conditions on a history of proprioception. This enables our approach, C-GMT, to achieve both general motion tracking and whole-body compliant responses. Compared to state-of-the-art general motion trackers and single-motion compliant policies, C-GMT demonstrates competitive performance in both motion tracking accuracy and compliance adherence. We further demonstrate improved safety, robustness, and error tolerance in simulation and real-world G1 experiments.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-15T15:59:04Z",
+              "url": "https://arxiv.org/abs/2610.22119",
+              "pdf_url": "https://arxiv.org/pdf/2610.22119v1",
+              "comment": "Project website: https://venki1899.github.io/c-gmt/",
+              "figure_url": "https://arxiv.org/html/2610.22119v1/CGMT_method_deploy.png",
+              "figure_caption": "Fig. 2: Overview of C-GMT training and deployment. During training, a privileged teacher generates compliant references from external force and stiffness commands, which are distilled into a proprioceptive residual adapter on top of a force-robust GMT. At deployment, the same adapter modifies the mo",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://venki1899.github.io/c-gmt/"
+              }
+            },
             {
               "id": "2610.18991",
               "title": "Contact-UAN: Unsupervised Actuator Networks as a Residual World Model for Humanoid Control",
@@ -4014,7 +4164,7 @@
           ]
         }
       ],
-      "total": 10
+      "total": 11
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -4391,33 +4541,11 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.00103",
-              "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy",
-              "authors": [
-                "Shmuel Berman",
-                "Jia Deng"
-              ],
-              "abstract": "Memory is widely viewed as an important unsolved problem for LLMs and VLMs, and current benchmarks typically evaluate it by testing accuracy over long text or video. However, accuracy alone misses properties that matter for real long-horizon tasks. We introduce ECCBench, a benchmark and evaluation protocol that measures memory beyond a system's capacity--its raw accuracy at a specific budget--via three axes we call ECC: efficiency--the computation, in FLOPs, needed to answer from memory; compression--whether compressible inputs are remembered more accurately or efficiently; and calibration--whether the system abstains in response to its own uncertainty and the cost of an error. We find that pretrained VLMs compress their memory over text but not video and are poorly calibrated on both. Among a broader set of memory backbones, several non-Transformer architectures achieve better compression-calibration tradeoffs than RoPE Transformers, suggesting they may be useful components for agents operating over long horizons.",
-              "categories": [
-                "cs.LG",
-                "cs.AI"
-              ],
-              "published": "2026-08-31T17:05:17Z",
-              "url": "https://arxiv.org/abs/2609.00103",
-              "pdf_url": "https://arxiv.org/pdf/2609.00103v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.00103v1/images/flops_acc_text_L512_L1024.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 12
+      "total": 11
     },
     {
       "name": "University of Washington",
@@ -5386,33 +5514,6 @@
               "links": {
                 "code": "https://github.com/ChiyunNoh/TRaIL-Odom"
               }
-            },
-            {
-              "id": "2609.00677",
-              "title": "ADAPT: Agile Diffusion Action Priors for Robust and Steerable Online Text-Driven Humanoid Control",
-              "authors": [
-                "Yan Wu",
-                "Chenhao Li",
-                "Kaifeng Zhao",
-                "Gen Li",
-                "Marco Hutter",
-                "Siyu Tang"
-              ],
-              "abstract": "We present ADAPT, an end-to-end framework for interactive, text-conditioned humanoid whole-body control. Unlike dominant text-to-motion pipelines that generate kinematic motions for a separate tracker, ADAPT solves language control with an end-to-end closed-loop control framework, where the robot must continuously respond to changing commands while maintaining balance, natural motion, and smooth transitions. ADAPT learns a diffusion-based action prior from text-labeled humanoid state-action trajectories, enabling diverse motion skills to be directly executed from language commands. To improve long-horizon robustness and smooth prompt switching, we train a lightweight residual reinforcement learning policy on top of the frozen diffusion controller. We further show that the same diffusion policy can be reused as a steerable text-conditioned motion prior for downstream task adaptation. Experiments demonstrate robust language-grounded skill execution, smooth interactive transitions, and style-preserving downstream control.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-01T03:53:38Z",
-              "url": "https://arxiv.org/abs/2609.00677",
-              "pdf_url": "https://arxiv.org/pdf/2609.00677v1",
-              "comment": "Project page: https://wuyan01.github.io/ADAPT-project/",
-              "figure_url": "https://arxiv.org/html/2609.00677v1/img/teaser.png",
-              "figure_caption": "Figure 1: ADAPT is an end-to-end diffusion-based skill prior that enables interactive text-driven humanoid control with smooth and robust skill transitions and can be reused for downstream tasks to achieve goal-reaching with controllable motion styles. Please refer to the project webpage for real-wo",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://wuyan01.github.io/ADAPT-project/"
-              }
             }
           ]
         },
@@ -5913,41 +6014,11 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.01061",
-              "title": "Accelerating Reinforcement Learning via MPC Solver-Gradient Guidance for Weights-varying MPC",
-              "authors": [
-                "Baha Zarrouki",
-                "Arslan Thobani",
-                "Jasper Hoffmann",
-                "Mattia Piccinini",
-                "Rudolf Reiter",
-                "Felix Jahncke",
-                "Sébastien Gros",
-                "Davide Scaramuzza",
-                "Johannes Betz"
-              ],
-              "abstract": "In Model Predictive Control (MPC), cost-function weights shape closed-loop behavior, yet changing conditions often make fixed parametrizations suboptimal and motivate context-dependent online adaptation. Learning such policies is difficult because behavior depends implicitly on numerical MPC solutions, producing nonlinear, potentially nonsmooth, long-horizon dependencies on policy parameters. This creates a bias-variance tradeoff: Reinforcement Learning (RL) optimizes realized closed-loop return from environment samples but is sample-inefficient, whereas Gradient-Based Policy Learning (GB-PL) uses low-variance solver gradients from differentiable MPC to optimize surrogate losses on predicted trajectories but can be biased under model mismatch. We propose Solver-Gradient Guided Reinforcement Learning (SG-RL), a solver-sensitivity augmentation for RL-based online MPC cost-weight adaptation. SG-RL keeps sampled closed-loop return as the objective and uses bounded solver-derived gradients as auxiliary guidance to improve stability and sample efficiency. We instantiate SG-RL in Proximal Policy Optimization (PPO) with four modular algorithms that inject solver-gradient guidance into actor-update scaling, policy loss, advantage estimation, and value-function learning. On two full-scale autonomous racing platforms with intentional model mismatch, SG-RL reaches PPO's best closed-loop return with up to 70.6% fewer samples, outperforms GB-PL baselines by at least 54% in closed-loop return, and generalizes zero-shot to unseen environments.",
-              "categories": [
-                "cs.RO",
-                "cs.LG",
-                "eess.SY"
-              ],
-              "published": "2026-09-01T10:55:18Z",
-              "url": "https://arxiv.org/abs/2609.01061",
-              "pdf_url": "https://arxiv.org/pdf/2609.01061v1",
-              "comment": "Submitted to IEEE Transactions on Robotics (T-RO). 18 pages, 13 figures",
-              "figure_url": "https://arxiv.org/html/2609.01061v1/abstract_fig.png",
-              "figure_caption": "Fig. 1 : SG-RL learns an online MPC weight-adaptation policy π ϕ \\pi_{\\phi} by combining environment-based policy-gradient learning ∇ ϕ 𝒥 RL \\nabla_{\\phi}\\mathcal{J}_{\\mathrm{RL}} with model-based solver-gradient guidance ∇ ϕ 𝒥 SG \\nabla_{\\phi}\\mathcal{J}_{\\mathrm{SG}} . The update preserves closed-",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 32
+      "total": 30
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -6350,6 +6421,59 @@
         {
           "name": "He Wang",
           "papers": [
+            {
+              "id": "2610.21735",
+              "title": "Uni-PNP: Unified Prehensile and Non-prehensile Policy Learning for Generalizable Object Pose Reaching",
+              "authors": [
+                "Wenxuan Zhu",
+                "Yuze Wang",
+                "Jiangran Lyu",
+                "Jiayi Chen",
+                "Yixin Zheng",
+                "Mi Yan",
+                "Li Yi",
+                "Zhizheng Zhang",
+                "He Wang"
+              ],
+              "abstract": "Object manipulation often requires combining non-prehensile actions with grasping. However, existing approaches typically develop these capabilities separately and integrate them by sequencing distinct primitives through prescribed intermediate objectives, limiting the coordination of contact motions and grasping. Their integration also remains sensitive to object and gripper geometry and depends on particular environmental supports, complicating real-world deployment. We present Uni-PNP, a unified policy that jointly learns prehensile and non-prehensile manipulation for object pose reaching across diverse objects and grippers. To achieve this, we first pretrain a geometry encoder to predict contact-induced object motion using a contact-dynamics dataset constructed from simulated interactions between diverse objects and grippers. We then train the policy in a two-stage reinforcement learning curriculum from graspable objects to ungraspable peers, encouraging the discovery of non-prehensile interactions and their integration with grasping. Experiments show 76.39% success on hundreds of seen objects with grippers, and 57.91% on unseen peers, outperforming the strongest pose-reaching baseline by 20.52 and 17.79 percentage points, respectively. We also analyze emergent behaviors, including nonprehensile and prehensile repositioning, grasp acquisition that requires grasping after tipping, and table-assisted reorientation while grasping, and transfer to the real-world scenario. Project page available at lgswdn.github.io/Uni-PNP.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-15T11:53:10Z",
+              "url": "https://arxiv.org/abs/2610.21735",
+              "pdf_url": "https://arxiv.org/pdf/2610.21735v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.21735v1/framew.png",
+              "figure_caption": "Fig. 2: Overview of Uni-PNP. We pretrain a geometry encoder to predict contact-induced object motion from object–gripper geometry and gripper actions. The pretrained encoder is then frozen during actor–critic policy learning with a two-stage curriculum.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2610.21349",
+              "title": "CQDC-Warp: GPU-Accelerated Differentiable Quasi-Dynamic Simulation for Contact-Rich Manipulation",
+              "authors": [
+                "Yanchen Ding",
+                "Jiayi Chen",
+                "Jianfeng Xu",
+                "Wei Zhao",
+                "Li Yi",
+                "He Wang"
+              ],
+              "abstract": "Efficient synthesis of contact-rich manipulation trajectories is essential for downstream robot learning. Gradient-based planning offers a promising approach, but jointly optimizing motion and contact decisions remains challenging. Meanwhile, many existing planners run on CPUs with limited throughput. We present CQDC-Warp, a GPU-accelerated differentiable quasi-dynamic simulator for batched model predictive control (MPC). We use it to study contact-guided trajectory optimization, in which intended robot--object contacts are specified before planning and encouraged through soft costs, while the simulated dynamics determine contact geometry and frictional response without a prescribed contact-mode schedule. Across $17{,}408$ trials on the $17$-object Allegro in-hand rotation benchmark, our framework achieves $79.8%$ success, compared with $73.7%$ for CFree and $65.2%$ for IMPACT, and reduces mean trajectory-generation time by factors of $27.0$ and $50.2$, respectively. On a single NVIDIA RTX 4090 with $2{,}048$ parallel worlds, forward and backward throughput reach $2.06\\times10^5$ and $2.25\\times10^5$ world-steps per second, respectively. Further experiments cover manipulation with LEAP and Shadow hands, environmental contact exploitation, bimanual manipulation, whole-body control, and real-world trajectory replay on a Sharpa hand.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-15T06:30:20Z",
+              "url": "https://arxiv.org/abs/2610.21349",
+              "pdf_url": "https://arxiv.org/pdf/2610.21349v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.21349v1/teaser.png",
+              "figure_caption": "Fig. 1 : CQDC-Warp. A differentiable contact simulator for GPU-parallel trajectory generation on versatile robotic tasks.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.13281",
               "title": "QCLR: A Plug-in Robustification Module via Quantization for Contrastive Learning in Self-Supervised Skeleton-Based Human Action Recognition",
@@ -7138,6 +7262,68 @@
           "name": "Cewu Lu",
           "papers": [
             {
+              "id": "2610.22368",
+              "title": "Value as Memory: Online Value-Guided Post-training for General Robot Policies",
+              "authors": [
+                "Wenye Yu",
+                "Yijin Chen",
+                "Kaiyi Xiong",
+                "Wenbo Han",
+                "Wendi Chen",
+                "Yang Jin",
+                "Han Xue",
+                "Jun Lv",
+                "Cewu Lu",
+                "Chuan Wen"
+              ],
+              "abstract": "Real-world post-training of generalist robot policies faces two challenges: partial observability makes action selection ambiguous, while offline post-training methods delay feedback from deployment experience. We present Value as Memory (VaM), a framework that addresses these challenges through value caching and online real-world reinforcement learning (RL). Value caching conditions actions on recent value predictions as task-progress memory, while online updates enable timely policy improvement by combining offline demonstrations, off-policy interventions, and on-policy rollouts for sample-efficient adaptation. As a result, VaM transitions from offline RL warmup to online autonomous learning with sparse rewards. Across long-horizon tasks involving deformable objects and contact-rich manipulation, VaM yields a mean absolute success-rate gain of $29.4%$ with value caching, while achieving a $32.8%$ gain with online autonomous learning over matched offline training. The evaluated online schedule performs $8\\times$ as many policy iterations under the same gradient-step budget, with more than $2\\times$ lower recorded time per gradient step with concurrent data collection and training.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-15T17:59:31Z",
+              "url": "https://arxiv.org/abs/2610.22368",
+              "pdf_url": "https://arxiv.org/pdf/2610.22368v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.22368v1/teaser-compressed.png",
+              "figure_caption": "Figure 1: VaM uses online real-world RL and value caching to boost sample efficiency and mitigate partial observability in long-horizon, deformable-object, and contact-rich manipulation.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2610.21095",
+              "title": "Can World and Action Modeling Benefit Each Other under Unified Causal Training?",
+              "authors": [
+                "Yue Su",
+                "Bokai Lin",
+                "Xinkai Wang",
+                "Chubin Zhang",
+                "Xiangnan Wu",
+                "Kuan Zhang",
+                "Weiyang Jin",
+                "Jiwen Yu",
+                "Yiming Li",
+                "Cewu Lu",
+                "Lixin Yang",
+                "Xihui Liu"
+              ],
+              "abstract": "World and action modeling are closely related, yet their reciprocal benefits under unified causal training remain unclear. We introduce OneWM, a simple framework for unified causal training that treats actions as both conditions for world prediction and targets for policy learning within a shared video-action architecture. Using this framework, we investigate whether learning forward dynamics conditioned on specified actions improves action learning, and whether learning to generate actions in turn improves action-conditioned world modeling. We use LIBERO, LIBERO-Plus, and RoboCasa365 as embodied testbeds to evaluate both policy learning and world modeling, complemented by real-world policy experiments. Learning the visual consequences of specified actions improves policy performance and generalization across changing scenes. In turn, action learning improves multi-view world-prediction fidelity under the same architecture. Together, these results answer both questions positively, supporting reciprocal benefits between world modeling and action generation under unified causal training.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-10-15T01:53:07Z",
+              "url": "https://arxiv.org/abs/2610.21095",
+              "pdf_url": "https://arxiv.org/pdf/2610.21095v1",
+              "comment": "Project page: https://selen-suyue.github.io/OneWMNet",
+              "figure_url": "https://arxiv.org/html/2610.21095v1/onewm-method-pipeline.png",
+              "figure_caption": "Figure 1 : \\CaptionLead Overview of OneWM. A VAE encodes frames into latents; the observed prefix remains clean, and the video expert denoises future latents. Action chunks are embedded for the action expert. Causal joint attention couples the two experts, each receiving instruction ℓ \\ell through i",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://selen-suyue.github.io/OneWMNet"
+              }
+            },
+            {
               "id": "2610.20223",
               "title": "ObjDream: Guiding Vision-Language-Action Models with Object-Level Understanding and Future State Prediction",
               "authors": [
@@ -7566,7 +7752,7 @@
           ]
         }
       ],
-      "total": 51
+      "total": 55
     },
     {
       "name": "工业界研究团队",
@@ -7615,34 +7801,6 @@
               "video_url": null,
               "links": {
                 "code": "https://github.com/developer-hq/ProbeMatchDTI"
-              }
-            },
-            {
-              "id": "2609.00396",
-              "title": "SlideMix: Enhancing Whole Slide Image Analysis via Multimodal Shuffling",
-              "authors": [
-                "Chad Wong",
-                "Sicheng Chen",
-                "Tianyi Zhang",
-                "Enhui Chai",
-                "Yueming Jin",
-                "Zeyu Liu",
-                "Fei Xia"
-              ],
-              "abstract": "Histopathological whole slide images (WSIs) are central to cancer diagnosis, but their gigapixel scale, tissue heterogeneity, weak slide-level supervision, sparse diagnostic regions, and multi-scale evidence make robust automated analysis challenging. Multiple instance learning (MIL) is widely used to aggregate tile-level features into slide-level predictions, yet existing augmentation strategies often perturb tissue regions without preserving diagnostic relevance, slide context, or cross-scale structure. We propose SlideMix, a model-agnostic multimodal augmentation framework for MIL-based WSI analysis. SlideMix uses a retrieval-augmented vision-language model (VLM)-based Visual-Language Adaptive Region selector to identify diagnostically relevant regions and reduce weak-label noise. It then performs In-place Tile Shuffling within meaningful tissue regions to mix feature embeddings while preserving slide-level context. A VLM-based soft-labeling module supervises mixed samples, while a multi-factor, loss-driven online Curriculum-Learning Feedback scheme adaptively controls shuffle granularity, feature similarity, and shuffle ratio to promote cross-scale representation learning. Across 11 WSI datasets comprising 20,523 slides, 8 diagnostic tasks, and 10 WSI backbones, SlideMix improves accuracy and generalization in most settings and compares favorably with established augmentation baselines, providing a simple plug-and-play approach for more robust and scalable digital pathology models. Source code: https://github.com/Xia-Research-Lab/SlideMix",
-              "categories": [
-                "cs.CV"
-              ],
-              "published": "2026-08-31T21:25:02Z",
-              "url": "https://arxiv.org/abs/2609.00396",
-              "pdf_url": "https://arxiv.org/pdf/2609.00396v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.00396v1/Figures/augmented.png",
-              "figure_caption": "Figure 1: Visualization of an augmented example. Compared to other mixing-based methods, SlideMix accurately identifies tile and instance boundaries. It further distinguishes effectively between negative and positive samples.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "code": "https://github.com/Xia-Research-Lab/SlideMix"
               }
             }
           ]
@@ -7813,7 +7971,7 @@
           ]
         }
       ],
-      "total": 7
+      "total": 6
     },
     {
       "name": "AMP / SMP 合作作者",
@@ -10108,42 +10266,11 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.00641",
-              "title": "AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning",
-              "authors": [
-                "Yutong Wang",
-                "Dongjae Lee",
-                "Xiaofeng Guo",
-                "Yuanzhu Zhan",
-                "Yufei Jiang",
-                "Bavin Saravanan",
-                "Muqing Cao",
-                "Jia Xie",
-                "Chenyang Mao",
-                "Sebastian Scherer",
-                "Junyi Geng",
-                "Guanya Shi"
-              ],
-              "abstract": "Standardized benchmarks have played a central role in advancing robot manipulation learning, yet most focus on ground-supported manipulation systems, which limits their applicability to dynamics-critical domains such as aerial manipulation (AM). AM presents distinct system-level challenges, including environmental disturbances, coupled dynamics between the manipulator and floating base, and constrained degrees of freedom. Consequently, task performance depends jointly on robot embodiment, low-level control, and high-level policy design. We introduce AM-Bench, a modular simulation suite and benchmark for multirotor-based AM policy learning. AM-Bench includes representative embodiments spanning underactuated, fully actuated, and overactuated systems, 12 tasks across contact, transport, and constrained interaction, configurable aerodynamic disturbances and actuator saturation, standard low-level controllers, and baseline policy-learning algorithms. Unlike prior manipulation benchmarks that primarily emphasize end-to-end policy performance, AM-Bench enables system-level evaluation of how embodiment, control, disturbances, and policy choices interact. We demonstrate its diagnostic value through three simulation studies spanning high-level policies, policy--control interfaces, and embodiments, together with real-world validation of modeled effects and a hardware test of the learning pipeline.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-01T03:20:24Z",
-              "url": "https://arxiv.org/abs/2609.00641",
-              "pdf_url": "https://arxiv.org/pdf/2609.00641v1",
-              "comment": "28 pages, 7 figures, 15 tables",
-              "figure_url": "https://arxiv.org/html/2609.00641v1/figure1_v7.png",
-              "figure_caption": "Figure 1: Overview of AM-Bench : AM-Bench is designed to systematically evaluate aerial manipulation along several dimensions: (left) robot platforms, including underactuated (UA-Quad, UA-Hexa), fully actuated (FA-Hexa), and overactuated (Omni-Hexa) systems, together with different low-level control",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 17
+      "total": 16
     },
     {
       "name": "RGMT 合作作者",
@@ -13882,43 +14009,6 @@
               "links": {
                 "code": "https://github.com/Hsu1023/PILL"
               }
-            },
-            {
-              "id": "2609.00092",
-              "title": "Safin-1: Safety from Within through Memory-Native State Evolution",
-              "authors": [
-                "Ming Zhang",
-                "Kaisen Yang",
-                "Shu Yu",
-                "Ermo Hua",
-                "Zhekai Chen",
-                "Cheng Jin",
-                "Jingnan Zheng",
-                "Yi Zhang",
-                "Zhongtian Ma",
-                "Jiawei Zhou",
-                "Sirui Chen",
-                "Qiaosheng Zhang",
-                "Xiang Wang",
-                "Ning Ding",
-                "Xia Hu",
-                "Bowen Zhou",
-                "Youbang Sun",
-                "Chaochao Lu"
-              ],
-              "abstract": "Long-horizon complex tasks require foundation models to accumulate information, maintain internal states, and adapt over extended interactions. Safety should be an intrinsic property of the model itself, rather than a behavioral constraint relying solely on external safeguards or post-hoc alignment such as supervised fine-tuning. This motivates Safety from Within, where safety-relevant capabilities are represented and invoked through the model's native computation. We present Safin-1, a family of foundation models realizing this principle through memory routing and state evolution. Safin-1 is built on Memory-Anchor Routing across Context History (MARCH), a network architecture that maintains structured memory states and selectively retrieves relevant historical information through content-conditioned routing. It supports test-time adaptation of persistent capability states without repeatedly modifying the backbone, enabling controlled specialization over a shared foundation. We investigate this interface on downstream safety tasks through a Safety State, demonstrating effective state-based adaptation with substantial safety improvements. More broadly, the routed-state interface unifies contextual memory and persistent capability adaptation within the model's native computation, reframing memory from a passive record of prior context into an active substrate for maintaining and evolving model behavior. Evaluations across general capabilities, long-context understanding, retrieval, and efficiency further validate Safin-1. These findings provide a path toward safety as a state-native and adaptively maintainable capability. This work is only an initial architectural exploration of Safety from Within, and substantial further work is needed to realize this broader vision.",
-              "categories": [
-                "cs.LG"
-              ],
-              "published": "2026-08-31T13:48:48Z",
-              "url": "https://arxiv.org/abs/2609.00092",
-              "pdf_url": "https://arxiv.org/pdf/2609.00092v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.00092v1/march_homepage_teaser_with_layout_updated_v7.png",
-              "figure_caption": "Figure 1 : Safin-1 architecture and representative results. Left: results from 0.8B architectural validation and 35B-A3B scaling. The 4B safety panel compares Qwen3.5 with Safin-1 equipped with its learned Safety State. Right: the Safin-1 architecture routes context-derived and persistent memory sta",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -14647,65 +14737,6 @@
               "links": {
                 "project": "https://zhenxinli.net/LargeDiscretePolicy/"
               }
-            },
-            {
-              "id": "2609.00297",
-              "title": "Geometry-aware Latent Autoregressive Generative Model for PDEs in Complex Domains",
-              "authors": [
-                "Zi Wang",
-                "Minghui Xu",
-                "Tapan Mukerji"
-              ],
-              "abstract": "Solving multiphysics partial differential equations (PDEs) remains a major challenge in scientific computing, especially for highly complex $μ$m-scale tortuous geometries critical to energy and chemical engineering. We address this challenge by proposing a Geometry-aware Latent Autoregressive generative Model for PDEs (GeoLAMP), which solves physics within highly irregular and tortuous structures by decoupling flow and transport physics. GeoLAMP introduces a dual-encoder architecture on graph representations to jointly capture global topology and fine-scale geometric features, enabling an effective transition from real-space fields to compact latent representations. In the latent space, we propose a causal self-attention transformer with flow matching to model temporal dynamics, allowing stable and scalable block-wise autoregressive prediction. In addition, we propose a grid-graph data fusion scheme that projects low-resolution grid-based approximate priors onto graph representations, improving prediction of flow in tortuous structures. We establish three multiphysics benchmark datasets in complex geometries, covering reactive flow, heat convection, and elasticity. GeoLAMP consistently achieves the most stable autoregression performance on these datasets. Our results provide a systematic study of geometry-aware learning for PDEs in $μ$m-scale complex geometries and offer new insights into block-wise time marching of latent autoregressive PDE modeling via a flow matching framework.",
-              "categories": [
-                "cs.LG",
-                "cs.AI"
-              ],
-              "published": "2026-08-31T19:42:37Z",
-              "url": "https://arxiv.org/abs/2609.00297",
-              "pdf_url": "https://arxiv.org/pdf/2609.00297v2",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.00297v1/Figure_1.png",
-              "figure_caption": "Figure 1: Schematic of GeoLAMP architecture",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2609.01659",
-              "title": "Beyond Textual Chain-of-Thought: A Survey on Action-Grounded Reasoning in Autonomous Driving",
-              "authors": [
-                "Zhengxu Tang",
-                "Xiaozhou Zhang",
-                "Guofeng Cui",
-                "Ziyu Gong",
-                "Zi Wang",
-                "Yunfei Shi",
-                "Ruifeng Deng",
-                "Chengzhi Qi",
-                "Ke Chen",
-                "Sachin Patil",
-                "Tianjun Xiao",
-                "Langechuan Liu",
-                "Pichao Wang"
-              ],
-              "abstract": "Chain-of-thought (CoT) reasoning powers generative models by eliciting intermediate steps before producing an answer. In autonomous driving, the answer is a continuous action. Thus its reasoning must share the same spatiotemporal structure as the physical world. This survey studies the resulting shift from textual CoT to action-grounded reasoning. Surveying 171 papers, including 130 method papers and 41 benchmarks, datasets, surveys, and analysis papers, we propose a representation-centered taxonomy that treats the form of the intermediate state as the organizing axis. We systematize the 130 methods into four categories: language-based, visual-spatial, latent-dynamic, and externalized reasoning, further divided into 13 subtypes tied to distinct regions of interests. Our synthesis shows that the open frontier of reasoning in driving agents lies in intermediate representations that can be grounded in the real world, coupled to real-time action, and verified under safety-critical systems. Project page: https://github.com/tangzhengxu/awesome-av-cot.",
-              "categories": [
-                "cs.CV",
-                "cs.CL",
-                "cs.RO"
-              ],
-              "published": "2026-08-31T18:16:11Z",
-              "url": "https://arxiv.org/abs/2609.01659",
-              "pdf_url": "https://arxiv.org/pdf/2609.01659v1",
-              "comment": "Accepted by EMNLP 2026",
-              "figure_url": "https://arxiv.org/html/2609.01659v1/figures/figure_1.png",
-              "figure_caption": "Figure 1: Overview of action-grounded reasoning representations in autonomous driving. Different representations can connect the same scene to a driving decision. They differ in interpretability, grounding, action coupling, latency, and closed-loop reliability.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "code": "https://github.com/tangzhengxu/awesome-av-cot"
-              }
             }
           ]
         },
@@ -15263,7 +15294,7 @@
           ]
         }
       ],
-      "total": 36
+      "total": 33
     }
   ]
 }
