@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-24T11:25:12+00:00",
-  "day": "2026-10-24",
+  "updated": "2026-10-25T11:54:42+00:00",
+  "day": "2026-10-25",
   "days_back": 45,
-  "total": 354,
+  "total": 347,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -3052,32 +3052,6 @@
               "links": {
                 "project": "https://prism-real2sim2real.github.io/"
               }
-            },
-            {
-              "id": "2609.11083",
-              "title": "Learning Realistic Athletic Sprinting Without Demonstrations",
-              "authors": [
-                "William Wang",
-                "Nicholas Bianco",
-                "Guy Tevet",
-                "Jennifer Hicks",
-                "C. Karen Liu",
-                "Scott Delp",
-                "Kayvon Fatahalian"
-              ],
-              "abstract": "We present a muscle-driven simulation system for generating biomechanically accurate motion for high-speed athletic locomotion tasks that does not require motion demonstrations. Our approach integrates state-of-the-art biomechanical athlete models into a new, high-performance GPU simulator capable of running at 1000x real-time. High-throughput simulation enables large-batch reinforcement learning to train control policies that operate directly in the model's high-dimensional muscle excitation space, and are guided only by task-specific episode termination conditions and a reward that encourages maximizing speed while reducing forces needed to respect joint limits. These policies train within a few hours on a single GPU and generate \"near visually realistic\" motions for complete athletic activities such as a full 100-meter sprint or performing popular athletic locomotion drills like side-shuffling, backpedaling, and carioca. The generated sprinting motions also exhibit strong agreement with experimental data captured from sprinters.",
-              "categories": [
-                "cs.GR"
-              ],
-              "published": "2026-09-10T04:44:25Z",
-              "url": "https://arxiv.org/abs/2609.11083",
-              "pdf_url": "https://arxiv.org/pdf/2609.11083v1",
-              "comment": "17 pages, 23 figures",
-              "figure_url": "https://arxiv.org/html/2609.11083v1/figures/teaser.jpg",
-              "figure_caption": "Figure 1 . Our system produces biomechanically accurate, “near visually realistic” motion for high-speed athletic locomotion tasks (left to right: hurdles, carioca, 100m dash). Motion control policies train from scratch in less than a day on a single GPU. No demonstrations were used to train the pol",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -3731,7 +3705,7 @@
           ]
         }
       ],
-      "total": 69
+      "total": 68
     },
     {
       "name": "Carnegie Mellon University",
@@ -4552,35 +4526,7 @@
       "researchers": [
         {
           "name": "Russ Tedrake",
-          "papers": [
-            {
-              "id": "2609.10905",
-              "title": "Planning along Differentiable Charts of Constraint Manifolds with General-Purpose IK Solvers",
-              "authors": [
-                "Thomas Cohn",
-                "Seiji Shaw",
-                "Harel Biggie",
-                "Travis Manderson",
-                "Nicholas Roy",
-                "Russ Tedrake"
-              ],
-              "abstract": "Planning trajectories for robot manipulators under kinematic equality constraints restricts feasible motions to a measure-zero submanifold of the configuration space, requiring special algorithmic treatment. A promising strategy is parametrizing the set of feasible configurations using analytic inverse kinematics (IK). Bespoke analytic IK functions can be written to be differentiable, a necessary property for gradient-based trajectory optimization. But the vast majority of IK functions are computed by automated meta-solvers like IKFast, and are difficult to modify for differentiability. We present a new approach for computing gradients of analytic IK parameterizations: we leverage the inverse function theorem to recover the desired gradients from the ordinary forward kinematic Jacobian. Furthermore, we present a least-squares domain extension and an optimization-amenable description of the reachability constraint, which preserves gradient signal outside the reachable workspace. We demonstrate the efficacy of our approach through numerical experiments and downstream tasks, including a hardware demonstration of an RB-Y1 picking up a box and placing it on a table. Project website: https://cohnt.github.io/inverse-function-theorem-parameterization/",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-09T23:22:03Z",
-              "url": "https://arxiv.org/abs/2609.10905",
-              "pdf_url": "https://arxiv.org/pdf/2609.10905v1",
-              "comment": "8 pages, 4 figures, 3 tables. Under review. Project website: https://cohnt.github.io/inverse-function-theorem-parameterization/",
-              "figure_url": "https://arxiv.org/html/2609.10905v1/media/rby1_swept_volume/sweep_p7_med.png",
-              "figure_caption": "Fig. 1 : A constraint-satisfying motion planned with our minimal coordinates trajectory optimization framework, using the RB-Y1 bimanual manipulator to pick up a box from the floor and place it on a table.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://cohnt.github.io/inverse-function-theorem-parameterization/"
-              }
-            }
-          ]
+          "papers": []
         },
         {
           "name": "Pulkit Agrawal",
@@ -4904,7 +4850,7 @@
           ]
         }
       ],
-      "total": 12
+      "total": 11
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -7768,32 +7714,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.11155",
-              "title": "DRG-MAPPO: Hierarchical Dynamic Role-Graph Multi-Agent Reinforcement Learning for Cooperative Air Combat",
-              "authors": [
-                "Junlin Liu",
-                "Chengwei Li",
-                "Yang Gao",
-                "Hui Chang",
-                "Xinchen Zhang",
-                "Zhijun Zhao",
-                "Hao Zhao"
-              ],
-              "abstract": "Multi-Agent Reinforcement Learning (MARL) has emerged as a pivotal paradigm for complex decision-making in autonomous systems and air combat. While MARL has demonstrated significant potential in air combat, achieving sophisticated tactical coordination remains a non-trivial challenge. This difficulty is largely attributed to two primary limitations: (1) the absence of structured relational modeling hinders agents from capturing complex, time-varying interactions among battlefield entities; and (2) conventional flat architectures often lack the capability to explicitly model tactical roles, leading to ambiguous task allocation in highly dynamic environments. To address these challenges, we propose Hierarchical Dynamic Role-Graph Multi-Agent Proximal Policy Optimization (DRG-MAPPO), a novel MARL framework that integrates graph-based relational modeling with dynamic role assignment. Specifically, DRG-MAPPO constructs a graph-based representation of battlefield interactions and leverages graph attention mechanisms to extract critical relational features among allies, enemies, and threats. Subsequently, a high-level policy employs a dynamic role assignment mechanism to determine tactical responsibilities (e.g., ``leader'' and ``supporter''). Conditioned on these roles and encoded graph-relational features, a low-level policy executes discrete maneuver actions, facilitating the joint optimization of tactical strategy and collaborative execution. Furthermore, a target-priority auxiliary task is designed to foster the emergence of behaviors such as focus-fire. Experimental results demonstrate that DRG-MAPPO achieves a state-of-the-art win rate of 87%, suggesting that our framework effectively balances relational modeling, interpretability, and optimization stability for cooperative air combat.",
-              "categories": [
-                "cs.AI"
-              ],
-              "published": "2026-09-10T07:02:01Z",
-              "url": "https://arxiv.org/abs/2609.11155",
-              "pdf_url": "https://arxiv.org/pdf/2609.11155v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.11155v1/observation.png",
-              "figure_caption": "Figure 1 : Overview of the battlefield tactical geometry and observation space.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -9075,7 +8995,7 @@
           ]
         }
       ],
-      "total": 57
+      "total": 56
     },
     {
       "name": "工业界研究团队",
@@ -10505,27 +10425,6 @@
               "figure_source": "pdf",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.11131",
-              "title": "Rubric-Aligned Disentangled Evaluation of Human Simultaneous Interpreting",
-              "authors": [
-                "Ziyu Zhang",
-                "Satoshi Nakamura"
-              ],
-              "abstract": "Human simultaneous interpreting (SI) is commonly assessed with analytic rubrics separating meaning transfer, delivery quality, and temporal synchrony, yet no automatic metric is designed for rubric-aligned segment-level SI evaluation. We construct a professionally annotated corpus of 1,101 SI segments with scores for meaning transfer (LQ), delivery quality (EXP), and perceived latency (LAT). We show that structured LLM prompting and scalar supervision collapse rubric dimensions, yielding near-zero correlation with human ratings and strong cross-dimension coupling. To isolate supervision structure under identical backbone capacity, we introduce dual regression heads on a LoRA-adapted COMET-KIWI encoder. On a held-out talk-level test set, the model achieves Pearson correlations of 0.388 (LQ) and 0.301 (EXP), improving over frozen COMET-KIWI. Given low absolute rater agreement, we interpret results relative to human consistency and target stable ranking signals for formative assessment.",
-              "categories": [
-                "cs.CL"
-              ],
-              "published": "2026-09-10T06:20:40Z",
-              "url": "https://arxiv.org/abs/2609.11131",
-              "pdf_url": "https://arxiv.org/pdf/2609.11131v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.11131v1/pipeline.png",
-              "figure_caption": "Figure 1: Overview of the rubric-aligned SI evaluation framework: segment-level rubric annotation (LQ/EXP/LAT) with talk-level split, dual-head COMET-KIWI for LQ/EXP, and evaluation via correlation, human reliability, and disentanglement.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -10635,32 +10534,6 @@
               "links": {
                 "project": "https://tml.stanford.edu/FoveaVLA/"
               }
-            },
-            {
-              "id": "2609.11083",
-              "title": "Learning Realistic Athletic Sprinting Without Demonstrations",
-              "authors": [
-                "William Wang",
-                "Nicholas Bianco",
-                "Guy Tevet",
-                "Jennifer Hicks",
-                "C. Karen Liu",
-                "Scott Delp",
-                "Kayvon Fatahalian"
-              ],
-              "abstract": "We present a muscle-driven simulation system for generating biomechanically accurate motion for high-speed athletic locomotion tasks that does not require motion demonstrations. Our approach integrates state-of-the-art biomechanical athlete models into a new, high-performance GPU simulator capable of running at 1000x real-time. High-throughput simulation enables large-batch reinforcement learning to train control policies that operate directly in the model's high-dimensional muscle excitation space, and are guided only by task-specific episode termination conditions and a reward that encourages maximizing speed while reducing forces needed to respect joint limits. These policies train within a few hours on a single GPU and generate \"near visually realistic\" motions for complete athletic activities such as a full 100-meter sprint or performing popular athletic locomotion drills like side-shuffling, backpedaling, and carioca. The generated sprinting motions also exhibit strong agreement with experimental data captured from sprinters.",
-              "categories": [
-                "cs.GR"
-              ],
-              "published": "2026-09-10T04:44:25Z",
-              "url": "https://arxiv.org/abs/2609.11083",
-              "pdf_url": "https://arxiv.org/pdf/2609.11083v1",
-              "comment": "17 pages, 23 figures",
-              "figure_url": "https://arxiv.org/html/2609.11083v1/figures/teaser.jpg",
-              "figure_caption": "Figure 1 . Our system produces biomechanically accurate, “near visually realistic” motion for high-speed athletic locomotion tasks (left to right: hurdles, carioca, 100m dash). Motion control policies train from scratch in less than a day on a single GPU. No demonstrations were used to train the pol",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -10704,7 +10577,7 @@
           "papers": []
         }
       ],
-      "total": 36
+      "total": 34
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -13637,36 +13510,6 @@
               "links": {
                 "project": "https://chenxi-song.github.io/worldinworld"
               }
-            },
-            {
-              "id": "2609.11265",
-              "title": "Uncertainty DMD: Restoring Diversity in Few-Step Autoregressive Video Distillation",
-              "authors": [
-                "Zixuan Duan",
-                "Xunzhi Xiang",
-                "Yabo Chen",
-                "Xin Zhang",
-                "Changhan Liu",
-                "Haibin Huang",
-                "Chi Zhang",
-                "Qi Fan",
-                "Xuelong Li"
-              ],
-              "abstract": "Few-step distillation improves the efficiency of autoregressive (AR) video generation, but often causes diversity collapse: under the same prompt, different noise samples tend to produce highly similar videos with weakened motion dynamics. We analyze this degradation in Distribution Matching Distillation (DMD)-distilled AR video generators and find that, in the autoregressive setting, it takes the form of a structured uncertainty collapse: the mode-seeking bias of DMD maps different noise samples to nearly identical first chunks, and the deterministic AR cache then propagates this collapsed state to all subsequent chunks, turning a local loss of stochasticity at the rollout root into a global suppression of temporal variation. Based on this analysis, we propose Uncertainty DMD, a simple uncertainty-injection framework that restores stochasticity at two key stages of AR generation: a timestep perturbation for the first chunk to increase first-chunk diversity, and a stochastic cache-writing mechanism for later chunks to preserve uncertainty in autoregressive conditioning. The method requires no architectural changes and introduces only lightweight perturbation operations. The same perturbation mechanisms are used during both training and inference. Experiments show that Uncertainty DMD consistently improves diversity and motion dynamics while maintaining comparable per-sample visual quality.",
-              "categories": [
-                "cs.CV"
-              ],
-              "published": "2026-09-10T08:59:47Z",
-              "url": "https://arxiv.org/abs/2609.11265",
-              "pdf_url": "https://arxiv.org/pdf/2609.11265v1",
-              "comment": "Project page: https://scdzx.github.io/Uncertainty-DMD",
-              "figure_url": "https://arxiv.org/html/2609.11265v1/x1.png",
-              "figure_caption": "Figure 1. Comparison using 19 random seeds ( 0 0 – 18 18 ) under the same setup. The first two rows show the first frame of each generated video for cross-seed comparison. In the third row, each horizontal strip represents one video, with frames ordered from left to right.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://scdzx.github.io/Uncertainty-DMD"
-              }
             }
           ]
         },
@@ -13753,7 +13596,7 @@
           "papers": []
         }
       ],
-      "total": 35
+      "total": 34
     },
     {
       "name": "PGMT 合作作者",
@@ -14429,37 +14272,7 @@
         },
         {
           "name": "Yanyan Yuan",
-          "papers": [
-            {
-              "id": "2609.10844",
-              "title": "Expressive Robotic Pianist: Mastering Complex Piano Repertoire with Graph-Mimic and Musical Dynamics",
-              "authors": [
-                "Yanhong Liang",
-                "Xianwei Liu",
-                "Chaojie Fu",
-                "Shaowen Cheng",
-                "Yanyan Yuan",
-                "Chengwei Zhuo",
-                "Xi Chen",
-                "Yongbin Jin",
-                "Wei Yang",
-                "Hongtao Wang"
-              ],
-              "abstract": "Enabling robots to perform musical instruments with human-level expressivity represents a frontier in bridging the gap between mechanical precision and artistic interpretation. Despite advances in robotic dexterity, replicating the fluid finger transitions and nuanced dynamic control characteristic of human pianists remains a significant challenge. Through a reinforcement learning-based control framework, we demonstrate that a dexterous robotic hand can achieve high-fidelity performance across a diverse piano repertoire. Central to our approach is a graph-based optimization strategy that guides the robot to generate natural pre-press and key-press fingering strategies that closely resemble human movement patterns. To achieve expressive sound production, the control system is coupled with a physics-inspired acoustic model that modulates keypress velocity to accurately reproduce the dynamic variations specified in musical scores. Quantitative evaluations demonstrate that our expressive control model significantly outperforms baseline methods in both finger morphology similarity and dynamic velocity accuracy. In a perceptual test involving participants from diverse listener groups, performances generated by our system are significantly preferred over baseline robotic performances and are indistinguishable from human performances for non-professional audiences. Furthermore, extensive experiments across multiple musical styles confirm that our method maintains high note-level accuracy while achieving expressive performance. Our approach provides a robust pathway for robotic systems to move beyond mere mechanical accuracy, elevating robotic musicianship to a level of expressive performance comparable to human pianists.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-09T21:26:29Z",
-              "url": "https://arxiv.org/abs/2609.10844",
-              "pdf_url": "https://arxiv.org/pdf/2609.10844v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.10844v1/Fig1.png",
-              "figure_caption": "Figure 1 : Overview of the robotic pianist system and core models. (A) An 18DOF robotic hand reproduces human pianistic techniques to perform on a piano. (B) Graph-Mimic, guiding the robot’s hand posture to imitate that of a human. (C) Musical Dynamics model, establishing the relationship between ke",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            }
-          ]
+          "papers": []
         },
         {
           "name": "Dapeng Jia",
@@ -14467,37 +14280,7 @@
         },
         {
           "name": "Yongbin Jin",
-          "papers": [
-            {
-              "id": "2609.10844",
-              "title": "Expressive Robotic Pianist: Mastering Complex Piano Repertoire with Graph-Mimic and Musical Dynamics",
-              "authors": [
-                "Yanhong Liang",
-                "Xianwei Liu",
-                "Chaojie Fu",
-                "Shaowen Cheng",
-                "Yanyan Yuan",
-                "Chengwei Zhuo",
-                "Xi Chen",
-                "Yongbin Jin",
-                "Wei Yang",
-                "Hongtao Wang"
-              ],
-              "abstract": "Enabling robots to perform musical instruments with human-level expressivity represents a frontier in bridging the gap between mechanical precision and artistic interpretation. Despite advances in robotic dexterity, replicating the fluid finger transitions and nuanced dynamic control characteristic of human pianists remains a significant challenge. Through a reinforcement learning-based control framework, we demonstrate that a dexterous robotic hand can achieve high-fidelity performance across a diverse piano repertoire. Central to our approach is a graph-based optimization strategy that guides the robot to generate natural pre-press and key-press fingering strategies that closely resemble human movement patterns. To achieve expressive sound production, the control system is coupled with a physics-inspired acoustic model that modulates keypress velocity to accurately reproduce the dynamic variations specified in musical scores. Quantitative evaluations demonstrate that our expressive control model significantly outperforms baseline methods in both finger morphology similarity and dynamic velocity accuracy. In a perceptual test involving participants from diverse listener groups, performances generated by our system are significantly preferred over baseline robotic performances and are indistinguishable from human performances for non-professional audiences. Furthermore, extensive experiments across multiple musical styles confirm that our method maintains high note-level accuracy while achieving expressive performance. Our approach provides a robust pathway for robotic systems to move beyond mere mechanical accuracy, elevating robotic musicianship to a level of expressive performance comparable to human pianists.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-09T21:26:29Z",
-              "url": "https://arxiv.org/abs/2609.10844",
-              "pdf_url": "https://arxiv.org/pdf/2609.10844v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.10844v1/Fig1.png",
-              "figure_caption": "Figure 1 : Overview of the robotic pianist system and core models. (A) An 18DOF robotic hand reproduces human pianistic techniques to perform on a piano. (B) Graph-Mimic, guiding the robot’s hand posture to imitate that of a human. (C) Musical Dynamics model, establishing the relationship between ke",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            }
-          ]
+          "papers": []
         },
         {
           "name": "Mingfeng Fan",
@@ -14601,35 +14384,6 @@
               "links": {
                 "project": "https://jingsongliang.com/robofoundry"
               }
-            },
-            {
-              "id": "2609.13295",
-              "title": "Ergodic Control and Controlled Diffusion for Robot Learning: Review and Tutorial",
-              "authors": [
-                "Max Muchen Sun",
-                "Cem Bilaloglu",
-                "Ananya Rao",
-                "Stefan Ivic",
-                "Guillaume Sartoretti",
-                "Kathleen Fitzsimons",
-                "Ian Abraham",
-                "Sylvain Calinon",
-                "Todd Murphey"
-              ],
-              "abstract": "Diffusion learning leverages the statistical mechanism of diffusion processes for learning, reasoning, and inferring complex distributions from data. Recent advances in diffusion learning have been transformative, with robot learning emerging as a key opportunity area, with applications spanning perception, control, and decision-making. At the same time, the statistical mechanism of diffusion processes can be controlled to shape the temporal evolution of the state distribution underlying robot trajectories, inducing ergodic behavior in robotic systems. The frameworks of controlled diffusion and ergodic control were developed around the same time as diffusion learning, and their theories and algorithms have increasingly converged. Ergodicity induced by controlled diffusion has several significant implications for robot learning, distinct from applying diffusion learning to robotics problems: it formally enforces statistical properties required to ensure optimality of robot learning, enables non-myopic search over uncertain information landscapes for data collection, and enables behavior specification based on spatial rather than temporal characteristics of trajectories. This survey introduces the intuition behind controlled diffusion for robot learning, explores its connection to diffusion learning, presents theoretical foundations and numerical tutorials for solving controlled diffusion and ergodic control problems, and reviews applications across robotics. Finally, we discuss key challenges and future opportunities in leveraging controlled diffusion for robot learning.",
-              "categories": [
-                "cs.RO",
-                "cs.LG"
-              ],
-              "published": "2026-09-09T16:24:33Z",
-              "url": "https://arxiv.org/abs/2609.13295",
-              "pdf_url": "https://arxiv.org/pdf/2609.13295v1",
-              "comment": "Under review at Foundations and Trends in Robotics",
-              "figure_url": "https://arxiv.org/html/2609.13295v1/figs/overview.png",
-              "figure_caption": "Figure 1.1 : Illustrations of ergodic trajectories and ergodic control in action.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -14663,40 +14417,11 @@
               "links": {
                 "code": "https://github.com/Stardust457/SLDR"
               }
-            },
-            {
-              "id": "2609.10844",
-              "title": "Expressive Robotic Pianist: Mastering Complex Piano Repertoire with Graph-Mimic and Musical Dynamics",
-              "authors": [
-                "Yanhong Liang",
-                "Xianwei Liu",
-                "Chaojie Fu",
-                "Shaowen Cheng",
-                "Yanyan Yuan",
-                "Chengwei Zhuo",
-                "Xi Chen",
-                "Yongbin Jin",
-                "Wei Yang",
-                "Hongtao Wang"
-              ],
-              "abstract": "Enabling robots to perform musical instruments with human-level expressivity represents a frontier in bridging the gap between mechanical precision and artistic interpretation. Despite advances in robotic dexterity, replicating the fluid finger transitions and nuanced dynamic control characteristic of human pianists remains a significant challenge. Through a reinforcement learning-based control framework, we demonstrate that a dexterous robotic hand can achieve high-fidelity performance across a diverse piano repertoire. Central to our approach is a graph-based optimization strategy that guides the robot to generate natural pre-press and key-press fingering strategies that closely resemble human movement patterns. To achieve expressive sound production, the control system is coupled with a physics-inspired acoustic model that modulates keypress velocity to accurately reproduce the dynamic variations specified in musical scores. Quantitative evaluations demonstrate that our expressive control model significantly outperforms baseline methods in both finger morphology similarity and dynamic velocity accuracy. In a perceptual test involving participants from diverse listener groups, performances generated by our system are significantly preferred over baseline robotic performances and are indistinguishable from human performances for non-professional audiences. Furthermore, extensive experiments across multiple musical styles confirm that our method maintains high note-level accuracy while achieving expressive performance. Our approach provides a robust pathway for robotic systems to move beyond mere mechanical accuracy, elevating robotic musicianship to a level of expressive performance comparable to human pianists.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-09T21:26:29Z",
-              "url": "https://arxiv.org/abs/2609.10844",
-              "pdf_url": "https://arxiv.org/pdf/2609.10844v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.10844v1/Fig1.png",
-              "figure_caption": "Figure 1 : Overview of the robotic pianist system and core models. (A) An 18DOF robotic hand reproduces human pianistic techniques to perform on a piano. (B) Graph-Mimic, guiding the robot’s hand posture to imitate that of a human. (C) Musical Dynamics model, establishing the relationship between ke",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 10
+      "total": 6
     },
     {
       "name": "SONIC 合作作者",
