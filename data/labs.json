@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-25T11:54:42+00:00",
-  "day": "2026-10-25",
+  "updated": "2026-10-26T13:30:02+00:00",
+  "day": "2026-10-26",
   "days_back": 45,
-  "total": 347,
+  "total": 346,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -514,6 +514,33 @@
         {
           "name": "Ken Goldberg",
           "papers": [
+            {
+              "id": "2610.31801",
+              "title": "KiRoSe: Using Kinematic Data for Efficient Segmentation of Robot Demonstrations",
+              "authors": [
+                "Shuangyu Xie",
+                "Kaiyuan Chen",
+                "Muhammad Zubair Irshad",
+                "Richard Cheng",
+                "Sergey Zakharov",
+                "Ken Goldberg"
+              ],
+              "abstract": "Segmenting robot demonstration data into disjoint temporal and semantic subsegments is valuable for learning, cleaning, retrieval, and analysis. Segmentation is often performed manually in a tedious and error prone process. Multimodal Large Language Models (MLLMs) have the potential for automating this process, but directly ingesting raw multi camera video streams into MLLMs can be costly and can quickly exhaust context windows. In this paper, we introduce KiRoSe (Kinematics for Robot Segmentation), a novel framework that focuses on the companion stream of robot kinematic data. Inspired by the principle of classical entropy coding, such as Huffman coding, where frequently occurring symbols are represented more compactly, we propose Sparse Motion Tokens (SMTs), a discrete kinematic vocabulary designed to compactly represent recurring, temporally localized motion patterns, which we refer to as kinematic events. SMTs are learned by encoding kinematic trajectories with temporal segment supervision and quantizing the resulting features. We use increasingly available robot demonstration subtask annotations to supervise an open language model to interpret the resulting token sequences. Evaluation against human labeled segmentation shows that KiRoSe can substantially outperform baseline segmentation methods in F1 quality and transfers zero shot to unseen robot embodiments and egocentric human motion, while preserving the language models open vocabulary knowledge. Beyond segmentation, KiRoSe tracks task progress on an unseen robot and detects when an action is being reversed.(website: https://berkeleyautomation.github.io/kirose/)",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-22T18:40:43Z",
+              "url": "https://arxiv.org/abs/2610.31801",
+              "pdf_url": "https://arxiv.org/pdf/2610.31801v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.31801v1/figures/SMT-Token3.png",
+              "figure_caption": "Figure 1: Encoding Kinematic Events into Sparse Motion Tokens. Across diverse manipulation tasks and objects, continuous robot motion decomposes into recurring, temporally localized patterns termed kinematic events (e.g., bimanual lift, handover, pick, place). Despite visual and spatial variations, ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://berkeleyautomation.github.io/kirose/"
+              }
+            },
             {
               "id": "2610.30136",
               "title": "Agentic World Action Models",
@@ -1499,7 +1526,7 @@
           ]
         }
       ],
-      "total": 49
+      "total": 50
     },
     {
       "name": "Stanford",
@@ -1821,6 +1848,31 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2610.32977",
+              "title": "UniAction: Unified Action Conditioning for World Models",
+              "authors": [
+                "Bowen Xue",
+                "Zizhang Li",
+                "Hong-Xing Yu",
+                "Jiajun Wu"
+              ],
+              "abstract": "Actions that condition world models are highly heterogeneous, and thus existing action-conditioned world models are typically built for individual action types, fragmenting already limited action-annotated data across separate models. We introduce UniAction, a unified action-conditioning framework that represents any action as a sparse set of action elements, each with a discrete semantic identity and a continuous spatiotemporal grounding coordinate. By mapping these coordinates directly into the pretrained video model's native positional space, UniAction allows heterogeneous actions to condition a shared world model within the same spatiotemporal structure. We further introduce cardinality-calibrated attention to address the bias from differing action representation granularities. We evaluate UniAction on four representative action forms: force, camera control, hand pose, and robot pose. UniAction outperforms conditioning alternatives in action following, and a single jointly trained model surpasses the action-specific experts, showing that heterogeneous action data benefit from unified model and joint training.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-10-23T17:59:13Z",
+              "url": "https://arxiv.org/abs/2610.32977",
+              "pdf_url": "https://arxiv.org/pdf/2610.32977v1",
+              "comment": "Project page: https://uniaction.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.32977v1/teaser.png",
+              "figure_caption": "Figure 1: One world model for heterogeneous actions. Instead of training a separate model per action type (left), UniAction conditions a single world model (middle) on heterogeneous actions and outperforms the action-specific experts across all four action forms (right).",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://uniaction.github.io/"
+              }
+            },
             {
               "id": "2610.31118",
               "title": "ProductWebBench: Evaluating Website Continuity Beyond Task Completion",
@@ -2777,41 +2829,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.11900",
-              "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
-              "authors": [
-                "Yunfei Ge",
-                "Anbang Liu",
-                "Qineng Wang",
-                "Johnalbert Garnica",
-                "Jianwen Lyu",
-                "Zihan Wang",
-                "Reuben Tan",
-                "Jianfeng Gao",
-                "Ruohan Zhang",
-                "Yining Hong",
-                "Jiajun Wu",
-                "Manling Li"
-              ],
-              "abstract": "Spatial reasoning depends not only on metric properties such as distance, angle, and shape, but also on topological relations that remain invariant under continuous deformation. Cognitive science identifies these relations as foundational to spatial understanding, yet foundation-model evaluations largely focus on metric or viewpoint-dependent relations. We introduce MindTopo, a benchmark of topological intuition across five properties grounded in cognitive science and formal topology: continuity, separation, order, enclosure, and knots. MindTopo evaluates each property at two cognitive levels. Reasoning asks a model to identify topological relations or infer how they change. Planning instantiates a foundation model as a closed-loop agent whose policy selects environment actions. MindTopo contains 11,030 instances across 13 procedurally generated task types with controllable difficulty. We benchmark 14 MLLMs and study agent configurations augmented with image and video generation, including 3 video generative models in planning settings. Every MLLM performs better on reasoning than on planning, and the best-performing model remains far below observed human performance. On Qwen3-VL-2B-Instruct, supervised fine-tuning and reinforcement learning improve reasoning more than planning. Generated observations retain local cues and reach plausible endpoints, but audited rollouts do not reliably follow environment dynamics or preserve topology across transitions. Our website is at https://mind-topo.github.io/",
-              "categories": [
-                "cs.AI",
-                "cs.CL",
-                "cs.CV"
-              ],
-              "published": "2026-09-10T17:54:32Z",
-              "url": "https://arxiv.org/abs/2609.11900",
-              "pdf_url": "https://arxiv.org/pdf/2609.11900v1",
-              "comment": "Preprint version",
-              "figure_url": "https://arxiv.org/html/2609.11900v1/01_teaser_v4.png",
-              "figure_caption": "Figure 1 : Overview of MindTopo . Five topological properties ( continuity , separation , order , enclosure , knots ) probed at two cognitive levels: reasoning (visual QA over rendered scenes) and planning (interactive gym).",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://mind-topo.github.io/"
-              }
             }
           ]
         },
@@ -3067,13 +3084,13 @@
                 "Jeannette Bohg",
                 "Wenzhen Yuan"
               ],
-              "abstract": "Contact-rich manipulation is essential to everyday activities, yet evaluating robots' ability to perform these activities remains challenging because of their diverse contact behaviors and the difficulty of reproducing tasks across laboratories. Drawing on observations of everyday human manipulation, we identify eight recurring skill categories that provide a practical framework for studying these capabilities. We introduce ContactBench 1.0, an extensible benchmark that instantiates these skills through 36 reference tasks and more than 40 object assets. The assets capture task-relevant geometry and contact behavior, support reproducible fabrication using consumer-grade 3D printers, and are paired with simulation models with tunable resistance loads. Controlled task variations enable evaluation of policy generalization. We evaluate recent vision-based and vision-tactile policy learning methods on six benchmark tasks. The results reveal that the evaluated vision-only policies struggle to perceive or react to contact events, while the evaluated visual-tactile policies do not meaningfully improve performance. By providing shared tasks and physical and simulated assets, ContactBench 1.0 establishes a foundation for reproducible evaluation of contact-rich manipulation research. The benchmark is open-sourced at https://jingyi-xiang.github.io/contactbench",
+              "abstract": "Contact-rich manipulation underlies many everyday human activities, yet evaluating robots on such tasks remains difficult: the tasks involve diverse contact behaviors and are hard to reproduce across laboratories. Drawing on observations of everyday human manipulation, we identify eight essential skills that provide a practical framework for studying contact-rich manipulation. We introduce ContactBench 1.0, an extensible benchmark that instantiates these skills through 36 reference tasks and more than 40 object assets. The assets capture task-relevant geometry and contact behavior, can be fabricated reproducibly on consumer-grade 3D printers, and are each paired with a matching simulation model. Controlled task variations in both the real world and simulation enable evaluation of how well robot systems generalize. We evaluate recent representative vision-only and visual-tactile policy learning methods on six benchmark tasks. The results reveal that while vision-only policies struggle to perceive or react to contact events, visual-tactile policies do not meaningfully improve their performance, highlighting that contact-rich manipulation remains a significant challenge for current policy learning methods. By providing common task definitions alongside physical and simulated assets, ContactBench 1.0 offers a shared testbed for developing, evaluating, and comparing contact-rich manipulation systems. The benchmark will be open-sourced at https://jingyi-xiang.github.io/contactbench.",
               "categories": [
                 "cs.RO"
               ],
               "published": "2026-10-17T07:12:36Z",
               "url": "https://arxiv.org/abs/2610.24512",
-              "pdf_url": "https://arxiv.org/pdf/2610.24512v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.24512v2",
               "comment": "Project website: https://jingyi-xiang.github.io/contactbench",
               "figure_url": "https://arxiv.org/html/2610.24512v1/Figures/skills.png",
               "figure_caption": "Fig. 1: The eight contact-rich manipulation skills that are essential for everyday contact-rich manipulation tasks. We built ContactBench 1.0 to instantiate these skills.",
@@ -4053,6 +4070,35 @@
           "name": "Guanya Shi",
           "papers": [
             {
+              "id": "2610.32969",
+              "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
+              "authors": [
+                "Amber Xie",
+                "Jiawei Fu",
+                "Xiaofeng Guo",
+                "Carmelo Sferrazza",
+                "Guanya Shi",
+                "Haozhi Qi"
+              ],
+              "abstract": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstrations are easier to collect, but their motions must be estimated and retargeted to the robot, and they do not directly provide robot actions. In this paper, we introduce DexPort, a portable data-collection interface for high-DoF robot hands. It uses the same hand hardware for collection and deployment, avoiding a hand embodiment gap, and records both commanded joint targets and measured joint states. Our key observation is that a small set of skills can support a wide range of dexterous tasks. During collection, the operator moves the hand-held interface to specify the robot wrist motion and selects or adjusts skills that coordinate the finger motion. This removes the need to control each joint independently while retaining behaviors such as precise grasping and in-hand manipulation. We collect demonstrations across several real-world tasks and in unstructured environments without a robot arm. We then use behavior cloning to train visuomotor policies directly on the recorded wrist motions and hand commands, without skill labels. We evaluate across 4 tasks: pick-and-place with diverse objects, screwing with in-hand tool use, drawer stowage which requires simultaneous grasp and pulling, and a bimanual scanning task. We collect over 2,500 demonstrations with our portable device, in both laboratory and in-the-wild settings. Across our tasks, we see an improvement from 11% to 64% when using recorded robot commands instead of states, and an improvement from 36% to 78% for task success when using in-the-wild data.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.LG"
+              ],
+              "published": "2026-10-23T17:56:28Z",
+              "url": "https://arxiv.org/abs/2610.32969",
+              "pdf_url": "https://arxiv.org/pdf/2610.32969v1",
+              "comment": "Website: https://amberxie88.github.io/dexport/",
+              "figure_url": "https://arxiv.org/html/2610.32969v1/hardware.png",
+              "figure_caption": "Fig. 1: Transferable Hardware Interface and Control Mapping. (a) Transferable Module: The Wuji hand (A) and fisheye camera (B) form a transferable hand–camera module that mounts to the Quest 2 controller for data collection and to the robot wrist for deployment. Reusing the same module preserves han",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://amberxie88.github.io/dexport/"
+              }
+            },
+            {
               "id": "2610.27242",
               "title": "EmbodyHOI: Embodiment-Aware Generation of Hand-Object Interactions for Humanoid Dexterous Manipulation",
               "authors": [
@@ -4517,7 +4563,7 @@
           ]
         }
       ],
-      "total": 27
+      "total": 28
     },
     {
       "name": "MIT",
@@ -5946,6 +5992,42 @@
           "name": "Yuke Zhu",
           "papers": [
             {
+              "id": "2610.31779",
+              "title": "FLORA: An Open Model Suite for Scaling Robotics Data Engines",
+              "authors": [
+                "Sicong Leng",
+                "Yunze Man",
+                "Zhiqi Li",
+                "Jing Wang",
+                "Yuhe Zhang",
+                "Ryan Punamiya",
+                "Siddharth Patki",
+                "Kaiyuan Zheng",
+                "Zi-ang Cao",
+                "Zhiding Yu",
+                "Sifei Liu",
+                "Danfei Xu",
+                "Ben Levin",
+                "Jan Kautz",
+                "Yuke Zhu",
+                "Johan Bjorck",
+                "Linxi \"Jim\" Fan"
+              ],
+              "abstract": "The life-cycle of robotics foundation models crucially depends on data labels. Outcome reward labels are needed for monitoring real-world deployments. Process reward labels are needed during RL post-training. Timestamped captions are needed for filtering and balancing pretraining data. We present Flora, an industrial-quality data engine used for training GR00T models, that simultaneously covers these capabilities. Flora achieves SOTA scores on the captioning benchmark WGO-Bench and reward benchmarks RoboReward and Robometer. On internal benchmarks it is competitive with GPT-6 Astra while beating other frontier models. The model is substantially cheaper than API-based alternatives, roughly 125 times cheaper than GPT-6 Astra. Florais battle tested at scale, labeling 200,000 hours of data per day across 512 GB300s. By open-sourcing our data engine, we enable researchers to scale custom robotics datasets and explore emerging applications such as physical auto-research and human-to-robot transfer.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-22T18:16:17Z",
+              "url": "https://arxiv.org/abs/2610.31779",
+              "pdf_url": "https://arxiv.org/pdf/2610.31779v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.31779v1/release_pull_figure.png",
+              "figure_caption": "Figure 1 : Capabilities. Flora produces timestamped captions by first segmenting videos and then captioning individual segments. Flora can also produce outcome and process rewards, and rewards based on rubrics specified at test-time.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.30136",
               "title": "Agentic World Action Models",
               "authors": [
@@ -6317,7 +6399,7 @@
           ]
         }
       ],
-      "total": 15
+      "total": 16
     },
     {
       "name": "ETH Zürich / TU Darmstadt",
@@ -6722,31 +6804,6 @@
               "links": {
                 "project": "https://timengelbracht.github.io/forcetwin-website/"
               }
-            },
-            {
-              "id": "2609.12677",
-              "title": "Size Doesn't Matter: Material-State Reinforcement Learning for Excavator Transferable Soil Manipulation",
-              "authors": [
-                "Lennart Werner",
-                "Pol Eyschen",
-                "Sean Costello",
-                "Pierluigi Micarelli",
-                "Andrei Cramariuc",
-                "Marco Hutter"
-              ],
-              "abstract": "Earthmoving tasks such as excavation, backfilling, or embankment construction require deliberate repositioning of deformable soil. For these tasks, human operators use all shovel faces, while autonomous systems so far are limited to excavation and dumping. Current methods often rely on heuristic models but do not incorporate soil mechanics. We address this shortcoming by using Reinforcement Learning in a GPU-parallelized Material Point Method particle simulation. Our controllers are conditioned on material state such as shape and compactness, enabling skills that use multiple contact faces of the tool and displace material both inside and outside of the shovel. To use the same learned weights across machines, our policies operate in a normalized end-effector space and are deployed through a calibrated machine interface. We evaluate this calibrated transfer on an 11.5t hydraulic excavator and a 500g tabletop robot. We validate performance through autonomous construction of a 42m long, 2.1m high embankment in 45min, executing 201 individual policy strokes without failure, retry, or operator intervention. In a direct comparison, the autonomous controller matches an expert operator's progression speed and produces a higher, more consistent embankment. Additional qualitative backfilling and compaction experiments demonstrate the material-state awareness and calibrated transfer across machines.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-11T10:22:18Z",
-              "url": "https://arxiv.org/abs/2609.12677",
-              "pdf_url": "https://arxiv.org/pdf/2609.12677v1",
-              "comment": "22 pages, 31 figures, journal paper",
-              "figure_url": "https://arxiv.org/html/2609.12677v1/figures/both2_small.png",
-              "figure_caption": "Fig. 1: Overview of the proposed setup: local two-dimensional control policy trained in a MPM particle simulation executed on the 11.5 t 11.5\\text{\\,}\\mathrm{t} M445 hydraulic excavator and 500 g 500\\text{\\,}\\mathrm{g} tabletop robot through a low-level end effector space motion control interface.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -7279,7 +7336,7 @@
           ]
         }
       ],
-      "total": 36
+      "total": 35
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -8188,32 +8245,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.12433",
-              "title": "FoldNet++: a Large-Scale Synthetic Dataset for Robotic T-Shirt Folding and Unfolding",
-              "authors": [
-                "Yuxing Chen",
-                "Zhiyuan Wei",
-                "Bowen Xiao",
-                "Zhizheng Zhang",
-                "He Wang"
-              ],
-              "abstract": "Due to the highly deformable nature of garments, training a generalizable policy for robotic T-shirt folding and unfolding remains a significant challenge. In this work, we present a large-scale synthetic dataset for robotic T-shirt folding and unfolding, covering 6 robotic embodiments, 1K T-shirts, 1K environmental assets, and 120K episodes with rich annotations, which can be used to train a wide range of manipulation policies. We first follow the FoldNet pipeline to generate a large-scale dataset of physically simulatable T-shirts with diverse appearances and annotated semantic keypoints. Based on these semantic keypoints, we then generate manipulation demonstrations for different robotic embodiments through a unified rule-based framework. We use these demonstrations to train visuomotor policies, and experimental results demonstrate that models trained solely on our synthetic data can achieve over 90% end-to-end task success rates when directly deployed to unseen real-world environments and previously unseen T-shirts from arbitrary initial configurations. Project URL: https://pku-epic.github.io/FoldNetXX/.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-11T04:43:48Z",
-              "url": "https://arxiv.org/abs/2609.12433",
-              "pdf_url": "https://arxiv.org/pdf/2609.12433v1",
-              "comment": "CoRL 2026, Project Page: https://pku-epic.github.io/FoldNetXX/",
-              "figure_url": "https://arxiv.org/html/2609.12433v1/teaser_v1.png",
-              "figure_caption": "Figure 1: Overview of FoldNet++. (a) Our dataset includes 6 robots, 1K T-shirts, and 1K table textures and HDRI environment maps. (b) Using these assets, we import them into an FEM-based physics simulator. Combined with predefined manipulation rules and domain randomization, we generate 120K episode",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://pku-epic.github.io/FoldNetXX/"
-              }
             }
           ]
         },
@@ -8489,14 +8520,14 @@
                 "Cewu Lu",
                 "Jianhua Sun"
               ],
-              "abstract": "Predictive representations for robot manipulation should connect scene geometry with the state changes induced by actions. Our intuition is that understanding what an action will change starts with understanding where things are: complementary RGB and depth observations ground a common scene representation from which to infer those changes. Guided by this intuition, we introduce DepState-JEPA, a dual-stream RGB--Depth joint-embedding predictive architecture that connects spatial understanding with action-conditioned prediction through a shared latent state, DepState. Built on V-JEPA~2.1, the framework uses depth both as a complementary observation stream and to ground both modalities in metric 3D space, aggregating shared information into DepState while retaining modality-private features for decoding. Ray-conditioned readouts predict local features without target depth; after an action-conditioned transition, the same decoders predict future RGB and depth features using the predicted state and fixed initial private features. Robot-state readouts provide recursive proprioceptive inputs; object-trajectory supervision and calibrated forward kinematics shape state learning through motion targets and joint--TCP consistency. Comparisons show stronger RGB-encoder transfer after RGB-D adaptation, feature completion, conditioned visual forecasting, and manipulation success. Within-model ablations identify contributions from depth content, metric coordinates, and future-state matching, with additional control gains from FK regularization.",
+              "abstract": "Predictive representations for robot manipulation should connect scene geometry with the state changes induced by actions. Our intuition is that understanding what an action will change starts with understanding where things are: complementary RGB and depth observations ground a common scene representation from which to infer those changes. Guided by this intuition, we introduce DepState-JEPA, a dual-stream RGB--Depth joint-embedding predictive architecture that connects spatial understanding with action-conditioned prediction through a shared latent state, DepState. Built on V-JEPA~2.1, the framework uses depth both as a complementary observation stream and to ground both modalities in metric 3D space, aggregating shared information into DepState while retaining modality-private features for decoding. Ray-conditioned readouts predict local features without target depth; after an action-conditioned transition, the same decoders predict future RGB and depth features using the predicted state and fixed initial private features. Robot-state readouts provide recursive proprioceptive inputs; object-trajectory supervision and calibrated forward kinematics shape state learning through motion targets and joint--TCP consistency. Comparisons show stronger RGB-encoder transfer after RGB-D adaptation, feature completion, conditioned visual forecasting, and manipulation success. Within-model ablations identify contributions from depth content, metric coordinates, and future-state matching, with additional control gains from FK regularization. The project page is available at https://shawnleung-sii.github.io/depstate-jepa/.",
               "categories": [
                 "cs.RO",
                 "cs.CV"
               ],
               "published": "2026-10-21T05:51:06Z",
               "url": "https://arxiv.org/abs/2610.29246",
-              "pdf_url": "https://arxiv.org/pdf/2610.29246v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.29246v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.29246v1/Teaser.png",
               "figure_caption": "Figure 1: From Where Things Are to What Actions Change. DepState-JEPA grounds complementary RGB–depth observations in a shared latent state, DepState, while retaining modality-private features for decoding. This depth-grounded state connects spatial queries with action-conditioned prediction of futu",
@@ -8995,7 +9026,7 @@
           ]
         }
       ],
-      "total": 56
+      "total": 55
     },
     {
       "name": "工业界研究团队",
@@ -9354,7 +9385,7 @@
               ],
               "published": "2026-10-17T11:05:21Z",
               "url": "https://arxiv.org/abs/2610.24628",
-              "pdf_url": "https://arxiv.org/pdf/2610.24628v2",
+              "pdf_url": "https://arxiv.org/pdf/2610.24628v3",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.24628v2/assets/chart_high.png",
               "figure_caption": "Figure 2 : Muse Glimmer capability radar chart. We compare Muse Glimmer at high reasoning strength against the competitive open models Gemma4-31B and Qwen3.6-27B",
@@ -10400,31 +10431,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.11545",
-              "title": "Complex-Text Robustness Evaluation and Failure Diagnosis for Low-Resource Multilingual Text-to-Speech",
-              "authors": [
-                "Tianlun Zuo",
-                "Ziyu Zhang",
-                "Tingzhi Mao",
-                "Zhonghua Fu",
-                "Lei Xie"
-              ],
-              "abstract": "Low-resource multilingual text-to-speech (TTS) systems have expanded language coverage, but their robustness under complex text inputs remains insufficiently diagnosed. Existing evaluations mainly focus on naturalness, speaker similarity, and content consistency using regular test sentences, while providing limited insight into how multilingual TTS systems fail when handling challenging inputs such as numbers, dates, named entities, long sentences, code-switched expressions, and punctuation-related structures. This paper proposes a complex-text robustness diagnosis framework for low-resource multilingual TTS. We evaluate robustness from three dimensions: content consistency, language consistency, and generation stability. A multilingual robustness testing scheme is designed for Thai, Vietnamese, Swahili, and Indonesian, covering ordinary sentences and multiple types of complex text inputs. We further introduce automatic diagnostic metrics, including character error rate, language identification accuracy, and duration abnormal rate. To support input-level risk analysis before speech generation, we propose a lightweight Text Risk Score (TRS), which estimates synthesis risk from interpretable text features without manual annotation or model training. Experiments on three representative multilingual TTS systems, including OmniVoice, VoxCPM2, and MMS-TTS, show that complex text inputs expose systematic failure patterns that are not fully reflected by ordinary short-sentence evaluation. Different systems exhibit distinct vulnerabilities in number normalization, named entity handling, long-text generation, and code-switched input processing. Furthermore, TRS shows a positive correlation with content errors and duration abnormalities, demonstrating its usefulness as a low-cost pre-synthesis indicator for complex-text risk diagnosis in low-resource multilingual TTS.",
-              "categories": [
-                "cs.CL",
-                "cs.SD"
-              ],
-              "published": "2026-09-10T13:41:22Z",
-              "url": "https://arxiv.org/abs/2609.11545",
-              "pdf_url": "https://arxiv.org/pdf/2609.11545v1",
-              "comment": "NCMMSC 2026 accepted",
-              "figure_url": "thumbs/2609.11545.jpg",
-              "figure_caption": "论文首页预览",
-              "figure_source": "pdf",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -10577,7 +10583,7 @@
           "papers": []
         }
       ],
-      "total": 34
+      "total": 33
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -11524,6 +11530,35 @@
           "name": "Guanya Shi",
           "papers": [
             {
+              "id": "2610.32969",
+              "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
+              "authors": [
+                "Amber Xie",
+                "Jiawei Fu",
+                "Xiaofeng Guo",
+                "Carmelo Sferrazza",
+                "Guanya Shi",
+                "Haozhi Qi"
+              ],
+              "abstract": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstrations are easier to collect, but their motions must be estimated and retargeted to the robot, and they do not directly provide robot actions. In this paper, we introduce DexPort, a portable data-collection interface for high-DoF robot hands. It uses the same hand hardware for collection and deployment, avoiding a hand embodiment gap, and records both commanded joint targets and measured joint states. Our key observation is that a small set of skills can support a wide range of dexterous tasks. During collection, the operator moves the hand-held interface to specify the robot wrist motion and selects or adjusts skills that coordinate the finger motion. This removes the need to control each joint independently while retaining behaviors such as precise grasping and in-hand manipulation. We collect demonstrations across several real-world tasks and in unstructured environments without a robot arm. We then use behavior cloning to train visuomotor policies directly on the recorded wrist motions and hand commands, without skill labels. We evaluate across 4 tasks: pick-and-place with diverse objects, screwing with in-hand tool use, drawer stowage which requires simultaneous grasp and pulling, and a bimanual scanning task. We collect over 2,500 demonstrations with our portable device, in both laboratory and in-the-wild settings. Across our tasks, we see an improvement from 11% to 64% when using recorded robot commands instead of states, and an improvement from 36% to 78% for task success when using in-the-wild data.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.LG"
+              ],
+              "published": "2026-10-23T17:56:28Z",
+              "url": "https://arxiv.org/abs/2610.32969",
+              "pdf_url": "https://arxiv.org/pdf/2610.32969v1",
+              "comment": "Website: https://amberxie88.github.io/dexport/",
+              "figure_url": "https://arxiv.org/html/2610.32969v1/hardware.png",
+              "figure_caption": "Fig. 1: Transferable Hardware Interface and Control Mapping. (a) Transferable Module: The Wuji hand (A) and fisheye camera (B) form a transferable hand–camera module that mounts to the Quest 2 controller for data collection and to the robot wrist for deployment. Reusing the same module preserves han",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://amberxie88.github.io/dexport/"
+              }
+            },
+            {
               "id": "2610.27242",
               "title": "EmbodyHOI: Embodiment-Aware Generation of Hand-Object Interactions for Humanoid Dexterous Manipulation",
               "authors": [
@@ -11911,7 +11946,7 @@
           ]
         }
       ],
-      "total": 20
+      "total": 21
     },
     {
       "name": "RGMT 合作作者",
@@ -13486,30 +13521,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.11548",
-              "title": "World in World: Explore the World with World Models",
-              "authors": [
-                "Chenxi Song",
-                "Yanming Yang",
-                "Chi Zhang"
-              ],
-              "abstract": "Autoregressive video world models enable interactive, long-horizon exploration, but flexible control remains challenging. Exploring a source video from new viewpoints requires the generated rollout to remain synchronised with the recorded event, place observed content in the requested view, plausibly complete newly exposed regions, and recover previously generated appearance on revisits. Existing methods typically address these requirements through task-specific modules or additional training. We present World in World, a training-free inference-time interface that converts heterogeneous control evidence into camera- and time-labelled clean visual states, which are read through the native self attention of a frozen causal video model. The evidence comprises source-video observations, target-view scene projections, geometry renderings that guide completion of newly exposed subject regions, and retrieved generated states beyond the rolling cache. Each evidence source carries token-level support and its own availability schedule. A correspondence router combines persistent point identities with geometry to establish token correspondences, guiding supported queries towards matching source-video tokens. Evidence-wise attention CFG (EWA) then independently regulates each auxiliary channel's additional contribution using attention responses from the same denoising forward pass. The shared interface supports camera-controlled rerendering, long-horizon revisiting, and human-motion transfer with the same frozen backbone. We evaluate World in World on camera-controlled video rerendering under diverse viewpoint changes, assessing perceptual quality, temporal consistency, and camera-following accuracy.",
-              "categories": [
-                "cs.CV"
-              ],
-              "published": "2026-09-10T13:42:26Z",
-              "url": "https://arxiv.org/abs/2609.11548",
-              "pdf_url": "https://arxiv.org/pdf/2609.11548v1",
-              "comment": "Project Page: https://chenxi-song.github.io/worldinworld",
-              "figure_url": "https://arxiv.org/html/2609.11548v1/pipeline.png",
-              "figure_caption": "Fig. 2 : Overview of the World in World pipeline. Target-view projections, rendered geometry, and retrieved historical states provide temporary visual evidence. Correspondence-guided attention routing connects queries to matching source-video tokens, and evidence-wise attention CFG regulates each ch",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://chenxi-song.github.io/worldinworld"
-              }
             }
           ]
         },
@@ -13596,7 +13607,7 @@
           "papers": []
         }
       ],
-      "total": 34
+      "total": 33
     },
     {
       "name": "PGMT 合作作者",
@@ -14867,7 +14878,44 @@
         },
         {
           "name": "Zi-Ang Cao",
-          "papers": []
+          "papers": [
+            {
+              "id": "2610.31779",
+              "title": "FLORA: An Open Model Suite for Scaling Robotics Data Engines",
+              "authors": [
+                "Sicong Leng",
+                "Yunze Man",
+                "Zhiqi Li",
+                "Jing Wang",
+                "Yuhe Zhang",
+                "Ryan Punamiya",
+                "Siddharth Patki",
+                "Kaiyuan Zheng",
+                "Zi-ang Cao",
+                "Zhiding Yu",
+                "Sifei Liu",
+                "Danfei Xu",
+                "Ben Levin",
+                "Jan Kautz",
+                "Yuke Zhu",
+                "Johan Bjorck",
+                "Linxi \"Jim\" Fan"
+              ],
+              "abstract": "The life-cycle of robotics foundation models crucially depends on data labels. Outcome reward labels are needed for monitoring real-world deployments. Process reward labels are needed during RL post-training. Timestamped captions are needed for filtering and balancing pretraining data. We present Flora, an industrial-quality data engine used for training GR00T models, that simultaneously covers these capabilities. Flora achieves SOTA scores on the captioning benchmark WGO-Bench and reward benchmarks RoboReward and Robometer. On internal benchmarks it is competitive with GPT-6 Astra while beating other frontier models. The model is substantially cheaper than API-based alternatives, roughly 125 times cheaper than GPT-6 Astra. Florais battle tested at scale, labeling 200,000 hours of data per day across 512 GB300s. By open-sourcing our data engine, we enable researchers to scale custom robotics datasets and explore emerging applications such as physical auto-research and human-to-robot transfer.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-22T18:16:17Z",
+              "url": "https://arxiv.org/abs/2610.31779",
+              "pdf_url": "https://arxiv.org/pdf/2610.31779v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.31779v1/release_pull_figure.png",
+              "figure_caption": "Figure 1 : Capabilities. Flora produces timestamped captions by first segmenting videos and then captioning individual segments. Flora can also produce outcome and process rewards, and rewards based on rubrics specified at test-time.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            }
+          ]
         },
         {
           "name": "Jiefeng Li",
@@ -15710,6 +15758,42 @@
           "name": "Jan Kautz",
           "papers": [
             {
+              "id": "2610.31779",
+              "title": "FLORA: An Open Model Suite for Scaling Robotics Data Engines",
+              "authors": [
+                "Sicong Leng",
+                "Yunze Man",
+                "Zhiqi Li",
+                "Jing Wang",
+                "Yuhe Zhang",
+                "Ryan Punamiya",
+                "Siddharth Patki",
+                "Kaiyuan Zheng",
+                "Zi-ang Cao",
+                "Zhiding Yu",
+                "Sifei Liu",
+                "Danfei Xu",
+                "Ben Levin",
+                "Jan Kautz",
+                "Yuke Zhu",
+                "Johan Bjorck",
+                "Linxi \"Jim\" Fan"
+              ],
+              "abstract": "The life-cycle of robotics foundation models crucially depends on data labels. Outcome reward labels are needed for monitoring real-world deployments. Process reward labels are needed during RL post-training. Timestamped captions are needed for filtering and balancing pretraining data. We present Flora, an industrial-quality data engine used for training GR00T models, that simultaneously covers these capabilities. Flora achieves SOTA scores on the captioning benchmark WGO-Bench and reward benchmarks RoboReward and Robometer. On internal benchmarks it is competitive with GPT-6 Astra while beating other frontier models. The model is substantially cheaper than API-based alternatives, roughly 125 times cheaper than GPT-6 Astra. Florais battle tested at scale, labeling 200,000 hours of data per day across 512 GB300s. By open-sourcing our data engine, we enable researchers to scale custom robotics datasets and explore emerging applications such as physical auto-research and human-to-robot transfer.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-22T18:16:17Z",
+              "url": "https://arxiv.org/abs/2610.31779",
+              "pdf_url": "https://arxiv.org/pdf/2610.31779v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.31779v1/release_pull_figure.png",
+              "figure_caption": "Figure 1 : Capabilities. Flora produces timestamped captions by first segmenting videos and then captioning individual segments. Flora can also produce outcome and process rewards, and rewards based on rubrics specified at test-time.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.17456",
               "title": "Compositional RL: Evaluating and Training LLMs for Collaborative Reasoning",
               "authors": [
@@ -16201,6 +16285,42 @@
           "name": "Yuke Zhu",
           "papers": [
             {
+              "id": "2610.31779",
+              "title": "FLORA: An Open Model Suite for Scaling Robotics Data Engines",
+              "authors": [
+                "Sicong Leng",
+                "Yunze Man",
+                "Zhiqi Li",
+                "Jing Wang",
+                "Yuhe Zhang",
+                "Ryan Punamiya",
+                "Siddharth Patki",
+                "Kaiyuan Zheng",
+                "Zi-ang Cao",
+                "Zhiding Yu",
+                "Sifei Liu",
+                "Danfei Xu",
+                "Ben Levin",
+                "Jan Kautz",
+                "Yuke Zhu",
+                "Johan Bjorck",
+                "Linxi \"Jim\" Fan"
+              ],
+              "abstract": "The life-cycle of robotics foundation models crucially depends on data labels. Outcome reward labels are needed for monitoring real-world deployments. Process reward labels are needed during RL post-training. Timestamped captions are needed for filtering and balancing pretraining data. We present Flora, an industrial-quality data engine used for training GR00T models, that simultaneously covers these capabilities. Flora achieves SOTA scores on the captioning benchmark WGO-Bench and reward benchmarks RoboReward and Robometer. On internal benchmarks it is competitive with GPT-6 Astra while beating other frontier models. The model is substantially cheaper than API-based alternatives, roughly 125 times cheaper than GPT-6 Astra. Florais battle tested at scale, labeling 200,000 hours of data per day across 512 GB300s. By open-sourcing our data engine, we enable researchers to scale custom robotics datasets and explore emerging applications such as physical auto-research and human-to-robot transfer.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-22T18:16:17Z",
+              "url": "https://arxiv.org/abs/2610.31779",
+              "pdf_url": "https://arxiv.org/pdf/2610.31779v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.31779v1/release_pull_figure.png",
+              "figure_caption": "Figure 1 : Capabilities. Flora produces timestamped captions by first segmenting videos and then captioning individual segments. Flora can also produce outcome and process rewards, and rewards based on rubrics specified at test-time.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.30136",
               "title": "Agentic World Action Models",
               "authors": [
@@ -16382,7 +16502,7 @@
           ]
         }
       ],
-      "total": 42
+      "total": 45
     }
   ]
 }
