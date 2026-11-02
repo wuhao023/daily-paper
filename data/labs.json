@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-01T13:43:53+00:00",
-  "day": "2026-11-01",
+  "updated": "2026-11-02T16:28:23+00:00",
+  "day": "2026-11-02",
   "days_back": 45,
-  "total": 359,
+  "total": 361,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -1003,37 +1003,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.21400",
-              "title": "A Scene Language Model for Open-Vocabulary Scene Mapping",
-              "authors": [
-                "Adam Lilja",
-                "Fabio Hübel",
-                "Siming He",
-                "Junsheng Fu",
-                "Claire Tomlin",
-                "Lars Hammarstrand",
-                "Jitendra Malik",
-                "Jonas Frey",
-                "Marco Pavone"
-              ],
-              "abstract": "Open-vocabulary 3D scene mapping aims to build a persistent representation of the objects in an environment. Existing systems typically rely on engineered mapping pipelines to associate observations, merge information across views, and maintain a consistent scene representation over time. Many additionally store feature-rich object representations, such as embeddings or image crops, increasing the size and complexity of the persistent memory. We introduce SceneLM, a Scene-Language Model that directly maintains a textual scene map. The full scene is represented as a structured text list of objects, which serves as the model's only persistent memory. For each input image, the model reads the current scene state and updates the map by adding, editing, and removing objects. To learn this behavior, we introduce supervision tasks for iterative scene map maintenance together with an automatic annotation pipeline that generates training data from images without human labels. We evaluate SceneLM on both a language-grounded retrieval benchmark and a localization benchmark. Across both benchmarks, the model produces a scene map that achieves competitive performance with complete mapping systems built from dedicated perception and geometric modules while producing a scene representation that is 6-12x more compact. We further show that SceneLM can be run online on an edge device through experiments on a quadruped. These results show that a persistent open-vocabulary 3D scene map can be maintained directly by a single vision-language model using only a lightweight text representation. Training and inference code is available on https://goldengait.github.io/scenelm/.",
-              "categories": [
-                "cs.CV",
-                "cs.RO"
-              ],
-              "published": "2026-09-18T07:16:18Z",
-              "url": "https://arxiv.org/abs/2609.21400",
-              "pdf_url": "https://arxiv.org/pdf/2609.21400v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.21400v1/scene_lm_first_lowres_framed_final.png",
-              "figure_caption": "Figure 1: Overview of SceneLM. Given an RGB observation and the current textual scene map, SceneLM predicts ADD , EDIT , and REMOVE operations that update the persistent scene map. The colored point clouds in the top row are for illustration and are obtained by aggregating the posed RGB-D observatio",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://goldengait.github.io/scenelm/"
-              }
             }
           ]
         },
@@ -1554,7 +1523,7 @@
           ]
         }
       ],
-      "total": 51
+      "total": 50
     },
     {
       "name": "Stanford",
@@ -1874,6 +1843,35 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2610.40754",
+              "title": "DyCraft: An Agentic System for Long-Horizon 4D Scene Generation",
+              "authors": [
+                "Jeff Tan",
+                "Hang Dai",
+                "Zeqian Long",
+                "Yanzhe Lyu",
+                "R. Kenny Jones",
+                "Shangzhe Wu",
+                "Chen Geng",
+                "Jiajun Wu"
+              ],
+              "abstract": "While frontier coding agents can generate high-quality 3D scenes and articulated assets, they struggle to create coherent long-horizon animations. When equipped with general-purpose harnesses, they frequently produce physically implausible outputs, generating objects that interpenetrate, lack physical support, or move unnaturally. Such bare agents struggle to repair these errors because they default to scripting the full animation in one pass, making it difficult to verify their work and disentangle complex spatiotemporal constraints. Drawing on the practice of human animators, we introduce DyCraft, a system for animated 3D scene generation that breaks animation into steps that coding agents can more reliably solve. DyCraft first expands the user's prompt into a detailed plan and builds a static scene. It then creates a 3D storyboard of key animation poses, where each frame is a static 3D scene that the agent can build and debug in isolation. Storyboarding decomposes the problem into pairs of verified start and end states, allowing the agent to author local motion between them with a collection of motion authoring tools. We evaluate DyCraft on 24 long-horizon, multi-shot animation tasks covering humanoid robots, human and animal characters, and physical mechanisms. Compared with a native GPT-6 agent in Codex and prior agentic baselines, DyCraft substantially reduces physical violations and generates higher-quality animated 3D scenes that are more often preferred by human raters.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-10-29T16:42:04Z",
+              "url": "https://arxiv.org/abs/2610.40754",
+              "pdf_url": "https://arxiv.org/pdf/2610.40754v1",
+              "comment": "Project page: https://dy-craft.github.io/",
+              "figure_url": "https://arxiv.org/html/2610.40754v1/teaser.png",
+              "figure_caption": "Figure 1: DyCraft is an end-to-end agentic system for generating long-horizon animated 3D scenes from text prompts. Our system allows GPT-6-Astra coding agents to write minute-long 3D animations in Blender, depicting humanoid robots, human characters, and physical mechanisms. 3D moments from the aut",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://dy-craft.github.io/"
+              }
+            },
             {
               "id": "2610.34051",
               "title": "BEHAVIOR-Spatial Benchmark: Evaluating Spatial Understanding for Robotics",
@@ -2357,7 +2355,7 @@
               ],
               "published": "2026-10-13T05:28:59Z",
               "url": "https://arxiv.org/abs/2610.17748",
-              "pdf_url": "https://arxiv.org/pdf/2610.17748v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.17748v2",
               "comment": "Project website: https://i-3l.github.io/",
               "figure_url": "https://arxiv.org/html/2610.17748v1/figures/pull2.jpg",
               "figure_caption": "Fig. 1: I3L combines interactive correction with iterative policy refinement. Left: 1) the policy approaches a failure, prompting the operator to take over with JoyLo+ and provide targeted corrections, 2) the operator uses JoyLo+ to take over during autonomous execution. Center: corrections are aggr",
@@ -3583,7 +3581,7 @@
               ],
               "published": "2026-10-13T05:28:59Z",
               "url": "https://arxiv.org/abs/2610.17748",
-              "pdf_url": "https://arxiv.org/pdf/2610.17748v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.17748v2",
               "comment": "Project website: https://i-3l.github.io/",
               "figure_url": "https://arxiv.org/html/2610.17748v1/figures/pull2.jpg",
               "figure_caption": "Fig. 1: I3L combines interactive correction with iterative policy refinement. Left: 1) the policy approaches a failure, prompting the operator to take over with JoyLo+ and provide targeted corrections, 2) the operator uses JoyLo+ to take over during autonomous execution. Center: corrections are aggr",
@@ -3779,7 +3777,7 @@
           ]
         }
       ],
-      "total": 69
+      "total": 70
     },
     {
       "name": "Carnegie Mellon University",
@@ -4766,32 +4764,6 @@
               "links": {
                 "project": "https://contact-uan.csail.mit.edu/"
               }
-            },
-            {
-              "id": "2609.20820",
-              "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision",
-              "authors": [
-                "Nitish Dashora",
-                "Douglas Chen",
-                "Idan Shenfeld",
-                "John Marangola",
-                "Pulkit Agrawal",
-                "Max Simchowitz"
-              ],
-              "abstract": "Complex robotic manipulation tasks frequently require a long-term memory of past events and actions. As conditioning on full histories renders policies prone to spurious correlations and degrades performance, many approaches to policy memory involve compressing historical information through expensive VLM queries in-the-loop to process only task-salient information. In this paper, we propose an alternative approach in which computationally intensive VLM queries are made during train-time to learn a lightweight latent memory that can be efficiently queried at deployment time. Our representation, which we call the workspace token, is trained by (1) using a VLM to identify current and historical information necessary for completing a task, then (2) distilling these into the workspace token using a set-reconstruction decoder loss. In both simulation and hardware, we show that the workspace token can be used as a drop-in replacement for observations during deployment, enabling policies to solve memory-intensive tasks without the need for VLM reasoning in-the-loop, in effect serving as a latent harness for distilling a stronger reasoning models ability to solve long-horizon tasks to a reactive robotic policy. We further demonstrate that the workspace tokens are not only more lightweight, but also lead to better policy performance compared to conditioning policies on explicit modalities like curated past image frames, motivating a latent approach to history curation and reasoning model harnesses more broadly.",
-              "categories": [
-                "cs.RO",
-                "cs.AI"
-              ],
-              "published": "2026-09-17T17:59:53Z",
-              "url": "https://arxiv.org/abs/2609.20820",
-              "pdf_url": "https://arxiv.org/pdf/2609.20820v3",
-              "comment": "26 pages; CoRL 2026; 11 figures",
-              "figure_url": "https://arxiv.org/html/2609.20820v3/wsm_teaser_2_cropped.png",
-              "figure_caption": "Figure 1 : We propose the Workspace Model , an architecture trained to produce compressed latent representations of history used for downstream policy learning. Workspace Models are trained by encoding raw histories and reconstructing high-level salient information, as judged by a VLM, thus amortizi",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -4948,7 +4920,7 @@
           ]
         }
       ],
-      "total": 10
+      "total": 9
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -4958,6 +4930,35 @@
         {
           "name": "Lerrel Pinto",
           "papers": [
+            {
+              "id": "2610.42146",
+              "title": "Hierarchical World Models with Implicit Dynamics",
+              "authors": [
+                "Gaoyue Zhou",
+                "Yvonne Wu",
+                "Zichen Jeff Cui",
+                "Nicolas Ballas",
+                "Mido Assran",
+                "Lerrel Pinto",
+                "Yann LeCun"
+              ],
+              "abstract": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-30T17:59:25Z",
+              "url": "https://arxiv.org/abs/2610.42146",
+              "pdf_url": "https://arxiv.org/pdf/2610.42146v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.42146v1/idwm_teaser.png",
+              "figure_caption": "Figure 1: Overview of ID-WM . Our hierarchical planning framework decouples state-space reachability from local control, eliminating the reliance on task-specific value functions or pre-trained policies. Planning proceeds in two interleaved stages: (1) high-level planning, which discovers a sequence",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://id-wm.github.io"
+              }
+            },
             {
               "id": "2610.18711",
               "title": "Steertuning Policies from a Few Human Videos",
@@ -4996,6 +4997,35 @@
         {
           "name": "Yann LeCun",
           "papers": [
+            {
+              "id": "2610.42146",
+              "title": "Hierarchical World Models with Implicit Dynamics",
+              "authors": [
+                "Gaoyue Zhou",
+                "Yvonne Wu",
+                "Zichen Jeff Cui",
+                "Nicolas Ballas",
+                "Mido Assran",
+                "Lerrel Pinto",
+                "Yann LeCun"
+              ],
+              "abstract": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-10-30T17:59:25Z",
+              "url": "https://arxiv.org/abs/2610.42146",
+              "pdf_url": "https://arxiv.org/pdf/2610.42146v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.42146v1/idwm_teaser.png",
+              "figure_caption": "Figure 1: Overview of ID-WM . Our hierarchical planning framework decouples state-space reachability from local control, eliminating the reliance on task-specific value functions or pre-trained policies. Planning proceeds in two interleaved stages: (1) high-level planning, which discovers a sequence",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://id-wm.github.io"
+              }
+            },
             {
               "id": "2610.39302",
               "title": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
@@ -5710,7 +5740,7 @@
           ]
         }
       ],
-      "total": 20
+      "total": 22
     },
     {
       "name": "University of Washington",
@@ -5897,35 +5927,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.20477",
-              "title": "Visual Sim-to-Real Learning for Robotic Insertion under Geometric Variations: Application to Rebar Installation",
-              "authors": [
-                "Tao Sun",
-                "Beining Han",
-                "Patrick Yin",
-                "Rui Xu",
-                "Harry He",
-                "Abhishek Gupta",
-                "Szymon Rusinkiewicz",
-                "Yi Shao"
-              ],
-              "abstract": "Rebar insertion is among the most repetitive and physically demanding tasks on construction sites, and a contact-rich problem at 1.4 mm clearance. The parts, however, vary at two levels: a nominal design per structural member, and fabrication tolerance around each nominal design. Real-world data therefore has to be re-collected as designs and batches change. We present RebarSim, a visual sim-to-real system trained entirely in simulation. A privileged state-based teacher is trained with reinforcement learning over procedurally generated rebar geometries, then distilled into a multi-view student that maps raw RGB and proprioception directly to actions under extensive domain randomization. The student transfers to the real world zero-shot, seating rebars taken from a real factory production run in 91.3% of real-robot rollouts. Underlying that result, geometry diversity and pretraining both bring benefits. Training across a diverse set of nominal designs rather than one lifts the zero-shot success of both the teacher and the student on unseen designs, and the student policy outperforms a single-design specialist on that specialist's own design. A pretrained student then adapts to a new design with 4--6x fewer distillation samples than one trained from scratch. Visual sim-to-real transfer depends on appearance randomization and the DAgger mixture: removing either one sharply lowers success. Videos, code, and task assets are available at https://rebarsim.github.io.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-17T14:32:30Z",
-              "url": "https://arxiv.org/abs/2609.20477",
-              "pdf_url": "https://arxiv.org/pdf/2609.20477v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.20477v1/figures_src/Rebar_task_human_robot.jpg",
-              "figure_caption": "Fig. 1: Manual rebar insertion on site (left, middle): the worker lifts each rebar, then forces it down into the slots, thousands of times a day. Our robot setup for the same task (right).",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://rebarsim.github.io"
-              }
             }
           ]
         },
@@ -5964,7 +5965,7 @@
           ]
         }
       ],
-      "total": 8
+      "total": 7
     },
     {
       "name": "Georgia Tech / UT Austin",
@@ -6536,6 +6537,31 @@
           "name": "Marco Hutter",
           "papers": [
             {
+              "id": "2610.41456",
+              "title": "SAFARI: Semantic- And Frontier-driven Autonomous Risk Inspection",
+              "authors": [
+                "Ugur Kafkasyali",
+                "Mihnea Toader",
+                "Julia Richter",
+                "Turcan Tuna",
+                "Cesar Cadena",
+                "Marco Hutter"
+              ],
+              "abstract": "Robotic exploration can reduce human exposure to hazardous environments by autonomously searching unknown areas for objects of interest while constructing a complete, risk-aware map. However, existing autonomous exploration approaches typically prioritize geometric coverage or information gain, without explicitly coupling semantic object detection and the risk associated with operating near potentially hazardous objects. Moreover, many systems have been demonstrated primarily in simulation or controlled environments, leaving limited validation of risk-aware semantic exploration in complex, unstructured field settings. To address this gap, we propose SAFARI, a framework that treats object detection as a native channel of a unified probabilistic map, thereby jointly informing exploration and planning with both geometric and semantic evidence. We evaluated SAFARI in 11 missions across three field sites on a quadruped platform. The framework achieved an average coverage of 98.7% of the accessible mission area, without operator intervention for 97.6% of mission time, and detected objects with characteristic dimensions as small as 15cm. Lastly, through ablation studies and a detailed analysis of system behavior, we show that object-size awareness and safety-aware path planning are crucial for effective hazardous-object search.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-30T09:01:50Z",
+              "url": "https://arxiv.org/abs/2610.41456",
+              "pdf_url": "https://arxiv.org/pdf/2610.41456v1",
+              "comment": "First two listed authors have equal contribution. Submitted to IEEE Transactions on Field Robotics",
+              "figure_url": "https://arxiv.org/html/2610.41456v1/paper_overview_draft.png",
+              "figure_caption": "Figure 1: Illustration of the mission setup. Given a bounded region, the robot autonomously explores, while simultaneously detecting and avoiding collision with objects of potential interest. (A) Third-person view of an ANYbotics ANYmal D approaching and correctly detecting two OPIs: a trash can and",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.37602",
               "title": "RESPLE2: Inertial-Informed Recursive Non-Uniform Spline Estimation for Multi-Sensor Odometry with Global Refinement",
               "authors": [
@@ -6955,35 +6981,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2609.21751",
-              "title": "ForceTwin: Physics-informed Digital Twins for Robotic Manipulation from Instrumented Human Interaction",
-              "authors": [
-                "Tim Engelbracht",
-                "René Zurbrügg",
-                "Mayank Mittal",
-                "Marco Hutter",
-                "Marc Pollefeys",
-                "Hermann Blum",
-                "Zuria Bauer"
-              ],
-              "abstract": "Manipulating objects requires understanding not only their motion, but also the physical properties that determine it. For articulated objects, these include inertia, friction, and mechanisms such as springs or door closers, whose effects can vary with configuration and velocity. Such properties are not directly observable from appearance: visually identical doors may require very different effort to manipulate. Existing digital-twin pipelines recover primarily kinematics or assign static physical parameters from visual and language priors, which can yield physically implausible estimates. As a result, state-dependent mechanism dynamics remain unidentified and are not represented in standard asset formats. We present ForceTwin, a system for identifying physics-informed digital twins of articulated objects from instrumented human interaction. A person probes an object using a handheld force-sensing gripper, providing synchronized poses and interaction forces from which we estimate the articulation, parametric dynamics including inertia, Coulomb friction, viscous damping, and a structured neural residual capturing state-dependent mechanism forces. ForceTwin nearly halves the inertial-parameter error of a VLM prior. As a feedforward dynamics model for impedance control on a Spot and a Franka FR3, ForceTwin achieves 87% goal completion across nine object-embodiment pairs, compared with 60% using VLM-prior and 57% using kinematics-only twins, with the largest gains on objects whose strong mechanisms cause both baselines to stall. We further use the identified twins to train whole-body door-traversal policies and deploy them in the real world. Project Page: https://timengelbracht.github.io/forcetwin-website/",
-              "categories": [
-                "cs.RO",
-                "cs.AI"
-              ],
-              "published": "2026-09-18T13:26:32Z",
-              "url": "https://arxiv.org/abs/2609.21751",
-              "pdf_url": "https://arxiv.org/pdf/2609.21751v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.21751v1/figures/ForceTwin_PipelineFigure.png",
-              "figure_caption": "Fig. 1: The ForceTwin pipeline. Instrumented human interaction provides synchronized tool poses and contact wrenches from which we identify an articulation model and its generalized-effort dynamics. Geometry is reconstructed from the same recording or supplied independently, and the physical model i",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://timengelbracht.github.io/forcetwin-website/"
-              }
             }
           ]
         },
@@ -8126,6 +8123,30 @@
           "name": "He Wang",
           "papers": [
             {
+              "id": "2610.42106",
+              "title": "Hard Constraint Projection in a Physics Informed Neural Network (Burgers)",
+              "authors": [
+                "Miranda J S Horne",
+                "Peter K Jimack",
+                "Amirul Khan",
+                "He Wang"
+              ],
+              "abstract": "Physics informed machine learning provides a framework to study and simulate fluid dynamics, potentially at a fraction of the computational cost of traditional numerical methods, with the goal of improving the explainability, accuracy and robustness of purely data driven machine learning methods. In this work, we extend the hard constraint projection (HCP) method developed by Chen et al. [Journal of Computational Physics, 445, 110624, 2021] from a linear partial differential equation (PDE) to a nonlinear PDE: the 1D Burgers' equation. To strictly impose a discrete approximation of the governing equation, the Burgers' equation is first locally discretised (using a finite difference stencil) then decomposed into a constraint matrix and a prediction matrix. Using tools from linear algebra, the constraint matrix is used to construct a projection matrix. A physics informed neural network (PINN) [Raissi et al. Journal of Computational Physics, 378, 686, 2019] is used to predict the velocity, and a final unlearnable layer projects the velocity prediction to the hyperplane of exact solutions to a discretised form of the Burgers' equation. Our initial results indicate that the HCP-PINN initially trains similarly to an equivalent PINN, and as the PINN loss plateaus, the HCP-PINN loss continues to decline. When tested on a previously unseen uniform grid of points covering the domain, the HCP-PINN exhibits higher accuracy, converging to a data error approximately an order of magnitude lower than the comparable PINN. We also observe that the inclusion of the HCP layer results in better observance of the governing PDE. Our findings suggest that the HCP-PINN can be more robust to the selection of physics collocation points, and less dependent on collocation point quantity.",
+              "categories": [
+                "physics.flu-dyn",
+                "cs.LG"
+              ],
+              "published": "2026-10-30T17:47:01Z",
+              "url": "https://arxiv.org/abs/2610.42106",
+              "pdf_url": "https://arxiv.org/pdf/2610.42106v1",
+              "comment": "6 pages, 3 figures, In proceedings of 1st international Symposium on AI and Fluid Mechanics 2025 (Paper No. S11P2)",
+              "figure_url": "https://arxiv.org/html/2610.42106v1/figures/42_archi_hat.png",
+              "figure_caption": "Figure 1 : HCP-PINN architecture. The left box is the FFNN with learnable weights and biases, and the right box is the unlearnable HCP.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.34163",
               "title": "Reinforcement Learning for Adaptive Crowd Flow Control Using Dynamic Barriers",
               "authors": [
@@ -8532,6 +8553,37 @@
           "name": "Hao Dong",
           "papers": [
             {
+              "id": "2610.41663",
+              "title": "ResMerge: Residual Policy Learning and Merging for Continual Adaptation of Pre-trained Robot Policies",
+              "authors": [
+                "Kefei Zhu",
+                "Lingyun Xu",
+                "Yue Xin",
+                "Xiaoqi Li",
+                "Caixin Guo",
+                "Xincheng Du",
+                "Yuanpei Chen",
+                "Yaodong Yang",
+                "Hao Dong"
+              ],
+              "abstract": "Continual adaptation to new tasks is essential for robots deployed in the real world, but adapting pre-trained policies remains challenging due to parameter growth and the need for continual demonstration collection. Parameter-Efficient Continual Fine-Tuning (PECFT) isolates task-specific updates, but adapter-per-task designs require demonstrations and grow with the task set. We propose ResMerge, a two-stage framework that learns mergeable residual policies atop a frozen pre-trained policy: residual reinforcement learning (RL) acquires task-specific corrections without additional expert demonstrations during adaptation, and parameter-space merging consolidates compatible residuals to reduce stored parameters. We introduce Residual-Field Consistency (RFC), a simple, bounded, and interpretable metric that assesses compatibility in residual action-field space by comparing correction direction and magnitude. Experiments on LIBERO across two backbones and on a real-world Franka robot show improved continual learning performance over strong PECFT baselines, while selective merging reduces the residual-parameter footprint. Project website: https://resmerge.github.io/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-30T12:33:47Z",
+              "url": "https://arxiv.org/abs/2610.41663",
+              "pdf_url": "https://arxiv.org/pdf/2610.41663v1",
+              "comment": "9 pages. Code: https://github.com/ResMerge/resmerge-official",
+              "figure_url": "https://arxiv.org/html/2610.41663v1/Method_new_sliced.png",
+              "figure_caption": "Fig. 2: ResMerge framework. In the Learn stage, a LoRA-parameterized residual policy R cand R_{\\text{cand}} is trained on the new task via residual RL with π base \\pi_{\\text{base}} frozen. In the Merge stage, R cand R_{\\text{cand}} is merged into the most compatible existing expert when their Residu",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://resmerge.github.io/",
+                "code": "https://github.com/ResMerge/resmerge-official"
+              }
+            },
+            {
               "id": "2610.33794",
               "title": "One Scan is Enough: Demonstration-Free Adaptation for Language-Guided Navigation",
               "authors": [
@@ -8689,38 +8741,6 @@
               "comment": "Accepted at CoRL 2026",
               "figure_url": "https://arxiv.org/html/2609.23445v1/teaser.png",
               "figure_caption": "Figure 1: Overview of BiRoAD. (a) Bimanual tasks in which scene initializations induce different functional roles for two arms. (b) Under imbalanced training distributions, a base policy may favor frequent arm–role configurations and perform less reliably when the scene induces a less common role as",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2609.20659",
-              "title": "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-              "authors": [
-                "Zimu Han",
-                "Yiming Zeng",
-                "Jiyao Zhang",
-                "Zihao Zhao",
-                "Yuanfei Wang",
-                "Yixiang Jin",
-                "Shiqi Li",
-                "Shuangben Chen",
-                "Wei Huang",
-                "Ruodai Li",
-                "Hui Shen",
-                "Hao Dong"
-              ],
-              "abstract": "Large-scale vision-language-action (VLA) models provide powerful priors for robot manipulation, yet adapting them to a specific deployment remains challenging. Supervised fine-tuning (SFT) on task-specific demonstrations provides a step toward deployment, but faces two persistent limitations: static data provide limited coverage of out-of-distribution states, and standard imitation objectives do not distinguish progressing behavior from less useful data. Interactive post-training can address these limitations, but typically requires repeated policy execution and human intervention on a physical robot. We introduce HIL-UMI, a policy-guided Universal Manipulation Interface (UMI) framework for robot-free human-in-the-loop VLA post-training. During handheld UMI demonstrations, HIL-UMI queries the current policy on the same observation stream without executing its predictions. The Energy Score compares the human action trajectory with policy inference and triggers collection when their discrepancy indicates an out-of-distribution region. In a separate feedback loop, low online advantage predictions identify essential segments for refining a progress-based advantage estimator. The updated estimator then guides advantage-conditioned behavioral cloning using a balanced mixture of base demonstrations and new policy data. This design preserves the iterative and policy-aware nature of human-in-the-loop learning while decoupling data collection from robot deployment. Experiments on four real-world tasks spanning long-horizon and precise manipulation show that HIL-UMI achieves consistent improvement over SFT and benefits from both targeted collection and advantage refinement. Moreover, HIL-UMI outperforms HG-DAgger on Clean Up Table with lower per-frame collection time, suggesting a scalable path for VLA post-training across operators and locations.",
-              "categories": [
-                "cs.RO",
-                "cs.AI"
-              ],
-              "published": "2026-09-17T16:38:37Z",
-              "url": "https://arxiv.org/abs/2609.20659",
-              "pdf_url": "https://arxiv.org/pdf/2609.20659v2",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.20659v2/framework.png",
-              "figure_caption": "Fig. 2: Overview of HIL-UMI. In each round, we first run advantage OOD detector online to collect advantage data. We then run the current policy OOD detector and collect policy data from segments. Next, we update the advantage estimator then using it to construct the advantage-labeled training datas",
               "figure_source": "html",
               "video_url": null,
               "links": {}
@@ -9334,7 +9354,7 @@
           ]
         }
       ],
-      "total": 57
+      "total": 58
     },
     {
       "name": "工业界研究团队",
@@ -9707,6 +9727,27 @@
           "name": "Dhruv Shah",
           "papers": [
             {
+              "id": "2610.40977",
+              "title": "Learning the Omega-Limit Partition from Approximate Koopman Invariants",
+              "authors": [
+                "Dhruv Shah",
+                "Jorge Cortés"
+              ],
+              "abstract": "Nonlinear dynamical systems with multiple omega-limit sets pose a fundamental challenge for global finite-dimensional Koopman modeling with continuous observables. A natural way to address this challenge is to decompose the state space into forward-invariant regions associated with distinct asymptotic behaviors and to learn a separate Koopman model for each region. This paper studies how to compute such partitions from data. We establish conditions under which Koopman-invariant observables, namely eigenfunctions associated with the unit eigenvalue, characterize the stationary partition induced by omega-limit sets. Building on this characterization, we develop OPAL (Omega-limit Partitions from Approximate invariants Learned from data), an algorithm that extracts partitions from approximate invariant observables. Numerical examples show that the recovered partitions capture the relevant asymptotic regions and support multiple regional linear Koopman models with significantly improved long-horizon prediction capabilities.",
+              "categories": [
+                "eess.SY"
+              ],
+              "published": "2026-10-29T21:01:32Z",
+              "url": "https://arxiv.org/abs/2610.40977",
+              "pdf_url": "https://arxiv.org/pdf/2610.40977v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2610.40977v1/figures/duffing_rollout_phase_portrait.png",
+              "figure_caption": "(a) Duffing oscillator",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.27387",
               "title": "Training Controllable World Models via Action Influence Maximization",
               "authors": [
@@ -9872,7 +9913,7 @@
           ]
         }
       ],
-      "total": 6
+      "total": 7
     },
     {
       "name": "AMP / SMP 合作作者",
@@ -11542,38 +11583,11 @@
               "links": {
                 "project": "http://www.liukepku.com/skelwam/index.html"
               }
-            },
-            {
-              "id": "2609.20598",
-              "title": "COIN-GP: Cooperative Online Learning in Networked Distributed Systems with Partial Measurements via Gaussian Process Regression",
-              "authors": [
-                "Zewen Yang",
-                "Xiaobing Dai",
-                "Zhenxiao Yin",
-                "Hang Zhao",
-                "Zhijun Li",
-                "C. C. Chan"
-              ],
-              "abstract": "In this paper, we tackle the problem of jointly estimating the system states and partially unknown dynamics within distributed sensor-equipped networks, particularly in scenarios where only partial state observations are available. To address this issue, we propose an observer-based dynamic cooperative learning framework incorporating online distributed Gaussian Process (GP) regression, which enables accurate estimation despite incomplete in measurements and deficient GP models. In addition, a novel data collection strategy is introduced, with theoretical conditions ensuring feasible data acquisition. Moreover, we also derive an error upper bound encompassing state estimation and model estimation, leveraging the deterministic error bounds of GPs. Empirical simulations demonstrate the superiority of our approach compared to existing distributed GP-based methods.",
-              "categories": [
-                "cs.LG",
-                "cs.MA",
-                "eess.SY"
-              ],
-              "published": "2026-09-17T15:47:46Z",
-              "url": "https://arxiv.org/abs/2609.20598",
-              "pdf_url": "https://arxiv.org/pdf/2609.20598v1",
-              "comment": "",
-              "figure_url": "thumbs/2609.20598.jpg",
-              "figure_caption": "论文首页预览",
-              "figure_source": "pdf",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 24
+      "total": 23
     },
     {
       "name": "BFM-Zero 合作作者",
@@ -12389,6 +12403,33 @@
         {
           "name": "Han Yu",
           "papers": [
+            {
+              "id": "2610.41330",
+              "title": "Cross-Embodiment Motion Planning by Coupling Body-Agnostic World Model with Differentiable Ego-Dynamics",
+              "authors": [
+                "Zhidong Wang",
+                "Zirui Li",
+                "Haoran Xu",
+                "Yujie Yan",
+                "Zitong Shan",
+                "Jingsong Liang",
+                "Han Yu",
+                "Chen Lv"
+              ],
+              "abstract": "Motion planning in clutter is embodiment-specific: the feasible free space and reachable commands depend on each robot's geometry and dynamics. Existing cross-embodiment policies output normalized commands that disregard these differences, or compensate through per-robot training and distillation. World models can in principle pool cross-embodiment data, yet command-conditioned models bind their latent dynamics to a single action space, while pose-conditioned models omit the mapping from commands to body-specific motion. On flat ground, however, embodiment affects the planner's observations only through the camera ego-motion. This letter proposes Hourglass, an hourglass-shaped architecture that factorizes cross-embodiment motion planning at this interface: a body-agnostic world model and each robot's differentiable ego-dynamics, which map commands to that ego-motion, are coupled only through it. The world model is trained on data pooled across embodiments and camera mounts; each robot's ego-dynamics is a reduced-order template with identified physical parameters. A generalist parameter-conditioned policy is learned once at this junction: each imagined step rolls out the template and then the world model, and imagination training through each robot's template makes the policy body-aware. On seven simulated robots of five locomotion types, the generalist policy outperforms imitation-learning and diffusion-policy baselines on the same world model by 3.8--10.6 percentage points in success rate and matches per-robot specialists without dedicated training, while approaching its parameter-conditioned MPPI teacher within 1.4--2.8 points without an online map. After three minutes of teleoperated driving for identification, the synthetic-data-trained model transfers zero-shot to a real skid-steer robot unseen in training, navigating unseen indoor scenes.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-10-30T06:45:17Z",
+              "url": "https://arxiv.org/abs/2610.41330",
+              "pdf_url": "https://arxiv.org/pdf/2610.41330v1",
+              "comment": "8 pages",
+              "figure_url": "https://arxiv.org/html/2610.41330v1/fig_teaser.png",
+              "figure_caption": "Fig. 1: Hourglass: a body-agnostic world model and the differentiable ego-dynamics with physical parameters 𝜽 \\boldsymbol{\\theta} , which map the commands 𝐮 \\mathbf{u} to the camera ego-motion Δ ​ ξ \\Delta\\xi , are joined only through Δ ​ ξ \\Delta\\xi ; a cross-embodiment generalist policy π \\pi is l",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.35727",
               "title": "TRACE: Memory-Efficient Time Series Class-Incremental Learning via Temporal-Spectral Reconstruction",
@@ -13522,7 +13563,7 @@
           "papers": []
         }
       ],
-      "total": 36
+      "total": 37
     },
     {
       "name": "PGMT 合作作者",
@@ -14097,6 +14138,58 @@
         {
           "name": "Sirui Chen",
           "papers": [
+            {
+              "id": "2610.40751",
+              "title": "Safin-1.5: Safety-Native Architecture and Verifiable Reasoning for Recursive Safety Improvement",
+              "authors": [
+                "Jingnan Zheng",
+                "Cheng Jin",
+                "Ming Zhang",
+                "Huan Sun",
+                "Zhongtian Ma",
+                "Kaisen Yang",
+                "Ziyuan Zhou",
+                "Tong Wu",
+                "Dongcheng Zhang",
+                "Yi Zhang",
+                "Xiao Wang",
+                "Han Qi",
+                "Shu Yu",
+                "Ermo Hua",
+                "Zongji Yu",
+                "Chaozhuo Li",
+                "Xiaoyu Wen",
+                "Zhekai Chen",
+                "Jiawei Zhou",
+                "Sirui Chen",
+                "Ning Ding",
+                "An Zhang",
+                "Tat-Seng Chua",
+                "Xiangnan He",
+                "Xia Hu",
+                "Bowen Zhou",
+                "Qiaosheng Zhang",
+                "Youbang Sun",
+                "Xiang Wang",
+                "Zhongyu Huang",
+                "Chaochao Lu"
+              ],
+              "abstract": "Recursive self-improvement (RSI) enables large language models to advance their capabilities through successive updates, but these updates can also introduce new risks and weaken existing safeguards. In line with the AI-45° Law, we pursue Safety RSI, in which safety develops as an intrinsic capability alongside general model capabilities through continual risk discovery and repair, while preserving utility and limiting over-refusal. We introduce Safin-1.5, a model built on a safety architecture and trained through recursive safety improvement, with an inference-time harness that extends its capabilities to formal reasoning. Our approach comprises three components: i) The safety architecture combines persistent safety states with hazardous-knowledge disentanglement. The former retains and selectively invokes safety knowledge, while the latter relocates targeted hazardous knowledge into removable experts, enabling its removal with minimal impact on general capabilities. ii) Recursive safety improvement establishes a discovery-evaluation-repair loop. The loop identifies new vulnerabilities and uses experimental feedback to develop repair strategies. It accepts updates only when they improve safety while preserving general capabilities and limiting over-refusal. iii) The formal reasoning harness combines the model's language understanding with symbolic inference and verification. Proof-obligation-guided semantic bridging recovers missing relations in formal representations, enabling symbolic solvers to construct checkable proofs under formalized premises and accepted semantic bridges. Experimental results demonstrate that Safin-1.5 achieves safety and reasoning performance, outperforming frontier models.",
+              "categories": [
+                "cs.CR",
+                "cs.AI",
+                "cs.CL"
+              ],
+              "published": "2026-10-29T16:14:36Z",
+              "url": "https://arxiv.org/abs/2610.40751",
+              "pdf_url": "https://arxiv.org/pdf/2610.40751v1",
+              "comment": "29 pages, 5 figures",
+              "figure_url": "https://arxiv.org/html/2610.40751v1/teaser-v2.png",
+              "figure_caption": "Figure 1 : Main evaluation results of Safin-1.5 (35B) compared with frontier models across safety and formal reasoning benchmarks. For lower-is-better benchmarks (H-CoT, X-Teaming, and WJB), results are reported as 100 - metric , so higher scores consistently indicate better performance.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.36477",
               "title": "Proposing Better Rollouts for On-Policy Distillation",
@@ -15305,7 +15398,7 @@
           ]
         }
       ],
-      "total": 48
+      "total": 49
     }
   ]
 }
