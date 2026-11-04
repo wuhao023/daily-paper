@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-03T14:37:03+00:00",
-  "day": "2026-11-03",
+  "updated": "2026-11-04T14:51:12+00:00",
+  "day": "2026-11-04",
   "days_back": 45,
-  "total": 376,
+  "total": 388,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -12,6 +12,56 @@
         {
           "name": "Sergey Levine",
           "papers": [
+            {
+              "id": "2611.05295",
+              "title": "GSBR: Geometric Support Behavior Regularization for Online RL",
+              "authors": [
+                "Charles Xu",
+                "Jacob Berg",
+                "Liyiming Ke",
+                "Sergey Levine"
+              ],
+              "abstract": "Regularizing online reinforcement learning (RL) toward a pretrained base policy can improve sample efficiency and learning stability, but regularization that is too restrictive limits how much the policy can improve. Base policies -- typically diffusion or flow-matching models trained by imitation learning on large, diverse datasets -- capture many behaviors that are reasonable but suboptimal. Existing regularizers using such base policies are too restrictive in one of two ways: behavioral cloning regularizers pull the actor toward the full base-policy distribution, penalizing it for discarding suboptimal modes, while hard support constraints forbid improvements that lie just outside the base policy's support. We propose Geometric Support Behavior Regularization (GSBR), which penalizes actions by their distance from the base policy's support. Actions within the support incur no penalty, so the actor can concentrate on high-value modes; outside the support, where value estimates are less reliable, the penalty grows smoothly with distance while still permitting improvement when the value gained outweighs the penalty. GSBR estimates this distance from a finite set of base-policy samples, so it requires only sample access to the base policy. Across 19 tasks on four robotic benchmarks, GSBR raises the average success rate from 33% for the base policy to 95%, achieving the highest average success rate and throughput among all compared methods, with about 23% higher normalized throughput than the next-best RL method. Project website and open-source code at https://charlesxu0124.github.io/gsbr/ .",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-11-03T18:08:32Z",
+              "url": "https://arxiv.org/abs/2611.05295",
+              "pdf_url": "https://arxiv.org/pdf/2611.05295v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05295v1/method_figure.png",
+              "figure_caption": "Figure 2: GSBR . To implement the geometric support regularizer on a generative robot policy, draw samples from π β ( ⋅ ∣ s ) \\pi_{\\beta}(\\cdot\\mid s) and compute the nearest-neighbor distance between them. Set r ℬ r_{\\mathcal{B}} to a quantile over these distances and construct the support region C",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://charlesxu0124.github.io/gsbr/"
+              }
+            },
+            {
+              "id": "2611.05266",
+              "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+              "authors": [
+                "Kevin Frans",
+                "Alexander M Rush",
+                "Sergey Levine",
+                "Pieter Abbeel",
+                "Ashvin Nair"
+              ],
+              "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-03T17:54:33Z",
+              "url": "https://arxiv.org/abs/2611.05266",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
+              "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.02160",
               "title": "Value Forcing: Aligning Return Distributions at All Noise Levels",
@@ -216,6 +266,30 @@
           "name": "Pieter Abbeel",
           "papers": [
             {
+              "id": "2611.05266",
+              "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+              "authors": [
+                "Kevin Frans",
+                "Alexander M Rush",
+                "Sergey Levine",
+                "Pieter Abbeel",
+                "Ashvin Nair"
+              ],
+              "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-03T17:54:33Z",
+              "url": "https://arxiv.org/abs/2611.05266",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
+              "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.02546",
               "title": "Energy-Based Policy Orchestration",
               "authors": [
@@ -285,7 +359,7 @@
               ],
               "published": "2026-11-01T04:32:23Z",
               "url": "https://arxiv.org/abs/2611.01560",
-              "pdf_url": "https://arxiv.org/pdf/2611.01560v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.01560v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.01560v1/figs/overview/overview.png",
               "figure_caption": "Figure 1 : uni-robot-agent: results and system overview. Top: shared tools, execution, and feedback connect models to environment adapters, supporting generalizable agentic training across environments. Bottom: Simulation and real-world scores.",
@@ -1628,7 +1702,7 @@
           ]
         }
       ],
-      "total": 53
+      "total": 56
     },
     {
       "name": "Stanford",
@@ -4973,6 +5047,36 @@
           "name": "Leslie Pack Kaelbling",
           "papers": [
             {
+              "id": "2611.04080",
+              "title": "FEIJOA: Task-Driven Grounding and Execution for Mobile Manipulation",
+              "authors": [
+                "Aditya Agarwal",
+                "William Shen",
+                "Sahit Chintalapudi",
+                "Lucy Cai",
+                "Nishanth Kumar",
+                "Aidan Curtis",
+                "Travis Manderson",
+                "Tomás Lozano-Pérez",
+                "Leslie Pack Kaelbling"
+              ],
+              "abstract": "A mobile manipulator asked to \"put the toys away in the toy box\" must decide which objects are toys and which container the user means, then find base poses, grasps, and placements it can execute. Because a scene representation is built before the instruction is known, it may lack the attributes, affordances, or concepts needed to resolve the task. We present FEIJOA, a language-model agent that grounds the instruction at test time. It queries a grounding tool over a posed RGB-D scan, inspects the returned candidates, and refines its queries until they resolve the instruction. An embodiment-aware harness checks each skill's preconditions, samples base poses from which the target is reachable, and verifies the skill's effect from observations before and after execution. On 103 open-ended grounding queries, FEIJOA resolves 94.2% exactly, compared with 68.0% for the best prebuilt representation. Over 50 real-world trials on Spot, it completes 35 tasks; 17 of these successes follow recovery from a failed tool call or verification check. Of the 15 failed trials, 13 were caused by the robot's physical skills, and only 2 by grounding or the agent's reasoning. Project website: https://williamshen-nz.github.io/feijoa/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-02T23:42:40Z",
+              "url": "https://arxiv.org/abs/2611.04080",
+              "pdf_url": "https://arxiv.org/pdf/2611.04080v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.04080v1/spot_wipe.png",
+              "figure_caption": "Figure 1: Feijoa on Spot. Given “Erase whatever is on the whiteboard that’s bringing down the mood, then put the thing you used to erase back on the table next to the burger”, the agent must work out that the drawing to remove is the sad face, that the eraser is the mitt it is holding, and which of ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://williamshen-nz.github.io/feijoa/"
+              }
+            },
+            {
               "id": "2611.02546",
               "title": "Energy-Based Policy Orchestration",
               "authors": [
@@ -5064,6 +5168,36 @@
         {
           "name": "Tomás Lozano-Pérez",
           "papers": [
+            {
+              "id": "2611.04080",
+              "title": "FEIJOA: Task-Driven Grounding and Execution for Mobile Manipulation",
+              "authors": [
+                "Aditya Agarwal",
+                "William Shen",
+                "Sahit Chintalapudi",
+                "Lucy Cai",
+                "Nishanth Kumar",
+                "Aidan Curtis",
+                "Travis Manderson",
+                "Tomás Lozano-Pérez",
+                "Leslie Pack Kaelbling"
+              ],
+              "abstract": "A mobile manipulator asked to \"put the toys away in the toy box\" must decide which objects are toys and which container the user means, then find base poses, grasps, and placements it can execute. Because a scene representation is built before the instruction is known, it may lack the attributes, affordances, or concepts needed to resolve the task. We present FEIJOA, a language-model agent that grounds the instruction at test time. It queries a grounding tool over a posed RGB-D scan, inspects the returned candidates, and refines its queries until they resolve the instruction. An embodiment-aware harness checks each skill's preconditions, samples base poses from which the target is reachable, and verifies the skill's effect from observations before and after execution. On 103 open-ended grounding queries, FEIJOA resolves 94.2% exactly, compared with 68.0% for the best prebuilt representation. Over 50 real-world trials on Spot, it completes 35 tasks; 17 of these successes follow recovery from a failed tool call or verification check. Of the 15 failed trials, 13 were caused by the robot's physical skills, and only 2 by grounding or the agent's reasoning. Project website: https://williamshen-nz.github.io/feijoa/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-02T23:42:40Z",
+              "url": "https://arxiv.org/abs/2611.04080",
+              "pdf_url": "https://arxiv.org/pdf/2611.04080v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.04080v1/spot_wipe.png",
+              "figure_caption": "Figure 1: Feijoa on Spot. Given “Erase whatever is on the whiteboard that’s bringing down the mood, then put the thing you used to erase back on the table next to the burger”, the agent must work out that the drawing to remove is the sad face, that the eraser is the mitt it is holding, and which of ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://williamshen-nz.github.io/feijoa/"
+              }
+            },
             {
               "id": "2611.02546",
               "title": "Energy-Based Policy Orchestration",
@@ -5166,7 +5300,7 @@
                 "Xi Wang",
                 "Phillip Isola"
               ],
-              "abstract": "Multimodal representations enable zero-shot classification and retrieval, but aligning independently trained models usually requires large amounts of paired data. Yet, the Platonic Representation Hypothesis suggests that models trained on different modalities may converge spontaneously toward a shared representation geometry. But then, do we even need paired examples for cross-modal alignment? Remarkably, we show that paired examples are unnecessary for coarse cross-modal alignment. Our simple Wasserstein Procrustes method with a coarse geometric initialization aligns two disjoint embedding sets by estimating a single orthogonal map without seeing any pairs. Across datasets, modalities, and unimodal models, we show that we can consistently align independently trained representations without pairs, and standard geometric alignment metrics accurately predict when this is possible. Nevertheless, we can naturally benefit from paired examples. In the very few-pair regime, our method substantially outperforms existing ones, while staying competitive with pair-based methods with more added examples. Finally, we demonstrate that the resulting alignments can enable text-to-image generation without paired examples. These results show that independently trained models often share enough geometry to establish cross-modal correspondence with little or no paired data.",
+              "abstract": "Multimodal representations enable zero-shot classification and retrieval, but aligning independently trained models usually requires large amounts of paired data. Yet, the Platonic Representation Hypothesis suggests that models trained on different modalities may converge spontaneously toward a shared representation geometry. But then, do we even need paired examples for cross-modal alignment? Remarkably, we show that paired examples are unnecessary for coarse cross-modal alignment. Our simple Wasserstein Procrustes method with a coarse geometric initialization (GeoWarP) aligns two disjoint embedding sets by estimating a single orthogonal map without seeing any pairs. Across datasets, modalities, and unimodal models, we show that we can consistently align independently trained representations without pairs, and standard geometric alignment metrics accurately predict when this is possible. Nevertheless, we can naturally benefit from paired examples. In the very few-pair regime, our method substantially outperforms existing ones, while staying competitive with pair-based methods with more added examples. Finally, we demonstrate that the resulting alignments can enable text-to-image generation without paired examples. These results show that independently trained models often share enough geometry to establish cross-modal correspondence with little or no paired data.",
               "categories": [
                 "cs.LG",
                 "cs.AI",
@@ -5174,7 +5308,7 @@
               ],
               "published": "2026-10-07T04:12:30Z",
               "url": "https://arxiv.org/abs/2610.09411",
-              "pdf_url": "https://arxiv.org/pdf/2610.09411v2",
+              "pdf_url": "https://arxiv.org/pdf/2610.09411v3",
               "comment": "Project: https://dominik-schnaus.github.io/unpaired-rosetta/, Code: https://github.com/dominik-schnaus/unpaired-rosetta",
               "figure_url": "https://arxiv.org/html/2610.09411v2/teaser-teaser.png",
               "figure_caption": "Figure 1: Shared geometry enables unpaired alignment. Across modalities, embedding spaces of independent models share a similar geometry. Prior works require a multimodal “Rosetta Stone” of paired cross-modal examples to align both spaces. In contrast, our Wasserstein Procrustes approach directly ex",
@@ -5240,7 +5374,7 @@
           ]
         }
       ],
-      "total": 14
+      "total": 16
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -5648,13 +5782,13 @@
                 "Ran Tao",
                 "Bryan Dai"
               ],
-              "abstract": "Scaling supervised training for working agents requires diverse professional tasks that yield reliable expert demonstrations. However, missing or inconsistent task information can obstruct teacher execution and weaken the resulting supervision. We propose WorkFactory, a scalable framework for constructing coherent and executable professional tasks. Starting from professional intents, information-level planning builds an information support graph to guide task instantiation, explicitly representing the dependencies and locations of information required for the intended outputs. Probe executions then identify support failures and guide repairs while preserving the intended work. We construct 112,686 tasks spanning 612 occupations and use the collected teacher trajectories to fine-tune Qwen models at 4B, 27B, and 35B-A3B scales, yielding the WorkPilot family. All three models improve over their respective base models across four professional-work benchmarks, with WorkPilot-35B-A3B improving from 879 to 1565 Elo on GDPval-AA v2.1. Scaling analyses reveal model-dependent diminishing returns, with execution length first increasing and then decreasing. Controlled component analyses show that planning and repair reduce probe-diagnosed task environment defects and improve downstream performance. The data and models are available at https://github.com/IQuestLab/WorkFactory.",
+              "abstract": "Scaling supervised fine-tuning for working agents requires not only broad coverage of professional tasks, but also expert demonstrations that faithfully carry out professional workflows to completion. However, missing or inconsistent task information can disrupt expert demonstrations, weakening the resulting supervision. We introduce WorkFactory, a scalable task-construction framework that turns professional intents into executable task environments through hybrid intent sourcing, semantic workflow planning, and execution-based repair. Starting from these intents, WorkFactory constructs a Semantic Workflow Graph that explicitly represents information requirements, dependencies, and locations within the task environment. The graph guides the instantiation of task environments, while an adversarial execution-refinement loop exposes missing or inconsistent information and steers targeted repairs that preserve the original intent. Using WorkFactory, we construct 112,686 tasks spanning 612 occupations and train the WorkPilot family at 4B, 27B, and 35B-A3B scales on the resulting teacher trajectories. All three models improve over their respective base models across four professional-work benchmarks, with WorkPilot-35B-A3B rising from 879 to 1565 Elo on GDPval-AA v2.1. Scaling experiments with up to 110k tasks further show that larger models benefit more from additional task data but exhibit diminishing returns at smaller data scales, while WorkPilot's long-horizon execution evolves from verbose trajectories toward more efficient task completion. Controlled component studies quantify the negative effects of task-environment defects on downstream performance and show how semantic workflow planning and execution-based repair yield downstream gains through improved task-environment quality. The subset of data are available at https://github.com/IQuestLab/WorkFactory.",
               "categories": [
                 "cs.AI"
               ],
               "published": "2026-10-27T12:54:16Z",
               "url": "https://arxiv.org/abs/2610.37161",
-              "pdf_url": "https://arxiv.org/pdf/2610.37161v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.37161v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.37161v1/fig_benchmark_scores.png",
               "figure_caption": "Figure 1 : WorkPilot-35B-A3B consistently outperforms its Qwen3.6-35B-A3B base model across four professional-work benchmarks, with representative models shown for context.",
@@ -6452,6 +6586,31 @@
           "name": "Animesh Garg",
           "papers": [
             {
+              "id": "2611.05062",
+              "title": "FloMo: 3D Scene Flow as a World Action Model Intermediate for Learning from Human Video",
+              "authors": [
+                "Jeremy Collins",
+                "Namra Patel",
+                "Ayush Agarwal",
+                "Shitij Govil",
+                "Animesh Garg"
+              ],
+              "abstract": "Pretrained video generation models distill internet-scale motion priors into robot policies, but full video is a redundant signal for action prediction. We argue that dense 3D motion is the medium through which video pretraining best transfers to robot actions, and that predicting motion rather than video affords better sample-efficiency for action prediction. FloMo is a 5B video-generation model fine-tuned to predict 3D scene-flow and action tokens. Rendering scene flow as RGB and encoding it into the same latent space as video enables a pretrained video generation backbone to efficiently adapt to predict 3D scene flow. Co-trained on action-free human video and action-labeled robot teleoperation data, our model benefits from human-video pretraining and generalizes to unseen objects, motion primitives, and tasks. Replacing motion prediction with a video prediction objective degrades out-of-distribution generalization, while adding a video prediction target alongside motion lowers policy success rather than improving it. When motion, video, and action are predicted jointly, action tokens attend far more to motion than to video, suggesting that predicting video wastes model capacity. Together, these results indicate that motion effectively mediates the transfer from video pretraining to action. More information can be found at flomo-wam.github.io.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-11-03T15:25:35Z",
+              "url": "https://arxiv.org/abs/2611.05062",
+              "pdf_url": "https://arxiv.org/pdf/2611.05062v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05062v1/figures/figure_arch.png",
+              "figure_caption": "Figure 1: Given an image and text prompt, FloMo jointly predicts dense 3D motion (scene flow) and robot actions using a pretrained video generation model using flow-matching. To tokenize scene flow, we transform cumulative 3D velocities into RGB videos that are encoded by the pretrained video backbo",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.00602",
               "title": "Editing the Goal: Per-Token SAE Steering and Its Depth Limits in $π_{0.5}$",
               "authors": [
@@ -7053,7 +7212,7 @@
           ]
         }
       ],
-      "total": 19
+      "total": 20
     },
     {
       "name": "ETH Zürich / TU Darmstadt",
@@ -7063,6 +7222,32 @@
         {
           "name": "Marco Hutter",
           "papers": [
+            {
+              "id": "2611.05129",
+              "title": "WayTrace: A Map-to-Language-to-Trace Hierarchy for Embodied Urban Navigation",
+              "authors": [
+                "Manthan Patel",
+                "Jonas Frey",
+                "Pascal Roth",
+                "Marco Hutter",
+                "Cesar Cadena"
+              ],
+              "abstract": "Web services provide walking directions for nearly every city, but following them reliably over long routes remains challenging for autonomous robots. Point-goal navigation policies rely heavily on accurate GNSS, while most vision-language navigation models struggle to execute even short instructions outdoors. We present WayTrace, a hierarchical system that connects web-map directions to robot motion through language. An off-the-shelf orchestrator vision-language model reads the turn-by-turn directions, a satellite map and recent camera images, and issues one atomic language command at a time, such as \"cross the road to the left\". An onboard trace predictor, trained on over one million automatically labelled samples from street-level images, draws the path for this command in the image, and a reinforcement learning policy tracks it. In long-range simulated missions, WayTrace remains robust to GNSS noise and rarely leaves crosswalks or sidewalks, while point-goal baselines degrade sharply with about ten times more violations. Deployed on a wheeled-legged robot, WayTrace completes real-world missions of up to 1.37 km at about 1.1 m/s through a busy city centre, rural trails and a university campus, handling crosswalks, staircases and construction sites. Project page: https://way-trace.github.io",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-03T16:13:42Z",
+              "url": "https://arxiv.org/abs/2611.05129",
+              "pdf_url": "https://arxiv.org/pdf/2611.05129v1",
+              "comment": "Under Review",
+              "figure_url": "https://arxiv.org/html/2611.05129v1/fig_overview.png",
+              "figure_caption": "Fig. 2: Overview of WayTrace with the logged inputs and outputs of one decision in the real-world Snipes mission ( Figure 6 ). (A) Once per mission, the web map provides the route and turn-by-turn directions, and GNSS only identifies the next step and its distance. (B) Every 2 s, the off-the-shelf o",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://way-trace.github.io"
+              }
+            },
             {
               "id": "2611.03498",
               "title": "SNAP: Semantic Navigation Among Pedestrians",
@@ -7079,7 +7264,7 @@
               ],
               "published": "2026-11-02T17:37:50Z",
               "url": "https://arxiv.org/abs/2611.03498",
-              "pdf_url": "https://arxiv.org/pdf/2611.03498v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.03498v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.03498v1/real_world_snapshots_v4.png",
               "figure_caption": "Figure 1: Real-world crowd navigation while following semantic clues with ANYmal-D. The policy avoids pedestrians that repeatedly cross the robot’s path while also adhering to the underlying semantic structure of the terrain. The robot-centric BEV maps (insets) show how semantics and dynamic obstacl",
@@ -8071,6 +8256,31 @@
           "name": "Davide Scaramuzza",
           "papers": [
             {
+              "id": "2611.04748",
+              "title": "Mass Scaling Laws for Energy-Optimal Horizontal Multirotor Flight",
+              "authors": [
+                "Ayush Patnaik",
+                "Nicolas Michel",
+                "Leonard Baursfeld",
+                "Davide Scaramuzza",
+                "Xinfan Lin"
+              ],
+              "abstract": "Multicopters are a type of aerial robot seeing extensive real-world applications but with range and endurance as critical bottlenecks. Optimization of its energy efficiency through energy-aware flight planning (e.g. cruise speed-scheduling) has hence been an important topic. The mass of the multicopter is an important factor to consider, as it has a significant impact on efficiency, and many common applications are subject to frequent mass variation due to payload change. This work derives closed-form scaling relationships between the energy-optimal steady horizontal flight behavior of a multicopter and its vehicle mass, and validates them experimentally on two multirotor platforms. Specifically, for mass-only variation, i.e., when payload changes the vehicle mass while the airframe geometry, aerodynamic characteristics, and rotor configuration remain unchanged, we show through a combination of numerical simulation, theoretical derivation, and experimental validation that (1) the energy-optimal velocity is proportional to the square root of vehicle mass; (2) the energy-optimal pitch angle is constant with respect to mass; and (3) the optimal energy per meter is proportional to mass. The analysis shows that these three relationships arise from a common mass-similarity property of the steady-state flight and rotor-aerodynamic equations. Furthermore, the obtained scaling relationships enable simple yet effective cruise-speed planning to optimize energy efficiency and extend the range and endurance of the multicopter.",
+              "categories": [
+                "cs.RO",
+                "eess.SY"
+              ],
+              "published": "2026-11-03T12:02:36Z",
+              "url": "https://arxiv.org/abs/2611.04748",
+              "pdf_url": "https://arxiv.org/pdf/2611.04748v1",
+              "comment": "Accepted to IEEE Robotics and Automation Letters, October 2026",
+              "figure_url": "thumbs/2611.04748.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.39676",
               "title": "Event-SAMA: Language-Grounded Video Object Segmentation on Neuromorphic Event Streams",
               "authors": [
@@ -8227,7 +8437,7 @@
           ]
         }
       ],
-      "total": 44
+      "total": 46
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -8781,6 +8991,60 @@
           "name": "He Wang",
           "papers": [
             {
+              "id": "2611.04458",
+              "title": "Large Language Model-Assisted Adaptive Heuristic Search for Agile Earth Observation Satellite Scheduling",
+              "authors": [
+                "He Wang",
+                "Yeye Liu",
+                "Ruijie Li",
+                "Xuemei Jiang",
+                "Junyu Wu",
+                "Lining Liu Zhuoqi Man",
+                "Tao Li",
+                "Yanjie Song"
+              ],
+              "abstract": "Agile Earth observation satellites must coordinate imaging tasks within limited observation windows, while accounting for attitude maneuvering and onboard energy constraints. Competition among observation opportunities makes scheduling performance sensitive to the heuristic rules used for task selection. This letter proposes a large language model (LLM)-assisted adaptive heuristic search method for agile Earth observation satellite scheduling. The LLM generates an initial heuristic rule according to the characteristics of the scheduling instance. During the subsequent ant colony search, search performance and scheduling information are fed back to the LLM to refine the heuristic rule. The proposed modifications are evaluated through paired solution constructions before being incorporated into the search process. A unified scheduling procedure determines task selection, satellite assignment, and observation timing under the operational constraints. Experiments on six scheduling scenarios involving 50--200 imaging tasks demonstrate that the proposed method achieves 4.3%--9.6% higher mean observation benefit than the strongest baseline.",
+              "categories": [
+                "cs.AI",
+                "cs.CL"
+              ],
+              "published": "2026-11-03T07:47:24Z",
+              "url": "https://arxiv.org/abs/2611.04458",
+              "pdf_url": "https://arxiv.org/pdf/2611.04458v1",
+              "comment": "5 pages,4 figures",
+              "figure_url": "https://arxiv.org/html/2611.04458v1/fig_runtime_box_wall_S1_S4_S6.png",
+              "figure_caption": "Fig. 4: Runtime distributions of different algorithms under scenarios S1, S4, and S6.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.04424",
+              "title": "ReflexArc: Bottom-Up Integration of Instantaneous Tactile Reflexes into Whole-Body Humanoid Control",
+              "authors": [
+                "Mingyu Wang",
+                "Si Li",
+                "Ziqing Chen",
+                "He Wang",
+                "Li Yi"
+              ],
+              "abstract": "Humanoid robots operating in cluttered environments must react to unexpected contacts before the first impact peak, which arrives within tens of milliseconds. Learned whole-body policies running at 50 Hz introduce a policy-cycle delay and may suppress a protective withdrawal as a tracking error. To address these challenges, we propose ARC (Ascending Reflex Control), a bottom-up framework that integrates instantaneous tactile reflexes with learned whole-body control. ARC consists of two components: an instantaneous reflex pathway and bottom-up reflex integration. The reflex pathway detects hazardous contacts from full-body tactile sensing, solves a whole-body withdrawal pose, and delivers it directly to the motors within 10 ms. Bottom-up reflex integration combines reflex-in-the-loop policy learning, reflex-transparent policy alignment, and reflex-informed policy adaptation to sustain the withdrawal, maintain balance, and complete longer-horizon recovery. We deploy ARC on a Unitree G1 and evaluate three categories of hazardous contact. Compared with an otherwise identical reflex delayed by 20 ms, ARC reduces the first force peak by 34.1% and reduces the contact impulse from 0.2632 N s to 0.1225 N s (a 2.15x ratio). We further demonstrate protected motion tracking, teleoperation, and vision-free obstacle traversal guided by foot tactile sensing. Project page: https://minusmodulo.github.io/reflexarc-website/",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-03T07:10:52Z",
+              "url": "https://arxiv.org/abs/2611.04424",
+              "pdf_url": "https://arxiv.org/pdf/2611.04424v1",
+              "comment": "8 pages, 6 figures",
+              "figure_url": "https://arxiv.org/html/2611.04424v1/pipeline_v4.png",
+              "figure_caption": "Fig. 2: Overview of ARC. A hazardous contact is localized within milliseconds, a whole-body reflex pose is solved, and the motors withdraw within 10 ms 10\\text{\\,}\\mathrm{ms} of the collision (Sec. III ). The reflex then propagates bottom-up to the policy, which sustains it while continuing its task",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://minusmodulo.github.io/reflexarc-website/"
+              }
+            },
+            {
               "id": "2610.42106",
               "title": "Hard Constraint Projection in a Physics Informed Neural Network (Burgers)",
               "authors": [
@@ -9211,6 +9475,66 @@
           "name": "Hao Dong",
           "papers": [
             {
+              "id": "2611.05119",
+              "title": "DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation",
+              "authors": [
+                "Zhewei Gui",
+                "Anthony Bolton",
+                "Jiyao Zhang",
+                "Zeyuan Chen",
+                "Qiyang Yan",
+                "Tianyu Wang",
+                "Hao Dong"
+              ],
+              "abstract": "Dexterous manipulation involves not only moving objects, but also arranging the hand around them to maintain useful contacts and enable subsequent actions. Yet many learning-based systems specify goals primarily through object poses or trajectories, leaving hand-object configurations to emerge implicitly. We introduce DexHOT, which formulates dexterous manipulation as hand-object configuration transfer: moving between feasible configurations that jointly specify hand articulation and object pose relative to the wrist. DexHOT learns a reusable relation-conditioned transfer primitive from synthetic feasible configuration pairs, without human reference motions, and composes long-horizon behaviors through closed-loop tracking of configuration subgoals. On DexHOTBench with 120 objects, a single policy achieves 80.5% transfer success on seen objects and 69.4% on unseen objects; on a real dexterous hand, it achieves 61.5% success over 200 real-robot transfers and 90% task success across six demonstration-guided tasks. These results show that explicit hand-object goals provide an expressive and composable interface for dexterous manipulation. More details and videos are available at https://dex-hot.github.io/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-03T16:08:03Z",
+              "url": "https://arxiv.org/abs/2611.05119",
+              "pdf_url": "https://arxiv.org/pdf/2611.05119v1",
+              "comment": "9 pages, 4 figures",
+              "figure_url": "https://arxiv.org/html/2611.05119v1/DexHOT_pipeline.png",
+              "figure_caption": "Fig. 2: DexHOT overview . Top: a recurrent policy learns local transfers from physically validated configuration pools using population-based reinforcement learning. Observations include goals, object-frame keypoint residuals, proprioception, and object geometry. The displayed reward signals encoura",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://dex-hot.github.io/"
+              }
+            },
+            {
+              "id": "2611.04870",
+              "title": "PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations",
+              "authors": [
+                "Travis Davies",
+                "Wentao Ma",
+                "Lihao Guo",
+                "Tengfei Ma",
+                "Xiaowen Chang",
+                "Jiafeng Xu",
+                "Shilong Wang",
+                "Yiqi Deng",
+                "Shaowen He",
+                "Xiaoqi Li",
+                "Qian Zhu",
+                "Ran Cheng",
+                "Hao Dong"
+              ],
+              "abstract": "A robot world model that serves as a simulator must do more than generate plausible videos: it must faithfully follow commanded actions, maintain consistency across camera views, and sustain coherent long-horizon rollouts. We present PrimeSim, an action-conditioned, multiview world model simulator that addresses these challenges through progressive midtraining and posttraining. Starting from a pretrained video generator, we midtrain on 30,110 hours of robot demonstrations spanning 22 platforms. To improve action following, we introduce a unified cross-embodiment action representation and frame-aligned dual-path conditioning to strengthen action-frame correspondence. To maintain multiview consistency, we develop view-aware interleaved attention with explicit camera identities, enabling cross-view information exchange while preserving view-specific representations. We further introduce a fast-video, slow-memory posttraining framework that transforms the bidirectional video generator into an efficient autoregressive simulator. By combining fast causal generation, self-rollout training, and hierarchical temporal memory, PrimeSim mitigates error accumulation from self-generated histories and supports coherent long-horizon simulation. PrimeSim runs at 10.1 FPS, remains stable over long-horizon rollouts on rigid and deformable manipulation tasks, and transfers to held-out platforms within 100 to 200 gradient steps where the pretrained backbone does not. Against five open-source action-conditioned world models it leads four of the five WorldSimProbe suites and posts the best overall EWMBench score, while fine-grained local calibration still trails the field; its rollouts are faithful enough to support GRPO-based policy optimization. We release the model weights, inference code, and training code.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-03T13:25:52Z",
+              "url": "https://arxiv.org/abs/2611.04870",
+              "pdf_url": "https://arxiv.org/pdf/2611.04870v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.04870v1/images/primesim_teaser.png",
+              "figure_caption": "Figure 1 : PrimeSim. (a) The midtraining corpus: roughly 30.1K hours of curated robot data spanning humanoid, dual-arm, single-arm and handheld UMI [ 14 , 3 ] platforms, mixing real and simulated footage. (b) The model is conditioned on a language prompt, a unified action representation over head, t",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.41663",
               "title": "ResMerge: Residual Policy Learning and Merging for Continual Adaptation of Pre-trained Robot Policies",
               "authors": [
@@ -9375,33 +9699,6 @@
               "links": {
                 "project": "https://rolling-wam.github.io/"
               }
-            },
-            {
-              "id": "2609.23445",
-              "title": "BiRoAD: Learning Shared and Role-Adaptive Representations for Bimanual Manipulation",
-              "authors": [
-                "Yan Shen",
-                "Yuchen Liu",
-                "Feng Jiang",
-                "Hangtian Hu",
-                "Xiaoqi Li",
-                "Shu Chen",
-                "Ruihai Wu",
-                "Hao Dong"
-              ],
-              "abstract": "Bimanual manipulation requires policies that coordinate two arms while adapting their functional roles to scene geometry, object configuration, and task context. Learning such scene-conditioned role adaptation remains challenging, as demonstrations may contain uneven role distributions that limit generalization to underrepresented arm--role configurations. In addition, many bimanual policies predict actions in fixed left- and right-arm action spaces. While this provides a natural parameterization for robot control, it does not explicitly specify how behaviors should transform when functional roles are exchanged across arms. Across different scene initializations, the two arms may follow a similar coordination pattern, but the role-specific behavior assigned to each arm should change with the scene. Therefore, we propose BiRoAD, a Bimanual Role-Adaptive Decomposition framework for learning shared and role-adaptive representations in bimanual policies. Given bimanual trajectory or action-token features, BiRoAD decomposes these features into swap--symmetric and swap--antisymmetric components: the former captures coordination structure invariant to arm exchange, and the latter captures role-specific distinctions that vary consistently with functional role assignment. The two components are then recomposed as residual updates to the original paired arm representations, allowing BiRoAD to serve as a modular feature transformation without changing the policy inputs, imitation-learning objective, or requiring manually defined role labels. Across multiple bimanual manipulation tasks with balanced and imbalanced role distributions, BiRoAD improves robustness across role configurations over corresponding base policies, with notable gains on underrepresented role configurations.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-09-20T08:20:55Z",
-              "url": "https://arxiv.org/abs/2609.23445",
-              "pdf_url": "https://arxiv.org/pdf/2609.23445v1",
-              "comment": "Accepted at CoRL 2026",
-              "figure_url": "https://arxiv.org/html/2609.23445v1/teaser.png",
-              "figure_caption": "Figure 1: Overview of BiRoAD. (a) Bimanual tasks in which scene initializations induce different functional roles for two arms. (b) Under imbalanced training distributions, a base policy may favor frequent arm–role configurations and perform less reliably when the scene induces a less common role as",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -10012,7 +10309,7 @@
           ]
         }
       ],
-      "total": 60
+      "total": 63
     },
     {
       "name": "工业界研究团队",
@@ -10385,6 +10682,29 @@
           "name": "Dhruv Shah",
           "papers": [
             {
+              "id": "2611.04368",
+              "title": "RAFT: Reasoning-Aligned Fine-Tuning Improves Robustness of VLA Post-Training",
+              "authors": [
+                "Shresth Grover",
+                "Andrey Kolobov",
+                "Dhruv Shah"
+              ],
+              "abstract": "Adapting a generalist vision-language-action (VLA) policy to a target task with limited demonstrations can improve nominal task success while reducing robustness to variations in appearance, objects, and instructions. We introduce reasoning-aligned fine-tuning (RAFT), a two-stage post-training procedure: RAFT first trains low-rank adapters on task-relevant reasoning annotations, then freezes them while fine-tuning the policy on action demonstrations. On a physical DROID robot, RAFT achieves $75.0%$ out-of-distribution success, compared with $27.9%$ for plain fine-tuning; on a multi-stage bimanual YAM task, it reaches $70.0%$ mean success, compared with $36.0%$ for the strongest baseline. RAFT also improves success under visual, object, and instruction shifts in simulated pick-and-place and open-drawer tasks. Compared with plain fine-tuning, RAFT policies place more attention on annotated task regions and yield higher linear-probe accuracy for object identity in later layers. A broader reasoning-data mixture further improves downstream success across demonstration budgets.",
+              "categories": [
+                "cs.RO",
+                "cs.CV"
+              ],
+              "published": "2026-11-03T05:56:28Z",
+              "url": "https://arxiv.org/abs/2611.04368",
+              "pdf_url": "https://arxiv.org/pdf/2611.04368v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.04368v1/finetuning_robustness_teaser.png",
+              "figure_caption": "Figure 1 : Reasoning-aligned fine-tuning for robust VLA adaptation. (a) Plain FT, fine-tuned only on actions, succeeds in the training layout but fails under small scene changes. (b) RAFT first learns task-relevant reasoning through LoRA adapters, then freezes them while fine-tuning the policy on ac",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.40977",
               "title": "Learning the Omega-Limit Partition from Approximate Koopman Invariants",
               "authors": [
@@ -10571,7 +10891,7 @@
           ]
         }
       ],
-      "total": 7
+      "total": 8
     },
     {
       "name": "AMP / SMP 合作作者",
@@ -10704,6 +11024,30 @@
           "name": "Pieter Abbeel",
           "papers": [
             {
+              "id": "2611.05266",
+              "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+              "authors": [
+                "Kevin Frans",
+                "Alexander M Rush",
+                "Sergey Levine",
+                "Pieter Abbeel",
+                "Ashvin Nair"
+              ],
+              "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-03T17:54:33Z",
+              "url": "https://arxiv.org/abs/2611.05266",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
+              "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.02546",
               "title": "Energy-Based Policy Orchestration",
               "authors": [
@@ -10773,7 +11117,7 @@
               ],
               "published": "2026-11-01T04:32:23Z",
               "url": "https://arxiv.org/abs/2611.01560",
-              "pdf_url": "https://arxiv.org/pdf/2611.01560v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.01560v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.01560v1/figs/overview/overview.png",
               "figure_caption": "Figure 1 : uni-robot-agent: results and system overview. Top: shared tools, execution, and feedback connect models to environment adapters, supporting generalizable agentic training across environments. Bottom: Simulation and real-world scores.",
@@ -11130,6 +11474,56 @@
         {
           "name": "Sergey Levine",
           "papers": [
+            {
+              "id": "2611.05295",
+              "title": "GSBR: Geometric Support Behavior Regularization for Online RL",
+              "authors": [
+                "Charles Xu",
+                "Jacob Berg",
+                "Liyiming Ke",
+                "Sergey Levine"
+              ],
+              "abstract": "Regularizing online reinforcement learning (RL) toward a pretrained base policy can improve sample efficiency and learning stability, but regularization that is too restrictive limits how much the policy can improve. Base policies -- typically diffusion or flow-matching models trained by imitation learning on large, diverse datasets -- capture many behaviors that are reasonable but suboptimal. Existing regularizers using such base policies are too restrictive in one of two ways: behavioral cloning regularizers pull the actor toward the full base-policy distribution, penalizing it for discarding suboptimal modes, while hard support constraints forbid improvements that lie just outside the base policy's support. We propose Geometric Support Behavior Regularization (GSBR), which penalizes actions by their distance from the base policy's support. Actions within the support incur no penalty, so the actor can concentrate on high-value modes; outside the support, where value estimates are less reliable, the penalty grows smoothly with distance while still permitting improvement when the value gained outweighs the penalty. GSBR estimates this distance from a finite set of base-policy samples, so it requires only sample access to the base policy. Across 19 tasks on four robotic benchmarks, GSBR raises the average success rate from 33% for the base policy to 95%, achieving the highest average success rate and throughput among all compared methods, with about 23% higher normalized throughput than the next-best RL method. Project website and open-source code at https://charlesxu0124.github.io/gsbr/ .",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-11-03T18:08:32Z",
+              "url": "https://arxiv.org/abs/2611.05295",
+              "pdf_url": "https://arxiv.org/pdf/2611.05295v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05295v1/method_figure.png",
+              "figure_caption": "Figure 2: GSBR . To implement the geometric support regularizer on a generative robot policy, draw samples from π β ( ⋅ ∣ s ) \\pi_{\\beta}(\\cdot\\mid s) and compute the nearest-neighbor distance between them. Set r ℬ r_{\\mathcal{B}} to a quantile over these distances and construct the support region C",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://charlesxu0124.github.io/gsbr/"
+              }
+            },
+            {
+              "id": "2611.05266",
+              "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+              "authors": [
+                "Kevin Frans",
+                "Alexander M Rush",
+                "Sergey Levine",
+                "Pieter Abbeel",
+                "Ashvin Nair"
+              ],
+              "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-03T17:54:33Z",
+              "url": "https://arxiv.org/abs/2611.05266",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
+              "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.02160",
               "title": "Value Forcing: Aligning Return Distributions at All Noise Levels",
@@ -11673,7 +12067,7 @@
           "papers": []
         }
       ],
-      "total": 35
+      "total": 38
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -13483,6 +13877,62 @@
           "name": "Chi Zhang",
           "papers": [
             {
+              "id": "2611.04711",
+              "title": "Cycle WAM: Coupling Action and Video through Cycle Consistency",
+              "authors": [
+                "Qinglin Yang",
+                "Jiepeng Wang",
+                "Yuxing Huang",
+                "Haibin Huang",
+                "Kai Xu",
+                "Chi Zhang",
+                "Ruizhen Hu",
+                "Xuelong Li"
+              ],
+              "abstract": "Recent advances in video modeling have driven substantial progress in world action models (WAMs). Existing approaches exploit pretrained video priors by decoding actions from latent representations or inferring them from generated videos. The underlying link is causal: robot actions produce changes in the scene, and video observations of these changes provide evidence for inferring the actions that produced them. However, existing training formulations do not by themselves ensure that actions and their predicted visual consequences are consistent, potentially limiting the use of pretrained capabilities. We treat video and action as paired modalities linked by this causal relationship and learn their correspondence through a unified training framework designed to better exploit pretrained video priors. Cycle WAM first augments video-action co-training with bidirectional conversion to reinforce cross-modal correspondence and recover forward and inverse dynamics. It then introduces a differentiable cycle-reconstruction objective to further couple the two mappings. The resulting model supports both forward and inverse dynamics, with the potential to improve performance through more effective use of pretrained video priors. Cycle WAM achieves state-of-the-art performance among comparable methods on LIBERO-Pro and substantially improves DreamZero on DROID. Comparisons with UWM characterize its inverse-dynamics performance and show sharper visual detail in the displayed forward-dynamics predictions.",
+              "categories": [
+                "cs.CV",
+                "cs.AI",
+                "cs.RO"
+              ],
+              "published": "2026-11-03T11:33:51Z",
+              "url": "https://arxiv.org/abs/2611.04711",
+              "pdf_url": "https://arxiv.org/pdf/2611.04711v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.04711v1/forward_dynamics.png",
+              "figure_caption": "Fig. 3: Forward-dynamics examples on LIBERO: GT, UWM, and Cycle WAM (left to right), with two views per panel. Cycle WAM retains sharper boundaries, but object placement and view composition still differ from GT.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.04386",
+              "title": "StepX-OPD: Rethinking Multi-Teacher On-Policy Distillation in Diffusion Models",
+              "authors": [
+                "Chenru Wang",
+                "Xuanyang Zhang",
+                "Yucheng Han",
+                "Wenbo Nie",
+                "Wei Cheng",
+                "Xianfang Zeng",
+                "Gang YU",
+                "Chi Zhang"
+              ],
+              "abstract": "A deployable text-to-image diffusion model must hold several capabilities at once, such as instruction following, text rendering and human preference, and must sample in a few steps. Capabilities and few-step sampling are built in separate stages: a full-step model first consolidates capabilities through multi-teacher on-policy distillation, then serves as a fixed teacher for step distillation. Every full-step model we evaluate scores lower once compressed, and the second stage cannot begin until the first finishes. We introduce StepX-OPD, which merges the two stages: one student acquires every capability while learning to sample in a few steps, so frozen specialists supervise it on the states its own rollout visits rather than on a longer trajectory it never runs. Because a decomposition of the rollout's KL weights velocity mismatch most heavily near the clean end, we also regress the student's velocity on the low-noise part of the rollout. Separately, we find that capability integration makes models write prompt words into images on prompts that never asked for text, and we give a variant that lowers it. We evaluate on SD3.5-Medium and FLUX.1-dev across instruction following, text rendering, image quality and human preference. On both architectures, StepX-OPD attains the highest normalized average score among the four-step methods compared and exceeds the forty-step Flow-OPD model, and on SD3.5-Medium it trains with about 37% fewer GPU-hours than sequential DiffusionOPD followed by step distillation.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-11-03T06:16:16Z",
+              "url": "https://arxiv.org/abs/2611.04386",
+              "pdf_url": "https://arxiv.org/pdf/2611.04386v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.04386v1/qualitative_comparison_sixmodel.png",
+              "figure_caption": "Figure 2: Qualitative comparison result from benchmark.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.37146",
               "title": "Variational Optimal Control for Diffusion Guidance",
               "authors": [
@@ -13656,7 +14106,7 @@
               ],
               "published": "2026-10-20T04:31:18Z",
               "url": "https://arxiv.org/abs/2610.27616",
-              "pdf_url": "https://arxiv.org/pdf/2610.27616v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.27616v2",
               "comment": "8 pages, 4 figures",
               "figure_url": "https://arxiv.org/html/2610.27616v1/m06um_architecture_rebuilt.png",
               "figure_caption": "Fig. 2: Overview of the proposed framework. Frozen VGGT-Omega features from an RGB window are adapted into feature pyramids and frame memories. Historical residual proposals refine a latest-frame BEV anchor through cellwise selective fusion with a learned no-update option. Observation-aware evidenti",
@@ -14163,7 +14613,7 @@
           "papers": []
         }
       ],
-      "total": 34
+      "total": 36
     },
     {
       "name": "PGMT 合作作者",
