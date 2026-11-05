@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-04T14:51:12+00:00",
-  "day": "2026-11-04",
+  "updated": "2026-11-05T14:56:43+00:00",
+  "day": "2026-11-05",
   "days_back": 45,
-  "total": 388,
+  "total": 395,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -54,7 +54,7 @@
               ],
               "published": "2026-11-03T17:54:33Z",
               "url": "https://arxiv.org/abs/2611.05266",
-              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
               "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
@@ -281,7 +281,7 @@
               ],
               "published": "2026-11-03T17:54:33Z",
               "url": "https://arxiv.org/abs/2611.05266",
-              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
               "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
@@ -716,6 +716,44 @@
         {
           "name": "Ken Goldberg",
           "papers": [
+            {
+              "id": "2611.06881",
+              "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
+              "authors": [
+                "Shuangyu Xie",
+                "Kaiyuan Chen",
+                "Uksang Yoo",
+                "Xinyue Zhu",
+                "Meadow Shen",
+                "Jaimyn Drake",
+                "Eugen Solowjow",
+                "Lionel Gulich",
+                "Alexander Millane",
+                "Rafael Cathomen",
+                "Tuur Stuyck",
+                "Sangeeta Subramanian",
+                "Yichao Pan",
+                "Bruce McGowan",
+                "Michael Benedict",
+                "Linxi Fan",
+                "Yuke Zhu",
+                "Spencer Huang",
+                "Ken Goldberg"
+              ],
+              "abstract": "For robots to operate reliably in commercial and industrial applications, they must persistently perform specific tasks with known variations in object shape and pose. We call this Variational Automation (VA) to differentiate these settings from fixed automation. Inspired by recent papers on Agentic Robotics, where pretrained LLM and VLM coding agents combine interpretable robot programming with the open-world adaptability of model free policies, we propose a general set of agentic robotics benchmark design criteria that includes accessibility, repeatability, diversity, relevance to agentic robotics and practical applications, physical realizability, resistance to benchmark saturation, and computational efficiency. We instantiate these principles in six manipulation task classes spanning industrial, medical, and infrastructure applications: tool sorting, tool hanging, gear meshing, syringe packing, cable insertion, and cable routing. We introduce the Variational Automation Benchmark for Agentic Robotics (VABAR), an open, easily replicable, simulation-based manipulation benchmark to systematically evaluating agentic robotics systems. Built fully on open-source tools, VABAR features detailed implementations using the Newton physics engine, standardized task variations, difficulty tiers, success metrics, and a library of 33 generalizable skills with human-authored programmatic reference solutions. We provide initial baseline evaluations using an open agentic manipulation harness, Graph-as-Policy (GaP), and Isaac Lab Arena.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-04T18:38:01Z",
+              "url": "https://arxiv.org/abs/2611.06881",
+              "pdf_url": "https://arxiv.org/pdf/2611.06881v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.06881v1/VABAR-main.png",
+              "figure_caption": "Fig. 2 : Overview of the VABAR evaluation framework. Left: Tasks are specified by initial and goal configurations, an asset library, and robot definitions. Top right: Admissible task variations span objects, arrangements, and positions, with examples at two levels. Bottom right: Robot policies are e",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.31801",
               "title": "KiRoSe: Using Kinematic Data for Efficient Segmentation of Robot Demonstrations",
@@ -1157,37 +1195,41 @@
               "links": {
                 "project": "https://morphometricimitation.github.io"
               }
-            },
-            {
-              "id": "2609.24487",
-              "title": "AgentSTAR: Agentic Shape Tracking and Reconstruction from Monocular Videos",
-              "authors": [
-                "Kirill Mazur",
-                "Nikita Karaev",
-                "Matthew Chang",
-                "Jitendra Malik",
-                "Nur Muhammad \"Mahi'' Shafiullah"
-              ],
-              "abstract": "In this work, we present a method for shape reconstruction and tracking from video via agentic analysis-by-synthesis. Unlike prior methods which first estimate dense pixel correspondences and then recover object motion from them, our method infers a structured 3D object model, including its geometry and kinematic structure, and uses this model to optimise object track estimates over time. In our optimisation loop, a Vision-Language Model (VLM) agent iteratively refines shape or generalised pose through a render-and-compare loop, combining coarse visual reasoning with numerical pose optimisation for precise state estimation. This structured formulation enables our method to track through large motion, articulation, and severe occlusion without relying on pixel-matching objectives. Quantitatively, on ARCTIC, our method substantially outperforms state-of-the-art 3D point-tracking baselines for articulated objects, and on HOT3D it outperforms all evaluated rigid-object tracking baselines.",
-              "categories": [
-                "cs.CV",
-                "cs.AI"
-              ],
-              "published": "2026-09-21T12:26:13Z",
-              "url": "https://arxiv.org/abs/2609.24487",
-              "pdf_url": "https://arxiv.org/pdf/2609.24487v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.24487v1/teaser_v2.png",
-              "figure_caption": "Figure 1: Agentic shape tracking and reconstruction. Our method jointly reconstructs object geometry and kinematics ( left ) from monocular videos and tracks the resulting 3D model through time ( right ). It recovers complex articulation (first and fourth rows), preserves fine geometric details (sec",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
         {
           "name": "Koushil Sreenath",
           "papers": [
+            {
+              "id": "2611.05507",
+              "title": "Ctrl-F: Force as an Interface for Humanoid Loco-Manipulation",
+              "authors": [
+                "Mengjie Zhao",
+                "Yuxin Chen",
+                "Yiyang Shao",
+                "Chuye Hong",
+                "Jiakang Chen",
+                "Koushil Sreenath",
+                "Masayoshi Tomizuka"
+              ],
+              "abstract": "Humanoid motion tracking has scaled to general policies that reproduce diverse human motion, but the resulting behavior is in free-space: the tracker knows where the body should be, not how it should interact with the environment. Other work makes the object part of the objective, yet abstracts that interaction to contact or geometry, which leaves the demanding cases under-explored. We argue that force is a natural command channel between motion imitation and object interaction, one that specifies not just where to make contact but how hard. We present Ctrl-F, a hierarchical motion-force framework that augments motion tracking with an explicit force command, a 3-D force at each designated contact body such as a hand or a foot. The hierarchical framework comprises: (1) A unified motion-force controller tracks the reference motion while applying the commanded force to the world. (2) A high-level force planner that issues a force command online based on object state and proprioception observations. In simulation and on hardware, Ctrl-F completes loco-manipulation that demands large, sustained interaction force and adjusts its command online as the load changes, both out of reach of a force-blind tracker. On hardware, Ctrl-F demonstrates hand-based dragging, pushing, and lifting, as well as foot-based kicking, successfully manipulating boxes weighing up to 20kg in pushing and kicking tasks where the force-blind baseline fails, while adapting online to additional loads introduced mid-task.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-11-03T19:04:27Z",
+              "url": "https://arxiv.org/abs/2611.05507",
+              "pdf_url": "https://arxiv.org/pdf/2611.05507v1",
+              "comment": "Project page: https://forcectrl.github.io/",
+              "figure_url": "https://arxiv.org/html/2611.05507v1/teaser.png",
+              "figure_caption": "Figure 1 : Ctrl-F on hardware, running the raise-walk-kick sequence with a 1 1 kg box in the hands and an 8 8 kg cart to kick. Raising the box is already a force task: the hands slide off a box they do not press into, and a tracker without a force command does not lift it at all.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://forcectrl.github.io/"
+              }
+            },
             {
               "id": "2610.28480",
               "title": "SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model",
@@ -1702,7 +1744,7 @@
           ]
         }
       ],
-      "total": 56
+      "total": 57
     },
     {
       "name": "Stanford",
@@ -3131,6 +3173,30 @@
           "name": "C. Karen Liu",
           "papers": [
             {
+              "id": "2611.06184",
+              "title": "Can Astra Solve RoboMME without Breaking the Bank?",
+              "authors": [
+                "Bingao Chen",
+                "Haoquan Fang",
+                "C. Karen Liu"
+              ],
+              "abstract": "Robotic manipulation often requires remembering information that is no longer visible, such as an object's location before occlusion or the order of a demonstrated action sequence. A large vision-language planner can read this history, but calling it before every action chunk is slow and costly. We present a three-tier system for the RoboMME benchmark. GPT-6 Astra (System 2) selects a grounded subtask from stored visual history, a $π_{0.5}$ vision-language-action policy (System 1) executes it, and a fine-tuned Qwen3-VL-4B monitor (System 1.5) checks after each action chunk whether the subtask is finished. The instruction is kept until the monitor reports completion or a task-specific event occurs, while the policy keeps acting on new observations. On RoboMME, the system succeeds in 79.13% of episodes with an average of 3.63 Astra calls and 80.84 seconds per episode. This is 34.62 points above the best published non-oracle baseline and 4.95 points below GroundSG+Oracle, which gives the low-level policy ground-truth subgoals.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-04T09:01:53Z",
+              "url": "https://arxiv.org/abs/2611.06184",
+              "pdf_url": "https://arxiv.org/pdf/2611.06184v1",
+              "comment": "Accepted at the Workshop on Memory for Robot Foundation Models and the Workshop on Agentic Robotics, CoRL 2026. Project page: https://bingaochen.github.io/Astra-on-RoboMME/",
+              "figure_url": "https://arxiv.org/html/2611.06184v1/three-tier-overview.png",
+              "figure_caption": "Figure 1: Planning, action, and monitoring at different frequencies. (a) Astra uses task history to choose a subtask instruction l k l_{k} . The VLA executes actions a t a_{t} in 16-step chunks; the environment returns observations o t o_{t} , and a local monitor checks progress after each chunk. Th",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://bingaochen.github.io/Astra-on-RoboMME/"
+              }
+            },
+            {
               "id": "2610.25988",
               "title": "SSIO: Self-Supervised Inertial Odometry",
               "authors": [
@@ -3355,7 +3421,9 @@
               ],
               "abstract": "Data flywheels promise continuous improvement via insights from deployment data. Understanding how the deployed model succeeds and fails can steer subsequent data collection towards patching failures and reinforcing successes. However, robot deployments create large volumes of high-dimensional rollout data, which is challenging to understand and confidently ground data collection decisions in. To make deployment data easier to analyze and act on, we propose behavior graphs, which compress policy rollouts into a single interpretable, directed graph. We construct the graphs by learning to identify similar behavior modes across rollouts, connecting the behaviors temporally, and finally linking them to outcomes. In a user study on three real-world tasks, where participants analyzed rollouts to choose a data collection strategy, 16 of 18 preferred behavior graphs to rollout videos, reaching comparable conclusions with 40.3% lower perceived temporal demand and 37.6% lower effort. Beyond interpretability for deployment data, behavior graphs are capable progress predictors: across 43 datasets, they improve the rank correlation between predicted progress and true temporal order by 22.9% and reduce mean absolute error by 53.5% relative to the strongest baseline. As the number of deployed robots grows, behavior graphs lend structure to high-dimensional policy rollouts and make deployment data easier to interpret and reason about.",
               "categories": [
-                "cs.RO"
+                "cs.RO",
+                "cs.AI",
+                "cs.LG"
               ],
               "published": "2026-10-30T21:51:01Z",
               "url": "https://arxiv.org/abs/2611.00405",
@@ -4019,7 +4087,7 @@
           ]
         }
       ],
-      "total": 72
+      "total": 73
     },
     {
       "name": "Carnegie Mellon University",
@@ -4925,13 +4993,13 @@
                 "Antonia Bronars",
                 "Pulkit Agrawal"
               ],
-              "abstract": "Conventional robot arms can be extremely heavy compared with the everyday objects they manipulate, creating a significant inertia mismatch at contact. Even a small accidental bump from a heavy arm can knock a light object out of place. Modern learning methods have nevertheless demonstrated a wide range of successful manipulation behaviors on these platforms, suggesting that even extreme inertia mismatch can be overcome with sufficient data. However, it remains unclear whether high inertia imposes a hidden cost on learning, potentially worsening scaling with data or lowering the performance ceiling of modern robot learning methods. We investigate this question through controlled simulation experiments that vary robot and object masses. We find that reinforcement learning succeeds across a broad range of mass combinations, while behavior cloning learns more reliable policies when a lighter robot manipulates a heavier object, and more data narrows the resulting gap without closing it. Behavior cloning likewise degrades on a simulated robot arm as its motors reflect more inertia through their gearing, even though its weight stays the same. Finally, because new hardware is rarely an option, we explore ways to lower contact inertia on the arm one already has, either by choosing a lower-inertia workspace before collecting data or by steering the demonstrator toward lower-inertia solutions of the task. In both simulated cases, the lower-inertia demonstrations are imitated more reliably. Project website: https://younghyopark.me/inertia-mismatch/",
+              "abstract": "Conventional robot arms can be extremely heavy compared with the everyday objects they manipulate, creating a significant inertia mismatch at contact. Even a small accidental bump from a heavy arm can knock a light object out of place. Modern learning methods have nevertheless demonstrated a wide range of successful manipulation behaviors on these platforms, suggesting that even extreme inertia mismatch can be overcome with sufficient data. However, it remains unclear whether high inertia imposes a hidden cost on learning, potentially worsening scaling with data or lowering the performance ceiling of modern robot learning methods. We investigate this question through controlled simulation experiments that vary robot and object masses. We find that reinforcement learning succeeds across a broad range of mass combinations, while behavior cloning learns more reliable policies when a lighter robot manipulates a heavier object. Heavier robots require more demonstrations to attain the same performance as lighter robots. Finally, because new hardware is rarely an option, we explore ways to lower an existing arm's inertia at contact with existing hardware, either by choosing a lower-inertia workspace before collecting data or by steering the demonstrator toward lower-inertia configurations during the task. In both cases, the lower-inertia demonstrations are imitated more reliably. Project website: https://younghyopark.me/inertia-mismatch/",
               "categories": [
                 "cs.RO"
               ],
               "published": "2026-11-02T17:40:05Z",
               "url": "https://arxiv.org/abs/2611.03501",
-              "pdf_url": "https://arxiv.org/pdf/2611.03501v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.03501v2",
               "comment": "9 pages, 17 figures. Project website: https://younghyopark.me/inertia-mismatch/",
               "figure_url": "https://arxiv.org/html/2611.03501v1/figures/inertia_mismatch_teaser_cropped.png",
               "figure_caption": "Fig. 1: Robot arms can significantly outweigh the everyday objects they manipulate. A natural question arises: can modern robot learning fully compensate for this mismatch given sufficient data, or does it impose a hidden cost on learning reliable manipulation?",
@@ -5739,6 +5807,29 @@
           "name": "Jia Deng",
           "papers": [
             {
+              "id": "2611.06890",
+              "title": "Procedural Adversarial Learning",
+              "authors": [
+                "Jack Nugent",
+                "Jia Deng"
+              ],
+              "abstract": "For many computer vision tasks, neural networks can be trained to produce a low average error, yet they still fail on seemingly simple scenes. Reducing these failures requires first finding them, but they may not be in a fixed dataset. We study procedural adversarial learning (PAL), a framework of minimax training and adversarial evaluation which searches the input space of a procedural generator for difficult instances. The procedural generator is an interpretable program mapping a low-dimensional vector of control parameters (e.g. layout, lighting, pose) to a rendered image and its label. We introduce the Simple-PAT algorithm, which uses zeroth-order optimization in the procedural generator's parameter space to propose adversarial training samples that are generated on demand. We also create PAL-Dojo, a collection of efficient procedural generators for surface normal estimation, image segmentation, and human pose estimation. Against a cross-model black-box adversary with 50M aggregate queries, Simple-PAT reduces worst-case error by a geometric mean of 3.15x compared to standard training and 2.63x compared to the strongest robust training baseline. Code is available at https://github.com/princeton-vl/procedural-adversarial-learning.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-11-04T18:42:28Z",
+              "url": "https://arxiv.org/abs/2611.06890",
+              "pdf_url": "https://arxiv.org/pdf/2611.06890v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.06890v1/fig1_worstcase.png",
+              "figure_caption": "Figure 1: We compare Simple-PAT to training methods that uniformly sample data for each minibatch. Left: Simple-PAT reduces worst-case error more effectively than uniform training and alternative methods. Right: Simple-PAT models perform much better on cases uniformly trained models found challengin",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/princeton-vl/procedural-adversarial-learning"
+              }
+            },
+            {
               "id": "2610.39689",
               "title": "AI for Science in Space: Orbital Laboratories, Planetary Fieldwork, and Embodied Autonomy",
               "authors": [
@@ -6227,7 +6318,7 @@
           ]
         }
       ],
-      "total": 23
+      "total": 24
     },
     {
       "name": "University of Washington",
@@ -6436,7 +6527,7 @@
                 "Natasha Jaques",
                 "Abhishek Gupta"
               ],
-              "abstract": "Sequential decision-making under partial observability is difficult because agents must explore to infer hidden, task-relevant information before acting effectively. Learning such information-gathering behaviors tabula rasa via online reinforcement learning is sample-inefficient, whereas offline imitation averages expert actions across hidden states and fails to learn exploration. In this work, we propose ASTEROID, a simple and effective student--teacher supervised learning framework that can learn test-time exploration. Although a privileged expert never needs to explore, we demonstrate that a history-conditioned student can learn to do so when trained with on-policy contexts: the student first collects on-policy context under partial observability, and the privileged expert provides action labels conditioned on that context. By distilling expert actions directly conditioned on the student's on-policy history, the student learns to systematically resolve partial observability, i.e., search while uncertain and exploit once the hidden state is revealed. This enables efficient test-time exploration (similar to Bayesian posterior sampling) without incurring the impractical training-data costs of reinforcement learning. Across a diverse range of eleven different environments, including discrete exploration benchmarks, robotic manipulation, navigation, and Procgen environments, ASTEROID achieves ~2x higher returns under fixed exploration budgets, uses ~100x fewer interactions than RL baselines, and outperforms frontier models at exploration. Finally, our method transfers policies trained in simulation to vision-denied real-world robot manipulation, exhibiting efficient exploration and increasing success by +40% over standard distillation. Overall, it provides a simple yet surprisingly effective framework to learn efficient test-time exploration.",
+              "abstract": "Sequential decision-making under partial observability is difficult because agents must explore to infer hidden, task-relevant information before acting effectively. Learning such information-gathering behaviors tabula rasa via online reinforcement learning is sample-inefficient, whereas offline imitation averages expert actions across hidden states and fails to learn exploration. In this work, we propose ASTEROID, a simple and effective student--teacher supervised learning framework that can learn test-time exploration. Although a privileged expert never needs to explore, we demonstrate that a history-conditioned student can learn to do so when trained with on-policy contexts: the student first collects on-policy context under partial observability, and then imitates the privileged expert conditioned on that context. By distilling expert actions directly conditioned on the student's on-policy history, the student learns to systematically resolve partial observability, i.e., search while uncertain and exploit once the hidden state is revealed. This enables efficient test-time exploration (similar to Bayesian posterior sampling) without incurring the impractical training-data costs of reinforcement learning. Across a diverse range of eleven different environments, including discrete exploration benchmarks, robotic manipulation, navigation, and Procgen environments, ASTEROID achieves ~2x higher returns under fixed exploration budgets, uses ~100x fewer interactions than RL baselines, and outperforms frontier models at exploration. Finally, our method transfers policies trained in simulation to vision-denied real-world robot manipulation, exhibiting efficient exploration and increasing success by +40% over standard distillation. Overall, it provides a simple yet surprisingly effective framework to learn efficient test-time exploration.",
               "categories": [
                 "cs.RO",
                 "cs.AI",
@@ -6444,7 +6535,7 @@
               ],
               "published": "2026-10-21T17:50:31Z",
               "url": "https://arxiv.org/abs/2610.30105",
-              "pdf_url": "https://arxiv.org/pdf/2610.30105v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.30105v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.30105v1/figs/teaser_v2.png",
               "figure_caption": "Figure 1 : ASTEROID provides a simple and reliable method for learning efficient exploration in partially observed domains via on-policy asymmetric student-teacher distillation.",
@@ -6586,6 +6677,37 @@
           "name": "Animesh Garg",
           "papers": [
             {
+              "id": "2611.05567",
+              "title": "MESA: An Evaluation Framework for Compositional, Semantic, and Spatial Generalization in Robotics",
+              "authors": [
+                "Albert Wilcox",
+                "Frank Chang",
+                "Nhi Nguyen",
+                "Aishani Chakraborty",
+                "Jeremy A. Collins",
+                "Vaibhav Saxena",
+                "Benjamin Joffe",
+                "Siddharth Karamcheti",
+                "Animesh Garg"
+              ],
+              "abstract": "Despite growing interest in foundation models for robotic manipulation, systematic evaluation of their capabilities remains elusive. Existing benchmarks are either narrow and saturated, offering little signal on SOTA methods, broadly scoped, providing diversity at the cost of controlled experimentation, or require training on large, messy open-source datasets. We introduce MESA, an evaluation framework designed for precise, reproducible measurement of language-conditioned policy generalization. MESA provides five evaluation suites that isolate in-distribution performance and four distinct axes of generalization: spatial configuration, object instance, object category, and subtask composition, enabling researchers to diagnose where and why policies fail, not just whether they fail. To populate these suites at scale, we develop MESA-Gen, a pipeline for task and demonstration generation built by improving MimicGen. We instantiate the framework on two platforms and release both: the single-arm MESA suite, and BiMESA, the first large-scale benchmark for bimanual generalization. We evaluate seven baseline methods spanning diffusion policies, VLM-based approaches, and pretrained VLAs, finding that the strongest model achieves only 52% on MESA and 49% on BiMESA, providing meaningful signal while leaving ample room for progress. MESA rankings are broadly consistent with RoboArena scores, suggesting that MESA captures method-level differences relevant beyond simulation. Project website: https://pairlab.github.io/MESA.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-03T20:01:03Z",
+              "url": "https://arxiv.org/abs/2611.05567",
+              "pdf_url": "https://arxiv.org/pdf/2611.05567v1",
+              "comment": "51 pages, 12 figures, including appendices. Conference on Robot Learning (CoRL), 2026. Project website: https://pairlab.github.io/MESA",
+              "figure_url": "https://arxiv.org/html/2611.05567v1/teaser.png",
+              "figure_caption": "Figure 1: MESA ( Left ) is an evaluation framework designed to enable researchers to probe language steering and generalization capabilities in settings accessible to researchers with academic budgets. We introduce MESA-Bench ( Right ), which includes single-arm and bimanual datasets and test sets d",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://pairlab.github.io/MESA"
+              }
+            },
+            {
               "id": "2611.05062",
               "title": "FloMo: 3D Scene Flow as a World Action Model Intermediate for Learning from Human Video",
               "authors": [
@@ -6602,7 +6724,7 @@
               ],
               "published": "2026-11-03T15:25:35Z",
               "url": "https://arxiv.org/abs/2611.05062",
-              "pdf_url": "https://arxiv.org/pdf/2611.05062v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.05062v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.05062v1/figures/figure_arch.png",
               "figure_caption": "Figure 1: Given an image and text prompt, FloMo jointly predicts dense 3D motion (scene flow) and robot actions using a pretrained video generation model using flow-matching. To tokenize scene flow, we transform cumulative 3D velocities into RGB videos that are encoded by the pretrained video backbo",
@@ -6783,6 +6905,44 @@
         {
           "name": "Yuke Zhu",
           "papers": [
+            {
+              "id": "2611.06881",
+              "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
+              "authors": [
+                "Shuangyu Xie",
+                "Kaiyuan Chen",
+                "Uksang Yoo",
+                "Xinyue Zhu",
+                "Meadow Shen",
+                "Jaimyn Drake",
+                "Eugen Solowjow",
+                "Lionel Gulich",
+                "Alexander Millane",
+                "Rafael Cathomen",
+                "Tuur Stuyck",
+                "Sangeeta Subramanian",
+                "Yichao Pan",
+                "Bruce McGowan",
+                "Michael Benedict",
+                "Linxi Fan",
+                "Yuke Zhu",
+                "Spencer Huang",
+                "Ken Goldberg"
+              ],
+              "abstract": "For robots to operate reliably in commercial and industrial applications, they must persistently perform specific tasks with known variations in object shape and pose. We call this Variational Automation (VA) to differentiate these settings from fixed automation. Inspired by recent papers on Agentic Robotics, where pretrained LLM and VLM coding agents combine interpretable robot programming with the open-world adaptability of model free policies, we propose a general set of agentic robotics benchmark design criteria that includes accessibility, repeatability, diversity, relevance to agentic robotics and practical applications, physical realizability, resistance to benchmark saturation, and computational efficiency. We instantiate these principles in six manipulation task classes spanning industrial, medical, and infrastructure applications: tool sorting, tool hanging, gear meshing, syringe packing, cable insertion, and cable routing. We introduce the Variational Automation Benchmark for Agentic Robotics (VABAR), an open, easily replicable, simulation-based manipulation benchmark to systematically evaluating agentic robotics systems. Built fully on open-source tools, VABAR features detailed implementations using the Newton physics engine, standardized task variations, difficulty tiers, success metrics, and a library of 33 generalizable skills with human-authored programmatic reference solutions. We provide initial baseline evaluations using an open agentic manipulation harness, Graph-as-Policy (GaP), and Isaac Lab Arena.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-04T18:38:01Z",
+              "url": "https://arxiv.org/abs/2611.06881",
+              "pdf_url": "https://arxiv.org/pdf/2611.06881v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.06881v1/VABAR-main.png",
+              "figure_caption": "Fig. 2 : Overview of the VABAR evaluation framework. Left: Tasks are specified by initial and goal configurations, an asset library, and robot definitions. Top right: Admissible task variations span objects, arrangements, and positions, with examples at two levels. Bottom right: Robot policies are e",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.39429",
               "title": "ScheduleGen: Demonstration Generation via Skill Scheduling for Multi-Arm Imitation Learning",
@@ -7031,6 +7191,29 @@
           "name": "Peter Stone",
           "papers": [
             {
+              "id": "2611.05571",
+              "title": "ELA: End-to-End Latent Action Policy Learning from Video Demonstrations",
+              "authors": [
+                "Cheng-Chun Hsu",
+                "Peter Stone"
+              ],
+              "abstract": "Robot imitation learning is limited by the scarcity of action-labeled data, while action-free demonstrations such as videos are abundant. Recent latent-action methods learn action-relevant representations from observation transitions, but they do not optimize latent actions for downstream control, leading to latent representations that are difficult for policies to model and difficult to accurately decode into continuous robot actions. This paper introduces ELA, an end-to-end framework for learning from video demonstrations via latent actions jointly optimized for policy learning and action decoding. ELA jointly trains a latent action model, latent action policy, and action decoder, enabling policies to leverage abundant video data with only a handful of action-labeled robot demonstrations. Experiments on simulated and real-world manipulation tasks show that ELA consistently outperforms prior latent action baselines. Moreover, it integrates seamlessly with existing imitation learning methods through lightweight 4M-parameter action decoders, requiring no changes to policy architectures or training objectives. Additional materials can be found on: https://end2end-latent-action.github.io/",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-03T20:03:16Z",
+              "url": "https://arxiv.org/abs/2611.05571",
+              "pdf_url": "https://arxiv.org/pdf/2611.05571v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.05571v1/teaser.png",
+              "figure_caption": "Figure 1: Ela Overview. Our framework extends existing behavior cloning methods, e.g . diffusion policies, with latent actions jointly optimized for policy learning and action decoding. The approach enables training on mixtures of action-labeled and video demonstrations with little overhead, requiri",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://end2end-latent-action.github.io/"
+              }
+            },
+            {
               "id": "2611.00314",
               "title": "Decentralized Multi-Agent Coordination and Communication in Shared Codebases",
               "authors": [
@@ -7212,7 +7395,7 @@
           ]
         }
       ],
-      "total": 20
+      "total": 23
     },
     {
       "name": "ETH Zürich / TU Darmstadt",
@@ -7737,33 +7920,6 @@
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.31025v1/method_last_opt.png",
               "figure_caption": "Fig. 1: Online model-based control framework. Data collected on the machine update a probabilistic dynamics ensemble, through which sampling-based MPC plans under a task-specific reward. The same learned dynamics support time-indexed tracking and contouring.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2609.24576",
-              "title": "What do VLM-Based Vision-Language Navigation Models Rely on: Interpreting and Steering Policy Behavior",
-              "authors": [
-                "Débora Oliveira Makowski",
-                "Samiran Gode",
-                "Abhijeet Nayak",
-                "Marco Hutter",
-                "Cordelia Schmid",
-                "Lukas Rosenberger Schmid",
-                "Wolfram Burgard"
-              ],
-              "abstract": "Modern Vision-Language Navigation (VLN) models rely mostly on pre-trained large Vision-Language Models (VLMs) to predict navigation actions. While this fusion of language instructions and visual observations allows multimodal reasoning, it obscures how information is routed across modalities or what mechanisms drive navigation decisions. Thus, it remains unclear whether VLN models ground their predictions in relevant semantic cues or can track task progress. In this work, we study the interpretability and steerability of VLN models. We use intervention-based metrics that measure how visual observations, instructions, and visual memory causally influence navigation decisions. Our results show that these navigation policies are sensitive to all input modalities and do not depend on a single one. We further show that these agents encode navigation progress and retain semantic structure from their VLM backbones, enabling concept-level steering through internal activations. Finally, we extract activation vectors for abstract behaviors to transfer them zero-shot to out-of-distribution real-world scenarios, improving performance without additional fine-tuning.",
-              "categories": [
-                "cs.RO",
-                "cs.CV"
-              ],
-              "published": "2026-09-21T13:42:48Z",
-              "url": "https://arxiv.org/abs/2609.24576",
-              "pdf_url": "https://arxiv.org/pdf/2609.24576v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2609.24576v1/text-iss.png",
-              "figure_caption": "Fig. 1: Attribution heatmaps generated with ISS [ 10 ] for CorrectNav [ 11 ] . Red indicates higher sensitivity and blue lower. In text, darker tokens indicate higher sensitivity. Active subtask verbs (e.g., stop , through ) and semantic cues (e.g., kitchen , doors , vestibule ) have higher sensitiv",
               "figure_source": "html",
               "video_url": null,
               "links": {}
@@ -8437,7 +8593,7 @@
           ]
         }
       ],
-      "total": 46
+      "total": 45
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -10969,6 +11125,7 @@
                 "Max Smith",
                 "Tue Vu",
                 "Ziyu Zhang",
+                "Ali Agha",
                 "Shayegan Omidshafiei",
                 "Xue Bin Peng"
               ],
@@ -10979,7 +11136,7 @@
               ],
               "published": "2026-10-08T19:03:01Z",
               "url": "https://arxiv.org/abs/2610.12642",
-              "pdf_url": "https://arxiv.org/pdf/2610.12642v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.12642v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.12642v1/comparison_v7_padded.png",
               "figure_caption": "Fig. 3: Comparison of retargeting methods on a box-manipulation sequence. Baseline methods tend to distort the interactions or lose contact with the box, while PriMoRetarget preserves the interactions more closely.",
@@ -11039,7 +11196,7 @@
               ],
               "published": "2026-11-03T17:54:33Z",
               "url": "https://arxiv.org/abs/2611.05266",
-              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
               "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
@@ -11516,7 +11673,7 @@
               ],
               "published": "2026-11-03T17:54:33Z",
               "url": "https://arxiv.org/abs/2611.05266",
-              "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.05266v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.05266v1/imgs/fig1_new2.png",
               "figure_caption": "Figure 1: Naive RL fails to optimize criterion that fall outside the support of base policies. Exploration issues in RL can manifest as slow learning (middle) or in the worst case a complete failure to improve (left). On the other hand, targeted guidance enables policies to directionally improve spe",
@@ -11899,6 +12056,7 @@
                 "Max Smith",
                 "Tue Vu",
                 "Ziyu Zhang",
+                "Ali Agha",
                 "Shayegan Omidshafiei",
                 "Xue Bin Peng"
               ],
@@ -11909,7 +12067,7 @@
               ],
               "published": "2026-10-08T19:03:01Z",
               "url": "https://arxiv.org/abs/2610.12642",
-              "pdf_url": "https://arxiv.org/pdf/2610.12642v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.12642v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.12642v1/comparison_v7_padded.png",
               "figure_caption": "Fig. 3: Comparison of retargeting methods on a box-manipulation sequence. Baseline methods tend to distort the interactions or lose contact with the box, while PriMoRetarget preserves the interactions more closely.",
@@ -11922,6 +12080,34 @@
         {
           "name": "Yi Shi",
           "papers": [
+            {
+              "id": "2611.06074",
+              "title": "Which One Is Sounding? Binaural Sounding Instance Disambiguation for Audio-Visual Segmentation",
+              "authors": [
+                "Haoze Ma",
+                "Yidi Li",
+                "Yu Ma",
+                "Pengyuan Zhao",
+                "Yi Shi",
+                "Bin Ren",
+                "Yanwen Guo",
+                "Dimitrios Kanoulas"
+              ],
+              "abstract": "Existing audio-visual segmentation methods mainly predict sound-related regions or category masks and often fail to identify the sounding instance when multiple same-class candidates coexist. Recent audio-visual instance segmentation methods address instance-level prediction but rely largely on motion and cross-frame association, which may become unreliable under sparse observations or inconspicuous motion. To this end, we introduce binaural audio, whose interaural differences encode source-direction information, to provide spatial constraints for distinguishing the sounding instance among same-class visual candidates. We propose Binaural Sounding Instance Disambiguation for Audio-Visual Segmentation (BiSID-AVS), which progressively refines category-level candidate responses into a mask of the true sounding instance. BiSID-AVS first grounds category-consistent candidate regions through audio prompting, then projects binaural cues into an image-plane spatial response map, and finally refines the true sounding instance through dual-level spatial conditioning at the feature and decoder levels. Experiments on the binaurally extended AVS-Synthetic benchmark and Habitat-AVS dataset for robotic indoor perception show that BiSID-AVS achieves the best performance on the multi-candidate subsets, improving instance-level mIoU by 35.19 and 41.21 percentage points, respectively, while substantially reducing false activation on non-sounding same-class regions.",
+              "categories": [
+                "cs.AI",
+                "cs.SD"
+              ],
+              "published": "2026-11-04T07:18:41Z",
+              "url": "https://arxiv.org/abs/2611.06074",
+              "pdf_url": "https://arxiv.org/pdf/2611.06074v1",
+              "comment": "12 pages, 5 figures, including appendices",
+              "figure_url": "https://arxiv.org/html/2611.06074v1/figure1.png",
+              "figure_caption": "Figure 1: Task motivation of BiSID-AVS. AVS may activate multiple same-class candidates, while existing AVIS mainly relies on temporal context. BiSID-AVS instead uses binaural spatial cues to identify the true sounding instance.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.38027",
               "title": "METATRON: A Promptable Whole-Body Execution Layer for Humanoids",
@@ -11991,6 +12177,7 @@
                 "Max Smith",
                 "Tue Vu",
                 "Ziyu Zhang",
+                "Ali Agha",
                 "Shayegan Omidshafiei",
                 "Xue Bin Peng"
               ],
@@ -12001,7 +12188,7 @@
               ],
               "published": "2026-10-08T19:03:01Z",
               "url": "https://arxiv.org/abs/2610.12642",
-              "pdf_url": "https://arxiv.org/pdf/2610.12642v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.12642v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.12642v1/comparison_v7_padded.png",
               "figure_caption": "Fig. 3: Comparison of retargeting methods on a box-manipulation sequence. Baseline methods tend to distort the interactions or lose contact with the box, while PriMoRetarget preserves the interactions more closely.",
@@ -12067,7 +12254,7 @@
           "papers": []
         }
       ],
-      "total": 38
+      "total": 39
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -12225,6 +12412,35 @@
         {
           "name": "Mengjie Zhao",
           "papers": [
+            {
+              "id": "2611.05507",
+              "title": "Ctrl-F: Force as an Interface for Humanoid Loco-Manipulation",
+              "authors": [
+                "Mengjie Zhao",
+                "Yuxin Chen",
+                "Yiyang Shao",
+                "Chuye Hong",
+                "Jiakang Chen",
+                "Koushil Sreenath",
+                "Masayoshi Tomizuka"
+              ],
+              "abstract": "Humanoid motion tracking has scaled to general policies that reproduce diverse human motion, but the resulting behavior is in free-space: the tracker knows where the body should be, not how it should interact with the environment. Other work makes the object part of the objective, yet abstracts that interaction to contact or geometry, which leaves the demanding cases under-explored. We argue that force is a natural command channel between motion imitation and object interaction, one that specifies not just where to make contact but how hard. We present Ctrl-F, a hierarchical motion-force framework that augments motion tracking with an explicit force command, a 3-D force at each designated contact body such as a hand or a foot. The hierarchical framework comprises: (1) A unified motion-force controller tracks the reference motion while applying the commanded force to the world. (2) A high-level force planner that issues a force command online based on object state and proprioception observations. In simulation and on hardware, Ctrl-F completes loco-manipulation that demands large, sustained interaction force and adjusts its command online as the load changes, both out of reach of a force-blind tracker. On hardware, Ctrl-F demonstrates hand-based dragging, pushing, and lifting, as well as foot-based kicking, successfully manipulating boxes weighing up to 20kg in pushing and kicking tasks where the force-blind baseline fails, while adapting online to additional loads introduced mid-task.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-11-03T19:04:27Z",
+              "url": "https://arxiv.org/abs/2611.05507",
+              "pdf_url": "https://arxiv.org/pdf/2611.05507v1",
+              "comment": "Project page: https://forcectrl.github.io/",
+              "figure_url": "https://arxiv.org/html/2611.05507v1/teaser.png",
+              "figure_caption": "Figure 1 : Ctrl-F on hardware, running the raise-walk-kick sequence with a 1 1 kg box in the hands and an 8 8 kg cart to kick. Raising the box is already a force task: the hands slide off a box they do not press into, and a tracker without a force command does not lift it at all.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://forcectrl.github.io/"
+              }
+            },
             {
               "id": "2610.40532",
               "title": "BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing",
@@ -12696,7 +12912,7 @@
           ]
         }
       ],
-      "total": 21
+      "total": 22
     },
     {
       "name": "BFM-Zero 合作作者",
@@ -13877,6 +14093,35 @@
           "name": "Chi Zhang",
           "papers": [
             {
+              "id": "2611.06343",
+              "title": "Prism: Bidirectional Self-Teaching for Unified Multimodal Models",
+              "authors": [
+                "Peng Zhang",
+                "Qian Chen",
+                "Xianyin Zhang",
+                "Yimin Tian",
+                "Ruite Fei",
+                "Dongyi Lv",
+                "Lifan Guo",
+                "Chi Zhang",
+                "Shuai Liu"
+              ],
+              "abstract": "Unified Multimodal Models (UMMs) aim to support visual understanding and generation within a single model. Existing post-training methods either use understanding as a fixed teacher to improve generation, or rely on ground-truth trajectories to supervise both understanding and generation. Prism instead derives bidirectional supervision from self-generated interleaved rollouts, constructing training targets according to the reliability of their text and image chains. We propose Prism, a bidirectional self-teaching post-training method for UMMs. Like a prism decomposing mixed light, Prism decouples a coupled interleaved trajectory into a text chain and an image chain, assesses the reliability of each chain, and constructs a corresponding training target from their reliability states. Experiments on both SenseNova-U1 and BAGEL show that Prism improves both understanding and generation. On the generation side, GenEval improves from 85.8 to 89.2 (+3.4), and DPG improves from 86.1 to 87.3 (+1.2) on SenseNova-U1. On the understanding side, the total MME score improves from 2282.6 to 2311.6, and MMVP improves from 58.0 to 62.0. Consistent improvements are observed on BAGEL. These results highlight that Prism enables coordinated improvements in generation and understanding by constructing reliability-guided self-training targets from self-generated trajectories, without relying on an external verifier or externally annotated corrected trajectories during target construction.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-11-04T11:05:07Z",
+              "url": "https://arxiv.org/abs/2611.06343",
+              "pdf_url": "https://arxiv.org/pdf/2611.06343v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.06343v1/1_cropped.png",
+              "figure_caption": "Figure 1: Capabilities of Prism. Prism improves both understanding and generation through self-teaching on interleaved text-image trajectories. The base model shows redundant steps on step 2 in the cooking tutorial, while Prism produces a coherent and correct tutorial. It also improves performance o",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.04711",
               "title": "Cycle WAM: Coupling Action and Video through Cycle Consistency",
               "authors": [
@@ -14098,16 +14343,20 @@
                 "Yiyang Shao",
                 "Borui Wang",
                 "Chi Zhang",
+                "Jizhuo Chen",
+                "Jiaming Wang",
+                "Benyun Zhao",
+                "Zhongyu Li",
                 "Yunhui Liu"
               ],
-              "abstract": "Visual navigation in cluttered environments requires robots to recover previously observed structure and infer obstacles and free space that remain occluded. We present a framework that combines temporal aggregation and occupancy completion in an evidential bird's-eye-view (BEV) representation predicted from short RGB sequences. A decoder adapts frozen VGGT-Omega features and combines historical residual proposals using cellwise weights and a learned no-update option. The BEV predictor produces a local map in the latest ego frame without depth or camera-pose inputs or explicit geometric warping. The evidential model treats observed free space separately and predicts occupancy with associated confidence across the remaining supported region. We train the predictor on simulated RGB sequences paired with complete and visibility-masked occupancy annotations. Our experiments evaluate navigation in simulation and on a wheeled robot, with additional demonstrations on quadruped and humanoid robots. In simulated sequential two-goal navigation, our system achieves 89.6% success, outperforming the strongest evaluated baseline by 32.5 percentage points. Across 60 wheeled-robot trials in 20 scenes, it achieves 73.3% success, compared with 33.3% for the strongest evaluated baseline.",
+              "abstract": "Visual navigation in cluttered environments requires robots to recover previously observed structure and infer obstacles and free space that remain occluded. We present a framework that combines temporal aggregation and occupancy completion in an evidential bird's-eye-view (BEV) representation predicted from short RGB sequences. A decoder adapts frozen VGGT-Omega features and combines historical residual proposals using cellwise weights and a learned no-update option. The BEV predictor produces a local map in the latest ego frame without depth or camera-pose inputs or explicit geometric warping. The evidential model treats observed free space separately and predicts occupancy with associated confidence across the remaining supported region. We train the predictor on simulated RGB sequences paired with complete and visibility-masked occupancy annotations. Our experiments evaluate navigation in simulation and on a wheeled robot, with additional demonstrations on quadruped and humanoid robots. In simulated sequential two-goal navigation, our system achieves 86.3% success, outperforming the strongest evaluated baseline by 32.2 percentage points. Across 60 wheeled-robot trials in 20 scenes, it achieves 73.3% success, compared with 33.3% for the strongest evaluated baseline.",
               "categories": [
                 "cs.RO"
               ],
               "published": "2026-10-20T04:31:18Z",
               "url": "https://arxiv.org/abs/2610.27616",
-              "pdf_url": "https://arxiv.org/pdf/2610.27616v2",
-              "comment": "8 pages, 4 figures",
+              "pdf_url": "https://arxiv.org/pdf/2610.27616v3",
+              "comment": "9 pages, 6 figures",
               "figure_url": "https://arxiv.org/html/2610.27616v1/m06um_architecture_rebuilt.png",
               "figure_caption": "Fig. 2: Overview of the proposed framework. Frozen VGGT-Omega features from an RGB window are adapted into feature pyramids and frame memories. Historical residual proposals refine a latest-frame BEV anchor through cellwise selective fusion with a learned no-update option. Observation-aware evidenti",
               "figure_source": "html",
@@ -14613,7 +14862,7 @@
           "papers": []
         }
       ],
-      "total": 36
+      "total": 37
     },
     {
       "name": "PGMT 合作作者",
@@ -14869,6 +15118,28 @@
         {
           "name": "Ye Yuan",
           "papers": [
+            {
+              "id": "2611.06476",
+              "title": "The Alignment Tax Is Graded: Task-Selective Capability Loss Under Length-Normalized DPO with SFT Retention",
+              "authors": [
+                "Ye Yuan"
+              ],
+              "abstract": "Setting. This is an empirical characterization study; we propose no new method and run no comparisons against alternative objectives. We fine-tune Qwen3.5-4B with sparse LoRA and length-normalized DPO plus an SFT retention term (the RPO objective) on structured financial-filing tasks, and track downstream capability as the implicit reward margin grows to $\\sim 7$ $β$-scaled units (nf4 training; $\\sim 3$ under fp16 measurement on the unquantized base). Question. Does margin growth degrade capability uniformly across tasks, or selectively? Findings. In a pre-registered study (8 seeds, 6 unseen at freeze) with artifact-aware scoring and TOST equivalence testing, the alignment tax is graded and task-selective: extraction is preserved ($Δ= -0.55$ pts, equivalent at $\\pm5$ pts), json loses little ($Δ= -3.52$ pts, equivalence fails on a clustered item-level interval), and router degrades severely ($Δ= -30$ pts). Router's loss concentrates in a margin 1-3 damage window containing a transient format-break spike. The margin is accounted for almost entirely ($\\geq 96%$) by suppression of rejected completions, with chosen reward approximately flat, consistent with the retention term anchoring it; we do not attribute the behavioral damage to any single gradient channel. Gold-logp deflation is task-selective (extraction $-0.15$, json $-1.04$, router $-1.47$ nats/token under fp16), with gold selectively protected relative to incorrect controls on extraction (8/8 seeds). QLoRA reward margins differ up to $3.4\\times$ between nf4 training and unquantized fp16 measurement, with an axis-dependent gap. Scope. Length-normalized rewards with SFT retention, sparse LoRA on 8/32 layers, one 4B model, easily-separable synthetic preferences, three structured tasks. A no-retention control and a measured format-alignment metric are left to future work.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-04T13:18:09Z",
+              "url": "https://arxiv.org/abs/2611.06476",
+              "pdf_url": "https://arxiv.org/pdf/2611.06476v1",
+              "comment": "25 pages, 3 figures, 23 tables. Code: https://github.com/yuan-phd/delta-filing",
+              "figure_url": "thumbs/2611.06476.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/yuan-phd/delta-filing"
+              }
+            },
             {
               "id": "2611.00450",
               "title": "From Lookups to Lessons: Turning Retrieved Knowledge into Parametric Memory",
@@ -15487,7 +15758,7 @@
               ],
               "published": "2026-09-28T03:55:21Z",
               "url": "https://arxiv.org/abs/2609.34249",
-              "pdf_url": "https://arxiv.org/pdf/2609.34249v2",
+              "pdf_url": "https://arxiv.org/pdf/2609.34249v3",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2609.34249v2/teaser.png",
               "figure_caption": "Figure 1: Evolving support priorities in empathetic reinforcement learning. (a) CARE constructs a context-adaptive rubric over three empathy dimensions— cognitive, affective, and proactive —with state-dependent weights and fine-grained criteria. (b) CARE consistently outperforms prior methods across",
@@ -16294,6 +16565,44 @@
           "name": "Yuke Zhu",
           "papers": [
             {
+              "id": "2611.06881",
+              "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
+              "authors": [
+                "Shuangyu Xie",
+                "Kaiyuan Chen",
+                "Uksang Yoo",
+                "Xinyue Zhu",
+                "Meadow Shen",
+                "Jaimyn Drake",
+                "Eugen Solowjow",
+                "Lionel Gulich",
+                "Alexander Millane",
+                "Rafael Cathomen",
+                "Tuur Stuyck",
+                "Sangeeta Subramanian",
+                "Yichao Pan",
+                "Bruce McGowan",
+                "Michael Benedict",
+                "Linxi Fan",
+                "Yuke Zhu",
+                "Spencer Huang",
+                "Ken Goldberg"
+              ],
+              "abstract": "For robots to operate reliably in commercial and industrial applications, they must persistently perform specific tasks with known variations in object shape and pose. We call this Variational Automation (VA) to differentiate these settings from fixed automation. Inspired by recent papers on Agentic Robotics, where pretrained LLM and VLM coding agents combine interpretable robot programming with the open-world adaptability of model free policies, we propose a general set of agentic robotics benchmark design criteria that includes accessibility, repeatability, diversity, relevance to agentic robotics and practical applications, physical realizability, resistance to benchmark saturation, and computational efficiency. We instantiate these principles in six manipulation task classes spanning industrial, medical, and infrastructure applications: tool sorting, tool hanging, gear meshing, syringe packing, cable insertion, and cable routing. We introduce the Variational Automation Benchmark for Agentic Robotics (VABAR), an open, easily replicable, simulation-based manipulation benchmark to systematically evaluating agentic robotics systems. Built fully on open-source tools, VABAR features detailed implementations using the Newton physics engine, standardized task variations, difficulty tiers, success metrics, and a library of 33 generalizable skills with human-authored programmatic reference solutions. We provide initial baseline evaluations using an open agentic manipulation harness, Graph-as-Policy (GaP), and Isaac Lab Arena.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-04T18:38:01Z",
+              "url": "https://arxiv.org/abs/2611.06881",
+              "pdf_url": "https://arxiv.org/pdf/2611.06881v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.06881v1/VABAR-main.png",
+              "figure_caption": "Fig. 2 : Overview of the VABAR evaluation framework. Left: Tasks are specified by initial and goal configurations, an asset library, and robot definitions. Top right: Admissible task variations span objects, arrangements, and positions, with examples at two levels. Bottom right: Robot policies are e",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.39429",
               "title": "ScheduleGen: Demonstration Generation via Skill Scheduling for Multi-Arm Imitation Learning",
               "authors": [
@@ -16538,7 +16847,7 @@
           ]
         }
       ],
-      "total": 52
+      "total": 54
     }
   ]
 }
