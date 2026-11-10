@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-09T16:48:23+00:00",
-  "day": "2026-11-09",
+  "updated": "2026-11-10T15:13:54+00:00",
+  "day": "2026-11-10",
   "days_back": 45,
-  "total": 379,
+  "total": 392,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -287,6 +287,56 @@
         {
           "name": "Pieter Abbeel",
           "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.05266",
               "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
@@ -738,6 +788,30 @@
         {
           "name": "Ken Goldberg",
           "papers": [
+            {
+              "id": "2611.11941",
+              "title": "Flip Anything with Agentic Robotics Self-Learning",
+              "authors": [
+                "Shuangyu Xie",
+                "Kaiyuan Chen",
+                "Ken Goldberg"
+              ],
+              "abstract": "Flipping is a fundamental robotic manipulation skill that requires reorienting a target object in a stable pose on a planar support surface by rotating it 180$^\\circ$ about an axis parallel to the support surface -- think of flipping a coin from heads to tails. Although flipping is a common objective in industrial tasks such as parts inspection, mechanical assembly, and tool use, coding a bimanual robot with grippers to flip diverse objects is a significant challenge. In this paper, we show that a coding agent can autonomously develop and refine object-flipping strategies through iterative learning in physics simulations across diverse object geometries. Progressive skill acquisition, from basic handover to toppling and pushing, robust grasping and sensing, and thin-object manipulation with recovery, improves task success from 24.7% to 95.0%. The resulting graph-based code integrates high-level strategy selection with reactive control, enabling multi-stage flipping on physical robots.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-09T06:09:55Z",
+              "url": "https://arxiv.org/abs/2611.11941",
+              "pdf_url": "https://arxiv.org/pdf/2611.11941v1",
+              "comment": "CoRL 2026 late breaking. Project webpage https://berkeleyautomation.github.io/flipanything/",
+              "figure_url": "https://arxiv.org/html/2611.11941v1/figures/flip-title-v3.png",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://berkeleyautomation.github.io/flipanything/"
+              }
+            },
             {
               "id": "2611.09030",
               "title": "A Controlled Study of Models, Skills, Feedback, and Curriculum in Agentic Robotics",
@@ -1228,6 +1302,33 @@
         {
           "name": "Koushil Sreenath",
           "papers": [
+            {
+              "id": "2611.10137",
+              "title": "A Unified Inertial Encoder for Human and Humanoid Motion",
+              "authors": [
+                "Yutian Chen",
+                "Shibo Zhao",
+                "Rocky Duan",
+                "Karen Liu",
+                "Carmelo Sferrazza",
+                "Guanya Shi",
+                "Yuheng Qiu",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Learning humanoid state estimation and language-grounded motion understanding from robot recordings ties training coverage to the robot's motion repertoire. Human motion datasets offer broader coverage, yet transferring this knowledge requires overcoming differences in body geometry, sensing, and physical disturbances. To enable this transfer, we propose a unified inertial encoder whose shared inertial interface uses kinematic IMU synthesis to represent human and humanoid motion at corresponding body sites. Within this common input space, joint training on human and kinematically retargeted humanoid motion combines velocity estimation and motion--text alignment with continuous-time encoding and sensor and motion randomization. The resulting model transfers zero-shot to a physical Unitree G1 without physics simulation, real-robot training trajectories, or fine-tuning, achieving the lowest velocity error among evaluated methods across five datasets, including 0.099m/s on real G1. Its motion-description retrieval also extends to retargeted G1 motion categories observed only in human training, demonstrating how human motion knowledge can support the generalization of humanoid inertial odometry and language-grounded motion understanding.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-06T19:03:25Z",
+              "url": "https://arxiv.org/abs/2611.10137",
+              "pdf_url": "https://arxiv.org/pdf/2611.10137v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.10137v1/Figure2.png",
+              "figure_caption": "Fig. 2: Overview of the proposed method. Left: kinematic transport combines pelvis IMU measurements, joint encoders, and link kinematics to synthesize inertial signals at anatomically corresponding sites. Center: continuous convolution converts native-rate IMU streams into fixed-duration tokens. A s",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.05507",
               "title": "Ctrl-F: Force as an Interface for Humanoid Loco-Manipulation",
@@ -1748,7 +1849,7 @@
           ]
         }
       ],
-      "total": 57
+      "total": 60
     },
     {
       "name": "Stanford",
@@ -1900,6 +2001,31 @@
         {
           "name": "Shuran Song",
           "papers": [
+            {
+              "id": "2611.10148",
+              "title": "BATCH: Behavior Alignment for Cross-Embodiment Learning from Humans",
+              "authors": [
+                "Zeyi Liu",
+                "Shuran Song"
+              ],
+              "abstract": "Human demonstrations provide a scalable source of diverse manipulation data, but leveraging them for robot learning remains challenging due to differences in embodiment, viewpoint, action spaces, and temporal structure. We introduce BATCH, a cross-embodiment learning framework that explicitly aligns human and robot behaviors. BATCH learns self-supervised temporal representations with a cycle-consistency objective to establish cross-embodiment correspondences without manual annotation. We further introduce two complementary training objectives that leverage these correspondences within an autoregressive videoaction diffusion model: behavior-aligned co-training and human-to-robot style transfer. On real-world manipulation tasks, BATCH improves generalization to unseen task configurations compared with training on unaligned data and prior cross-embodiment baselines, with additional gains from the style-transfer objective. Our results demonstrate that explicit behavior alignment enables more effective transfer from human demonstrations to robot policies.",
+              "categories": [
+                "cs.RO",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-11-06T19:12:29Z",
+              "url": "https://arxiv.org/abs/2611.10148",
+              "pdf_url": "https://arxiv.org/pdf/2611.10148v1",
+              "comment": "Project website: https://batch-embodiment.github.io/",
+              "figure_url": "https://arxiv.org/html/2611.10148v1/teaser.png",
+              "figure_caption": "Figure 1: BATCH performs behavior alignment between diverse out-of-domain human data and limited in-domain robot teleop data, accounting for differences in execution speed and irrelevant human segments. The aligned pairs are leveraged through two objectives within a downstream cross-embodiment video",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://batch-embodiment.github.io/"
+              }
+            },
             {
               "id": "2611.01565",
               "title": "Beyond Validation Loss: Coverage and Reliability Dynamics in Robot Policy Pretraining",
@@ -2093,6 +2219,56 @@
         {
           "name": "Jiajun Wu",
           "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.09476",
               "title": "LEMMO: A Large Electromagnetic Model leveraging Pretrained LLMs for Million-Sample Signal Understanding",
@@ -3126,30 +3302,6 @@
               "links": {
                 "project": "https://tml.stanford.edu/ditto-x/"
               }
-            },
-            {
-              "id": "2609.38340",
-              "title": "CARAT: Do Materials LLMs Reason or Recite?",
-              "authors": [
-                "Jiajun Wu",
-                "Jian Yang",
-                "Zixiang Ni",
-                "Zhenzhu Li",
-                "Bin Chong"
-              ],
-              "abstract": "When a materials LLM answers a question about crystal structure, does it reason from the structure or copy an answer already printed in its input? Accuracy cannot tell: a structural description often prints the very field it is scored against. CARAT holds question and gold answer fixed across eight matched views, names each structural relation separately in GraphSpace, and adds matched fine-tuning, answer masking, evidence injection, paired inference, and a rule that can withhold claims. First, on the benchmark's hardest families the grounded view is worth 17.3 points over formula inputs. Second, we turn that scrutiny on ourselves. GraphSpace beats a plain periodic graph by 19.3 points, but that margin is two effects at once: where the plain rendering carries everything the question needs it is 1.96 points, and where it omits those fields entirely, 46.7 points. The headline mostly measures what the baseline lacked, not how evidence is presented. Third, we attack our own benchmark. A rule that skips the link and reads the list directly answers four of seven hardened families, so we rebuilt it until eleven such shortcuts sat near chance. The frozen model quotes that link yet answers the same when we redirect it, on 95.6% of paired cases: it repeats the relation without using it. After matched supervision it reaches 99.8%, and deleting the link drops it to 23.4%, below the 27.0% the best shortcut reaches: both steps are learnable.",
-              "categories": [
-                "cs.AI"
-              ],
-              "published": "2026-09-29T18:06:07Z",
-              "url": "https://arxiv.org/abs/2609.38340",
-              "pdf_url": "https://arxiv.org/pdf/2609.38340v1",
-              "comment": "42 pages, 19 figures, including appendix",
-              "figure_url": "https://arxiv.org/html/2609.38340v1/carat-intro.png",
-              "figure_caption": "Figure 1: Reasoning or recitation? CARAT varies structural evidence under matched questions and tests answer dependence through masking and injection.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -3209,6 +3361,33 @@
         {
           "name": "C. Karen Liu",
           "papers": [
+            {
+              "id": "2611.10410",
+              "title": "SimDuoReal: Object-Centric Bimanual Policy for Emergent Dexterity",
+              "authors": [
+                "Qiyang Yan",
+                "Yulin Liu",
+                "Akash Sharma",
+                "Haozhi Qi",
+                "Guanya Shi",
+                "C. Karen Liu"
+              ],
+              "abstract": "Bimanual dexterous manipulation requires coordinated arm and hand control, yet specifying such coordination manually is challenging and often task-specific. In this work, we explore whether complex bimanual dexterity can emerge from a simple object-centric learning objective. We train reinforcement learning policies under a shared object-centric reward, varying their training environments rather than tuning separate rewards for each behavior. We find that the policies discover pre-grasp manipulation, grasping and regrasping, in-hand adjustment and handover to reach object-pose goals without hand-designed motion sequences. We then refine the experts on transition states and use DAgger and reinforcement learning to distill them into a single policy that composes these behaviors for diverse bimanual tasks. On real hardware, the same policy succeeds in 61 of 80 trials (76.3%) across four tasks with unseen objects and no task-specific fine-tuning. In simulated barcode scanning, our policy achieves 85.0% success, compared with 60.4% for two single-arm policies without handover. These results suggest that this objective provides a simple and scalable interface for learning general bimanual dexterity, shifting the burden from manually designing robot coordination to specifying what should happen to the object.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-07T02:44:58Z",
+              "url": "https://arxiv.org/abs/2611.10410",
+              "pdf_url": "https://arxiv.org/pdf/2611.10410v1",
+              "comment": "Website: https://simduoreal.github.io",
+              "figure_url": "https://arxiv.org/html/2611.10410v1/system_overview_1.png",
+              "figure_caption": "Fig. 1 : System overview (A) Three experts are trained in simulation under a shared object-centric representation and reward, with different goal-sampling regimes: the left and right experts π L \\pi_{L} and π R \\pi_{R} learn grasping with in-hand manipulation from goals inside one arm’s workspace, a",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://simduoreal.github.io"
+              }
+            },
             {
               "id": "2611.06184",
               "title": "Can Astra Solve RoboMME without Breaking the Bank?",
@@ -3442,6 +3621,73 @@
         {
           "name": "Jeannette Bohg",
           "papers": [
+            {
+              "id": "2611.12162",
+              "title": "Same Physics, Different Gradients: A State-of-the-Art Report on Differentiable Physics Simulation",
+              "authors": [
+                "Lei Shu",
+                "Zizhou Huang",
+                "Yunuo Chen",
+                "Yifei Li",
+                "Tao Du",
+                "Minchen Li",
+                "Tuur Stuyck",
+                "Miles Macklin",
+                "Kui Wu",
+                "Bo Zhu",
+                "Yin Yang",
+                "Ming C. Lin",
+                "Alberta Longhini",
+                "Rika Antonova",
+                "Leonidas Guibas",
+                "Gordon Wetzstein",
+                "Jeannette Bohg",
+                "Chenfanfu Jiang"
+              ],
+              "abstract": "Differentiable simulation propagates derivatives through a physics simulator, turning animation, system identification, control, and computational design into gradient-based optimization. Engines differ in the physics they model and, less visibly, in which mathematical object they differentiate. We separate two questions the literature conflates. The referent is which object the returned derivative belongs to: the finite computation that executed, the converged equation it approximates, or the continuous dynamics. The realization describes the organization of the backward pass: automatically generated differentiation, an equation-level adjoint solve, or a custom adjoint. The referent defines the target against which exactness is assessed; the implementation determines how accurately that target is approximated. Cost depends on the realization together with how the states needed by the backward pass are retained or recovered. Crossing the axes places every method and engine we classify in a cell, separates claims the literature merges, and shows that the apparent trade-off between exactness and memory follows from how methods have been built rather than from a constraint. A second, orthogonal taxonomy covers contact, where the map is non-smooth. We then ask whether a correct gradient helps. Four mechanisms by which useful gradients are lost are cataloged and measured on one testbed, where the advantage of the exact derivative over the equation-level adjoint depends on where the fitting target comes from as much as on the solver budget, and we review the evidence that zeroth-order methods can outperform simulator gradients in the regimes where those mechanisms act. The model classes, systems techniques and applications are surveyed through this lens, and we close with a reporting checklist, a released diagnostic that computes it, and a research agenda.",
+              "categories": [
+                "cs.GR",
+                "cs.CV",
+                "cs.LG",
+                "cs.RO",
+                "math.NA"
+              ],
+              "published": "2026-11-09T10:13:58Z",
+              "url": "https://arxiv.org/abs/2611.12162",
+              "pdf_url": "https://arxiv.org/pdf/2611.12162v1",
+              "comment": "35 pages, 8 figures, 9 tables",
+              "figure_url": "https://arxiv.org/html/2611.12162v1/figs/r_beams.png",
+              "figure_caption": "Figure 2: What a contact solver is asked to resolve, and why contact modes matter. Left , two elastic beams twisted around one another, 97 thousand vertices between them, in sustained frictional contact along the whole interface while they buckle. The active pairs change along the trajectory. Local ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.11087",
+              "title": "SoftPAT3D: Physics-Augmented Text-to-3D Scene Generation with Deformables",
+              "authors": [
+                "Lei Shu",
+                "Alberta Longhini",
+                "Leonidas Guibas",
+                "Gordon Wetzstein",
+                "Jeannette Bohg"
+              ],
+              "abstract": "We present SoftPAT3D, a physics-augmented framework for text-to-3D scene generation in which deformable objects, such as cloth, stuffed toys and ropes, are generated as physically valid, simulation-ready bodies and placed in intersection-free contact with the furniture that supports them, with one another and with themselves. Existing physics-augmented pipelines simulate rigid bodies only and cannot accommodate a generated deformable object, which text-to-3D generation returns as a geometrically invalid mesh, sometimes self-intersecting, that has no rest shape, no material model and no admissible initial state. These are the inputs a deformable simulation requires, and we construct each from information already in the pipeline. The rest shape comes from how the object is manufactured rather than from the generated physically inconsistent deformed configuration, and a material library assigns each deformable object its initial elastic parameters, which can then be optimized. The occluded support is regenerated and converted into a watertight collision mesh, each object is released from an optimizable placement above the supporting part that the prompt specifies, and the complete scene is driven to static equilibrium under one unified contact model, with completion verified by geometric checks and a vision-language model. When a scene fails the prompt, a grid search over placements corrects it, and the adjoint of a differentiable simulation of the same contact energy reaches the targets the grid does not, places several bodies jointly and recovers and optimizes material parameters. Multi-body scenes equilibrate in a single simulation, and the pipeline also runs from the text prompt alone. On all sixty-five prompts, SoftPAT3D produces no undesired interpenetration of any kind, whereas every other system does, and its scenes directly support scene editing and robotic manipulation.",
+              "categories": [
+                "cs.CV",
+                "cs.GR",
+                "cs.RO"
+              ],
+              "published": "2026-11-08T02:55:57Z",
+              "url": "https://arxiv.org/abs/2611.11087",
+              "pdf_url": "https://arxiv.org/pdf/2611.11087v1",
+              "comment": "33 pages, 13 figures",
+              "figure_url": "https://arxiv.org/html/2611.11087v1/pipeline_v4.png",
+              "figure_caption": "Figure 2 : Overview of SoftPAT3D. Each card shows the state of one prompt at that point of the pipeline, and its label names the step that produced it. (a) The prompt is expanded into a reference image, segmented and lifted as in PAT3D, and the support hidden under each deformable object is inpainte",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.08209",
               "title": "RoboARCade: Benchmarking Agentic Robot Control",
@@ -3682,6 +3928,56 @@
         {
           "name": "Li Fei-Fei",
           "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.09036",
               "title": "ToolDex: An Ego-Exo Human Demonstration Dataset for Creative Physical Tool Use",
@@ -4211,7 +4507,7 @@
           ]
         }
       ],
-      "total": 77
+      "total": 82
     },
     {
       "name": "Carnegie Mellon University",
@@ -4524,6 +4820,110 @@
         {
           "name": "Guanya Shi",
           "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.10410",
+              "title": "SimDuoReal: Object-Centric Bimanual Policy for Emergent Dexterity",
+              "authors": [
+                "Qiyang Yan",
+                "Yulin Liu",
+                "Akash Sharma",
+                "Haozhi Qi",
+                "Guanya Shi",
+                "C. Karen Liu"
+              ],
+              "abstract": "Bimanual dexterous manipulation requires coordinated arm and hand control, yet specifying such coordination manually is challenging and often task-specific. In this work, we explore whether complex bimanual dexterity can emerge from a simple object-centric learning objective. We train reinforcement learning policies under a shared object-centric reward, varying their training environments rather than tuning separate rewards for each behavior. We find that the policies discover pre-grasp manipulation, grasping and regrasping, in-hand adjustment and handover to reach object-pose goals without hand-designed motion sequences. We then refine the experts on transition states and use DAgger and reinforcement learning to distill them into a single policy that composes these behaviors for diverse bimanual tasks. On real hardware, the same policy succeeds in 61 of 80 trials (76.3%) across four tasks with unseen objects and no task-specific fine-tuning. In simulated barcode scanning, our policy achieves 85.0% success, compared with 60.4% for two single-arm policies without handover. These results suggest that this objective provides a simple and scalable interface for learning general bimanual dexterity, shifting the burden from manually designing robot coordination to specifying what should happen to the object.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-07T02:44:58Z",
+              "url": "https://arxiv.org/abs/2611.10410",
+              "pdf_url": "https://arxiv.org/pdf/2611.10410v1",
+              "comment": "Website: https://simduoreal.github.io",
+              "figure_url": "https://arxiv.org/html/2611.10410v1/system_overview_1.png",
+              "figure_caption": "Fig. 1 : System overview (A) Three experts are trained in simulation under a shared object-centric representation and reward, with different goal-sampling regimes: the left and right experts π L \\pi_{L} and π R \\pi_{R} learn grasping with in-hand manipulation from goals inside one arm’s workspace, a",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://simduoreal.github.io"
+              }
+            },
+            {
+              "id": "2611.10137",
+              "title": "A Unified Inertial Encoder for Human and Humanoid Motion",
+              "authors": [
+                "Yutian Chen",
+                "Shibo Zhao",
+                "Rocky Duan",
+                "Karen Liu",
+                "Carmelo Sferrazza",
+                "Guanya Shi",
+                "Yuheng Qiu",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Learning humanoid state estimation and language-grounded motion understanding from robot recordings ties training coverage to the robot's motion repertoire. Human motion datasets offer broader coverage, yet transferring this knowledge requires overcoming differences in body geometry, sensing, and physical disturbances. To enable this transfer, we propose a unified inertial encoder whose shared inertial interface uses kinematic IMU synthesis to represent human and humanoid motion at corresponding body sites. Within this common input space, joint training on human and kinematically retargeted humanoid motion combines velocity estimation and motion--text alignment with continuous-time encoding and sensor and motion randomization. The resulting model transfers zero-shot to a physical Unitree G1 without physics simulation, real-robot training trajectories, or fine-tuning, achieving the lowest velocity error among evaluated methods across five datasets, including 0.099m/s on real G1. Its motion-description retrieval also extends to retargeted G1 motion categories observed only in human training, demonstrating how human motion knowledge can support the generalization of humanoid inertial odometry and language-grounded motion understanding.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-06T19:03:25Z",
+              "url": "https://arxiv.org/abs/2611.10137",
+              "pdf_url": "https://arxiv.org/pdf/2611.10137v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.10137v1/Figure2.png",
+              "figure_caption": "Fig. 2: Overview of the proposed method. Left: kinematic transport combines pelvis IMU measurements, joint encoders, and link kinematics to synthesize inertial signals at anatomically corresponding sites. Center: continuous convolution converts native-rate IMU streams into fixed-duration tokens. A s",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.38731",
               "title": "Value Function-Guided MPPI for Hierarchical Planning and Control in Off-Road Autonomous Navigation",
@@ -5105,7 +5505,7 @@
           ]
         }
       ],
-      "total": 30
+      "total": 33
     },
     {
       "name": "MIT",
@@ -5114,7 +5514,35 @@
       "researchers": [
         {
           "name": "Russ Tedrake",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.10949",
+              "title": "Explicitly capturing demonstrator multi-modality for distillation into diffusion policies",
+              "authors": [
+                "Shao Yuan Chew Chia",
+                "Rebecca H. Jiang",
+                "Abhinav Agarwal",
+                "Andreas Hofmann",
+                "Leslie Pack Kaelbling",
+                "Russ Tedrake"
+              ],
+              "abstract": "The diversity of a distilled diffusion policy's outputs matters beyond how it impacts the policy's success rate. In particular, downstream applications like test-time search and policy improvement require exploration. Thus, we want to distill multi-modal demonstrators into diffusion policies which reproduce their conditional action distributions. Standard data collection for behavior cloning applies a sliding window to demonstration episodes, which pairs unique observation histories with actions. These datasets can be fit by a policy that is either multi-modal, or unimodal with high Lipschitz constant to capture a diversity of actions seen at nearby observation samples. Prior work finds that diffusion policies trained on sparse data learn the latter, memorizing one action per observation. We adapt vine sampling to behavior cloning data collection to resolve this ambiguity: at some states the demonstrator visits, query it $k$ times from exactly the same observation. On a synthetic task, we study how the number of actions per observation, $k$, affects the learned policy, and find that larger $k$ yields a policy that better matches the demonstrator's conditional distribution, including its multi-modality and diversity. On a 2D truck unloading task, vine sampling likewise leads to a policy closer to the demonstrator and substantially improves both best-of-$N$ and expert iteration performance.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-07T20:25:48Z",
+              "url": "https://arxiv.org/abs/2611.10949",
+              "pdf_url": "https://arxiv.org/pdf/2611.10949v1",
+              "comment": "Presented at Pretrain to Adapt Workshop at the 10th Conference on Robot Learning (CoRL 2026). Project website: https://shaoyuan.cc/research/vine/",
+              "figure_url": "https://arxiv.org/html/2611.10949v1/truck_qualitative.png",
+              "figure_caption": "Figure 1: Actions from the truck unloading demonstrator of sec. C.1 (top), the vine policy (middle), and the sliding window policy (bottom), queried at the same state of a held-out problem instance. Each panel shows the observation image with future arm poses overlaid; poses with suction on are show",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://shaoyuan.cc/research/vine/"
+              }
+            }
+          ]
         },
         {
           "name": "Pulkit Agrawal",
@@ -5248,6 +5676,33 @@
         {
           "name": "Leslie Pack Kaelbling",
           "papers": [
+            {
+              "id": "2611.10949",
+              "title": "Explicitly capturing demonstrator multi-modality for distillation into diffusion policies",
+              "authors": [
+                "Shao Yuan Chew Chia",
+                "Rebecca H. Jiang",
+                "Abhinav Agarwal",
+                "Andreas Hofmann",
+                "Leslie Pack Kaelbling",
+                "Russ Tedrake"
+              ],
+              "abstract": "The diversity of a distilled diffusion policy's outputs matters beyond how it impacts the policy's success rate. In particular, downstream applications like test-time search and policy improvement require exploration. Thus, we want to distill multi-modal demonstrators into diffusion policies which reproduce their conditional action distributions. Standard data collection for behavior cloning applies a sliding window to demonstration episodes, which pairs unique observation histories with actions. These datasets can be fit by a policy that is either multi-modal, or unimodal with high Lipschitz constant to capture a diversity of actions seen at nearby observation samples. Prior work finds that diffusion policies trained on sparse data learn the latter, memorizing one action per observation. We adapt vine sampling to behavior cloning data collection to resolve this ambiguity: at some states the demonstrator visits, query it $k$ times from exactly the same observation. On a synthetic task, we study how the number of actions per observation, $k$, affects the learned policy, and find that larger $k$ yields a policy that better matches the demonstrator's conditional distribution, including its multi-modality and diversity. On a 2D truck unloading task, vine sampling likewise leads to a policy closer to the demonstrator and substantially improves both best-of-$N$ and expert iteration performance.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-07T20:25:48Z",
+              "url": "https://arxiv.org/abs/2611.10949",
+              "pdf_url": "https://arxiv.org/pdf/2611.10949v1",
+              "comment": "Presented at Pretrain to Adapt Workshop at the 10th Conference on Robot Learning (CoRL 2026). Project website: https://shaoyuan.cc/research/vine/",
+              "figure_url": "https://arxiv.org/html/2611.10949v1/truck_qualitative.png",
+              "figure_caption": "Figure 1: Actions from the truck unloading demonstrator of sec. C.1 (top), the vine policy (middle), and the sliding window policy (bottom), queried at the same state of a held-out problem instance. Each panel shows the observation image with future arm poses overlaid; poses with suction on are show",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://shaoyuan.cc/research/vine/"
+              }
+            },
             {
               "id": "2611.04080",
               "title": "FEIJOA: Task-Driven Grounding and Execution for Mobile Manipulation",
@@ -5437,6 +5892,31 @@
           "name": "Phillip Isola",
           "papers": [
             {
+              "id": "2611.11962",
+              "title": "Shaping Useful Noise: Energy Distributions Predict Visual Pretraining Quality",
+              "authors": [
+                "Ching Lam Choi",
+                "Antonio Torralba",
+                "Phillip Isola",
+                "Stefanie Jegelka"
+              ],
+              "abstract": "Synthetic data can scale visual pretraining, but current selection criteria only partially explain which datasets train strong representations. We propose using the energy profile of a dataset--the distribution of log-probability levels it occupies under a normalised real-image density model--as an audit and curation principle for synthetic data. To operationalise this view, we introduce Energy-Level Distribution Distance (ELD), which compares real and synthetic energy distributions. Real images span sparse high-likelihood scenes and dense low-likelihood textures, so useful synthetic data should cover this energy range rather than collapse to likely but low-variation samples. Across diverse synthetic datasets, ELD exposes mismatches missed by FID and predicts pretraining performance beyond FID, LPIPS variation, and feature-space recall, including across CNN and ViT self-supervised settings. We then use ELD to resample and mix synthetic sources, matching the real-image energy histogram while preserving diversity and improving downstream transfer.",
+              "categories": [
+                "cs.LG",
+                "cs.AI",
+                "cs.CV"
+              ],
+              "published": "2026-11-09T06:31:22Z",
+              "url": "https://arxiv.org/abs/2611.11962",
+              "pdf_url": "https://arxiv.org/pdf/2611.11962v1",
+              "comment": "Accepted as an oral presentation to NeurIPS 2026 (Sydney)",
+              "figure_url": "https://arxiv.org/html/2611.11962v1/appendix_dino_synthetic_samples.png",
+              "figure_caption": "Figure 6 : DINO/ViT-S synthetic pretraining sources. This grid highlights the range from noise and procedural structure to generator samples; Eld measures how these sources populate ImageNet likelihood levels.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.09411",
               "title": "Shared Geometry As A Rosetta Stone: Cross-Modal Alignment Without Paired Data",
               "authors": [
@@ -5520,7 +6000,7 @@
           ]
         }
       ],
-      "total": 14
+      "total": 17
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -5630,6 +6110,31 @@
         {
           "name": "Yann LeCun",
           "papers": [
+            {
+              "id": "2611.11379",
+              "title": "Self-Supervised Collapse Prevention with Score-Based Entropy Maximization",
+              "authors": [
+                "Adarsh Kappiyath",
+                "Silpa Vadakkeeveetil Sreelatha",
+                "Xiatian Zhu",
+                "Yann LeCun",
+                "Lu Yin",
+                "Amir Bar"
+              ],
+              "abstract": "Diffusion models have demonstrated the effectiveness of score-based objectives for generative modeling, yet their potential for self-supervised representation learning remains underexplored. We introduce Entropy-Based Regularization (EBReg), a framework that uses latent score estimation to regularize the latent distribution during self-supervised training. EBReg jointly learns an encoder and a latent score model, and utilizes the learned score to provide a diversity-preserving signal that prevents representational collapse. Motivated by a mutual-information lower bound, we formulate the objective as view alignment with smoothed marginal entropy maximization and optimize the marginal entropy without explicit density evaluation. The same score model can additionally be used at test time to refine corrupted representations toward the training latent distribution. Empirically, EBReg learns competitive representations on ImageNet-1K, achieving 75.57% linear-probe accuracy with ViT-L. Across diverse architectures, score-guided test-time adaptation further improves robustness on ImageNet-C, yielding an average relative accuracy gain of approximately 5%.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-08T13:40:24Z",
+              "url": "https://arxiv.org/abs/2611.11379",
+              "pdf_url": "https://arxiv.org/pdf/2611.11379v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.11379v1/demonstration_group_ablation.png",
+              "figure_caption": "Figure 1: Illustration of the EBReg anti-collapse mechanism. Top: (a) Representations lie near a one-dimensional subspace of ℝ 2 \\mathbb{R}^{2} . (b) EBReg alone spreads them across both dimensions. (c) Alignment alone contracts them, resulting in dimensional collapse. (d) Alignment + EBReg yields c",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.42146",
               "title": "Hierarchical World Models with Implicit Dynamics",
@@ -5957,7 +6462,7 @@
               ],
               "published": "2026-10-27T12:54:16Z",
               "url": "https://arxiv.org/abs/2610.37161",
-              "pdf_url": "https://arxiv.org/pdf/2610.37161v2",
+              "pdf_url": "https://arxiv.org/pdf/2610.37161v3",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.37161v1/fig_benchmark_scores.png",
               "figure_caption": "Figure 1 : WorkPilot-35B-A3B consistently outperforms its Qwen3.6-35B-A3B base model across four professional-work benchmarks, with representative models shown for context.",
@@ -6366,7 +6871,7 @@
           ]
         }
       ],
-      "total": 23
+      "total": 24
     },
     {
       "name": "University of Washington",
@@ -6897,6 +7402,80 @@
           "name": "Yuke Zhu",
           "papers": [
             {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.10553",
+              "title": "Meta-Reinforcement Learning with Zero-Shot Reinforcement Learning",
+              "authors": [
+                "Jake Grigsby",
+                "Siddhant Agarwal",
+                "Yu Lei",
+                "Leonidas Varveropoulos",
+                "Yuke Zhu"
+              ],
+              "abstract": "Meta-reinforcement learning (meta-RL) trains agents to adapt to novel tasks from test-time experience, but requires diverse training environments and reward functions. While environments are becoming cheaper to generate, it remains difficult to anticipate every objective an agent may be asked to pursue at test time. Behavior Foundation Models (BFMs) learn policies from reward-free data and support zero-shot RL (ZSRL): adaptation to new objectives at test time using a large reward-labeled dataset. Recent work has shown that BFM task inference can instead be performed online without prior task-specific data. We note that this capability positions BFMs and meta-RL as alternative approaches for online adaptation to new reward functions in a fixed environment. We then ask whether we can extend BFMs to compete with meta-RL more broadly, including in novel environments, and identify four challenges: environment identification, online data collection, test-time exploration, and learning from mixed reward supervision. We study each individually, then propose MetaBFM, a hybrid method that addresses all four. During training, it combines supervised reward-following with unsupervised learning; at test time, it can interpolate between exploration, exploitation, and ZSRL-style reward inference. We demonstrate that MetaBFM can recover the in-distribution performance of supervised meta-RL while generalizing to reward functions outside the training set. Our work suggests that BFMs and meta-RL are complementary research directions whose combined strengths allow adaptive agents to learn more diverse behaviors from a fixed set of supervised objectives.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-07T07:43:39Z",
+              "url": "https://arxiv.org/abs/2611.10553",
+              "pdf_url": "https://arxiv.org/pdf/2611.10553v1",
+              "comment": "NeurIPS 2026",
+              "figure_url": "thumbs/2611.10553.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.06881",
               "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
               "authors": [
@@ -7386,7 +7965,7 @@
           ]
         }
       ],
-      "total": 22
+      "total": 24
     },
     {
       "name": "ETH Zürich / TU Darmstadt",
@@ -9694,6 +10273,37 @@
           "name": "Cewu Lu",
           "papers": [
             {
+              "id": "2611.12870",
+              "title": "SWAM: Scaling World Action Models with Cross-Modal Alignment",
+              "authors": [
+                "Yu Zhou",
+                "Xinyuan Xia",
+                "Xuankun Yang",
+                "Yinghao Yang",
+                "Wendi Chen",
+                "Bowen Liu",
+                "Jianhan Ma",
+                "Weicheng Duan",
+                "Jun Lv",
+                "Cewu Lu",
+                "Yanwei Li"
+              ],
+              "abstract": "World action models jointly predict video and actions conditioned on language. Existing studies focus primarily on architectures and training mechanisms, typically treating language-video alignment acquired through video pretraining as an established foundation. However, introducing action learning may impair this alignment. Principled guidance on data and supervision design for maintaining language-video alignment during action learning remains limited. To investigate this, we curate a pool of approximately 47,000 hours of general videos, egocentric videos, UMI demonstrations, and robot demonstrations. Building on this, we systematically study how language-video supervision, language-video-action supervision, and the joint use of these two forms affect WAM performance. In particular, we examine how language annotation quality affects pretrained language-video capabilities, and how action supervision from UMI and robot demonstrations extends these capabilities to language-video-action modeling. To better scale the model, we further conduct detailed studies on joint training recipe and model architecture. Under a fixed training budget, mixing egocentric videos and UMI demonstrations improves control generalization. Model architecture affects how effectively these experiences are used, while scaling pretraining under the selected configuration brings further gains. The resulting recipe, post-trained on RoboTwin Clean demonstrations only, achieves success rates of 88.10% and 61.56% under Easy (Clean-to-Clean) and Hard (Clean-to-Random) conditions, respectively. Our model achieves 40.00% SR across three real-world tasks, compared with 23.33% for the strongest baseline, indicating better generalization under unseen conditions. We release the curated data, training code, and model weights.",
+              "categories": [
+                "cs.CV",
+                "cs.RO"
+              ],
+              "published": "2026-11-09T18:55:04Z",
+              "url": "https://arxiv.org/abs/2611.12870",
+              "pdf_url": "https://arxiv.org/pdf/2611.12870v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.12870v1/intro_data_model.png",
+              "figure_caption": "Figure 2: Multisource data and model overview. (a) Composition of the 47k-hour pretraining data pool. (b) Our world action model architecture, with video and action branches connected through shared masked attention.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2610.30991",
               "title": "UniFlowWAM: A Unified World-Action Model with Visual Semantics and 4D Geometry",
               "authors": [
@@ -10238,7 +10848,7 @@
           ]
         }
       ],
-      "total": 57
+      "total": 58
     },
     {
       "name": "工业界研究团队",
@@ -10915,6 +11525,56 @@
         {
           "name": "Pieter Abbeel",
           "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.05266",
               "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
@@ -12044,7 +12704,7 @@
           "papers": []
         }
       ],
-      "total": 41
+      "total": 42
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -12392,43 +13052,11 @@
               "links": {
                 "project": "https://wb-wam.github.io"
               }
-            },
-            {
-              "id": "2609.32626",
-              "title": "World SLAM Model: Joint World Modeling for SLAM and Navigation",
-              "authors": [
-                "Minghui Qin",
-                "Yijun Yuan",
-                "Weicheng Zheng",
-                "Kenan Li",
-                "Weibang Wang",
-                "Chang Sun",
-                "Junhao Huang",
-                "Anmin Liu",
-                "Yicheng Yao",
-                "Hang Zhao"
-              ],
-              "abstract": "We introduce World SLAM Model (WSM), a unified framework that brings the SLAM paradigm directly into downstream navigation. Rather than treating SLAM merely as an upstream module that provides poses, maps or tokens, WSM adopts its core mechanisms, including incremental state updates with persistent memory and backend refinement of accumulated errors, to maintain a consistent world state during interaction. Given the current observation and a navigation goal, WSM predicts future visual states and jointly estimates their camera motion and dense geometry, grounding visual prediction in an evolving spatial world state. This spatial state is continuously updated as new observations arrive and provides the basis for action generation and closed-loop navigation. WSM is trained end-to-end with a joint navigation--SLAM objective, enabling downstream navigation to benefit directly from SLAM-style state maintenance and refinement while preserving accurate geometric estimation. Experiments demonstrate improved navigation performance together with strong SLAM accuracy, highlighting the potential of SLAM as an intrinsic mechanism for long-horizon world modeling and embodied interaction.",
-              "categories": [
-                "cs.RO",
-                "cs.CV"
-              ],
-              "published": "2026-09-26T13:44:57Z",
-              "url": "https://arxiv.org/abs/2609.32626",
-              "pdf_url": "https://arxiv.org/pdf/2609.32626v1",
-              "comment": "Website: https://tsinghua-mars-lab.github.io/WorldSLAMModel",
-              "figure_url": "https://arxiv.org/html/2609.32626v1/Fig1V5.png",
-              "figure_caption": "Figure 1: Overview of the World SLAM Model. WSM integrates a SLAM expert and a generation expert into a unified model that autoregressively estimates world states (i.e., depth and camera pose), dreams future observations, and infers future world states, supporting navigation, localization, and mappi",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://tsinghua-mars-lab.github.io/WorldSLAMModel"
-              }
             }
           ]
         }
       ],
-      "total": 12
+      "total": 11
     },
     {
       "name": "BFM-Zero 合作作者",
@@ -12562,7 +13190,58 @@
         },
         {
           "name": "Tonghe Zhang",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            }
+          ]
         },
         {
           "name": "Cunxi Dai",
@@ -12692,6 +13371,110 @@
         {
           "name": "Guanya Shi",
           "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.10410",
+              "title": "SimDuoReal: Object-Centric Bimanual Policy for Emergent Dexterity",
+              "authors": [
+                "Qiyang Yan",
+                "Yulin Liu",
+                "Akash Sharma",
+                "Haozhi Qi",
+                "Guanya Shi",
+                "C. Karen Liu"
+              ],
+              "abstract": "Bimanual dexterous manipulation requires coordinated arm and hand control, yet specifying such coordination manually is challenging and often task-specific. In this work, we explore whether complex bimanual dexterity can emerge from a simple object-centric learning objective. We train reinforcement learning policies under a shared object-centric reward, varying their training environments rather than tuning separate rewards for each behavior. We find that the policies discover pre-grasp manipulation, grasping and regrasping, in-hand adjustment and handover to reach object-pose goals without hand-designed motion sequences. We then refine the experts on transition states and use DAgger and reinforcement learning to distill them into a single policy that composes these behaviors for diverse bimanual tasks. On real hardware, the same policy succeeds in 61 of 80 trials (76.3%) across four tasks with unseen objects and no task-specific fine-tuning. In simulated barcode scanning, our policy achieves 85.0% success, compared with 60.4% for two single-arm policies without handover. These results suggest that this objective provides a simple and scalable interface for learning general bimanual dexterity, shifting the burden from manually designing robot coordination to specifying what should happen to the object.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-07T02:44:58Z",
+              "url": "https://arxiv.org/abs/2611.10410",
+              "pdf_url": "https://arxiv.org/pdf/2611.10410v1",
+              "comment": "Website: https://simduoreal.github.io",
+              "figure_url": "https://arxiv.org/html/2611.10410v1/system_overview_1.png",
+              "figure_caption": "Fig. 1 : System overview (A) Three experts are trained in simulation under a shared object-centric representation and reward, with different goal-sampling regimes: the left and right experts π L \\pi_{L} and π R \\pi_{R} learn grasping with in-hand manipulation from goals inside one arm’s workspace, a",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://simduoreal.github.io"
+              }
+            },
+            {
+              "id": "2611.10137",
+              "title": "A Unified Inertial Encoder for Human and Humanoid Motion",
+              "authors": [
+                "Yutian Chen",
+                "Shibo Zhao",
+                "Rocky Duan",
+                "Karen Liu",
+                "Carmelo Sferrazza",
+                "Guanya Shi",
+                "Yuheng Qiu",
+                "Koushil Sreenath"
+              ],
+              "abstract": "Learning humanoid state estimation and language-grounded motion understanding from robot recordings ties training coverage to the robot's motion repertoire. Human motion datasets offer broader coverage, yet transferring this knowledge requires overcoming differences in body geometry, sensing, and physical disturbances. To enable this transfer, we propose a unified inertial encoder whose shared inertial interface uses kinematic IMU synthesis to represent human and humanoid motion at corresponding body sites. Within this common input space, joint training on human and kinematically retargeted humanoid motion combines velocity estimation and motion--text alignment with continuous-time encoding and sensor and motion randomization. The resulting model transfers zero-shot to a physical Unitree G1 without physics simulation, real-robot training trajectories, or fine-tuning, achieving the lowest velocity error among evaluated methods across five datasets, including 0.099m/s on real G1. Its motion-description retrieval also extends to retargeted G1 motion categories observed only in human training, demonstrating how human motion knowledge can support the generalization of humanoid inertial odometry and language-grounded motion understanding.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-06T19:03:25Z",
+              "url": "https://arxiv.org/abs/2611.10137",
+              "pdf_url": "https://arxiv.org/pdf/2611.10137v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.10137v1/Figure2.png",
+              "figure_caption": "Fig. 2: Overview of the proposed method. Left: kinematic transport combines pelvis IMU measurements, joint encoders, and link kinematics to synthesize inertial signals at anatomically corresponding sites. Center: continuous convolution converts native-rate IMU streams into fixed-duration tokens. A s",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2610.38731",
               "title": "Value Function-Guided MPPI for Hierarchical Planning and Control in Off-Road Autonomous Navigation",
@@ -13195,7 +13978,7 @@
           ]
         }
       ],
-      "total": 24
+      "total": 28
     },
     {
       "name": "RGMT 合作作者",
@@ -13542,6 +14325,7 @@
                 "Zheng Wang",
                 "Zhengwei Gong",
                 "Yuanzhi Liang",
+                "Haibin Huang",
                 "Chi Zhang"
               ],
               "abstract": "Video generation models can produce highly realistic videos while generating physically inconsistent object motion. This limitation suggests that visual modeling alone may not provide a transferable representation of physical dynamics. We introduce MotionCore, a framework for learning physical dynamics via a learnable partial differential equation solver and focuses on rigid-body motion. We introduce a latent neural simulator learning to predict the evolution of object-level physical states from observed motion. Its predictions are then converted into spatially aligned latent controls for a controllable video diffusion model. The generator serves as a visual interface: it provides appearance and scene detail, while the learned dynamics model specifies the physical trajectory. To preserve this trajectory through the interface, MotionCore combines a diffusion-matching objective with a low-capacity decodability constraint on object identity and position. We evaluate MotionCore on public physical-consistency benchmarks and on paired data with known trajectories. Results indicate that MotionCore improves physical consistency and trajectory obedience in the evaluated rigid-body settings, while maintaining comparable visual quality. A controlled ablation protocol compares learned dynamics with an analytic prior and studies the choice of latent evolution processor.",
@@ -13550,7 +14334,7 @@
               ],
               "published": "2026-11-06T02:45:37Z",
               "url": "https://arxiv.org/abs/2611.08904",
-              "pdf_url": "https://arxiv.org/pdf/2611.08904v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.08904v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.08904v1/figs/Method.png",
               "figure_caption": "Figure 1 : Overview of MotionCore. (a) Stage 1 pretrains the occupancy autoencoder and the surface operator. Stage 2 freezes them and trains the neural simulator on rollouts of K K frames. At inference the simulator rolls out the scene, and the decoded occupancy is rendered into a control video for ",
@@ -13596,14 +14380,14 @@
                 "Chi Zhang",
                 "Shuai Liu"
               ],
-              "abstract": "Unified Multimodal Models (UMMs) aim to support visual understanding and generation within a single model. Existing post-training methods either use understanding as a fixed teacher to improve generation, or rely on ground-truth trajectories to supervise both understanding and generation. Prism instead derives bidirectional supervision from self-generated interleaved rollouts, constructing training targets according to the reliability of their text and image chains. We propose Prism, a bidirectional self-teaching post-training method for UMMs. Like a prism decomposing mixed light, Prism decouples a coupled interleaved trajectory into a text chain and an image chain, assesses the reliability of each chain, and constructs a corresponding training target from their reliability states. Experiments on both SenseNova-U1 and BAGEL show that Prism improves both understanding and generation. On the generation side, GenEval improves from 85.8 to 89.2 (+3.4), and DPG improves from 86.1 to 87.3 (+1.2) on SenseNova-U1. On the understanding side, the total MME score improves from 2282.6 to 2311.6, and MMVP improves from 58.0 to 62.0. Consistent improvements are observed on BAGEL. These results highlight that Prism enables coordinated improvements in generation and understanding by constructing reliability-guided self-training targets from self-generated trajectories, without relying on an external verifier or externally annotated corrected trajectories during target construction.",
+              "abstract": "Unified Multimodal Models (UMMs) aim to support visual understanding and generation within a single model. Existing post-training methods either use understanding as a fixed teacher to improve generation, or rely on ground-truth trajectories to supervise both understanding and generation. Prism instead derives bidirectional supervision from self-generated interleaved rollouts, constructing training targets according to the reliability of their text and image chains. We propose Prism, a bidirectional self-teaching post-training method for UMMs. Like a prism decomposing mixed light, Prism decouples a coupled interleaved trajectory into a text chain and an image chain, assesses the reliability of each chain, and constructs a corresponding training target from their reliability states. Experiments on both SenseNova-U1 and BAGEL show that Prism improves both understanding and generation. On the generation side, GenEval improves from 85.8 to 89.2 (+3.4), and DPG improves from 86.1 to 87.3 (+1.2) on SenseNova-U1. On the understanding side, the total MME score improves from 2282.6 to 2311.6, and MMVP improves from 58.0 to 62.0. Consistent improvements are observed on BAGEL. These results highlight that Prism enables coordinated improvements in generation and understanding by constructing reliability-guided self-training targets from self-generated trajectories, without relying on an external verifier or externally annotated corrected trajectories during target construction. Code is available at https://github.com/aliyun/qwen-dianjin/tree/master/DianJin-Prism.",
               "categories": [
                 "cs.CV",
                 "cs.AI"
               ],
               "published": "2026-11-04T11:05:07Z",
               "url": "https://arxiv.org/abs/2611.06343",
-              "pdf_url": "https://arxiv.org/pdf/2611.06343v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.06343v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.06343v1/1_cropped.png",
               "figure_caption": "Figure 1: Capabilities of Prism. Prism improves both understanding and generation through self-teaching on interleaved text-image trajectories. The base model shows redundant steps on step 2 in the cooking tutorial, while Prism produces a coherent and correct tutorial. It also improves performance o",
@@ -13726,7 +14510,8 @@
                 "Chi Zhang",
                 "Wei Zheng",
                 "Weifan Zhang",
-                "Yifan Wei"
+                "Yifan Wei",
+                "Yong Sun"
               ],
               "abstract": "Coding agents can adapt robotic software by revising executable programs, but successful responses to an evolving opponent may not remain effective. We present a framework for program-level adversarial co-adaptive self-play in which coding agents generate attacks and defenses from tested opponent code and mission feedback, without model fine-tuning. Environment-specific interfaces support external programs for autonomous driving and SDK-level defenses for humanoid locomotion. Two eight-generation case studies reveal concrete software responses: a driving defender introduces direct-actuation recovery, while a humanoid defender revises incoming-state validation. These responses provide local task recovery but do not establish sustained robustness. The framework makes such adaptation and limitations observable through executable artifacts and task-level evidence.",
               "categories": [
@@ -13734,7 +14519,7 @@
               ],
               "published": "2026-10-26T18:49:21Z",
               "url": "https://arxiv.org/abs/2610.36143",
-              "pdf_url": "https://arxiv.org/pdf/2610.36143v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.36143v2",
               "comment": "8 pages, 5 figures",
               "figure_url": "https://arxiv.org/html/2610.36143v1/media/framework.png",
               "figure_caption": "Figure 1: Program-level adversarial co-adaptation. Coding agents develop attack and defense programs that are checked, frozen, and evaluated in Autoware-CARLA or G1-MuJoCo. Independent referees judge outcomes from simulator ground truth; results and tested opponent code guide the next generation.",
@@ -14361,7 +15146,38 @@
       "researchers": [
         {
           "name": "Hongyi Li",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.12111",
+              "title": "GAP: Generalized Adaptation Prior for Dexterous Piano Playing",
+              "authors": [
+                "Jinyi Chen",
+                "Hongyi Li",
+                "Lei Jiang",
+                "Xianwei Liu",
+                "Yanhong Liang",
+                "Yulin Chen",
+                "Yucheng Tao",
+                "Yongbin Jin",
+                "Hongtao Wang"
+              ],
+              "abstract": "Dexterous hands enable versatile manipulation, but policies trained in simulation often degrade on hardware owing to non-idealities, and the high-dimensional action space makes real-world adaptation costly. Piano playing, which requires precise and coordinated multifinger motion, offers a representative testbed. We propose GAP (Generalized Adaptation Prior for Dexterous Piano Playing), a sample-efficient adaptation framework that learns how to adapt, rather than how to act, during simulation pretraining and transfers this adaptation prior to hardware. Between repeated executions, GAP uses feedback to adjust the actions of the next one: a gradient guidance network learns from paired executions how adjusting actions affects playing performance, and its gradients guide these adjustments. In simulation, GAP yields approximately 2.4 times the F1 scores improvement of the existing fast-adaptation baseline for dexterous piano playing under the same interaction budget. The learned prior also generalizes to musical pieces held out from pretraining. On a physical dexterous hand, the same simulation-pretrained prior improves F1 scores by 3.6%-23% across three pieces of varying difficulty after approximately 7 min of adaptation each. These results suggest a practical route to reduce the real-world interaction needed to deploy dexterous hands.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-09T09:24:46Z",
+              "url": "https://arxiv.org/abs/2611.12111",
+              "pdf_url": "https://arxiv.org/pdf/2611.12111v1",
+              "comment": "See video at https://www.bilibili.com/video/BV1hbWx6QE9u",
+              "figure_url": "https://arxiv.org/html/2611.12111v1/first_page_figure.png",
+              "figure_caption": "Fig. 1: GAP pretrains a generalized adaptation prior in simulation on multiple pieces under different perturbations, including joint zero offsets, damping, actuator delays, and sensor noise (top), and uses it for fast adaptation on the physical hand (bottom). Green, red, and orange keys denote corre",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://www.bilibili.com/video/BV1hbWx6QE9u"
+              }
+            }
+          ]
         },
         {
           "name": "Li Peizhuo",
@@ -14369,7 +15185,38 @@
         },
         {
           "name": "Yucheng Tao",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.12111",
+              "title": "GAP: Generalized Adaptation Prior for Dexterous Piano Playing",
+              "authors": [
+                "Jinyi Chen",
+                "Hongyi Li",
+                "Lei Jiang",
+                "Xianwei Liu",
+                "Yanhong Liang",
+                "Yulin Chen",
+                "Yucheng Tao",
+                "Yongbin Jin",
+                "Hongtao Wang"
+              ],
+              "abstract": "Dexterous hands enable versatile manipulation, but policies trained in simulation often degrade on hardware owing to non-idealities, and the high-dimensional action space makes real-world adaptation costly. Piano playing, which requires precise and coordinated multifinger motion, offers a representative testbed. We propose GAP (Generalized Adaptation Prior for Dexterous Piano Playing), a sample-efficient adaptation framework that learns how to adapt, rather than how to act, during simulation pretraining and transfers this adaptation prior to hardware. Between repeated executions, GAP uses feedback to adjust the actions of the next one: a gradient guidance network learns from paired executions how adjusting actions affects playing performance, and its gradients guide these adjustments. In simulation, GAP yields approximately 2.4 times the F1 scores improvement of the existing fast-adaptation baseline for dexterous piano playing under the same interaction budget. The learned prior also generalizes to musical pieces held out from pretraining. On a physical dexterous hand, the same simulation-pretrained prior improves F1 scores by 3.6%-23% across three pieces of varying difficulty after approximately 7 min of adaptation each. These results suggest a practical route to reduce the real-world interaction needed to deploy dexterous hands.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-09T09:24:46Z",
+              "url": "https://arxiv.org/abs/2611.12111",
+              "pdf_url": "https://arxiv.org/pdf/2611.12111v1",
+              "comment": "See video at https://www.bilibili.com/video/BV1hbWx6QE9u",
+              "figure_url": "https://arxiv.org/html/2611.12111v1/first_page_figure.png",
+              "figure_caption": "Fig. 1: GAP pretrains a generalized adaptation prior in simulation on multiple pieces under different perturbations, including joint zero offsets, damping, actuator delays, and sensor noise (top), and uses it for fast adaptation on the physical hand (bottom). Green, red, and orange keys denote corre",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://www.bilibili.com/video/BV1hbWx6QE9u"
+              }
+            }
+          ]
         },
         {
           "name": "Ze Wang",
@@ -14381,7 +15228,38 @@
         },
         {
           "name": "Jinyi Chen",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.12111",
+              "title": "GAP: Generalized Adaptation Prior for Dexterous Piano Playing",
+              "authors": [
+                "Jinyi Chen",
+                "Hongyi Li",
+                "Lei Jiang",
+                "Xianwei Liu",
+                "Yanhong Liang",
+                "Yulin Chen",
+                "Yucheng Tao",
+                "Yongbin Jin",
+                "Hongtao Wang"
+              ],
+              "abstract": "Dexterous hands enable versatile manipulation, but policies trained in simulation often degrade on hardware owing to non-idealities, and the high-dimensional action space makes real-world adaptation costly. Piano playing, which requires precise and coordinated multifinger motion, offers a representative testbed. We propose GAP (Generalized Adaptation Prior for Dexterous Piano Playing), a sample-efficient adaptation framework that learns how to adapt, rather than how to act, during simulation pretraining and transfers this adaptation prior to hardware. Between repeated executions, GAP uses feedback to adjust the actions of the next one: a gradient guidance network learns from paired executions how adjusting actions affects playing performance, and its gradients guide these adjustments. In simulation, GAP yields approximately 2.4 times the F1 scores improvement of the existing fast-adaptation baseline for dexterous piano playing under the same interaction budget. The learned prior also generalizes to musical pieces held out from pretraining. On a physical dexterous hand, the same simulation-pretrained prior improves F1 scores by 3.6%-23% across three pieces of varying difficulty after approximately 7 min of adaptation each. These results suggest a practical route to reduce the real-world interaction needed to deploy dexterous hands.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-09T09:24:46Z",
+              "url": "https://arxiv.org/abs/2611.12111",
+              "pdf_url": "https://arxiv.org/pdf/2611.12111v1",
+              "comment": "See video at https://www.bilibili.com/video/BV1hbWx6QE9u",
+              "figure_url": "https://arxiv.org/html/2611.12111v1/first_page_figure.png",
+              "figure_caption": "Fig. 1: GAP pretrains a generalized adaptation prior in simulation on multiple pieces under different perturbations, including joint zero offsets, damping, actuator delays, and sensor noise (top), and uses it for fast adaptation on the physical hand (bottom). Green, red, and orange keys denote corre",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://www.bilibili.com/video/BV1hbWx6QE9u"
+              }
+            }
+          ]
         },
         {
           "name": "Yanyan Yuan",
@@ -14393,7 +15271,38 @@
         },
         {
           "name": "Yongbin Jin",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.12111",
+              "title": "GAP: Generalized Adaptation Prior for Dexterous Piano Playing",
+              "authors": [
+                "Jinyi Chen",
+                "Hongyi Li",
+                "Lei Jiang",
+                "Xianwei Liu",
+                "Yanhong Liang",
+                "Yulin Chen",
+                "Yucheng Tao",
+                "Yongbin Jin",
+                "Hongtao Wang"
+              ],
+              "abstract": "Dexterous hands enable versatile manipulation, but policies trained in simulation often degrade on hardware owing to non-idealities, and the high-dimensional action space makes real-world adaptation costly. Piano playing, which requires precise and coordinated multifinger motion, offers a representative testbed. We propose GAP (Generalized Adaptation Prior for Dexterous Piano Playing), a sample-efficient adaptation framework that learns how to adapt, rather than how to act, during simulation pretraining and transfers this adaptation prior to hardware. Between repeated executions, GAP uses feedback to adjust the actions of the next one: a gradient guidance network learns from paired executions how adjusting actions affects playing performance, and its gradients guide these adjustments. In simulation, GAP yields approximately 2.4 times the F1 scores improvement of the existing fast-adaptation baseline for dexterous piano playing under the same interaction budget. The learned prior also generalizes to musical pieces held out from pretraining. On a physical dexterous hand, the same simulation-pretrained prior improves F1 scores by 3.6%-23% across three pieces of varying difficulty after approximately 7 min of adaptation each. These results suggest a practical route to reduce the real-world interaction needed to deploy dexterous hands.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-09T09:24:46Z",
+              "url": "https://arxiv.org/abs/2611.12111",
+              "pdf_url": "https://arxiv.org/pdf/2611.12111v1",
+              "comment": "See video at https://www.bilibili.com/video/BV1hbWx6QE9u",
+              "figure_url": "https://arxiv.org/html/2611.12111v1/first_page_figure.png",
+              "figure_caption": "Fig. 1: GAP pretrains a generalized adaptation prior in simulation on multiple pieces under different perturbations, including joint zero offsets, damping, actuator delays, and sensor noise (top), and uses it for fast adaptation on the physical hand (bottom). Green, red, and orange keys denote corre",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://www.bilibili.com/video/BV1hbWx6QE9u"
+              }
+            }
+          ]
         },
         {
           "name": "Mingfeng Fan",
@@ -14504,6 +15413,36 @@
           "name": "Hongtao Wang",
           "papers": [
             {
+              "id": "2611.12111",
+              "title": "GAP: Generalized Adaptation Prior for Dexterous Piano Playing",
+              "authors": [
+                "Jinyi Chen",
+                "Hongyi Li",
+                "Lei Jiang",
+                "Xianwei Liu",
+                "Yanhong Liang",
+                "Yulin Chen",
+                "Yucheng Tao",
+                "Yongbin Jin",
+                "Hongtao Wang"
+              ],
+              "abstract": "Dexterous hands enable versatile manipulation, but policies trained in simulation often degrade on hardware owing to non-idealities, and the high-dimensional action space makes real-world adaptation costly. Piano playing, which requires precise and coordinated multifinger motion, offers a representative testbed. We propose GAP (Generalized Adaptation Prior for Dexterous Piano Playing), a sample-efficient adaptation framework that learns how to adapt, rather than how to act, during simulation pretraining and transfers this adaptation prior to hardware. Between repeated executions, GAP uses feedback to adjust the actions of the next one: a gradient guidance network learns from paired executions how adjusting actions affects playing performance, and its gradients guide these adjustments. In simulation, GAP yields approximately 2.4 times the F1 scores improvement of the existing fast-adaptation baseline for dexterous piano playing under the same interaction budget. The learned prior also generalizes to musical pieces held out from pretraining. On a physical dexterous hand, the same simulation-pretrained prior improves F1 scores by 3.6%-23% across three pieces of varying difficulty after approximately 7 min of adaptation each. These results suggest a practical route to reduce the real-world interaction needed to deploy dexterous hands.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-09T09:24:46Z",
+              "url": "https://arxiv.org/abs/2611.12111",
+              "pdf_url": "https://arxiv.org/pdf/2611.12111v1",
+              "comment": "See video at https://www.bilibili.com/video/BV1hbWx6QE9u",
+              "figure_url": "https://arxiv.org/html/2611.12111v1/first_page_figure.png",
+              "figure_caption": "Fig. 1: GAP pretrains a generalized adaptation prior in simulation on multiple pieces under different perturbations, including joint zero offsets, damping, actuator delays, and sensor noise (top), and uses it for fast adaptation on the physical hand (bottom). Green, red, and orange keys denote corre",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://www.bilibili.com/video/BV1hbWx6QE9u"
+              }
+            },
+            {
               "id": "2610.10345",
               "title": "SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing",
               "authors": [
@@ -14534,7 +15473,7 @@
           ]
         }
       ],
-      "total": 4
+      "total": 9
     },
     {
       "name": "SONIC 合作作者",
@@ -14580,6 +15519,38 @@
         {
           "name": "Ye Yuan",
           "papers": [
+            {
+              "id": "2611.11558",
+              "title": "InfraRSI: Harnessing Recursive Self-Improvement for Training Infrastructure",
+              "authors": [
+                "InfraRSI Team",
+                "Yuchuan Tian",
+                "Haocheng Mei",
+                "Ye Yuan",
+                "Chao Xu",
+                "Boxun Li",
+                "Guohao Dai",
+                "Kai Han",
+                "Allen Chen",
+                "Yunhe Wang",
+                "Yu Wang"
+              ],
+              "abstract": "While Recursive Self-Improvement (RSI) accelerates isolated algorithm and kernel synthesis, distributed LLM training depends on tightly coupled launch settings, operator kernels, and communication schedules, where single edits often hit out-of-memory (OOM) boundaries, compiler conflicts, measurement jitter, or silent numerical drift. We present InfraRSI, the agentic harness that turns open-ended human commands into verified training optimizations via a five-stage workflow: init locks editable scope and a fixed task contract over workload, loss, and timing invariants to prevent reward hacking, doctor profiles baseline phases and calibrates cluster noise, run co-optimizes launch knobs and code patches before re-verifying top candidates against the baseline and logging findings to a cross-hardware experience bank, and report and apply audit source paths, track failed-trial costs, and commit promoted changes. Rather than stepping greedily from a single incumbent, InfraRSI initializes from diverse experience-seeded configurations and fits global execution-time and censored peak-memory models across all trials, including OOMs. Using these models, it prices per-setting memory costs, revises miscalibrated LLM priors from live runs, and pairs memory-hungry optimizations with memory savers and verified code patches. Across four single- and multi-node dense and Mixture-of-Experts (MoE) LLM workloads, InfraRSI achieves a speedup of up to $2.75\\times$ and lifts mean Model FLOPs Utilization (MFU) from $17.4%$ to $30.0%$, outperforming existing tuners and coding agents while transferring experience across GPUs. As it improves training infrastructure efficiency, InfraRSI forms a two-level Recursive Self-Improvement loop---revising priors online within runs and distilling experience across clusters---to push foundation model scaling.",
+              "categories": [
+                "cs.AI"
+              ],
+              "published": "2026-11-08T18:59:37Z",
+              "url": "https://arxiv.org/abs/2611.11558",
+              "pdf_url": "https://arxiv.org/pdf/2611.11558v1",
+              "comment": "22 pages, 5 figures, 8 tables. Project page and code: https://github.com/TokenRhythm/InfraRSI",
+              "figure_url": "thumbs/2611.11558.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/TokenRhythm/InfraRSI"
+              }
+            },
             {
               "id": "2611.06476",
               "title": "The Alignment Tax Is Graded: Task-Selective Capability Loss Under Length-Normalized DPO with SFT Retention",
@@ -15469,7 +16440,58 @@
         },
         {
           "name": "Wenli Xiao",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            }
+          ]
         },
         {
           "name": "Simon Yuen",
@@ -15478,6 +16500,29 @@
         {
           "name": "Jan Kautz",
           "papers": [
+            {
+              "id": "2611.11692",
+              "title": "LocateAnyMesh: Grounding 3D Mesh Queries in 2D Images with Vision-Language Models",
+              "authors": [
+                "Chris Choy",
+                "Zhiding Yu",
+                "Jan Kautz"
+              ],
+              "abstract": "Textured 3D meshes specify object geometry and appearance, making them a natural query for finding a particular asset in an image. We introduce LocateAnyMesh, a vision-language model that uses the mesh itself as part of its prompt. A frozen 3D encoder maps colored surface points to a compact token sequence, which a learned connector places alongside image and instruction tokens. We evaluate two grounding models with PPAT mesh tokens: LAM-Select selects image-region proposals, while LAM-Direct predicts coordinates directly. Neither requires rendered query views or view-template matching. New objects require a single encoder pass and no object-specific fine-tuning. LAM-Select improves localization on the reported real-image suites and the official BOP YCB-V evaluation. Secondary experiments compare mesh encoders, and a LAM-Direct study isolates surface color. A single-seed LAM-Select continuation supplies pointing and mesh-only description evidence without replacing the reported localization model. The results support mesh tokens as a query representation, with remaining limitations in presence decisions, identity binding, proposal coverage, and descriptive fidelity.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-11-08T23:24:50Z",
+              "url": "https://arxiv.org/abs/2611.11692",
+              "pdf_url": "https://arxiv.org/pdf/2611.11692v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.11692v1/fig_architecture.png",
+              "figure_caption": "Figure 3 : LAM -Select , initialized from VLX-Seek-1.5-10B. A frozen 3D encoder and a trainable connector place mesh features alongside image, region, and instruction tokens. An image-only detector supplies candidate boxes. The Qwen3.5 decoder generates region IDs or an explicit refusal; selected ID",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.08449",
               "title": "VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding",
@@ -16012,6 +17057,80 @@
           "name": "Yuke Zhu",
           "papers": [
             {
+              "id": "2611.12177",
+              "title": "Embodied First Exam",
+              "authors": [
+                "Kangrui Wang",
+                "Qineng Wang",
+                "Changhe Chen",
+                "Pingyue Zhang",
+                "Chi Gui",
+                "Feishi Wang",
+                "Canyu Chen",
+                "Wenli Xiao",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Linjie Li",
+                "Zihan Wang",
+                "Minyeong Kim",
+                "Yiyou Sun",
+                "Mingkai Deng",
+                "Jinyu Hou",
+                "Qi Zhu",
+                "Han Liu",
+                "Eric P. Xing",
+                "Huaxiu Yao",
+                "Zhiwen Fan",
+                "Yuejiang Liu",
+                "Dawn Song",
+                "Pieter Abbeel",
+                "Li Fei-Fei",
+                "Jiajun Wu",
+                "Yuke Zhu",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-09T10:29:19Z",
+              "url": "https://arxiv.org/abs/2611.12177",
+              "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+              "comment": "Preprint version",
+              "figure_url": "https://arxiv.org/html/2611.12177v1/fig4.png",
+              "figure_caption": "Figure 1 : Examples of the control approaches, each with an excerpt of the agent’s commands or code. Dark tabs mark the approaches used ( model is direct control), and the framed line is a policy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.10553",
+              "title": "Meta-Reinforcement Learning with Zero-Shot Reinforcement Learning",
+              "authors": [
+                "Jake Grigsby",
+                "Siddhant Agarwal",
+                "Yu Lei",
+                "Leonidas Varveropoulos",
+                "Yuke Zhu"
+              ],
+              "abstract": "Meta-reinforcement learning (meta-RL) trains agents to adapt to novel tasks from test-time experience, but requires diverse training environments and reward functions. While environments are becoming cheaper to generate, it remains difficult to anticipate every objective an agent may be asked to pursue at test time. Behavior Foundation Models (BFMs) learn policies from reward-free data and support zero-shot RL (ZSRL): adaptation to new objectives at test time using a large reward-labeled dataset. Recent work has shown that BFM task inference can instead be performed online without prior task-specific data. We note that this capability positions BFMs and meta-RL as alternative approaches for online adaptation to new reward functions in a fixed environment. We then ask whether we can extend BFMs to compete with meta-RL more broadly, including in novel environments, and identify four challenges: environment identification, online data collection, test-time exploration, and learning from mixed reward supervision. We study each individually, then propose MetaBFM, a hybrid method that addresses all four. During training, it combines supervised reward-following with unsupervised learning; at test time, it can interpolate between exploration, exploitation, and ZSRL-style reward inference. We demonstrate that MetaBFM can recover the in-distribution performance of supervised meta-RL while generalizing to reward functions outside the training set. Our work suggests that BFMs and meta-RL are complementary research directions whose combined strengths allow adaptive agents to learn more diverse behaviors from a fixed set of supervised objectives.",
+              "categories": [
+                "cs.LG"
+              ],
+              "published": "2026-11-07T07:43:39Z",
+              "url": "https://arxiv.org/abs/2611.10553",
+              "pdf_url": "https://arxiv.org/pdf/2611.10553v1",
+              "comment": "NeurIPS 2026",
+              "figure_url": "thumbs/2611.10553.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.06881",
               "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
               "authors": [
@@ -16294,7 +17413,7 @@
           ]
         }
       ],
-      "total": 53
+      "total": 58
     }
   ]
 }
