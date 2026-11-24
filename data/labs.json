@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-23T18:38:55+00:00",
-  "day": "2026-11-23",
+  "updated": "2026-11-24T18:07:40+00:00",
+  "day": "2026-11-24",
   "days_back": 45,
-  "total": 316,
+  "total": 323,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -2296,6 +2296,7 @@
                 "Satvik Sharma",
                 "Hengyuan Hu",
                 "Mihika Kamat",
+                "Samrat Sahoo",
                 "Dorsa Sadigh",
                 "Jeannette Bohg"
               ],
@@ -2305,7 +2306,7 @@
               ],
               "published": "2026-11-05T16:00:16Z",
               "url": "https://arxiv.org/abs/2611.08209",
-              "pdf_url": "https://arxiv.org/pdf/2611.08209v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.08209v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.08209v1/task_lineup_4x5.png",
               "figure_caption": "Figure 1: Representative tasks from RoboARCade. The benchmark includes 22 tasks spanning single and bimanual manipulation, assembly, physical puzzles, and biolab-inspired procedures. This figure shows 20 of them. Tasks require combinations of visual understanding, precise control, memory, and multi-",
@@ -2554,6 +2555,7 @@
                 "Satvik Sharma",
                 "Hengyuan Hu",
                 "Mihika Kamat",
+                "Samrat Sahoo",
                 "Dorsa Sadigh",
                 "Jeannette Bohg"
               ],
@@ -2563,7 +2565,7 @@
               ],
               "published": "2026-11-05T16:00:16Z",
               "url": "https://arxiv.org/abs/2611.08209",
-              "pdf_url": "https://arxiv.org/pdf/2611.08209v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.08209v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.08209v1/task_lineup_4x5.png",
               "figure_caption": "Figure 1: Representative tasks from RoboARCade. The benchmark includes 22 tasks spanning single and bimanual manipulation, assembly, physical puzzles, and biolab-inspired procedures. This figure shows 20 of them. Tasks require combinations of visual understanding, precise control, memory, and multi-",
@@ -3101,6 +3103,32 @@
         {
           "name": "Deepak Pathak",
           "papers": [
+            {
+              "id": "2611.29913",
+              "title": "MoMa-NMP: Scene-Scale Neural Motion Planning for Mobile Manipulators",
+              "authors": [
+                "Adam Kan",
+                "Jason Jingzhou Liu",
+                "Jiahui Yang",
+                "Kenneth Shaw",
+                "Deepak Pathak"
+              ],
+              "abstract": "Mobile manipulators operating in homes and other complex environments must coordinate their base and arm over long horizons, navigating around obstacles, through narrow passages, and between constrained workspaces. Neural motion planners can provide fast closed-loop planning from partial observations, but scaling them to room-sized environments is difficult because generating high-quality training trajectories is itself a challenging motion-planning problem. To address this, we introduce MoMa-DemoSmith, a demonstration-generation pipeline that separates the problem into global path discovery for large complex scenes and local motion refinement for collision avoidance. This key separation enables the generation of millions of challenging whole-body trajectories across our procedurally generated scenes. We train MoMa-NMP on these demonstrations through behavior cloning (BC) followed by privileged on-policy distillation, achieving 87.0% success on our simulation benchmark and 77.5% across 80 trials in unseen real-world scenes. See video results at https://adamhkan.com/moma-nmp/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-23T02:10:52Z",
+              "url": "https://arxiv.org/abs/2611.29913",
+              "pdf_url": "https://arxiv.org/pdf/2611.29913v1",
+              "comment": "Website: https://adamhkan.com/moma-nmp/",
+              "figure_url": "https://arxiv.org/html/2611.29913v1/demosmith-data-generation-blue-scenes-hires.png",
+              "figure_caption": "Fig. 1: MoMa-DemoSmith demonstration generation. (1) We generate diverse scenes with varying arrangements of tables and obstacles, and sample start and goal poses in both open and confined workspaces. (2) We use cuRobo to plan global trajectories for the mobile base and arm. Relaxed planning constra",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://adamhkan.com/moma-nmp/"
+              }
+            },
             {
               "id": "2611.03647",
               "title": "Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations",
@@ -3820,37 +3848,6 @@
               "video_url": null,
               "links": {
                 "project": "https://iscoyizj.github.io/discrete-action-website/"
-              }
-            },
-            {
-              "id": "2610.14406",
-              "title": "Memory Without Curation: Learning Multi-Stream Latent Memory for Robot Policies",
-              "authors": [
-                "Yilin Wu",
-                "Rutav Shah",
-                "Shuaiyi Huang",
-                "Sumedh A. Sontakke",
-                "Homanga Bharadhwaj",
-                "Andrea Bajcsy",
-                "Max Simchowitz",
-                "Guanya Shi"
-              ],
-              "abstract": "It is widely appreciated that robotic policies require long-term memory to perform complex tasks. However, directly conditioning policies on all past observations leaves policy learning susceptible to learning spurious shortcuts, and introduces large latency at policy deployment. As such, today's memory-augmented policies curate what to remember, either by retaining only recent frames, selected keyframes, or textual summaries, or by learning latent representations of the visual stream alone. In this work, we propose an alternative approach IMPRINT, a policy-agnostic latent memory framework that augments vision-language-action (VLA) models with multi-stream memory without explicitly constraining what the policy should remember. IMPRINT compresses different streams into a latent memory that is updated incrementally at inference, enabling low latency. To avoid shortcut learning, IMPRINT adopts a two-stage training procedure, first supervising memory to reconstruct multiple streams (observations, actions, proprioception) of past information, as well as estimate current task progress, followed by end-to-end finetuning, jointly with the policy, on action prediction. Across both simulation and real-world tasks demanding memory, IMPRINT improves average success over the base VLA by at least 26%, outperforming popular alternatives, and maintaining lowest inference latency among memory-augmented VLAs. Through careful ablations, we demonstrate the utility of incorporating diverse information streams into robotic memory, validating the advantages of foregoing history curation. Project website: https://yilin-wu98.github.io/imprint_website/.",
-              "categories": [
-                "cs.RO",
-                "cs.AI",
-                "cs.LG"
-              ],
-              "published": "2026-10-09T23:58:57Z",
-              "url": "https://arxiv.org/abs/2610.14406",
-              "pdf_url": "https://arxiv.org/pdf/2610.14406v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.14406v1/method_figure_5.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://yilin-wu98.github.io/imprint_website/"
               }
             }
           ]
@@ -4668,13 +4665,13 @@
             },
             {
               "id": "2610.15267",
-              "title": "LeHami: Symplectic Latent Dynamics for World Models",
+              "title": "LeHami: Symplectic Latent Dynamics Toward Long-Horizon Rollouts in World Models",
               "authors": [
                 "Romina Yalovetzky",
                 "Randall Balestriero",
                 "Yann LeCun"
               ],
-              "abstract": "Joint-embedding predictive architectures (JEPAs) learn world models directly in latent space, but unconstrained autoregressive predictors may contract the latent distribution over long rollouts. We introduce Symplectic Hamiltonian JEPA (LeHami), which replaces the standard predictor with an action-conditioned Hamiltonian flow over a structured latent state (q, p) integrated using an exactly symplectic leapfrog step. This construction preserves phase-space volume at every rollout step and rules out uniform contraction, asymptotically stable fixed points, and merging of distinct latent states, independently of the learned parameters or action sequence. We obtain the momentum-like component from temporal derivatives of the learned position-like representation, providing an explicit second-order state for prediction and control. On conservative and actuated visual pendulum environments, LeHami substantially improves long-horizon velocity prediction over an unconstrained JEPA world model and empirically maintains constant latent volume where the baseline contracts. The learned flow also supports accurate integration at unseen sub-frame step sizes and numerical time reversal. These results show how geometric structure can provide inference-time guarantees that are complementary to representation regularization in latent world models.",
+              "abstract": "Joint-embedding predictive architectures (JEPAs) learn world models in latent space, but unconstrained autoregressive predictors may contract the latent distribution over long rollouts. We introduce Symplectic Hamiltonian JEPA (LeHami), which replaces the standard predictor with an action-conditioned Hamiltonian flow over a structured latent state (q, p) integrated using an exactly symplectic leapfrog step. This construction preserves phase-space volume at every rollout step and rules out uniform contraction, asymptotically stable fixed points, and merging of distinct latent states, independently of the learned parameters or action sequence. We obtain the momentum-like component from temporal derivatives of the learned position-like representation, providing an explicit second-order state for prediction and control. We measure rollout collapse on the data, with four ratios of the rollout to the truth, on five environments learned from pixels: conservative and actuated pendulums, a mass-spring, a two-body system and a cart pole. With the encoder and latent state held fixed, an MLP and a transformer predictor contract the rollout on every environment, while LeHami's rollouts do not merge. LeHami is the most accurate of the three at long horizons, in position on four of the five environments and in velocity on three, while at short horizons the free predictors are more accurate on two of the five. The learned flow also integrates at unseen sub-frame step sizes and, run backward with the recorded actions, recovers earlier frames as well as it predicts later ones. LeWM, with a richer three-frame encoder of its own, is more accurate on four of the five, which suggests incorporating a richer encoder within LeHami in future work. These results show how geometric structure can provide inference-time guarantees that are complementary to representation regularization in latent world models.",
               "categories": [
                 "cs.LG",
                 "cs.AI",
@@ -4682,7 +4679,7 @@
               ],
               "published": "2026-10-11T01:28:41Z",
               "url": "https://arxiv.org/abs/2610.15267",
-              "pdf_url": "https://arxiv.org/pdf/2610.15267v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.15267v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.15267v1/concept_hjepa_properties_actuated.png",
               "figure_caption": "Figure 1: LeHami: Learning symplectic world models end-to-end. Bottom left: Actuated pendulum frames and applied torque sequence u t u_{t} (green). Upper left: Latent phase space ( 𝐪 t , 𝐩 t ) (\\mathbf{q}_{t},\\mathbf{p}_{t}) , where transitions are generated by a learned scalar H ϕ ​ ( 𝐪 t , 𝐩 t , u",
@@ -6064,6 +6061,31 @@
           "name": "Marco Hutter",
           "papers": [
             {
+              "id": "2611.30312",
+              "title": "One Policy, Many Bodies: Cooperative Human-Object Interaction with Heterogeneous Teams",
+              "authors": [
+                "Zhihao Cao",
+                "Tianxu An",
+                "Chenhao Li",
+                "Chenyangguang Zhang",
+                "Stelian Coros",
+                "Marco Hutter"
+              ],
+              "abstract": "Physics-based human-object interaction (HOI) has enabled multiple characters to cooperatively transport objects, but existing cooperative controllers largely assume homogeneous embodiments and predefined interaction tasks. We ask whether a single physics-based policy can enable cooperation across diverse embodiments, team compositions, and interaction skills. We present MorphHOI, a decentralised framework built on a key insight: effective heterogeneous cooperation requires a unified representation across embodiments while accounting for differences in their physical capabilities. To realise this insight, we introduce a canonical body interface that unifies observation and action spaces, together with an embodiment-conditioned transformer that adapts cooperative decisions to the physical capabilities of each agent and its teammates. To extend cooperation to new interaction skills, we reuse the learned cooperative policy through task-specific tokens and lightweight adaptation, preserving its original capabilities. Our framework achieves success rates of up to 96.7% on seen embodiments, 95.6% on unseen embodiments, and 91.4% on novel payloads. Furthermore, the learned cooperation extends to diverse interaction skills with high success rates, including box carrying, transport on stairs, and waypoint following, while preserving previously acquired cooperative capabilities.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-23T08:58:19Z",
+              "url": "https://arxiv.org/abs/2611.30312",
+              "pdf_url": "https://arxiv.org/pdf/2611.30312v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.30312v1/fig2_method.png",
+              "figure_caption": "Figure 2: Overview of MorphHOI. (a) Agent i i (green) observes its ego state o ego o^{\\mathrm{ego}} via canonical links (FK) and teammate states o j o^{j} relative to it. Tokenizers f f produce agent X i X^{i} (queries Q Q ), team T i T^{i} , and task Y Y tokens (keys and values K , V K,V ). Encoder",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.25215",
               "title": "Bridging vision-language reasoning and learned control for legged navigation in the wild",
               "authors": [
@@ -7023,7 +7045,7 @@
           ]
         }
       ],
-      "total": 35
+      "total": 36
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -7033,6 +7055,30 @@
         {
           "name": "Yang Gao",
           "papers": [
+            {
+              "id": "2611.30351",
+              "title": "NNS-GS: Non-Local Neural Scattering for Relightable Gaussian Splatting",
+              "authors": [
+                "Shiyu Liang",
+                "Yang Gao",
+                "Lili Wang",
+                "Aimin Hao",
+                "Beibei Wang"
+              ],
+              "abstract": "Creating relightable 3D assets of translucent objects is challenging because changing the illumination at one surface location can affect the appearance elsewhere through subsurface scattering. Existing Gaussian-based scattering models typically predict scattering from local features, making this dependence difficult to capture. We present Non-Local Neural Scattering for Gaussian Splatting (NNS-GS), which learns non-local scattering together with geometry-guided local reflection. The scattering module learns how illumination from light-visible surface regions in light space contributes to the shading point in view space, conditioned on regional diffuse responses and spatial relationships. The reflection module supplies these diffuse responses and uses additional geometric guidance to better capture specular highlights and sharp shadow boundaries. To reduce component mixing and support controllable scattering appearance, anchor-based progressive training establishes the diffuse-scattering base before introducing specular reflection and supervises the components separately. Under calibrated point lighting, NNS-GS improves mean PSNR over existing methods by 2.47 dB and 0.81 dB on the synthetic and real translucent scenes, respectively. Additional synthetic comparisons further show that NNS-GS better matches the reference when adjusting scattering attenuation.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-11-23T09:23:15Z",
+              "url": "https://arxiv.org/abs/2611.30351",
+              "pdf_url": "https://arxiv.org/pdf/2611.30351v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.30351v1/fig_figure2_overview_spaces.png",
+              "figure_caption": "Figure 1 : Overview of the NNS-GS framework. Our framework comprises two modules for non-local scattering and detailed local reflection. The scattering module collects illumination cues from light-visible surfaces in light space and learns their contributions to the point 𝐏 \\mathbf{P} in view space ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.27166",
               "title": "Mem-X: A Memory-Dependent Cross-Episode Benchmark for Vision-and-Language Navigation",
@@ -7055,7 +7101,7 @@
               ],
               "published": "2026-11-20T05:51:31Z",
               "url": "https://arxiv.org/abs/2611.27166",
-              "pdf_url": "https://arxiv.org/pdf/2611.27166v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.27166v2",
               "comment": "9 pages, 3 figures. Submitted to IEEE International Conference on Robotics and Automation (ICRA 2027)",
               "figure_url": "https://arxiv.org/html/2611.27166v1/memx-overview.png",
               "figure_caption": "Fig. 1: Overview of the Mem-X benchmark. (a) Three memory-dependent levels: In-Trajectory Memory Recall, In-Memory Localization and Episodic Indexing, and Off-Memory Relocalization and Route Re-entry. (b) Mem-X requires historical memory, unlike prior VLN benchmarks; MemBridge is evaluated with memo",
@@ -7125,10 +7171,10 @@
             },
             {
               "id": "2611.19193",
-              "title": "Ref-MIL: Plug-and-Play Posterior Refinement for Multiple Instance Learning in QSM-Based Brain Disease Classification",
+              "title": "PoRef-MIL: Plug-and-Play Posterior Refinement for Multiple Instance Learning in QSM-Based Brain Disease Classification",
               "authors": [
-                "Ang Gaoa",
-                "Rui Jina",
+                "Ang Gao",
+                "Rui Jin",
                 "Yin Liu",
                 "Pengfei Rong",
                 "Feng Liu",
@@ -7143,7 +7189,7 @@
               ],
               "published": "2026-11-14T06:21:04Z",
               "url": "https://arxiv.org/abs/2611.19193",
-              "pdf_url": "https://arxiv.org/pdf/2611.19193v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.19193v2",
               "comment": "5figure, 6tables;",
               "figure_url": "https://arxiv.org/html/2611.19193v1/Figure1.png",
               "figure_caption": "Figure 1: Overview of the 2D dual-branch diagnosis network and its iterative training in PoRef-MIL. (a) In the 2D diagnosis network, each 2D QSM slice is processed by four feature extraction blocks (FEBs), followed by max pooling and slice-level classification. (b) Each FEB block fuses the features ",
@@ -8034,6 +8080,57 @@
           "name": "Hao Dong",
           "papers": [
             {
+              "id": "2611.28564",
+              "title": "Tool-to-Self: Internalizing Visual Tool Capabilities via Scaffolded Reinforcement Learning",
+              "authors": [
+                "Jin Cui",
+                "Hao Dong",
+                "Xinyue Long",
+                "Boran Zhao",
+                "Pengju Ren"
+              ],
+              "abstract": "Vision-language models (VLMs) increasingly rely on external visual tools to access fine-grained visual evidence, but repeated tool execution incurs substantial inference overhead and deployment dependencies. Moreover, conventional tool-use RL can improve visual-task performance, yet the resulting tool gains are often unstable. Motivated by this, we propose Tool-to-Self (T2S), a tool-scaffolded reinforcement learning framework that turns external visual tools into temporary training scaffolds. T2S cold-starts tool-use ability and observation prediction from tool-repairable examples, then progressively anneals tool execution on a per-tool basis during RL. By combining answer-correctness and observation-consistency rewards with privileged on-policy self-distillation from actual tool observations, T2S effectively teaches the model both to reproduce tool outputs and to reason from them. Experiments across diverse visual perception and reasoning benchmarks demonstrate consistent improvements over both explicit tool-use models and implicit zooming models while enabling tool-free inference with reduced latency.",
+              "categories": [
+                "cs.CL",
+                "cs.AI"
+              ],
+              "published": "2026-11-21T04:38:15Z",
+              "url": "https://arxiv.org/abs/2611.28564",
+              "pdf_url": "https://arxiv.org/pdf/2611.28564v1",
+              "comment": "11 pages, 6 figures",
+              "figure_url": "https://arxiv.org/html/2611.28564v1/main-fig.png",
+              "figure_caption": "Figure 2 : Overview of T2S. (a) Data construction and cold-start: Failed student rollouts are repaired by tool observations, and a teacher organizes successful repairs into trajectories for supervised fine-tuning. (b) Tool-augmented inference: Tool-use models depend on external execution and observa",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.28558",
+              "title": "From Reward Engineering to Data-Centric Reinforcement Learning for Effective Agentic Visual Tool Use",
+              "authors": [
+                "Jin Cui",
+                "Xinyue Long",
+                "Jiepeng Zhou",
+                "Boran Zhao",
+                "Pengju Ren",
+                "Hao Dong"
+              ],
+              "abstract": "Multimodal large language models (MLLMs) increasingly use external visual tools to acquire evidence during reasoning, yet learning when to invoke these tools remains challenging. Existing tool-use reinforcement learning (RL) methods often rely on call-contingent rewards to encourage beneficial tool use, but such reward engineering can distort the task objective and lead to degenerate calling behaviors. We argue that effective tool-use learning requires identifying not merely which questions are difficult, but which failures are attributable to missing visual evidence and can therefore be corrected through tool observations. We propose AOVO, a data-centric framework that enables MLLMs to learn effective tool use through perception attribution and policy-adaptive data sampling (PADS), without introducing tool-specific rewards. It counterfactually probes the model's reasoning states to identify observation-sensitive questions, distinguishing them from reasoning-dominated ones. PADS then periodically estimates category-level observation effects from recent policy rollouts and dynamically reallocates the training distribution toward questions where visual observations provide informative learning signals, while optimizing solely for final-answer correctness. Experiments across diverse visual perception and multimodal reasoning benchmarks demonstrate consistent improvements over competitive tool-use MLLMs, with causal analysis further validating the data-centric perspective for learning effective visual tool use.",
+              "categories": [
+                "cs.CL",
+                "cs.AI"
+              ],
+              "published": "2026-11-21T04:24:24Z",
+              "url": "https://arxiv.org/abs/2611.28558",
+              "pdf_url": "https://arxiv.org/pdf/2611.28558v1",
+              "comment": "11 pages, 4 figures",
+              "figure_url": "https://arxiv.org/html/2611.28558v1/AOVO-main.png",
+              "figure_caption": "Figure 1 : Overview of AOVO. (a) Student rollout .(b) Counterfactual probe : from the same reasoning state, the student continues both without and with each expert’s observation. Comparing the outcomes assigns each question to one of five categories. (c) Teacher rewrite : the teacher corrects only t",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.24940",
               "title": "$Z$-sight: Unifying Vision-Language-Action and Latent World Modeling",
               "authors": [
@@ -8300,6 +8397,41 @@
         {
           "name": "Cewu Lu",
           "papers": [
+            {
+              "id": "2611.30963",
+              "title": "Foresight Forcing: Learning Spatial Foresight for Robotic Manipulation",
+              "authors": [
+                "Mishuo Han",
+                "Zhixuan Liang",
+                "Zhaoyuan Wan",
+                "Wendi Chen",
+                "Jiarui Chen",
+                "Xinkai Wang",
+                "Yue Ma",
+                "Yu Zhou",
+                "Junting Chen",
+                "Yao Mu",
+                "Jun Lv",
+                "Chuan Wen",
+                "Cewu Lu"
+              ],
+              "abstract": "Robotic manipulation policies can improve action prediction by anticipating how objects move and how their spatial relationships change. World Action Models (WAMs) learn to predict future visual observations, but their training objectives typically leave the underlying 3D geometric transitions implicit. To alleviate this problem, we introduce Foresight Forcing ($\\mathcal{F}^{2}$), a WAM that learns a spatial transition representation from changes in a pretrained 3D feature space. During training, a frozen 3D foundation model extracts patch-wise feature differences from aligned current and future observations that provide dense supervision for geometry-aware feature transitions. We distill these targets into spatial transition queries, which are progressively refined from the current observation, language instruction, and proprioceptive state, and use them alongside current visual features to generate actions. At deployment, the policy predicts the queries without future observations or the 3D teacher. Experiments on LIBERO, LIBERO-Plus, and RoboTwin2.0 demonstrate strong manipulation performance and improved robustness, including 95.01% average success on RoboTwin2.0 Full. On six real-world manipulation tasks, $\\mathcal{F}^{2}$ achieves a mean task score of 85.8%.",
+              "categories": [
+                "cs.RO",
+                "cs.CV"
+              ],
+              "published": "2026-11-23T16:32:22Z",
+              "url": "https://arxiv.org/abs/2611.30963",
+              "pdf_url": "https://arxiv.org/pdf/2611.30963v1",
+              "comment": "Project website: https://anson2333.github.io/foresight-forcing",
+              "figure_url": "https://arxiv.org/html/2611.30963v1/teaser.png",
+              "figure_caption": "Figure 1 : Foresight Forcing ( ℱ 2 \\mathcal{F}^{2} ) at a glance. ℱ 2 \\mathcal{F}^{2} learns spatial transition queries from correspondence-aligned changes in 3D teacher features. During training, a frozen VGGT extracts features from paired observations to supervise the queries. At inference, the qu",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://anson2333.github.io/foresight-forcing"
+              }
+            },
             {
               "id": "2611.12870",
               "title": "SWAM: Scaling World Action Models with Cross-Modal Alignment",
@@ -8743,7 +8875,7 @@
           ]
         }
       ],
-      "total": 54
+      "total": 58
     },
     {
       "name": "工业界研究团队",
@@ -9995,7 +10127,29 @@
         },
         {
           "name": "Ziyu Zhang",
-          "papers": []
+          "papers": [
+            {
+              "id": "2611.28566",
+              "title": "Modeling Perceived Promptness in Simultaneous Interpreting from Quality, Structure, and Timing Signals",
+              "authors": [
+                "Ziyu Zhang",
+                "Satoshi Nakamura"
+              ],
+              "abstract": "Simultaneous interpreting requires interpreters to convey the source accurately while keeping pace with it in real time. Timing measures such as segment-onset delay capture part of this requirement, but may not fully reflect how professional evaluators judge promptness. We investigate whether these judgments can be explained by timing alone or whether the interpreted output provides additional information. Our dataset contains 622 Chinese-English and English-Chinese segments from 16 source speeches and seven interpreters. Two senior professional interpreters rated each segment for language quality (LQ), expressiveness (EXP), and perceived latency (LAT), which we also refer to as professional promptness. On held-out source speeches, onset delay alone achieves a Pearson correlation of r = .318 with LAT ratings. Combining predicted LQ and EXP with delay improves the correlation to r = .475. Lexical and structural features provide a stronger signal, reaching r = .632 when combined with delay and r = .658 when predicted quality is also included. These results suggest that professional promptness judgments reflect properties of the interpreted output beyond when the interpreter begins speaking. The additional contribution of predicted quality over structural features, however, is modest. Although the two evaluators differ in how strongly quality relates to LAT, cross-evaluator predictions remain positively correlated with LAT ratings. The overall pattern also holds when each interpreter is held out in turn.",
+              "categories": [
+                "cs.CL"
+              ],
+              "published": "2026-11-21T04:47:20Z",
+              "url": "https://arxiv.org/abs/2611.28566",
+              "pdf_url": "https://arxiv.org/pdf/2611.28566v1",
+              "comment": "",
+              "figure_url": "thumbs/2611.28566.jpg",
+              "figure_caption": "论文首页预览",
+              "figure_source": "pdf",
+              "video_url": null,
+              "links": {}
+            }
+          ]
         },
         {
           "name": "Yi Shi",
@@ -10145,7 +10299,7 @@
           "papers": []
         }
       ],
-      "total": 24
+      "total": 25
     },
     {
       "name": "Hiking in the Wild / Project Instinct 合作作者",
@@ -10967,42 +11121,11 @@
               "links": {
                 "project": "https://iscoyizj.github.io/discrete-action-website/"
               }
-            },
-            {
-              "id": "2610.14406",
-              "title": "Memory Without Curation: Learning Multi-Stream Latent Memory for Robot Policies",
-              "authors": [
-                "Yilin Wu",
-                "Rutav Shah",
-                "Shuaiyi Huang",
-                "Sumedh A. Sontakke",
-                "Homanga Bharadhwaj",
-                "Andrea Bajcsy",
-                "Max Simchowitz",
-                "Guanya Shi"
-              ],
-              "abstract": "It is widely appreciated that robotic policies require long-term memory to perform complex tasks. However, directly conditioning policies on all past observations leaves policy learning susceptible to learning spurious shortcuts, and introduces large latency at policy deployment. As such, today's memory-augmented policies curate what to remember, either by retaining only recent frames, selected keyframes, or textual summaries, or by learning latent representations of the visual stream alone. In this work, we propose an alternative approach IMPRINT, a policy-agnostic latent memory framework that augments vision-language-action (VLA) models with multi-stream memory without explicitly constraining what the policy should remember. IMPRINT compresses different streams into a latent memory that is updated incrementally at inference, enabling low latency. To avoid shortcut learning, IMPRINT adopts a two-stage training procedure, first supervising memory to reconstruct multiple streams (observations, actions, proprioception) of past information, as well as estimate current task progress, followed by end-to-end finetuning, jointly with the policy, on action prediction. Across both simulation and real-world tasks demanding memory, IMPRINT improves average success over the base VLA by at least 26%, outperforming popular alternatives, and maintaining lowest inference latency among memory-augmented VLAs. Through careful ablations, we demonstrate the utility of incorporating diverse information streams into robotic memory, validating the advantages of foregoing history curation. Project website: https://yilin-wu98.github.io/imprint_website/.",
-              "categories": [
-                "cs.RO",
-                "cs.AI",
-                "cs.LG"
-              ],
-              "published": "2026-10-09T23:58:57Z",
-              "url": "https://arxiv.org/abs/2610.14406",
-              "pdf_url": "https://arxiv.org/pdf/2610.14406v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.14406v1/method_figure_5.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://yilin-wu98.github.io/imprint_website/"
-              }
             }
           ]
         }
       ],
-      "total": 19
+      "total": 18
     },
     {
       "name": "RGMT 合作作者",
@@ -11247,6 +11370,31 @@
         {
           "name": "Chi Zhang",
           "papers": [
+            {
+              "id": "2611.30204",
+              "title": "Counterfactual Velocity Steering for World Action Models",
+              "authors": [
+                "Xufeng Zhan",
+                "Yuanzhi Liang",
+                "Ye Lu",
+                "Haibin Huang",
+                "Chi Zhang",
+                "Xuelong Li"
+              ],
+              "abstract": "Flow-based robot policies generate actions by repeatedly evaluating a conditional velocity field, so test-time bias correction seems simple: query the action expert under a task-agnostic condition and subtract that velocity from the task-conditioned prediction. We show this is often wrong. On Fast-WAM across 50 RoboTwin 2.0 tasks, mean-instruction predictions align strongly with task-conditioned velocities (cosine approximately 0.94-0.95). Averaging eight completed-state references barely cancels this direction: their mean norm is 98.3% of the mean individual norm. References thus contain a large shared transport component, not only harmful bias, and aggressive subtraction damages generation. We propose a same-state diagnostic and shrinkage analysis showing that the optimal correction scale depends on reference signal-to-noise. This motivates geometry-calibrated action debiasing, which removes only the component orthogonal to the task velocity and predicts a small task-dependent scale from instruction geometry. In controlled RoboTwin experiments, corrupting instructions still permits 25.1% success (50 tasks, 20 episodes), whereas dynamic visual corruption nearly eliminates success. A fixed centered orthogonal correction reaches 92.7% versus a 92.1% baseline in one randomized 1000-trial sweep, but gains are non-monotonic and within run-to-run variation. An angular scale pilot has an offline oracle-gated bound of 94.5%; its best learned online realization reaches 92.5%. These results identify shared flow and train-serve mismatch as central obstacles and provide a reproducible foundation for conditional correction.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-23T07:42:15Z",
+              "url": "https://arxiv.org/abs/2611.30204",
+              "pdf_url": "https://arxiv.org/pdf/2611.30204v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.30204v1/figures/method_overview_v5.png",
+              "figure_caption": "Figure 1 : Correction-aware fine-tuning for Fast-WAM. (a) Task and mean instruction contexts query the same WAM with identical observation o o , proprioception p p , noisy action x t x_{t} , and flow time t t . The mean context averages 8,192 cached training contexts. The no-op inset repeats the cur",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.25774",
               "title": "DS2Agent: Holistic Device Agents for Accelerated Embedded Board-Level Design",
@@ -11704,13 +11852,13 @@
                 "Beier Zhu",
                 "Chi Zhang"
               ],
-              "abstract": "We present a variational control framework that connects sampling-time guidance and reward-based model adaptation through a shared Jacobian pullback. Starting from terminal reward maximization with a path-space KL penalty, the Gibbs variational principle and Doob transform yield a correction to the generative dynamics. A local denoising approximation exposes the pullback that transports output preferences to the controlled variable. This construction gives Variational Optimal Guidance (VOG) in state space and extends to Distilled Variational Optimal Control (DVOC) by amortizing locally improved endpoints into model parameters. The resulting controls share a local variational rule: VOG acts through the denoising Jacobian, while DVOC realizes the parameter pullback by endpoint distillation. Under a linear MMSE model, VOG's exact correction lies in the data subspace. On ImageNet, VOG reduces DiT-XL/2 FID from 2.27 to 2.04 at 250 sampling steps and from 7.58 to 4.44 at 25 steps. After 20 updates on Z-Image-Turbo, DVOC improves HPSv3++ and four held-out evaluator scores over the untrained model, with the highest corresponding means among the trained methods compared. These results connect inference-time control and reward adaptation through a common geometric principle.",
+              "abstract": "Sampling-time guidance and reward-based post-training act on different variables but share a core geometric objective: realizing an output-space improvement through a generative model. We organize both around a Jacobian pullback evaluated with respect to either the current noisy state or the trainable parameters. Formulating current-state conditional variational optimal control (VOC) yields Variational Optimal Guidance (VOG), which transports a terminal reward proxy into a covariance-weighted sampling correction. Under a linear-subspace denoising model, the exact pullback has no component normal to the data subspace. Distilled Variational Optimal Control (DVOC) realizes the parameter-space counterpart of this local control principle: projected reward ascent constructs a bounded endpoint displacement within a local trust region, and a sparse, forward-pinned Euler surrogate transports it to LoRA parameters. Empirically, VOG reduces DiT-XL/2 FID on ImageNet from 2.27 to 2.04 at 250 sampling steps and from 7.58 to 4.44 at 25 steps. After 20 updates on Z-Image-Turbo, DVOC improves HPSv3++ and four held-out evaluator scores over the untrained model and leads all trained comparators on these five means, while CLIP remains close to the base and DeQA declines across all trained methods. The shared pullback interface cleanly separates the desired output change from the model derivative and the actuation variable.",
               "categories": [
                 "cs.LG"
               ],
               "published": "2026-10-27T12:42:59Z",
               "url": "https://arxiv.org/abs/2610.37146",
-              "pdf_url": "https://arxiv.org/pdf/2610.37146v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.37146v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.37146v1/vog_pipeline.png",
               "figure_caption": "Figure 1 : Variational control for sampling-time guidance and model adaptation. The gray curve illustrates generation from noise to the sampled endpoint. VOG (blue) evaluates the objective at the denoised prediction x ^ 0 \\hat{x}_{0} and maps its gradient through 𝐉 t \\mathbf{J}_{t} to correct the cu",
@@ -12052,7 +12200,7 @@
           "papers": []
         }
       ],
-      "total": 33
+      "total": 34
     },
     {
       "name": "PGMT 合作作者",
