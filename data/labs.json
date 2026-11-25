@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-24T18:07:40+00:00",
-  "day": "2026-11-24",
+  "updated": "2026-11-25T17:35:43+00:00",
+  "day": "2026-11-25",
   "days_back": 45,
-  "total": 323,
+  "total": 333,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -2232,57 +2232,6 @@
               "links": {
                 "project": "https://commgap.github.io/"
               }
-            },
-            {
-              "id": "2610.15582",
-              "title": "Inverse Garment Design with Visual Agents",
-              "authors": [
-                "Nanxiang Jiang",
-                "Yunuo Chen",
-                "Zeng Tao",
-                "Zizhang Li",
-                "Qi Guo",
-                "Jiajun Wu",
-                "Yin Yang",
-                "Chenfanfu Jiang"
-              ],
-              "abstract": "We study the problem of inverse garment design, reconstructing simulation-ready 3D outfits with arbitrary layers from a single image, with visual agents. Unlike differentiable optimization that is time-consuming, or feed-forward methods limited by training data, we introduce DressAgent, a hierarchical agentic system that recovers garment sewing patterns through planning and closed-loop refinement grounded in physical simulation. To this end, we first present an enhanced representation based on GarmentCode for diverse styles and arbitrary dressing layers, and build the first multi-layer sewing pattern dataset with over 15K outfits for supervision and benchmarking. Inverse design then proceeds coarse to fine: In layer planning and coarse estimation, agents infer layer order and relations, peel each layer into its own view, and estimate coarse patterns. In fine-grained refinement, an agentic trio of Tailor, Critic, and Orchestrator refines patterns in a closed loop of editing, simulating, and judging against the reference with visual and measured evidence. Carefully designed tools and an evolving memory make this refinement converge on the target geometry. We also design an agentic generation method for high-fidelity textures. DressAgent outperforms feed-forward methods by a large margin, surpasses or matches differentiable optimization in a fraction of the time, and generalizes to complex layering, diverse poses, and body shapes.",
-              "categories": [
-                "cs.AI"
-              ],
-              "published": "2026-10-11T12:55:06Z",
-              "url": "https://arxiv.org/abs/2610.15582",
-              "pdf_url": "https://arxiv.org/pdf/2610.15582v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.15582v1/teaser.png",
-              "figure_caption": "Figure 1: We introduce DressAgent for inverse garment design with agentic planning and refinement. (a) Results on in-the-wild photos with arbitrary layering, diverse poses, and body shapes. (b) The outfits drape and animate under physics. (c) Every garment is a sewing pattern with high-fidelity text",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2610.15290",
-              "title": "Co-DSL: Human-LLM Co-design of Reusable Spatial Concepts for Layout Generation",
-              "authors": [
-                "R. Kenny Jones",
-                "Jiajun Wu",
-                "Maneesh Agrawala"
-              ],
-              "abstract": "We present Co-DSL, a framework in which users and LLMs co-design reusable spatial concepts for layout generation. In the first stage, our system allows users to create a library of personalized operations. To add a concept, a user provides a description, which the LLM converts into an initial implementation. The user can then observe the concept's execution behavior over example scenarios and provide lightweight feedback to the LLM, which revises the concept's implementation logic. In the second stage, given a library, an LLM can author a layout program that meets a new layout request from a user. Executing a layout program instantiates a concept-graph, a declarative composition of library concepts. In this way, we require the LLM only to specify which concepts should hold, while we use a solver to search for a layout that satisfies them. Across five spatial layout domains, we find that Co-DSL libraries let LLMs capture layout patterns that are challenging for prior fixed-operation systems, and demonstrate that our concept-graph representation is needed for LLMs to reliably compose concepts together. We further find that Co-DSL lets LLMs author generative layout programs that expose high-level parametric controls users can manipulate to explore a distribution of related layouts without re-prompting.",
-              "categories": [
-                "cs.GR",
-                "cs.AI",
-                "cs.CV"
-              ],
-              "published": "2026-10-11T02:49:48Z",
-              "url": "https://arxiv.org/abs/2610.15290",
-              "pdf_url": "https://arxiv.org/pdf/2610.15290v1",
-              "comment": "Project page: rkjones4.github.io/codsl.html",
-              "figure_url": "https://arxiv.org/html/2610.15290v1/codsl_tog_teaser.png",
-              "figure_caption": "Figure 1. We propose Co-DSL , a framework that helps LLMs generate spatial layouts that align with a user’s intent. In the first stage (left), a user collaborates with an LLM to co-design reusable spatial concepts, providing high-level feedback until each concept behaves as intended. In the second s",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -2698,6 +2647,37 @@
           "name": "Li Fei-Fei",
           "papers": [
             {
+              "id": "2611.32606",
+              "title": "Recursive Collective Intelligence: Emergence on an Equal-Budget Ladder in Multi-Agent LLM Systems",
+              "authors": [
+                "Lixuan He",
+                "Shengqu Cai",
+                "Fang Wu",
+                "Shikang Zheng",
+                "Liwei Jiang",
+                "Manling Li",
+                "Yi Ma",
+                "Li Fei-Fei",
+                "Leonidas Guibas",
+                "Gordon Wetzstein",
+                "Yejin Choi",
+                "Yining Hong"
+              ],
+              "abstract": "Large language models increasingly work as teams of agents, and a team is expected to solve problems beyond the reach of any single member. Most evaluations credit a team for outperforming a single agent, without accounting for the additional computation: a team may consume many times the tokens of one agent, and a plain vote over independent answers already explains most of the reported gain. Two questions therefore remain open: When does interaction itself make a group smarter, and can a group improve its next generation by learning from its own work? We answer both with the equal-budget ladder, which grades a group against independent agents at three levels: outperforming a single agent, a compute-matched majority vote, and compute-matched pass@n. On this ladder we define Recursive Collective Intelligence (RCI) as a group whose own output, without a teacher or external labels, makes its next generation smarter at equal cost. Three findings follow. First, interaction improves collective intelligence when it moves information across agents: forwarding split facts lifts groups above pass@n at three model scales, by about a third at 27B. Second, organization emerges spontaneously: identical 27B agents form hubs and improve accuracy by 18 percentage points; encoding their organization in a prompt enables them to reach level 3 at less than half the token budget in a descriptive comparison. Third, groups recursively improve themselves: Two label-free generations progressively climb the ladder, the second 9B generation surpassing both pass@$n$ and a control trained on base-model turns; on PlanBench, HiddenBench and Hanabi, each generation outperforms its predecessor on unseen problems for four to six generations. A group therefore outperforms its members when it forwards useful information more efficiently than it spends tokens on coordination, and learns to do so from its own work.",
+              "categories": [
+                "cs.MA"
+              ],
+              "published": "2026-11-24T13:37:54Z",
+              "url": "https://arxiv.org/abs/2611.32606",
+              "pdf_url": "https://arxiv.org/pdf/2611.32606v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.32606v1/framework.png",
+              "figure_caption": "Figure 3: Overview of one generation g g . Collective: copies of the policy π θ \\pi_{\\theta} write messages to a shared store, read and cite each other’s messages, and can hand their reading budget to another member, so hubs form on their own; evidence helps ( + ⁣ + ++ ) and arguments mislead ( − ⁣ ",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.12177",
               "title": "Embodied First Exam",
               "authors": [
@@ -3093,7 +3073,7 @@
           ]
         }
       ],
-      "total": 53
+      "total": 52
     },
     {
       "name": "Carnegie Mellon University",
@@ -3925,6 +3905,34 @@
           "name": "Pulkit Agrawal",
           "papers": [
             {
+              "id": "2611.31588",
+              "title": "One Phase Is Enough: Sim-to-Real Transfer with Direct Visual Reinforcement Learning",
+              "authors": [
+                "John Marangola",
+                "Antonia Bronars",
+                "Younghyo Park",
+                "Stephen Andrews",
+                "Kushal Kedia",
+                "Pulkit Agrawal"
+              ],
+              "abstract": "Sim-to-real reinforcement learning (RL) has enabled impressive robotic behaviors, yet deploying policies directly from vision remains challenging. A common approach first trains a teacher policy with RL using privileged state observations, then distills its behavior into a vision-based student via imitation. However, the resulting student can substantially underperform its teacher. Directly training visual policies with RL offers a promising alternative, but learning task-relevant visual representations from scratch can be sample-inefficient, making one-phase visual RL intractable. We propose DRIFT, a simple recipe for efficient one-phase visual RL using image observations available at test time. Our key insight is to use frozen, pretrained foundation vision encoders, allowing RL to focus on learning control from existing visual representations. Freezing the encoder avoids costly backpropagation through the vision backbone, while its pretrained representations enable real-world transfer from fast, rasterized simulation rendering. Under matched architectures, observations, and compute budgets, DRIFT outperforms two-phase distillation and achieves a 58.8% relative improvement in average real-world success rate across three manipulation tasks. Controlled simulation evaluations demonstrate that DRIFT's relative advantage grows from roughly 9% in-distribution to over 61% under out-of-distribution shifts, suggesting that stronger generalization contributes to superior real-world transfer. Project website: https://jmarangola.github.io/one-phase-visual-rl/",
+              "categories": [
+                "cs.LG",
+                "cs.RO"
+              ],
+              "published": "2026-11-23T21:32:12Z",
+              "url": "https://arxiv.org/abs/2611.31588",
+              "pdf_url": "https://arxiv.org/pdf/2611.31588v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.31588v1/arch_figure_comparison.png",
+              "figure_caption": "Fig. 2: DRIFT learns visual policies directly from task rewards. Simulation provides privileged state information, such as object poses and velocities, that is not directly available at deployment. Two-phase approaches use this information to train a teacher, then train a visual student to imitate i",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://jmarangola.github.io/one-phase-visual-rl/"
+              }
+            },
+            {
               "id": "2611.03501",
               "title": "When Robots Outweigh Objects: How Inertia Mismatch Shapes Robot Policy Learning",
               "authors": [
@@ -4421,7 +4429,7 @@
           ]
         }
       ],
-      "total": 19
+      "total": 20
     },
     {
       "name": "NYU / Columbia / Princeton",
@@ -4659,30 +4667,6 @@
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.39302v1/phase.png",
               "figure_caption": "Figure 4: Positives that join less of a scene need more data ( Section 2.3 ). A synthetic world of five classes of six states (literal data, as in Figure 12 ): alignment of a text JEPA with the image side against the samples per state N N and the reach Δ \\Delta of its bad views (means over three sam",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2610.15267",
-              "title": "LeHami: Symplectic Latent Dynamics Toward Long-Horizon Rollouts in World Models",
-              "authors": [
-                "Romina Yalovetzky",
-                "Randall Balestriero",
-                "Yann LeCun"
-              ],
-              "abstract": "Joint-embedding predictive architectures (JEPAs) learn world models in latent space, but unconstrained autoregressive predictors may contract the latent distribution over long rollouts. We introduce Symplectic Hamiltonian JEPA (LeHami), which replaces the standard predictor with an action-conditioned Hamiltonian flow over a structured latent state (q, p) integrated using an exactly symplectic leapfrog step. This construction preserves phase-space volume at every rollout step and rules out uniform contraction, asymptotically stable fixed points, and merging of distinct latent states, independently of the learned parameters or action sequence. We obtain the momentum-like component from temporal derivatives of the learned position-like representation, providing an explicit second-order state for prediction and control. We measure rollout collapse on the data, with four ratios of the rollout to the truth, on five environments learned from pixels: conservative and actuated pendulums, a mass-spring, a two-body system and a cart pole. With the encoder and latent state held fixed, an MLP and a transformer predictor contract the rollout on every environment, while LeHami's rollouts do not merge. LeHami is the most accurate of the three at long horizons, in position on four of the five environments and in velocity on three, while at short horizons the free predictors are more accurate on two of the five. The learned flow also integrates at unseen sub-frame step sizes and, run backward with the recorded actions, recovers earlier frames as well as it predicts later ones. LeWM, with a richer three-frame encoder of its own, is more accurate on four of the five, which suggests incorporating a richer encoder within LeHami in future work. These results show how geometric structure can provide inference-time guarantees that are complementary to representation regularization in latent world models.",
-              "categories": [
-                "cs.LG",
-                "cs.AI",
-                "cs.RO"
-              ],
-              "published": "2026-10-11T01:28:41Z",
-              "url": "https://arxiv.org/abs/2610.15267",
-              "pdf_url": "https://arxiv.org/pdf/2610.15267v2",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.15267v1/concept_hjepa_properties_actuated.png",
-              "figure_caption": "Figure 1: LeHami: Learning symplectic world models end-to-end. Bottom left: Actuated pendulum frames and applied torque sequence u t u_{t} (green). Upper left: Latent phase space ( 𝐪 t , 𝐩 t ) (\\mathbf{q}_{t},\\mathbf{p}_{t}) , where transitions are generated by a learned scalar H ϕ ​ ( 𝐪 t , 𝐩 t , u",
               "figure_source": "html",
               "video_url": null,
               "links": {}
@@ -5195,7 +5179,7 @@
           ]
         }
       ],
-      "total": 21
+      "total": 20
     },
     {
       "name": "University of Washington",
@@ -5296,6 +5280,42 @@
         {
           "name": "Abhishek Gupta",
           "papers": [
+            {
+              "id": "2611.33130",
+              "title": "Exploratory Midtraining for Robot Policies",
+              "authors": [
+                "Kshitiz",
+                "Zheyuan Hu",
+                "Robyn Wu",
+                "Yizhou Li",
+                "Yunchu Zhang",
+                "Vattanary Tevy",
+                "Kavya Tayal",
+                "Shawn Yin",
+                "Aykut Onol",
+                "Kushal Arora",
+                "Dhruv Shah",
+                "Abhishek Gupta",
+                "Zackory Erickson",
+                "Aviral Kumar"
+              ],
+              "abstract": "Robot policies predominantly learn from human-collected data emphasizing competent behavior, limiting coverage of the low-level behaviors needed to support autonomous improvement. We study how a form of midtraining can be used to build coverage over diverse low-level behaviors that connect challenging states of the robot and its environment to states from which further progress is possible (\"connected behavioral coverage\"). We also examine how this coverage supports downstream adaptation and online improvement. To this end, we introduce $β$-Data, a dataset collected via adversarial teleoperation, where a human adversary reversibly perturbs the environment while a human operator continues toward completion without resetting. We relabel trajectory segments with local outcomes in natural language and finetune a pretrained policy conditioned on recent action history. The resulting policy exhibits sustained use of more low-level behaviors. Across manipulation tasks in simulation and on three real-robot platforms, our approach yields more favorable data scaling laws, better zero-shot generalization, and more effective use of additional rollout time than training on standard demonstrations. During online finetuning, these policies need fewer rollouts to collect successful experience and reach higher success rates, suggesting that midtraining can prepare robots for both more robust task execution and continued autonomous improvement. Our project page and robot videos are available at https://kshitiz-1225.github.io/exploratory-midtraining-robot-policies/.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-11-24T18:52:34Z",
+              "url": "https://arxiv.org/abs/2611.33130",
+              "pdf_url": "https://arxiv.org/pdf/2611.33130v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.33130v1/fig01.png",
+              "figure_caption": "Figure 1 : Connected behavioral coverage (CBC) induced by training on β \\beta - Data in LEGO disassembly. From the same initial assembly and natural language goal, variations in grasps, orientations, and contacts produce diverse sequences of outcomes. The top and middle rollouts detach different red",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://kshitiz-1225.github.io/exploratory-midtraining-robot-policies/"
+              }
+            },
             {
               "id": "2611.08576",
               "title": "Q-OIL: Optimistic Exploration in Learning from Human Interventions",
@@ -5426,7 +5446,7 @@
           "papers": []
         }
       ],
-      "total": 6
+      "total": 7
     },
     {
       "name": "Georgia Tech / UT Austin",
@@ -6632,8 +6652,8 @@
               ],
               "published": "2026-11-19T15:48:40Z",
               "url": "https://arxiv.org/abs/2611.26293",
-              "pdf_url": "https://arxiv.org/pdf/2611.26293v1",
-              "comment": "26 pages, 11 figures, 4 tables. Code: https://github.com/robfiras/loco-mujoco",
+              "pdf_url": "https://arxiv.org/pdf/2611.26293v2",
+              "comment": "28 pages, 11 figures, 5 tables. Code: https://github.com/robfiras/loco-mujoco",
               "figure_url": "https://arxiv.org/html/2611.26293v1/figures/fig_envs_ghosts.jpg",
               "figure_caption": "Figure 1: The 12 humanoid and (musculo-)skeletal embodiments replaying one walking trajectory; ghosted poses show time. All share one training, plug-in, and dataset interface.",
               "figure_source": "html",
@@ -6922,6 +6942,29 @@
           "name": "Davide Scaramuzza",
           "papers": [
             {
+              "id": "2611.32883",
+              "title": "3D Tracking Any Point with Events and Frames",
+              "authors": [
+                "Roberto Pellerito",
+                "Zijia Dai",
+                "Laurent Kneip",
+                "Davide Scaramuzza"
+              ],
+              "abstract": "Tracking a fast-moving point in 3D is prohibitive when RGB frames are blurred or too far apart to reveal its motion. Event cameras record brightness changes between frames, providing measurements inside these temporal gaps. We introduce TrackAnyMotion, which combines monocular RGB frames and events to track arbitrary points in 2D and 3D, including at times when no RGB frame is available. The motion expected for a static point, given scene geometry and camera motion, provides a reference for identifying independently moving objects. An independent-motion decoder combines geometric motion cues with event guidance and 2D tracks, feeding its predictions back into iterative 2D and 3D refinement. We also introduce HyperEvent, a synthetic RGB--Event dataset with high-frequency 3D trajectories, geometry, and independent-motion labels. At RGB frame timestamps on this benchmark, TrackAnyMotion reduces 3D and 2D endpoint errors by 70% and 32%, respectively.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-11-24T16:17:41Z",
+              "url": "https://arxiv.org/abs/2611.32883",
+              "pdf_url": "https://arxiv.org/pdf/2611.32883v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.32883v1/Pipeline.png",
+              "figure_caption": "Figure 2 : Overview of TrackAnyMotion. Frozen RGB geometry and event-conditioned features support iterative 2D and 3D tracking. At inter-frame timestamps, learned camera poses and coarse world motion construct target pseudo-pointmaps. An independent-motion decoder combines tracking features with dev",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.24579",
               "title": "ALIVE: Bring Foundation Features to Life with Events",
               "authors": [
@@ -7045,7 +7088,7 @@
           ]
         }
       ],
-      "total": 36
+      "total": 37
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -7055,6 +7098,29 @@
         {
           "name": "Yang Gao",
           "papers": [
+            {
+              "id": "2611.33119",
+              "title": "MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing",
+              "authors": [
+                "Scott Piersall",
+                "Yang Gao",
+                "Shenyang Liu",
+                "Liqiang Wang"
+              ],
+              "abstract": "Large language models (LLMs) can generate parallel programs, but their correctness and performance depend strongly on the instructions that guide generation. We present MetaFORGE, an execution-grounded meta-learning framework that iteratively optimizes persistent natural-language skill specifications for MPI C code generation. MetaFORGE combines correctness testing, compiler diagnostics, static-analysis findings, runtime measurements, and rank-level load-imbalance profiles into a scalar reward that drives textual-gradient refinement, while an external memory distills and retrieves reward-supported optimization knowledge across runs. Across six MPI tasks and three workload sizes, MetaFORGE improves static-analysis quality, runtime, and load balance relative to zero-shot generation and generally exceeds the evaluated TextGrad iterative baseline. A model-matched refinement ablation shows that the MetaFORGE advantage persists when its refinement model is reduced to gpt-4o. An expanded retrieval ablation across all 18 task--workload configurations shows consistent runtime benefit and broad static-analysis and load-balance benefit from retrieved context. Leakage-controlled held-out and zero-update experiments further provide evidence that optimization knowledge persists in both the transferred skill and external memory under the evaluated protocol.",
+              "categories": [
+                "cs.AI"
+              ],
+              "published": "2026-11-24T18:49:19Z",
+              "url": "https://arxiv.org/abs/2611.33119",
+              "pdf_url": "https://arxiv.org/pdf/2611.33119v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.33119v1/frame.png",
+              "figure_caption": "Figure 1: MetaFORGE: An automated meta-learning skill-refinement architecture. MetaFORGE optimizes LLM coding skills through execution-grounded feedback. Generated MPI C code is compiled, statically analyzed, executed, and scored using Eq. ( 1 ). Diagnostics and reward trends are converted into a te",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.30351",
               "title": "NNS-GS: Non-Local Neural Scattering for Relightable Gaussian Splatting",
@@ -7647,6 +7713,66 @@
         {
           "name": "He Wang",
           "papers": [
+            {
+              "id": "2611.32654",
+              "title": "DexWAC: A Unified World-Actor-Critic Model for Dexterous Robot Manipulation",
+              "authors": [
+                "Hongjia Liu",
+                "Dacheng Zhou",
+                "Minghao Fu",
+                "Chuanjun Guo",
+                "Tianze Wang",
+                "Qingtao Liu",
+                "He Wang",
+                "Li Yi"
+              ],
+              "abstract": "Robot demonstrations provide more than actions to imitate: they reveal how actions change the world and how those changes contribute to task success. Recent world-action models (WAMs) extend vision-language-action (VLA) models with the first signal by jointly predicting actions and future observations, yet this predictive ability serves only as an auxiliary loss for policy learning. Meanwhile, most policy improvement methods learn dynamics and values in separate models, increasing training overhead and limiting representation sharing between these complementary objectives. We introduce DexWAC, a unified world-actor-critic model that jointly learns an actor, an action-conditioned world model, and a bootstrapped critic in a single robot pretraining stage. Our key insight is that visual prediction encourages control-relevant features, while value supervision promotes task-relevant representations; together, they shape a representation suited to policy learning. Built on an image-editing backbone, DexWAC predicts, for each action chunk, the visual latent and proprioception at its endpoint together with its reward and continuation, so the world model alone efficiently yields complete imagined transitions without generating intermediate video frames. After adapting the world model and critic on real rollouts, we improve the pretrained actor through either PPO on imagined rollouts or critic-guided best-of-$N$ selection. DexWAC surpasses the large-scale pretrained VLA and WAM baselines in simulation and achieves 75% average success on two real-world tasks, compared with 45% for $π_{0.5}$. Its world model is more accurate and faster than video-based baselines, and ablations confirm that learning dynamics and value together improves the policy.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-24T14:09:49Z",
+              "url": "https://arxiv.org/abs/2611.32654",
+              "pdf_url": "https://arxiv.org/pdf/2611.32654v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.32654v1/figures/dexrsi_workflow.png",
+              "figure_caption": "Figure 1 : Overview of DexWAC. (I) Unified world–actor–critic pretraining on existing robotic datasets, optionally incorporating non-expert trajectories for dynamic and value learning. (II) After the pretrained actor executes, the world model and critic are adapted to the resulting successful and fa",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.32353",
+              "title": "Any2Act: Scaling In-Context Robot Learning from Heterogeneous Demonstrations",
+              "authors": [
+                "Ziang Ren",
+                "Zifan Wang",
+                "Zhuoyang Li",
+                "Benhao Qin",
+                "Haoyang Li",
+                "Qingtao Liu",
+                "Xuchuan Chen",
+                "Zekun Qi",
+                "He Wang",
+                "Yanchao Yang",
+                "Li Yi"
+              ],
+              "abstract": "Robot in-context learning (ICL) enables a policy to perform unseen tasks by following contextual demonstrations, without task-specific fine-tuning. This is increasingly valuable as large language models reasoning at low frequency can specify tasks through demonstrations and delegate high-frequency execution to such a policy. However, methods conditioned on human videos are bounded by scarce human-robot pairs, while those conditioned on robot demonstrations accept only one or two source types at limited scale. We present Any2Act, a foundation model for robot ICL. Our key insight is that a demonstration should be expressed in the camera layout and action space of the robot that performs it (the executor), not of whoever provided it (the demonstrator). This unified embodiment-grounded representation decouples learning to follow from admitting a new source. Any2Act learns to follow once, from robot-to-robot pairs that already take this form in 1.2M real trajectories spanning 10K tasks. Human videos, simulation, UMI, and other robots are then translated into this representation, and source-routed adapters trained on only a few hundred pairs each absorb the residual gap while the pretrained model stays frozen. For long horizons, a training-free tracker feeds only the demonstration window around the executor's progress, bounding the context and rolling back to redo failed steps. From a single demonstration, Any2Act achieves 57.5% success on unseen tasks without fine-tuning, exceeding VLAs fine-tuned on 50 demonstrations per task; other demonstrators retain 74-91% of the success achieved with the executor's own demonstrations.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-24T10:28:46Z",
+              "url": "https://arxiv.org/abs/2611.32353",
+              "pdf_url": "https://arxiv.org/pdf/2611.32353v1",
+              "comment": "Project page: https://any2act.github.io/",
+              "figure_url": "https://arxiv.org/html/2611.32353v1/data_pipeline.png",
+              "figure_caption": "Figure 2 : Demonstration sources. Top: robot-to-robot pairs from routine data collection supply pretraining; recordings of the same task are VLM-filtered and grouped, and any two form a pair. Bottom: human videos (via agentic ego2sim), UMI, and other robots are translated into the unified embodiment",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://any2act.github.io/"
+              }
+            },
             {
               "id": "2611.24723",
               "title": "Multi-Band Galaxy Novel-View Synthesis with Radiative Gaussian Fields",
@@ -8378,13 +8504,13 @@
                 "Jianyi Wang",
                 "Hao Dong"
               ],
-              "abstract": "Computer-aided retrosynthesis has advanced through single-step prediction, tree search and route scoring, but complex targets still require judgement over the whole route, where stereochemistry, functional-group compatibility, cost and greenness interact. Here we present \\textbf{\\mbox{ReTRACE}} (REtrosynthesis with Tool-orchestrated Reasoning And Context-aware Evidence), an agent that places a large language model (LLM) in a chemistry harness that integrates molecular tools, complementary single-step prediction engines, a purchasable starting-material library, a route memory and a multi-criterion route evaluator. Routes are judged by a new metric that combines programmatic checks with adversarial LLM review, and its verdicts are compared with a synthetic chemist's. The agent learns continually from evaluator feedback during search, diagnosing weak routes and backtracking to revise them. With Claude Opus 4.8, at least one of the top 10 routes proposed by ReTRACE passed the audit for 87.4%, 95.0% and 86.7% of targets on the three benchmarks. Two prospective wet-lab syntheses show that ReTRACE route proposals can be converted into executable procedures after expert revision.",
+              "abstract": "Computer-aided retrosynthesis has progressed through single-step prediction, tree search and route scoring, yet complex targets still require route-level judgement where stereochemistry, functional-group compatibility, cost and greenness interact. Here we present \\textbf{\\mbox{ReTRACE}} (REtrosynthesis with Tool-orchestrated Reasoning And Context-aware Evidence), an agent that places a large language model (LLM) inside a deterministic chemistry harness integrating molecular tools, heterogeneous single-step prediction engines, purchasable building-block libraries, an external route memory and a multi-criterion evaluator. To assess chemical validity beyond stock termination, we introduce Audit@k, a two-stage metric combining programmatic structural checks with adversarial LLM review that closely tracks expert judgement. ReTRACE learns from harness feedback on two timescales: within a run, it diagnoses weak sub-scores and backtracks to revise disconnections; across runs, trajectories and audit verdicts are distilled through a three-stage post-training pipeline into an open-weight coordinator, ReTRACE-27B, which completes routes for all 40 evaluation targets and raises Audit@1 from 11/40 (27.5%) to 23/40 (57.5%). Across Retro*-190, JMC2025 and FDA30, ReTRACE with GPT-6.2 Astra achieves Audit@1 of 97.9%, 99.3% and 96.7%, and Audit@10 of 99.5%, 100.0% and 100.0%, respectively. Two prospective wet-lab syntheses demonstrate that ReTRACE proposals translate into executable procedures after expert revision.",
               "categories": [
                 "cs.AI"
               ],
               "published": "2026-10-17T15:22:01Z",
               "url": "https://arxiv.org/abs/2610.24744",
-              "pdf_url": "https://arxiv.org/pdf/2610.24744v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.24744v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.24744v1/figures/figure1.png",
               "figure_caption": "Figure 1: ReTRACE harness, two decision instances from real search trajectories and the response to score feedback within a run. a , An LLM coordinator works inside a harness of heterogeneous chemistry tools, deterministic gates that check every tool call, tool result and saved route, and a route me",
@@ -8875,7 +9001,7 @@
           ]
         }
       ],
-      "total": 58
+      "total": 61
     },
     {
       "name": "工业界研究团队",
@@ -9328,6 +9454,42 @@
           "name": "Dhruv Shah",
           "papers": [
             {
+              "id": "2611.33130",
+              "title": "Exploratory Midtraining for Robot Policies",
+              "authors": [
+                "Kshitiz",
+                "Zheyuan Hu",
+                "Robyn Wu",
+                "Yizhou Li",
+                "Yunchu Zhang",
+                "Vattanary Tevy",
+                "Kavya Tayal",
+                "Shawn Yin",
+                "Aykut Onol",
+                "Kushal Arora",
+                "Dhruv Shah",
+                "Abhishek Gupta",
+                "Zackory Erickson",
+                "Aviral Kumar"
+              ],
+              "abstract": "Robot policies predominantly learn from human-collected data emphasizing competent behavior, limiting coverage of the low-level behaviors needed to support autonomous improvement. We study how a form of midtraining can be used to build coverage over diverse low-level behaviors that connect challenging states of the robot and its environment to states from which further progress is possible (\"connected behavioral coverage\"). We also examine how this coverage supports downstream adaptation and online improvement. To this end, we introduce $β$-Data, a dataset collected via adversarial teleoperation, where a human adversary reversibly perturbs the environment while a human operator continues toward completion without resetting. We relabel trajectory segments with local outcomes in natural language and finetune a pretrained policy conditioned on recent action history. The resulting policy exhibits sustained use of more low-level behaviors. Across manipulation tasks in simulation and on three real-robot platforms, our approach yields more favorable data scaling laws, better zero-shot generalization, and more effective use of additional rollout time than training on standard demonstrations. During online finetuning, these policies need fewer rollouts to collect successful experience and reach higher success rates, suggesting that midtraining can prepare robots for both more robust task execution and continued autonomous improvement. Our project page and robot videos are available at https://kshitiz-1225.github.io/exploratory-midtraining-robot-policies/.",
+              "categories": [
+                "cs.RO",
+                "cs.LG"
+              ],
+              "published": "2026-11-24T18:52:34Z",
+              "url": "https://arxiv.org/abs/2611.33130",
+              "pdf_url": "https://arxiv.org/pdf/2611.33130v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.33130v1/fig01.png",
+              "figure_caption": "Figure 1 : Connected behavioral coverage (CBC) induced by training on β \\beta - Data in LEGO disassembly. From the same initial assembly and natural language goal, variations in grasps, orientations, and contacts produce diverse sequences of outcomes. The top and middle rollouts detach different red",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://kshitiz-1225.github.io/exploratory-midtraining-robot-policies/"
+              }
+            },
+            {
               "id": "2611.23147",
               "title": "AI Companions for Young Adult Caregivers: Practical Advice, Emotional Depth, and the Limits of Metric Evaluation",
               "authors": [
@@ -9495,7 +9657,7 @@
           ]
         }
       ],
-      "total": 10
+      "total": 11
     },
     {
       "name": "AMP / SMP 合作作者",
@@ -10416,6 +10578,51 @@
           "name": "Hang Zhao",
           "papers": [
             {
+              "id": "2611.31822",
+              "title": "G0.7: Scaling Up a Fast World Action Model with Long Context",
+              "authors": [
+                "Tianyuan Yuan",
+                "Baijun Ye",
+                "Shicheng Cao",
+                "Xing Nie",
+                "Xiaopeng Yu",
+                "Ke Dong",
+                "Zijie Zhao",
+                "Shenling Qiu",
+                "Yizhao Xu",
+                "Feiyang Xue",
+                "Haonan Liu",
+                "Haoyu Zhang",
+                "Haobo Jia",
+                "Zheng Liu",
+                "Anqi Yang",
+                "Jiahui Niu",
+                "Yue Sun",
+                "Tailai Cheng",
+                "Jianpeng Yu",
+                "Yang Wen",
+                "Longhao Wei",
+                "Zibin Dong",
+                "Shiduo Zhang",
+                "Yicheng Liu",
+                "Hang Zhao"
+              ],
+              "abstract": "World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation histories. Building on Fast-WAM, which showed that video prediction shapes policy representations during training so that future frame synthesis can be skipped at deployment, we present G0.7, a generalist world action model scaled along two axes: extending the context window from a single observation to up to five minutes of history, and scaling pretraining to a large-scale corpus of robot teleoperation and human egocentric (ego) video. Across public simulation suites and real-robot deployments, direct action decoding (Fast mode) matches imagine-then-act (IDM) inference from the same checkpoint while running in 60 ms per 16-step action chunk on a single RTX 5090 (7.6x faster than IDM) and supporting pause-free real-time chunking. Performance scales consistently with pretraining data, with human ego video driving the largest gains in out-of-distribution generalization: G0.7 achieves a 70.8 mean score across five simulation benchmark suites, 48% and 54% zero-shot pick-and-place success on Galaxea R1 Pro and R1 Lite, 96.7% in-distribution and 93.3% out-of-distribution success on video-conditioned in-context learning tasks, and 86.9% mean task progress across seven real-world post-training tasks including multi-minute box folding, drink preparation, and product bagging.",
+              "categories": [
+                "cs.CV",
+                "cs.RO"
+              ],
+              "published": "2026-11-24T02:17:04Z",
+              "url": "https://arxiv.org/abs/2611.31822",
+              "pdf_url": "https://arxiv.org/pdf/2611.31822v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.31822v1/model.png",
+              "figure_caption": "Figure 1: G0.7 architecture and control loop. The context caches up to five minutes of real camera observations, combining the robot’s own history with an optional demonstration video. Conditioned at every layer by the language expert, the vision/action expert attends over this context to decode the",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.15490",
               "title": "ActionCodec2: A Streaming Action Tokenizer",
               "authors": [
@@ -10508,7 +10715,7 @@
           ]
         }
       ],
-      "total": 6
+      "total": 7
     },
     {
       "name": "BFM-Zero 合作作者",
@@ -10595,8 +10802,8 @@
               ],
               "published": "2026-11-19T15:48:40Z",
               "url": "https://arxiv.org/abs/2611.26293",
-              "pdf_url": "https://arxiv.org/pdf/2611.26293v1",
-              "comment": "26 pages, 11 figures, 4 tables. Code: https://github.com/robfiras/loco-mujoco",
+              "pdf_url": "https://arxiv.org/pdf/2611.26293v2",
+              "comment": "28 pages, 11 figures, 5 tables. Code: https://github.com/robfiras/loco-mujoco",
               "figure_url": "https://arxiv.org/html/2611.26293v1/figures/fig_envs_ghosts.jpg",
               "figure_caption": "Figure 1: The 12 humanoid and (musculo-)skeletal embodiments replaying one walking trajectory; ghosted poses show time. All share one training, plug-in, and dataset interface.",
               "figure_source": "html",
@@ -11371,6 +11578,107 @@
           "name": "Chi Zhang",
           "papers": [
             {
+              "id": "2611.32772",
+              "title": "RubikSQL-HB: Agentic Text-to-SQL with Knowledge in the Loop",
+              "authors": [
+                "Haorui Jia",
+                "Zihan Qu",
+                "Yundi Dong",
+                "Ziyang Mei",
+                "Chi Zhang",
+                "Zezhi Zheng",
+                "Dousheng Zhao",
+                "Jiahao Zhang",
+                "Zui Chen",
+                "Han Li"
+              ],
+              "abstract": "Database agents need more than schema structure: business meanings, stored values and reference queries supply knowledge that becomes relevant at different points in reasoning. We introduce RubikSQL-HB, which exposes these materials through queryable, database-specific knowledge workspaces built on the HeavenBase platform. Its knowledge interface remains available as an agent constructs and investigates an answer. Candidate agents interleave knowledge access with SQL construction and execution; a downstream Judge can reuse the same interfaces to investigate disagreements. A two-stage example interface separates discovering a reference question from expanding its SQL. On a 500-question BIRD Mini-Dev evaluation, the full pipeline reaches 75.2% execution accuracy, against 71.2% for first-candidate selection and 70.4% for execution-majority voting, with a correct candidate available on 79.0% of questions. The raw-knowledge condition, which also regenerates candidates without the built workspace, is 3.0 points lower, and adjudication with tools and revision accounts for most of the gain over selection baselines. A recorded execution probe shows how continued investigation resolves a candidate disagreement. Separate archived runs show semantic revision recovering answers absent from their original candidate pools. A versioned development study further illustrates how recurring corrections become reusable execution checks. The system and results connect knowledge-interface design to agent decision quality: queryable knowledge supports the construction of useful alternatives, and evidence-aware adjudication connects those alternatives to a final answer. Keeping knowledge in the loop lets agents acquire relevant observations as their reasoning develops.",
+              "categories": [
+                "cs.AI"
+              ],
+              "published": "2026-11-24T15:06:50Z",
+              "url": "https://arxiv.org/abs/2611.32772",
+              "pdf_url": "https://arxiv.org/pdf/2611.32772v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.32772v1/figures/rubiksql-hb-overview/rubiksql-hb-overview-v3-knowledge-loop.preview.png",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.32622",
+              "title": "RoboRecast: Intent-Preserving Demonstration Augmentation via Diagnosis-Driven Optimization",
+              "authors": [
+                "Yushi Long",
+                "Juzhan Xu",
+                "Haibin Huang",
+                "Chi Zhang",
+                "Yin Chen",
+                "Sida Peng",
+                "Ruizhen Hu",
+                "Xiaowei Zhou"
+              ],
+              "abstract": "Collecting diverse real-world manipulation demonstrations is costly, motivating the use of simulation to augment existing demonstrations for robot policy learning. When objects, layouts, or robots change, transferring motions from a source demonstration can produce behavior that is semantically implausible or physically infeasible in the new setting. We introduce RoboRecast, an agentic optimization framework that preserves the interactions required by the source task while jointly optimizing the simulated scene and robot motion to make those interactions executable in the target setting. When an interaction fails, the agent uses simulation feedback to diagnose the cause, revise the relevant scene or motion parameters, and test whether the revision resolves the failure. This flexibility allows RoboRecast to generate synthetic data from both human and robot demonstrations and to adapt them to new layouts, objects, and robot embodiments. When target demonstrations are available, adding RoboRecast data improves policy success on both real-world single-arm and simulated bimanual tasks. Even without demonstrations in the target configuration, RoboRecast adapts source demonstrations to support policy learning with new objects or robot embodiments.",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-24T13:48:19Z",
+              "url": "https://arxiv.org/abs/2611.32622",
+              "pdf_url": "https://arxiv.org/pdf/2611.32622v1",
+              "comment": "18 pages, including supplementary material. Corresponding author: Ruizhen Hu",
+              "figure_url": "https://arxiv.org/html/2611.32622v1/overview.png",
+              "figure_caption": "Figure 2 : Overview of RoboRecast. Given the real demonstration and target configuration, RoboRecast generates a successful simulation rollout that preserves the demonstrated task intent under that configuration. The agent first extracts the interaction requirements that define the task intent and u",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.32174",
+              "title": "A Unified Control Framework for Gradient Inversion Defense in Federated Learning",
+              "authors": [
+                "Lianhai Ren",
+                "Chi Zhang"
+              ],
+              "abstract": "Gradient perturbations are widely recognized as an effective defense against gradient inversion attacks in federated learning, but they are equally known to impair optimization, creating a persistent tension between privacy and utility. In this paper, we show that existing gradient perturbation defenses, despite their different formulations, can be unified under a controlled dynamics framework, providing a cohesive understanding of their optimization behavior and enabling the derivation of universal convergence and safety conditions without relying on case-specific analyses. Leveraging this observation, we propose ``Near Orthogonal Gradient Projection (NODE)'', which injects perturbations only along directions orthogonal to the original gradient so that the defended gradient maintains a fixed cosine similarity with the true gradient. By preserving the first-order descent direction, NODE substantially reduces the optimization cost of strong perturbations while maintaining effective protection against gradient inversion attacks. We theoretically establish convergence guarantees under standard optimization assumptions and further show that, under mild conditions on the gradient distribution, NODE remains effective in preventing inversion attacks. Comprehensive experiments on multiple benchmark datasets, including CIFAR-10, ImageNet, and Chest X-ray, together with a variety of gradient inversion attacks, demonstrate that the proposed framework achieves an improved privacy--utility trade-off over existing defenses across a broad range of training settings.",
+              "categories": [
+                "cs.LG",
+                "cs.DC"
+              ],
+              "published": "2026-11-24T08:26:45Z",
+              "url": "https://arxiv.org/abs/2611.32174",
+              "pdf_url": "https://arxiv.org/pdf/2611.32174v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.32174v1/ci10_01.png",
+              "figure_caption": "Figure 2: Comparison between the original image and its reconstructions on CIFAR-10 across different combinations of attack and defense methods. Rows denote the attack applied, while columns illustrate the corresponding defense strategies.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.31998",
+              "title": "ADE: A Zero-Training Unlearning Method for Latent World Models",
+              "authors": [
+                "Sirui He",
+                "Chi Zhang"
+              ],
+              "abstract": "Latent world models learn compact recurrent dynamics from offline trajectories, yet deployed simulators can retain backdoor triggers or stale transitions from outdated physical regimes. Existing unlearning methods fail in autoregressive physics: gradient updates distort latent manifolds and compound rollout drift, naive output zeroing suppresses valid control responses on trigger onset, and single-step deletion leaves corruption inside recurrent hidden states. We propose Analytical Dynamics Excision (ADE), a deterministic, zero-training closed-form unlearning algorithm for latent world models. Using only cached pretraining moments, ADE recovers retain covariances via single-pass matrix downdating without raw retain data and cascades closed-form edits across the input bottleneck, hidden states, and downstream heads. Pairing orthogonal excision with whitened recurrent damping and mean-preserving affine calibration neutralizes out-of-manifold backdoors and realigns in-manifold shifts without variance collapse. Across four regimes on three MuJoCo benchmarks, ADE outperforms seven tuned baselines on DreamerV1, eliminating HalfCheetah and Hopper velocity-flip triggers $4.4\\times$ faster than fine-tuning, and transfers zero-shot to DreamerV3.",
+              "categories": [
+                "cs.LG",
+                "cs.AI"
+              ],
+              "published": "2026-11-24T05:49:20Z",
+              "url": "https://arxiv.org/abs/2611.31998",
+              "pdf_url": "https://arxiv.org/pdf/2611.31998v1",
+              "comment": "21 pages, 5 figures, 10 tables",
+              "figure_url": "https://arxiv.org/html/2611.31998v1/fig2_hopper_3x3_sensitivity_heatmap.png",
+              "figure_caption": "Figure 5 : ADE maintains a flat performance plateau across the 3 × 3 3\\times 3 hyperparameter grid without per-task tuning. Sensitivity analysis over energy threshold η ∈ { 0.95 , 0.99 , 0.999 } \\eta\\in\\{0.95,0.99,0.999\\} and Mode B ridge penalty λ B ∈ { 0.01 , 0.1 , 1.0 } \\lambda_{B}\\in\\{0.01,0.1,1",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.30204",
               "title": "Counterfactual Velocity Steering for World Action Models",
               "authors": [
@@ -11623,7 +11931,7 @@
               ],
               "published": "2026-11-12T17:57:48Z",
               "url": "https://arxiv.org/abs/2611.17194",
-              "pdf_url": "https://arxiv.org/pdf/2611.17194v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.17194v2",
               "comment": "Code Link: see https://github.com/Westlake-AGI-Lab/eDMD",
               "figure_url": "https://arxiv.org/html/2611.17194v1/overview.png",
               "figure_caption": "Figure 2 : Overview of eDMD on a 2D tree-structured toy distribution (gray). Left: a 4-step student denoises from noise ( σ = 1 \\sigma=1 ) to its final output ( σ = 0 \\sigma=0 , “delivered”); each update noises one step’s prediction to a level τ \\tau (green bar: its range) and compares the teacher a",
@@ -12200,7 +12508,7 @@
           "papers": []
         }
       ],
-      "total": 34
+      "total": 38
     },
     {
       "name": "PGMT 合作作者",
@@ -12466,8 +12774,8 @@
               ],
               "published": "2026-11-19T15:48:40Z",
               "url": "https://arxiv.org/abs/2611.26293",
-              "pdf_url": "https://arxiv.org/pdf/2611.26293v1",
-              "comment": "26 pages, 11 figures, 4 tables. Code: https://github.com/robfiras/loco-mujoco",
+              "pdf_url": "https://arxiv.org/pdf/2611.26293v2",
+              "comment": "28 pages, 11 figures, 5 tables. Code: https://github.com/robfiras/loco-mujoco",
               "figure_url": "https://arxiv.org/html/2611.26293v1/figures/fig_envs_ghosts.jpg",
               "figure_caption": "Figure 1: The 12 humanoid and (musculo-)skeletal embodiments replaying one walking trajectory; ghosted poses show time. All share one training, plug-in, and dataset interface.",
               "figure_source": "html",
@@ -13302,6 +13610,32 @@
         {
           "name": "Zi Wang",
           "papers": [
+            {
+              "id": "2611.32728",
+              "title": "Diving Deeper into Dense Keypoint Localization in Object Pose Estimation",
+              "authors": [
+                "Jiahong Chen",
+                "Jinghao Wang",
+                "Yueneng Yang",
+                "Banglei Guan",
+                "Zi Wang",
+                "Dewen Hu",
+                "Qifeng Yu"
+              ],
+              "abstract": "6D pose estimation of rigid objects is a fundamental and challenging task in computer vision. Recent dense semantic keypoint-based methods employ binary encoding for efficient global keypoint localization, delivering strong performance in object pose estimation. Nevertheless, the discontinuous nature of binary encoding hinders effective training at high resolutions, while its inherent discrete and quantization errors lead to significant localization uncertainty. We propose GHLAPose, a global-to-local framework that synergizes hybrid Gray-binary (HGB) encoding with local-aware refinement (LAR). Specifically, HGB encoding first alleviates discontinuity to achieve accurate initial global keypoint localization. To further address intrinsic encoding errors, the LAR module estimates uncertainty and refines keypoint localization. This synergy enables a precise global-to-local strategy by aggregating global and local features. Extensive experiments on LM, LM-O, YCB-V, and TUD-L datasets demonstrate that GHLAPose surpasses state-of-the-art methods, particularly on fine-grained metrics. On LM-O, it outperforms the second-best method by 1.4% and 1.9% on ADD(-S) 0.02d and 0.05d respectively, and on YCB-V by 1% on ADD(-S) 0.1d. The code will be available at GHLAPose.",
+              "categories": [
+                "cs.CV"
+              ],
+              "published": "2026-11-24T14:46:04Z",
+              "url": "https://arxiv.org/abs/2611.32728",
+              "pdf_url": "https://arxiv.org/pdf/2611.32728v1",
+              "comment": "21 pages, 14 figures. Accepted by TCSVT 2026",
+              "figure_url": "https://arxiv.org/html/2611.32728v1/Fig_motivation.png",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.27104",
               "title": "Reliable Behavior Discovery via False Discovery Rate Control",
@@ -14246,7 +14580,7 @@
           ]
         }
       ],
-      "total": 52
+      "total": 53
     }
   ]
 }
