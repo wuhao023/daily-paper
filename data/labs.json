@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-25T17:35:43+00:00",
-  "day": "2026-11-25",
+  "updated": "2026-11-26T17:15:56+00:00",
+  "day": "2026-11-26",
   "days_back": 45,
-  "total": 333,
+  "total": 338,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -905,6 +905,37 @@
           "name": "Koushil Sreenath",
           "papers": [
             {
+              "id": "2611.34884",
+              "title": "FineDex: Bridging Fine-Grained Human-Object Interaction Generation to Dexterous Humanoid Manipulation",
+              "authors": [
+                "Yujia Zeng",
+                "Yuxin Chen",
+                "Yuzhen Song",
+                "Runhan Huang",
+                "Chensheng Peng",
+                "Yiyang Shao",
+                "Koushil Sreenath",
+                "Masayoshi Tomizuka",
+                "Yilun Du"
+              ],
+              "abstract": "Dexterity is, at its core, finger-level control, yet existing dexterous manipulation and human-object interaction (HOI) generation methods rarely let one specify how an interaction is performed: five-fingered hands are often reduced to grippers, or finger usage is copied from individual human demonstrations. We present FineDex, a framework that makes finger-level intent both expressible and executable. FineDex learns coordinated human body, hand, and object motions that follow fine-grained instructions on hand selection, individual fingers, and contacts with articulated objects. To bridge generation and execution, FineDex leverages generated interactions as actionable priors for an agent that discovers physically feasible contact strategies through practice in a physics-based digital twin. By adapting at test time without per-instance retraining, FineDex generalizes across fine-grained instructions and object configurations. Experiments demonstrate state-of-the-art HOI generation quality and fine-grained controllability, substantial improvements in dexterous manipulation success, and successful deployment on a real dexterous humanoid robot.",
+              "categories": [
+                "cs.RO",
+                "cs.CV"
+              ],
+              "published": "2026-11-25T18:40:47Z",
+              "url": "https://arxiv.org/abs/2611.34884",
+              "pdf_url": "https://arxiv.org/pdf/2611.34884v1",
+              "comment": "Project page: https://finedex.github.io/",
+              "figure_url": "https://arxiv.org/html/2611.34884v1/overview.png",
+              "figure_caption": "Figure 2 : Overview of FineDex. A language-conditioned generator synthesizes fine-grained human–object interactions. The generated interaction 𝐱 \\mathbf{x} serves as a prior for an agent that proposes contact programs π \\pi and refines them through feedback from a physics-based digital twin. The mos",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://finedex.github.io/"
+              }
+            },
+            {
               "id": "2611.17626",
               "title": "Joint World Action Models through Differentiable Trajectory Optimization",
               "authors": [
@@ -1102,6 +1133,35 @@
         {
           "name": "Trevor Darrell",
           "papers": [
+            {
+              "id": "2611.33963",
+              "title": "Targeted Adaptation of World-Action Models via Interaction and Motion Heads",
+              "authors": [
+                "Yuze Zhu",
+                "Jacky Li",
+                "Yusen Luo",
+                "Ken Jiankun Zheng",
+                "Chancharik Mitra",
+                "Trevor Darrell",
+                "Roei Herzig"
+              ],
+              "abstract": "World-Action Models (WAMs) are a promising new paradigm of robot manipulation policies that jointly generate future video and actions. Successful manipulation requires both identifying where to interact and modeling how the robot and objects move. Yet standard adaptation methods, such as full fine-tuning and LoRA, do not explicitly select parameters aligned with these manipulation-specific capabilities. Motivated by this challenge, we discover two functionally specialized families of attention heads: Next-Interaction Heads, which localize upcoming grasp-and-release targets, and Motion Heads, which track movement across frames. Furthermore, we introduce HeadLight, a parameter-efficient refinement method that jointly adapts Next-Interaction Heads and Motion Heads. On RoboTwin tasks unseen during fine-tuning, HeadLight achieves 62.28% success, compared with 57.89% for full fine-tuning and 58.66% for LoRA, while updating only 1.1% of parameters. Inference-time ablations further validate the functional importance of these heads: ablating Motion Heads reduces manipulation success from 57.89% to 0.94%, while ablating Next-Interaction Heads lowers it to 40.61%, both substantially more than ablating equally many random heads. Finally, we show that our approach is effective across multiple WAM architectures and real-robot manipulation settings.",
+              "categories": [
+                "cs.RO",
+                "cs.CV"
+              ],
+              "published": "2026-11-25T08:28:00Z",
+              "url": "https://arxiv.org/abs/2611.33963",
+              "pdf_url": "https://arxiv.org/pdf/2611.33963v1",
+              "comment": "Project page: https://headlight-wam.github.io/",
+              "figure_url": "https://arxiv.org/html/2611.33963v1/method_overview.png",
+              "figure_caption": "Figure 2 : Overview of HeadLight. (1) We identify Next-Interaction Heads by their selective reliance on upcoming interaction targets over control tokens, and Motion Heads by the alignment of cross-frame attention with optical flow. (2) Ablating these heads causes distinct failures: missed grasps and",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://headlight-wam.github.io/"
+              }
+            },
             {
               "id": "2611.14834",
               "title": "Learning Low-Latency Action Verification for Frozen Vision-Language-Action Models",
@@ -1305,7 +1365,7 @@
           ]
         }
       ],
-      "total": 42
+      "total": 44
     },
     {
       "name": "Stanford",
@@ -2605,37 +2665,6 @@
               "links": {
                 "project": "https://jingyi-xiang.github.io/contactbench"
               }
-            },
-            {
-              "id": "2610.16293",
-              "title": "ClothAtlas: Joint Garment Identification and State Estimation under Self-Occlusion",
-              "authors": [
-                "Jens Lundell",
-                "Alberta Longhini",
-                "Lei Shu",
-                "Hemal Arora",
-                "Evan Robert",
-                "Carlota Parés-Morlans",
-                "Marcel Büsching",
-                "Mårten Björkman",
-                "Jeannette Bohg"
-              ],
-              "abstract": "Garment manipulation requires inferring both garment identity and complete configuration from partial, self-occluded observations. This creates a chicken-and-egg problem: completing a partial observation requires a garment-specific deformation prior, while identifying the garment requires a configuration that explains the observation. We introduce ClothAtlas, which jointly identifies garments and estimates their complete configurations from partial point clouds and a library of canonical meshes. A shared graph-conditioned flow-matching model samples configurations for each candidate mesh and ranks candidates by observation fit. The model accommodates different mesh shapes, vertex counts, and connectivities, allowing new garments to be added from canonical meshes alone without retraining. On held-out DexGarmentLab garments, ClothAtlas ranks the correct mesh first among 221 candidates for all 22 test garments from a single flat observation. From a single self-occluded observation, it identifies 15/22 garments, compared with 8/22 for a deterministic graph estimator. Persistent vertex identities support grasp-target localization on real garments, reducing mean error from 15.4 to 6.4 cm overall and from 17.0 to 8.3 cm on occluded targets compared with dense descriptor matching. Project page: https://clothatlas.github.io/",
-              "categories": [
-                "cs.CV",
-                "cs.RO"
-              ],
-              "published": "2026-10-12T07:18:06Z",
-              "url": "https://arxiv.org/abs/2610.16293",
-              "pdf_url": "https://arxiv.org/pdf/2610.16293v1",
-              "comment": "9 pages, 6 figures, 2 tables. Project page: https://clothatlas.github.io/",
-              "figure_url": "https://arxiv.org/html/2610.16293v1/c_tracking.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://clothatlas.github.io/"
-              }
             }
           ]
         },
@@ -3073,7 +3102,7 @@
           ]
         }
       ],
-      "total": 52
+      "total": 51
     },
     {
       "name": "Carnegie Mellon University",
@@ -3442,6 +3471,40 @@
         {
           "name": "Guanya Shi",
           "papers": [
+            {
+              "id": "2611.33390",
+              "title": "RoboARC: Physical Puzzles for Robotic Manipulation under Spatial Constraints",
+              "authors": [
+                "Qineng Wang",
+                "Jianwen Lyu",
+                "Pingyue Zhang",
+                "Reuben Tan",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Kangrui Wang",
+                "Yelong Shen",
+                "Jianfeng Gao",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Many hard manipulation tasks come down to a spatial constraint that only a few motions satisfy, such as passing a part through a gap barely wider than itself or separating two interlocked parts. These motions depend on the exact geometry of each scene, so demonstrations and skills recorded elsewhere rarely transfer. We therefore ask: when manipulation hinges on spatial constraints, can robots reason out the right motions? We introduce RoboARC, a benchmark of 90 tasks in six constraint types over rigid and soft materials, on three robots in MuJoCo. Every task is a frozen scene with a physics-based grader and a verified reference solution that replays bit-identically. Each task comes in a Privileged regime, with the full simulator state and resets, and a Standard regime with real-sensor inputs (camera images and proprioception) and a single attempt without resets. We evaluate seven coding agents and four VLA policies, none trained on these tasks. The strongest agent, GPT-6 Astra in Codex, solves 86% of the tasks in the Privileged regime and 43% in the Standard regime, and the four VLA policies, run zero-shot, solve none of their 18 one-arm puzzles. On 15 puzzles that GPT-6 Astra solved in the Privileged regime and failed in the Standard regime, object poses add 4 points and part geometry 13, but both together add 36, from 24% to 60%. Only 7% of the coding agents' failed runs pass more than half of a task, and 53% of the failed runs in the Standard regime are stuck on a single step. Frontier coding agents already reason out the right motions for many of these tasks once they know where the parts are and what shape they have. From their own sensors, in a single attempt, the strongest solves fewer than half of the tasks. The website can be found at https://roboarc.embodied-first-exam.ai",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-24T20:14:04Z",
+              "url": "https://arxiv.org/abs/2611.33390",
+              "pdf_url": "https://arxiv.org/pdf/2611.33390v1",
+              "comment": "72 pages, 28 figures, 30 tables",
+              "figure_url": "https://arxiv.org/html/2611.33390v1/fig_overview.png",
+              "figure_caption": "Figure 2 : Overview of RoboARC. Top: the two regimes share the scene, physics and grader. In the Standard regime a coding agent sends action chunks and receives RGB-D images, joint readings and the instruction, without resets. In the Privileged regime it also reads the full simulator state and may r",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://roboarc.embodied-first-exam.ai"
+              }
+            },
             {
               "id": "2611.12177",
               "title": "Embodied First Exam",
@@ -3862,7 +3925,7 @@
           ]
         }
       ],
-      "total": 26
+      "total": 27
     },
     {
       "name": "MIT",
@@ -3965,14 +4028,14 @@
                 "Max Simchowitz",
                 "Pulkit Agrawal"
               ],
-              "abstract": "Conditional Flow Models (CFMs) are increasingly being used in place of deterministic predictors across machine learning, including for tasks that were classically formulated as regression. Given their success in such tasks, we ask the question: what useful information do the conditional distributions produced by CFMs carry beyond what a point predictor would provide? We identify a systematic phenomenon: in many natural regimes, CFM samples routinely have larger variance than the true conditional distribution, even in nearly deterministic regression problems. This effect is most pronounced where the model has not resolved the dependence on the conditioning variable, and thus the additional variance can be viewed as converting epistemic uncertainty in fitting the ground truth conditional distribution into apparent aleatoric variance in the generated samples. Through controlled synthetic and real-data experiments, and comparisons with explicit smoothing estimators, we show that the induced variance tracks model underfitting of complex or hard-to-fit targets, and decreases with additional training or data. We provide a theoretical account of the phenomenon in a simplified setting and demonstrate a consequent practical use-case of conditional flow-matching: designing high-coverage predictive sets that cover the ground-truth regression target.",
+              "abstract": "Conditional Flow Models (CFMs) are increasingly being used in place of deterministic predictors across machine learning, including for tasks that were classically formulated as regression. Given their success in such tasks, we ask the question: what useful information do the conditional distributions produced by CFMs carry beyond what a point predictor would provide? We identify a systematic phenomenon: in many natural regimes, CFM samples routinely have larger variance than the true conditional distribution, even in nearly deterministic regression problems. This effect is most pronounced where the model has not resolved the dependence on the conditioning variable, and thus the additional variance can be viewed as converting epistemic uncertainty in fitting the ground truth conditional distribution into apparent aleatoric variance in the generated samples. Through controlled synthetic and real-data experiments, and comparisons with explicit smoothing estimators, we show that the induced variance tracks model underfitting of complex or hard-to-fit targets, and decreases with additional training or data. We uncover surprising structure in this excess conditional variance that seems unique to CFMs and absent in the other standard probabilistic models that we test. We provide a theoretical account of the phenomenon in a simplified setting and demonstrate a consequent practical use-case of conditional flow-matching: designing high-coverage predictive sets that cover the ground-truth regression target.",
               "categories": [
                 "cs.LG",
                 "cs.AI"
               ],
               "published": "2026-10-21T04:02:35Z",
               "url": "https://arxiv.org/abs/2610.29172",
-              "pdf_url": "https://arxiv.org/pdf/2610.29172v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.29172v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.29172v1/figure_1.png",
               "figure_caption": "Figure 1: Flow models vs Regression during underfitting.",
@@ -4677,6 +4740,29 @@
           "name": "Jia Deng",
           "papers": [
             {
+              "id": "2611.34936",
+              "title": "DexLink: Synthesizing Dexterous Behaviors from Chained Hand-object Poses",
+              "authors": [
+                "Meenal Parakh",
+                "Deep Patel",
+                "Beining Han",
+                "Jia Deng"
+              ],
+              "abstract": "Synthesizing diverse dexterous manipulation policies is challenging: existing simulation-based approaches rely on human demonstrations which are difficult to scale, or use generic reward functions, which provide limited control over the hand-object interactions. We propose DexLink, which addresses these limitations by synthesizing diverse dexterous behaviors from sparse, reusable hand-object interaction templates. Given key task waypoints, DexLink retargets static interaction templates to target objects using an optimization that preserves spatial hand-object relationships. It then links the retargeted poses into an approximate reference trajectory and uses residual reinforcement learning to refine this reference into a closed-loop policy in simulation. Experiments spanning single-hand, bimanual, articulated, and dynamic tasks demonstrate that DexLink provides fine-grained control over task timing, grasp types, and high-level execution. The modular interaction templates transfer reliably across object scales, instances, and categories; without object-specific human demonstrations, the framework also matches the performance of dense reference-tracking methods. Finally, zero-shot deployment of policies trained purely in simulation shows promise for the simulation-based framework.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-25T18:59:36Z",
+              "url": "https://arxiv.org/abs/2611.34936",
+              "pdf_url": "https://arxiv.org/pdf/2611.34936v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.34936v1/images/main/control_axes.png",
+              "figure_caption": "Figure 1: Controllable dexterous behavior axes: goal pose, hand–object interaction, task timing, and high-level strategy.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.20202",
               "title": "DAPPT: Domain-Aware Policies from Procedural Trajectories for Sim-to-Real Dexterous Tool Use",
               "authors": [
@@ -5179,7 +5265,7 @@
           ]
         }
       ],
-      "total": 20
+      "total": 21
     },
     {
       "name": "University of Washington",
@@ -6081,6 +6167,34 @@
           "name": "Marco Hutter",
           "papers": [
             {
+              "id": "2611.33380",
+              "title": "FOCI: Trajectory Optimization on Gaussian Splats for Gaussian Robots",
+              "authors": [
+                "Mario Gomez Andreu",
+                "Carlos Martinez Cuenca",
+                "Maximum Wilder-Smith",
+                "Victor Klemm",
+                "Vaishakh Patil",
+                "Marco Hutter",
+                "Jesus Tordesillas"
+              ],
+              "abstract": "3D Gaussian Splatting (3DGS) has recently gained popularity as a faster alternative to Neural Radiance Fields (NeRFs) in 3D reconstruction and view synthesis methods. Leveraging the spatial information encoded in 3DGS, this work proposes FOCI (Field Overlap Collision Integral), an algorithm that is able to optimize trajectories directly on the Gaussians themselves. FOCI leverages a novel and interpretable collision formulation for 3DGS using the notion of the overlap integral between Gaussians. The formulation presented applies to different robot morphologies (e.g., fixed and mobile base manipulators, legged robots, UAVs) and handles both static and dynamic Gaussian-Splat environments. Contrary to other approaches, which represent the robot with conservative bounding boxes that underestimate the traversability of the environment, we propose to represent the environment and the robot as Gaussian Splats. This not only has desirable computational properties, but also allows for orientation-aware planning, allowing the robot to pass through very tight and narrow spaces. We extensively test our algorithm in both synthetic and real Gaussian Splats, showcasing that collision-free trajectories for legged, aerial and manipulator robots can be computed in seconds, even with hundreds of thousands of Gaussians making up the environment. The code is available at https://github.com/leggedrobotics/foci",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-24T20:05:59Z",
+              "url": "https://arxiv.org/abs/2611.33380",
+              "pdf_url": "https://arxiv.org/pdf/2611.33380v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.33380v1/figures/Dynamic_Environment.png",
+              "figure_caption": "Fig. 1 : An underactuated UAV (blue Gaussians) plans a collision-free trajectory (green) from Start to Goal, avoiding a static rock ( ∼ \\sim 1.35M Gaussians) and seven moving barrels, each modeled with a single Gaussian (red arrows indicate their motion direction). Inset: top-down view.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "code": "https://github.com/leggedrobotics/foci"
+              }
+            },
+            {
               "id": "2611.30312",
               "title": "One Policy, Many Bodies: Cooperative Human-Object Interaction with Heterogeneous Teams",
               "authors": [
@@ -6942,6 +7056,54 @@
           "name": "Davide Scaramuzza",
           "papers": [
             {
+              "id": "2611.34046",
+              "title": "End-to-End Image-Goal Navigation for Agile Quadrotors via Recurrent State Distillation",
+              "authors": [
+                "Simone Nascivera",
+                "Ismail Geles",
+                "Davide Scaramuzza"
+              ],
+              "abstract": "Image-goal navigation asks a robot to reach the viewpoint of a target photograph without a map or goal pose. In three dimensions, this requires not only recognizing the goal but also estimating 3D displacement and generating continuous control actions to approach and settle at the target view. This is difficult because the same visual difference between current and goal image can require very different actions depending on the robot's velocity, yet monocular images alone reveal neither metric scale nor body motion. As a result, existing image-goal policies are limited to planar action spaces and rely on a state estimator for flight control. Policies that map directly from images to low-level control commands have been demonstrated for agile flight, but not toward goal images in unseen environments. We present the first image-goal navigation policy that directly commands thrust and angular rates for agile quadrotor flight in unseen 3D environments, without relying on state estimation (e.g., SLAM, VO, or SfM) or a separate velocity controller. We train a recurrent vision-based policy through a four-stage pipeline that combines geometric and motion supervision with privileged-teacher distillation and end-to-end reinforcement learning fine-tuning. On 1000 held-out flights in unseen environments, the policy achieves an 82.3% success rate with a mean terminal position error of 0.10m across successful flights. Deployed zero-shot on a real quadrotor, the policy reaches an 84% success rate over 25 trials in an unseen indoor environment.",
+              "categories": [
+                "cs.RO",
+                "cs.CV"
+              ],
+              "published": "2026-11-25T09:23:33Z",
+              "url": "https://arxiv.org/abs/2611.34046",
+              "pdf_url": "https://arxiv.org/pdf/2611.34046v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.34046v1/image_goal_mirrored.png",
+              "figure_caption": "Figure 1 : A goal image specifies where to fly. Real-world deployment of our method (a). The quadrotor flies from the starting image to the viewpoint goal, only relying on the onboard camera frames (b). No explicit state estimation (i.e., SLAM, VO, or SfM) is used.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
+              "id": "2611.33498",
+              "title": "A 3D Simulator for Passive SPAD Imaging",
+              "authors": [
+                "Elia Mergaert",
+                "Rong Zou",
+                "Roberto Pellerito",
+                "Simone Nascivera",
+                "Davide Scaramuzza"
+              ],
+              "abstract": "Passive single-photon avalanche diode (SPAD) cameras provide short-exposure observations for low-light perception, but collecting task annotations for these sensors remains difficult, and annotated datasets are scarce. We present a 3D simulation pipeline that generates realistic photon detections together with camera-motion and semantic labels, enabling perception models to be trained on synthetic SPAD observations and applied directly to real-world data. The pipeline couples controllable scene geometry and motion with a sensor-informed observation model that accounts for photon shot noise, dark counts, and spatial crosstalk. We evaluate the pipeline through calibrated photon-count comparisons and zero-shot sim-to-real transfer across three downstream perception tasks. We show that classifiers trained only on synthetic SPAD data achieve high accuracy on real low-light recordings at illumination levels less than 2 lux, without real-data fine-tuning. Similarly, we apply models trained entirely on simulated camera sweeps to real-world camera-rotation estimation and achieve mean absolute rotation errors of less than 1 degree on real 20-degree and 30-degree sweeps at 0.5 and 5.0 lux, when deployed zero-shot. We additionally train semantic segmentation models on synthetic data with automatically generated dense labels and perform direct inference on real-world low-light recordings; the results further demonstrate the usefulness of synthetic dense supervision for real low-light perception. Our simulator thus provides a practical source of annotated training data for real SPAD perception.",
+              "categories": [
+                "cs.CV",
+                "cs.RO"
+              ],
+              "published": "2026-11-24T22:18:37Z",
+              "url": "https://arxiv.org/abs/2611.33498",
+              "pdf_url": "https://arxiv.org/pdf/2611.33498v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.33498v1/method_figure.png",
+              "figure_caption": "",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.32883",
               "title": "3D Tracking Any Point with Events and Frames",
               "authors": [
@@ -7088,7 +7250,7 @@
           ]
         }
       ],
-      "total": 37
+      "total": 40
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -7676,43 +7838,43 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2610.16449",
-              "title": "CryptoFlowBench: Benchmarking Multi-Hop Reasoning on Blockchains for Cryptocurrency Fund Tracing",
-              "authors": [
-                "Runang He",
-                "Tongya Zheng",
-                "Jing Cao",
-                "Yucheng Ying",
-                "Shunyu Liu",
-                "Bingde Hu",
-                "Yang Gao",
-                "Zeyuan Hu",
-                "Jianrong Zhang",
-                "Mingli Song"
-              ],
-              "abstract": "Pseudonymous accounts and complex smart-contract ecosystems substantially hinder the tracing of illicit cryptocurrency fund flows. Existing Graph Neural Networks (GNNs) have achieved promising performance in blockchain fraud detection, yet their static node- or edge-level predictions do not naturally generalize to multi-hop fund tracing. Meanwhile, existing tracing methods mainly rely on predefined heuristics to capture multi-hop relationships, limiting their adaptive reasoning capabilities. To bridge this gap, we introduce CryptoFlowBench, a benchmark constructed from authoritative reports on cryptocurrency-related illicit incidents, with four tasks spanning local to multi-hop fund tracing. These tasks pose substantial challenges to existing learning- and heuristic-based methods, particularly in complex multi-hop scenarios. We therefore propose ChainSleuth, a graph-tool-augmented agent that iteratively reasons, invokes graph tools, and updates its tracing trajectory, enabling adaptive information acquisition and recovery from erroneous paths. Experiments show that no baseline consistently dominates all four tasks, revealing substantial gaps between local fraud detection and multi-hop fund tracing. ChainSleuth achieves notable improvements on multi-hop tasks, demonstrating the potential of agentic graph reasoning for cryptocurrency fund investigation.",
-              "categories": [
-                "cs.CR",
-                "cs.AI",
-                "cs.LG"
-              ],
-              "published": "2026-10-12T09:15:35Z",
-              "url": "https://arxiv.org/abs/2610.16449",
-              "pdf_url": "https://arxiv.org/pdf/2610.16449v1",
-              "comment": "9 pages, 2 figures. Currently under review",
-              "figure_url": "https://arxiv.org/html/2610.16449v1/trace_example.png",
-              "figure_caption": "Figure 1: Comparison of fund-tracing behaviors on a case-centered transaction graph. Red edges in (a) show the verified suspicious flow. The machine-learning/GNN-based method in (b) cannot recover after selecting an irrelevant branch, shown as gray edges, while the rule-based method in (c) over-expa",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
         {
           "name": "He Wang",
           "papers": [
+            {
+              "id": "2611.34655",
+              "title": "Nav4Manip: From Navigation to Dexterous Mobile Manipulation through Co-Evolution",
+              "authors": [
+                "Yusen Feng",
+                "Zixi Kang",
+                "Zhijun Yin",
+                "Changxiao Liu",
+                "Tianhong Gao",
+                "Jiazhao Zhang",
+                "Jiahang Liu",
+                "Libin Liu",
+                "Zhizheng Zhang",
+                "He Wang"
+              ],
+              "abstract": "Dexterous mobile manipulation is essential for robots to perform useful tasks in complex, unstructured environments. However, existing systems face two challenges. First, navigation remains too coarse for downstream manipulation, which often requires a precise base position and approach orientation rather than merely reaching a meter-scale goal region. Second, navigation and manipulation are commonly trained in isolation, lacking a feedback loop that enables the two capabilities to co-evolve. These limitations prevent current systems from reliably executing long-horizon dexterous mobile-manipulation tasks in real-world environments. To address them, we introduce Nav4Manip, a bidirectionally coupled co-evolution system for long-horizon dexterous mobile manipulation. It comprises two complementary architectures: Nav4Manip-N learns long-horizon navigation and refines its policy through manipulation feedback, while Nav4Manip-M trains a world-action model (WAM) for downstream dexterous manipulation. We train Nav4Manip-N in three stages: multi-task co-tuning learns navigation behavior and manipulation-aware affordance prediction; rejection sampling fine-tuning (RFT) rejects low-quality policy-generated paths and fine-tunes the model on retained trajectories; and reinforcement learning from AI feedback (RLAIF) uses counterfactual preferences to further improve navigation decisions. To support this framework, we establish the Nav-N-Manip benchmark and construct Nav4Manip-Pairs from benchmark rollouts, providing large-scale paired navigation--manipulation trajectories and affordance supervision. Extensive experiments on public vision-language navigation (VLN) benchmarks and Nav-N-Manip demonstrate state-of-the-art performance, while real-world evaluations show that Nav4Manip completes diverse dexterous mobile-manipulation tasks. Project website: https://nav4manip.github.io/.",
+              "categories": [
+                "cs.RO"
+              ],
+              "published": "2026-11-25T16:29:17Z",
+              "url": "https://arxiv.org/abs/2611.34655",
+              "pdf_url": "https://arxiv.org/pdf/2611.34655v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.34655v1/nav4manip_title_1.png",
+              "figure_caption": "Figure 1: Overview of Nav4Manip and its distinction from prior mobile-manipulation paradigms. (a) The Nav-N-Manip benchmark provides generated navigation and manipulation data, alongside real-world demonstrations of long-horizon dexterous mobile manipulation. See Appendix E.1 , Appendix E.2 , and Ap",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://nav4manip.github.io/"
+              }
+            },
             {
               "id": "2611.32654",
               "title": "DexWAC: A Unified World-Actor-Critic Model for Dexterous Robot Manipulation",
@@ -8426,7 +8588,7 @@
               ],
               "published": "2026-11-03T13:25:52Z",
               "url": "https://arxiv.org/abs/2611.04870",
-              "pdf_url": "https://arxiv.org/pdf/2611.04870v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.04870v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.04870v1/images/primesim_teaser.png",
               "figure_caption": "Figure 1 : PrimeSim. (a) The midtraining corpus: roughly 30.1K hours of curated robot data spanning humanoid, dual-arm, single-arm and handheld UMI [ 14 , 3 ] platforms, mixing real and simulated footage. (b) The model is conditioned on a language prompt, a unified action representation over head, t",
@@ -10496,7 +10658,7 @@
               ],
               "published": "2026-10-13T17:39:36Z",
               "url": "https://arxiv.org/abs/2610.18790",
-              "pdf_url": "https://arxiv.org/pdf/2610.18790v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.18790v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.18790v1/teaser.png",
               "figure_caption": "",
@@ -10578,6 +10740,48 @@
           "name": "Hang Zhao",
           "papers": [
             {
+              "id": "2611.33314",
+              "title": "Building a Unified Inline Code Editing Model for GitHub Copilot",
+              "authors": [
+                "Microsoft CodeAI Team",
+                "Microsoft VS Code Team",
+                "Julia Gong",
+                "Benjamin Liggett",
+                "Shengjie Ma",
+                "Ulugbek Abdullaev",
+                "Zhehui Liao",
+                "Benjamin Steenhoek",
+                "Gaurav Mittal",
+                "Fuhui Fang",
+                "Satarupa Guha",
+                "Hang Zhao",
+                "Anand Mooga",
+                "Cheng Long",
+                "Benjamin Simmonds",
+                "Soojin Choi",
+                "Luciana Abud",
+                "Nathan Halstead",
+                "Alexandru Dima",
+                "Yu Hu",
+                "Elsie Nallipogu"
+              ],
+              "abstract": "AI-assisted coding ranges from fully agentic coding to inline code suggestions in the editor. Inline suggestions require predicting a developer's most likely next edit from an editing session. The next edit may lie at the cursor, in nearby lines, or farther away, and one editing intent can span several of these. The preceding system queries separate completion, nearby edit, and long-distance edit models, each with its own output format, in a fixed sequence; it thus cannot express intents spanning distant locations in one response, can require several sequential model calls per suggestion, and prioritizes completion even when a correction would serve better. We present a unified model that predicts all three edit types in one output space: a sequence of anchored diff patches specifying locations, deleted lines, and added lines. This representation permits multiple edits per response, so the client can serve later edits from a cache without further model calls. We train this model in two phases, first unifying next edit and long-distance edit prediction, then adding code completion. We synthesize multi-edit supervision from single-edit data via model pseudolabeling and edit history playback. We use a binary LLM-graded reward, a patch validity taxonomy shared by data filtering, reward, and evaluation, and grader boosting for targeted failure modes. Phase 2 also adapts how the client processes and presents model outputs. In controlled online A/B experiments in GitHub Copilot, Phase 1 significantly reduces time to display by 6.77% and output tokens by 58.93% relative to the three-model baseline. In Phase 2, the 3-in-1 model and client adaptations reduce dismissed suggestions per user by 10.06% relative to the 2-in-1 model paired with the completion model. Throughout this report, we also share our methodology and learnings in evaluation, training, and end-to-end model and system design.",
+              "categories": [
+                "cs.SE",
+                "cs.CL",
+                "cs.LG"
+              ],
+              "published": "2026-11-24T19:05:07Z",
+              "url": "https://arxiv.org/abs/2611.33314",
+              "pdf_url": "https://arxiv.org/pdf/2611.33314v1",
+              "comment": "67 pages, 31 figures, 21 tables",
+              "figure_url": "https://arxiv.org/html/2611.33314v1/figures/teaser_ghost_text.png",
+              "figure_caption": "(a) Completion at the cursor, rendered as ghost text in the VS Code client.",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
+            {
               "id": "2611.31822",
               "title": "G0.7: Scaling Up a Fast World Action Model with Long Context",
               "authors": [
@@ -10595,6 +10799,8 @@
                 "Haoyu Zhang",
                 "Haobo Jia",
                 "Zheng Liu",
+                "Bowen Zhang",
+                "Haodong Yang",
                 "Anqi Yang",
                 "Jiahui Niu",
                 "Yue Sun",
@@ -10607,14 +10813,14 @@
                 "Yicheng Liu",
                 "Hang Zhao"
               ],
-              "abstract": "World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation histories. Building on Fast-WAM, which showed that video prediction shapes policy representations during training so that future frame synthesis can be skipped at deployment, we present G0.7, a generalist world action model scaled along two axes: extending the context window from a single observation to up to five minutes of history, and scaling pretraining to a large-scale corpus of robot teleoperation and human egocentric (ego) video. Across public simulation suites and real-robot deployments, direct action decoding (Fast mode) matches imagine-then-act (IDM) inference from the same checkpoint while running in 60 ms per 16-step action chunk on a single RTX 5090 (7.6x faster than IDM) and supporting pause-free real-time chunking. Performance scales consistently with pretraining data, with human ego video driving the largest gains in out-of-distribution generalization: G0.7 achieves a 70.8 mean score across five simulation benchmark suites, 48% and 54% zero-shot pick-and-place success on Galaxea R1 Pro and R1 Lite, 96.7% in-distribution and 93.3% out-of-distribution success on video-conditioned in-context learning tasks, and 86.9% mean task progress across seven real-world post-training tasks including multi-minute box folding, drink preparation, and product bagging.",
+              "abstract": "World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation histories. Building on Fast-WAM, which showed that video prediction shapes policy representations during training so that future frame synthesis can be skipped at deployment, we present G0.7, a generalist world action model scaled along two axes: extending the context window from a single observation to up to five minutes of history, and scaling pretraining to a large-scale corpus of robot teleoperation and human egocentric (ego) video. Across public simulation suites and real-robot deployments, direct action decoding (Fast mode) matches imagine-then-act (IDM) inference from the same checkpoint while running in 60 ms per 16-step action chunk on a single RTX 5090 (7.6x faster than IDM) and supporting pause-free real-time chunking. Performance scales consistently with pretraining data, with human ego video driving the largest gains in out-of-distribution generalization: G0.7 achieves a 70.8 mean score across five simulation benchmark suites, 48% and 54% zero-shot pick-and-place success on Galaxea R1 Pro and R1 Lite, 96.7% in-distribution and 93.3% out-of-distribution success on video-conditioned in-context learning tasks, and 86.9% mean task progress across seven real-world post-training tasks including multi-minute box folding, drink preparation, and product bagging. Project page: https://www.galaxea-ai.com/model-g07.html",
               "categories": [
                 "cs.CV",
                 "cs.RO"
               ],
               "published": "2026-11-24T02:17:04Z",
               "url": "https://arxiv.org/abs/2611.31822",
-              "pdf_url": "https://arxiv.org/pdf/2611.31822v1",
+              "pdf_url": "https://arxiv.org/pdf/2611.31822v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.31822v1/model.png",
               "figure_caption": "Figure 1: G0.7 architecture and control loop. The context caches up to five minutes of real camera observations, combining the robot’s own history with an optional demonstration video. Conditioned at every layer by the language expert, the vision/action expert attends over this context to decode the",
@@ -10671,7 +10877,7 @@
               ],
               "published": "2026-10-13T17:39:36Z",
               "url": "https://arxiv.org/abs/2610.18790",
-              "pdf_url": "https://arxiv.org/pdf/2610.18790v1",
+              "pdf_url": "https://arxiv.org/pdf/2610.18790v2",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.18790v1/teaser.png",
               "figure_caption": "",
@@ -10715,7 +10921,7 @@
           ]
         }
       ],
-      "total": 7
+      "total": 8
     },
     {
       "name": "BFM-Zero 合作作者",
@@ -10747,37 +10953,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2610.15833",
-              "title": "P-BFM: Perceptive Behavioral Foundation Models for Humanoid Control via Unsupervised Reinforcement Learning",
-              "authors": [
-                "Xue Wang",
-                "Yitang Li",
-                "Yiming Zhang",
-                "Siqin Wang",
-                "Junhan Sun",
-                "Zhihao Liu",
-                "Yaojie Shen",
-                "Jingbo Yuan",
-                "Hao Zhao",
-                "Qingdu Li"
-              ],
-              "abstract": "Behavioral foundation models (BFMs) provide humanoids with reusable repertoires of whole-body behaviors; in real-world humanoid control, the same behavioral intent may require fundamentally different motions under different terrain constraints. Covering such variation with terrain-matched demonstrations requires enumerating a combinatorial space of behaviors and terrain geometries. We introduce P-BFM, a perceptive behavioral foundation model that factorizes humanoid control into terrain-invariant intent and terrain-conditioned realization. A forward-backward representation maps motion references, target states, and reward functions into a shared intent space without terrain information, while a perceptive policy learns how to realize each intent under the surrounding terrain geometry. We further identify a complementary limitation of purely latent control: behavioral latents can preserve local motion patterns while losing precise global progress. We therefore introduce Explicit Root Instructions (ERI), which separates global transport (e.g., heading and planar velocity) from behavioral intent, while leaving local whole-body adaptation to the perceptive policy. This decomposition leads to a characteristic capability absent from conventional BFMs: one fixed intent induces different, terrain-appropriate behaviors, including changes in step height, stride, posture, foothold placement, and contacts, without terrain-specific demonstrations. Across challenging terrains, P-BFM improves motion fidelity, root-control precision, and perturbation recovery over strong baselines. A single frozen policy further supports motion tracking, goal reaching, reward inference, teleoperation, and terrain-aware recovery, and transfers zero-shot to a Unitree G1 using onboard depth sensing.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-10-11T18:35:50Z",
-              "url": "https://arxiv.org/abs/2610.15833",
-              "pdf_url": "https://arxiv.org/pdf/2610.15833v1",
-              "comment": "Project page: https://roboparty.github.io/P-BFM/",
-              "figure_url": "https://arxiv.org/html/2610.15833v1/TEASER.png",
-              "figure_caption": "Figure 1: Unified intent representation in P-BFM . Motion references, teleoperation inputs, target states, and reward functions are mapped into a shared terrain-agnostic intent space. A single perceptive policy realizes the same intent through distinct behaviors adapted to different terrains. Videos",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://roboparty.github.io/P-BFM/"
-              }
             }
           ]
         },
@@ -10818,6 +10993,40 @@
         {
           "name": "Tonghe Zhang",
           "papers": [
+            {
+              "id": "2611.33390",
+              "title": "RoboARC: Physical Puzzles for Robotic Manipulation under Spatial Constraints",
+              "authors": [
+                "Qineng Wang",
+                "Jianwen Lyu",
+                "Pingyue Zhang",
+                "Reuben Tan",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Kangrui Wang",
+                "Yelong Shen",
+                "Jianfeng Gao",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Many hard manipulation tasks come down to a spatial constraint that only a few motions satisfy, such as passing a part through a gap barely wider than itself or separating two interlocked parts. These motions depend on the exact geometry of each scene, so demonstrations and skills recorded elsewhere rarely transfer. We therefore ask: when manipulation hinges on spatial constraints, can robots reason out the right motions? We introduce RoboARC, a benchmark of 90 tasks in six constraint types over rigid and soft materials, on three robots in MuJoCo. Every task is a frozen scene with a physics-based grader and a verified reference solution that replays bit-identically. Each task comes in a Privileged regime, with the full simulator state and resets, and a Standard regime with real-sensor inputs (camera images and proprioception) and a single attempt without resets. We evaluate seven coding agents and four VLA policies, none trained on these tasks. The strongest agent, GPT-6 Astra in Codex, solves 86% of the tasks in the Privileged regime and 43% in the Standard regime, and the four VLA policies, run zero-shot, solve none of their 18 one-arm puzzles. On 15 puzzles that GPT-6 Astra solved in the Privileged regime and failed in the Standard regime, object poses add 4 points and part geometry 13, but both together add 36, from 24% to 60%. Only 7% of the coding agents' failed runs pass more than half of a task, and 53% of the failed runs in the Standard regime are stuck on a single step. Frontier coding agents already reason out the right motions for many of these tasks once they know where the parts are and what shape they have. From their own sensors, in a single attempt, the strongest solves fewer than half of the tasks. The website can be found at https://roboarc.embodied-first-exam.ai",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-24T20:14:04Z",
+              "url": "https://arxiv.org/abs/2611.33390",
+              "pdf_url": "https://arxiv.org/pdf/2611.33390v1",
+              "comment": "72 pages, 28 figures, 30 tables",
+              "figure_url": "https://arxiv.org/html/2611.33390v1/fig_overview.png",
+              "figure_caption": "Figure 2 : Overview of RoboARC. Top: the two regimes share the scene, physics and grader. In the Standard regime a coding agent sends action chunks and receives RGB-D images, joint readings and the instruction, without resets. In the Privileged regime it also reads the full simulator state and may r",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://roboarc.embodied-first-exam.ai"
+              }
+            },
             {
               "id": "2611.12177",
               "title": "Embodied First Exam",
@@ -10941,6 +11150,40 @@
         {
           "name": "Guanya Shi",
           "papers": [
+            {
+              "id": "2611.33390",
+              "title": "RoboARC: Physical Puzzles for Robotic Manipulation under Spatial Constraints",
+              "authors": [
+                "Qineng Wang",
+                "Jianwen Lyu",
+                "Pingyue Zhang",
+                "Reuben Tan",
+                "Xiaoyu Huang",
+                "Tonghe Zhang",
+                "Kangrui Wang",
+                "Yelong Shen",
+                "Jianfeng Gao",
+                "Guanya Shi",
+                "Ruohan Zhang",
+                "Manling Li"
+              ],
+              "abstract": "Many hard manipulation tasks come down to a spatial constraint that only a few motions satisfy, such as passing a part through a gap barely wider than itself or separating two interlocked parts. These motions depend on the exact geometry of each scene, so demonstrations and skills recorded elsewhere rarely transfer. We therefore ask: when manipulation hinges on spatial constraints, can robots reason out the right motions? We introduce RoboARC, a benchmark of 90 tasks in six constraint types over rigid and soft materials, on three robots in MuJoCo. Every task is a frozen scene with a physics-based grader and a verified reference solution that replays bit-identically. Each task comes in a Privileged regime, with the full simulator state and resets, and a Standard regime with real-sensor inputs (camera images and proprioception) and a single attempt without resets. We evaluate seven coding agents and four VLA policies, none trained on these tasks. The strongest agent, GPT-6 Astra in Codex, solves 86% of the tasks in the Privileged regime and 43% in the Standard regime, and the four VLA policies, run zero-shot, solve none of their 18 one-arm puzzles. On 15 puzzles that GPT-6 Astra solved in the Privileged regime and failed in the Standard regime, object poses add 4 points and part geometry 13, but both together add 36, from 24% to 60%. Only 7% of the coding agents' failed runs pass more than half of a task, and 53% of the failed runs in the Standard regime are stuck on a single step. Frontier coding agents already reason out the right motions for many of these tasks once they know where the parts are and what shape they have. From their own sensors, in a single attempt, the strongest solves fewer than half of the tasks. The website can be found at https://roboarc.embodied-first-exam.ai",
+              "categories": [
+                "cs.RO",
+                "cs.AI"
+              ],
+              "published": "2026-11-24T20:14:04Z",
+              "url": "https://arxiv.org/abs/2611.33390",
+              "pdf_url": "https://arxiv.org/pdf/2611.33390v1",
+              "comment": "72 pages, 28 figures, 30 tables",
+              "figure_url": "https://arxiv.org/html/2611.33390v1/fig_overview.png",
+              "figure_caption": "Figure 2 : Overview of RoboARC. Top: the two regimes share the scene, physics and grader. In the Standard regime a coding agent sends action chunks and receives RGB-D images, joint readings and the instruction, without resets. In the Privileged regime it also reads the full simulator state and may r",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {
+                "project": "https://roboarc.embodied-first-exam.ai"
+              }
+            },
             {
               "id": "2611.12177",
               "title": "Embodied First Exam",
@@ -11332,7 +11575,7 @@
           ]
         }
       ],
-      "total": 18
+      "total": 19
     },
     {
       "name": "RGMT 合作作者",
@@ -11577,6 +11820,31 @@
         {
           "name": "Chi Zhang",
           "papers": [
+            {
+              "id": "2611.34843",
+              "title": "Probing Visual Idiosyncrasies in Text-to-Image Models",
+              "authors": [
+                "Yongqian Peng",
+                "Hongjie Li",
+                "Yichao Zhou",
+                "Chi Zhang",
+                "Yixin Zhu"
+              ],
+              "abstract": "Text-to-Image (T2I) models turn short text descriptions into images, and the leading models now produce images of comparable visual quality. Whether their outputs still carry model-specific characteristics matters for attribution, for model comparison beyond aggregate quality, and for evaluations that assume anonymity. We ask whether images from frontier T2I models can still be classified by source, and which visual properties make this possible. Here we show that a standard ResNet-50 identifies the source of an image among HiDream-O1-Dev, FLUX.2-dev, HunyuanImage-3.0, and Qwen-Image-2512, the four highest-ranked open-source models on the Text-to-Image Arena, with 100.00% accuracy on held-out prompts. Human participants reach only 62.61% on the pairwise version of this task, so the distinguishing cues are not visually obvious. They are also not tied to a particular classifier and survive severe image corruptions and out-of-distribution prompts. We trace them to visual idiosyncrasies at three levels. Low-level texture statistics alone let a lightweight multi-layer perceptron match ResNet-50. Object layout, depth, and albedo estimated from the images each carry a source signal. Image captions reveal model-specific preferences in style and background that the prompts never specify. A one-sentence hint about these cues raises human accuracy by 9.03 percentage points. These idiosyncrasies make source classification a tool for measuring similarity between models and between real and generated images, and they caution against assuming anonymity in human preference evaluation of T2I models.",
+              "categories": [
+                "cs.CV",
+                "cs.AI"
+              ],
+              "published": "2026-11-25T18:20:18Z",
+              "url": "https://arxiv.org/abs/2611.34843",
+              "pdf_url": "https://arxiv.org/pdf/2611.34843v1",
+              "comment": "",
+              "figure_url": "https://arxiv.org/html/2611.34843v1/fig_framework_v2.png",
+              "figure_caption": "Figure 1: Source classification and multi-level cue analysis. (a) Images generated by four t2i models from shared ImageNet-derived prompts are highly distinguishable by source under a trained classifier. (b) We further investigate this distinguishability by analyzing potential model-specific cues at",
+              "figure_source": "html",
+              "video_url": null,
+              "links": {}
+            },
             {
               "id": "2611.32772",
               "title": "RubikSQL-HB: Agentic Text-to-SQL with Knowledge in the Loop",
@@ -12024,13 +12292,13 @@
                 "Haibin Huang",
                 "Chi Zhang"
               ],
-              "abstract": "Video generation models can produce highly realistic videos while generating physically inconsistent object motion. This limitation suggests that visual modeling alone may not provide a transferable representation of physical dynamics. We introduce MotionCore, a framework for learning physical dynamics via a learnable partial differential equation solver and focuses on rigid-body motion. We introduce a latent neural simulator learning to predict the evolution of object-level physical states from observed motion. Its predictions are then converted into spatially aligned latent controls for a controllable video diffusion model. The generator serves as a visual interface: it provides appearance and scene detail, while the learned dynamics model specifies the physical trajectory. To preserve this trajectory through the interface, MotionCore combines a diffusion-matching objective with a low-capacity decodability constraint on object identity and position. We evaluate MotionCore on public physical-consistency benchmarks and on paired data with known trajectories. Results indicate that MotionCore improves physical consistency and trajectory obedience in the evaluated rigid-body settings, while maintaining comparable visual quality. A controlled ablation protocol compares learned dynamics with an analytic prior and studies the choice of latent evolution processor.",
+              "abstract": "Video generation models can produce highly realistic videos while generating physically inconsistent object motion. This limitation suggests that visual modeling alone may not provide a transferable representation of physical dynamics. We introduce MotionCore, a framework for learning physical dynamics via a learnable latent neural operator which focuses on rigid-body video generation. We introduce a latent neural simulator learning to predict the evolution of object-level physical states from observed motion. Its predictions are then converted into spatially aligned latent controls for a controllable video diffusion model. The generator serves as a visual interface: it provides appearance and scene detail, while the learned dynamics model specifies the physical trajectory. We construct our training dataset comprising semi-realistic synthetic multi-object videos with rich annotations. We evaluate MotionCore on public physical video generation benchmarks and conduct controlled ablations to assess the contribution of learned dynamics relative to other priors. Results indicate that MotionCore improves physical consistency and trajectory obedience in the evaluated rigid-body settings, while maintaining comparable visual quality. MotionCore outperforms larger general and physics-aware video generators while using substantially fewer parameters.",
               "categories": [
                 "cs.CV"
               ],
               "published": "2026-11-06T02:45:37Z",
               "url": "https://arxiv.org/abs/2611.08904",
-              "pdf_url": "https://arxiv.org/pdf/2611.08904v2",
+              "pdf_url": "https://arxiv.org/pdf/2611.08904v3",
               "comment": "",
               "figure_url": "https://arxiv.org/html/2611.08904v2/figs/Method.png",
               "figure_caption": "Figure 1 : Overview of MotionCore. (a) Stage 1 pretrains the occupancy autoencoder and the surface operator. Stage 2 freezes them and trains the neural simulator on rollouts of K K frames. At inference the simulator rolls out the scene, and the decoded occupancy is rendered into a control video for ",
@@ -12431,30 +12699,6 @@
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.18482v1/panel_c.png",
               "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2610.18238",
-              "title": "Heading Hierarchy Reconstruction for Complex and Long Documents with Level-Wise Multimodal Memory",
-              "authors": [
-                "Qian Chen",
-                "Xianyin Zhang",
-                "Lifan Guo",
-                "Chi Zhang"
-              ],
-              "abstract": "Vision-language models (VLMs) have been widely adopted for document parsing and optical character recognition (OCR), as they can accurately extract page-level elements. However, downstream applications such as retrieval-augmented generation (RAG) also require coherent document-level structure. Although these models indicate heading levels using different numbers of preceding ``\\#'' symbols, page-by-page prediction often lacks document-level consistency. In practice, input-resolution and context-length constraints make it infeasible for a VLM to jointly process all page images in documents containing tens or hundreds of pages. To address this limitation, we propose a VLM-based framework that incrementally reconstructs heading hierarchies with a level-wise multimodal memory. The memory retains a compact subset of all previously processed pages, selected by anchors. Our framework supports flexible anchor selection, and in this work we select the most recent node at each level, allowing the VLM to observe the visual, textual, and layout patterns of headings at every level. For comprehensive evaluation, we also introduce the Complex and Long Document Heading Hierarchy Reconstruction Benchmark (CLDoc-HHRBench), comprising 250 documents and 11,212 pages with expert-verified annotations. Experiments on CLDoc-HHRBench and three existing benchmarks demonstrate the effectiveness of our method.",
-              "categories": [
-                "cs.CV",
-                "cs.AI"
-              ],
-              "published": "2026-10-13T12:06:28Z",
-              "url": "https://arxiv.org/abs/2610.18238",
-              "pdf_url": "https://arxiv.org/pdf/2610.18238v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.18238v1/Figures/model.png",
-              "figure_caption": "Figure 1: An overview of our proposed method. Left : a hierarchy tree constructed from the preceding predictions, where each circle denotes a heading node. Right : the memory and the next target heading are fed into the VLM, which is prompted to predict the target heading’s hierarchy level. Anchors ",
               "figure_source": "html",
               "video_url": null,
               "links": {}
@@ -13106,27 +13350,6 @@
               "comment": "",
               "figure_url": "https://arxiv.org/html/2610.20352v1/motivation_v5.png",
               "figure_caption": "Figure 1 : ReferFlow-Bench evaluates grounding trajectories, exposing intermediate localization failures hidden by final-only REC evaluation. ReferFlow combines object-indexed region states with parallel geometry-constrained coordinate decoding to support consistent grounding across steps.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2610.16839",
-              "title": "Label Collapse in Diffusion Language Model In-Context Learning",
-              "authors": [
-                "Ziye Guo",
-                "Ye Yuan"
-              ],
-              "abstract": "In-context learning (ICL) applies large language models to new tasks by prepending a few labeled demonstrations to a query. Prior work has studied how demonstration ordering affects ICL, but the interaction between label arrangement patterns and model biases has not been systematically examined. We define label collapse as the failure mode in which the model generates query-independent labels, and show that it is architecturally universal at the tested 8-9B scale: five models spanning autoregressive (Llama-3, Qwen3.5) and discrete diffusion (LLaDA, iLLaDA, LLaDA-Instruct) families all exhibit label collapse even under the class-balanced alternating arrangement, with some label word pairs collapsing in virtually every tested condition and others flipping their collapse direction with arrangement. Critically, accuracy alone cannot detect this collapse: models can achieve near-chance accuracy while generating query-independent labels, a score indistinguishable from balanced performance, so the failure can persist undetected in deployment. We measure separation, the log-odds of the two label words at the query position (the quantity that label-bias calibration operates on), as a complementary diagnostic that exposes collapse hidden beneath surface accuracy, together with a measurement protocol that guards label extraction against tokenizer and formatting artifacts. For autoregressive models, collapse persists where the majority-label-bias account does not apply, and arrangement patterns can reverse the collapse direction; for diffusion models, we present a systematic evaluation of ICL failure modes, complementing contemporaneous studies of dLLM context comprehension and demonstration-order sensitivity, and identify open questions about how iterative denoising interacts with label biases.",
-              "categories": [
-                "cs.CL"
-              ],
-              "published": "2026-10-12T14:17:48Z",
-              "url": "https://arxiv.org/abs/2610.16839",
-              "pdf_url": "https://arxiv.org/pdf/2610.16839v1",
-              "comment": "Accepted by NeurIPS 2026 DiffuLM workshop",
-              "figure_url": "https://arxiv.org/html/2610.16839v1/figures/fig1_ksweep_anchor2_gen.png",
-              "figure_caption": "Figure 1 : K-sweep generation pos_rate for the two anchor pairs (circle/square, safe/unsafe; alternating arrangement). Gray dashed line = 0.5 (balanced). circle/square collapses to 1.0 for all models at every K K ; on safe/unsafe, iLLaDA collapses to 0.0 while Llama-3 gradually recovers toward 0.5 a",
               "figure_source": "html",
               "video_url": null,
               "links": {}
@@ -14580,7 +14803,7 @@
           ]
         }
       ],
-      "total": 53
+      "total": 52
     }
   ]
 }
