@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-26T17:15:56+00:00",
-  "day": "2026-11-26",
+  "updated": "2026-11-27T16:56:03+00:00",
+  "day": "2026-11-27",
   "days_back": 45,
-  "total": 338,
+  "total": 326,
   "labs": [
     {
       "name": "UC Berkeley",
@@ -872,32 +872,6 @@
               "links": {
                 "project": "https://play-policy.github.io/"
               }
-            },
-            {
-              "id": "2610.17161",
-              "title": "Force-Modulated Dexterity: Unified Compliance for Contact-Rich Manipulation",
-              "authors": [
-                "Ying Yuan",
-                "David Held",
-                "Jitendra Malik",
-                "Haozhi Qi"
-              ],
-              "abstract": "Teleoperation is widely used to collect high-quality demonstrations for robot learning. Dexterous manipulation, however, requires coordinated control of motion and contact forces. Operators can specify motion, but struggle to reproduce the subtle force adjustments of human manipulation without feeling the robot's contacts. We introduce Force-Modulated Dexterity (FOMO-Dex), a unified compliance formulation for contact-rich manipulation. FOMO-Dex expresses nominal actions in coordinates defined by task geometry and contact structure. It applies force-driven motion corrections along selected directions while leaving the remaining command components unchanged. Across card picking, paper cutting, screwdriving, and nut-and-bolt assembly, FOMO-Dex reduces excessive contact forces compared with stiff control. A user study shows that operators collect more successful demonstration data per hour after brief practice. For policy learning, imitating the corrected actions improves card-picking success over imitating raw operator commands. Policies trained on FOMO-Dex demonstrations also achieve more rotation in nut-and-bolt manipulation and screwdriving than those trained on demonstrations collected with the stiff controller. Videos are shown on https://yingyuan0414.github.io/fomo-dex/ .",
-              "categories": [
-                "cs.RO",
-                "cs.AI"
-              ],
-              "published": "2026-10-12T17:37:23Z",
-              "url": "https://arxiv.org/abs/2610.17161",
-              "pdf_url": "https://arxiv.org/pdf/2610.17161v1",
-              "comment": "Project page: https://yingyuan0414.github.io/fomo-dex/",
-              "figure_url": "https://arxiv.org/html/2610.17161v1/system-setup-fixed.png",
-              "figure_caption": "Figure 1 : System overview. A teleoperator or learned policy provides nominal arm and finger commands. FOMO-Dex uses feedback from the wrist force-torque sensor and the hand’s tactile and joint-torque sensors to adjust selected motion components before sending the commands to the robot.",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://yingyuan0414.github.io/fomo-dex/"
-              }
             }
           ]
         },
@@ -1365,7 +1339,7 @@
           ]
         }
       ],
-      "total": 44
+      "total": 43
     },
     {
       "name": "Stanford",
@@ -2237,61 +2211,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2610.17748",
-              "title": "I3L: Iterative Interactive Imitation Learning for Whole-Body Mobile Manipulation",
-              "authors": [
-                "Wensi Ai",
-                "Christopher Luey",
-                "Karthik Dharmarajan",
-                "Evans Han",
-                "Yunfan Jiang",
-                "Stef Ren",
-                "Jianwen Xie",
-                "Jiajun Wu",
-                "Li Fei-Fei",
-                "Ruohan Zhang"
-              ],
-              "abstract": "Policies trained offline from teleoperated demonstrations can degrade outside their training distribution. This gap is particularly acute in long-horizon whole-body mobile manipulation, where long horizons amplify compounding errors and coordinated arm, torso, and base motion makes exhaustive demonstration coverage impractical. We introduce I3L, an integrated hardware and learning system that combines whole-body correction with iterative policy refinement to address this last-mile reliability gap. Its low-cost, open-source JoyLo+ interface uses policy-tracking leader arms and touch-triggered takeover to enable coordinated corrections across the body parts, while iterative deployment and retraining allow operators to target failures of the updated policy. We evaluate I3L across three robot embodiments and eight simulated and real-world tasks, including four long-horizon whole-body mobile manipulation tasks. Controlled simulation experiments show that four-round HG-DAgger achieves the highest final success on both tasks. Under this protocol, I3L improves autonomous success over the base policies by an average of 68.3 percentage points and achieves at least 90% success on every task, outperforming demonstration-only training by 35.6 percentage points on average with the same number of training trajectories. Averaged across tasks, takeover duration per episode decreases by 72% over four rounds. Together, these results show that I3L helps close the last-mile gap between offline training and reliable deployment and provides practical insights into collecting and using corrections for long-horizon whole-body mobile manipulation. Videos, visualizations, and appendix are at https://i-3l.github.io/.",
-              "categories": [
-                "cs.RO",
-                "cs.AI"
-              ],
-              "published": "2026-10-13T05:28:59Z",
-              "url": "https://arxiv.org/abs/2610.17748",
-              "pdf_url": "https://arxiv.org/pdf/2610.17748v2",
-              "comment": "Project website: https://i-3l.github.io/",
-              "figure_url": "https://arxiv.org/html/2610.17748v1/figures/pull2.jpg",
-              "figure_caption": "Fig. 1: I3L combines interactive correction with iterative policy refinement. Left: 1) the policy approaches a failure, prompting the operator to take over with JoyLo+ and provide targeted corrections, 2) the operator uses JoyLo+ to take over during autonomous execution. Center: corrections are aggr",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://i-3l.github.io/"
-              }
-            },
-            {
-              "id": "2610.17746",
-              "title": "The Human--VLA Communication Gap: What Humans Leave Implicit and What Policies Cannot Recover",
-              "authors": [
-                "Yiqing Xu",
-                "Jiajun Wu"
-              ],
-              "abstract": "A robot may know how to perform a task yet fail when a human asks for it naturally. We study this human--VLA communication gap by separating an information gap, where task semantics, grounding, or event structure remain unresolved, from a residual execution gap, where even a fully specified task depends on how it is organized and invoked. To do this, we characterize how people naturally express demonstrated objectives and evaluate controlled variants of the same physical tasks, with detailed analysis on $π_{0.5}$ and consistent trends on $π_0$-FAST and Cosmos3-Edge. Our study reveals that humans increasingly compress instructions as tasks grow, relying more on contextual grounding and implicit execution structure. Current policies are misaligned with this behavior: they tolerate grounding dependence relatively well, but struggle when task semantics or event structure must be reconstructed. Even after the information gap is resolved, execution remains sensitive to command granularity and invocation state. These findings identify concrete targets for human-centered policy learning and interfaces that better bridge natural human objectives to robot behavior. Project website: https://commgap.github.io/.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-10-13T05:25:17Z",
-              "url": "https://arxiv.org/abs/2610.17746",
-              "pdf_url": "https://arxiv.org/pdf/2610.17746v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.17746v1/main_figure.png",
-              "figure_caption": "Fig. 1: Human–VLA communication gap. For the same physical task, human specifications vary in task content, reference, and composition, producing substantially different VLA performance (top). We separate this mismatch into an information gap , where task semantics, grounding, or event structure rem",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://commgap.github.io/"
-              }
             }
           ]
         },
@@ -3066,43 +2985,11 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2610.17748",
-              "title": "I3L: Iterative Interactive Imitation Learning for Whole-Body Mobile Manipulation",
-              "authors": [
-                "Wensi Ai",
-                "Christopher Luey",
-                "Karthik Dharmarajan",
-                "Evans Han",
-                "Yunfan Jiang",
-                "Stef Ren",
-                "Jianwen Xie",
-                "Jiajun Wu",
-                "Li Fei-Fei",
-                "Ruohan Zhang"
-              ],
-              "abstract": "Policies trained offline from teleoperated demonstrations can degrade outside their training distribution. This gap is particularly acute in long-horizon whole-body mobile manipulation, where long horizons amplify compounding errors and coordinated arm, torso, and base motion makes exhaustive demonstration coverage impractical. We introduce I3L, an integrated hardware and learning system that combines whole-body correction with iterative policy refinement to address this last-mile reliability gap. Its low-cost, open-source JoyLo+ interface uses policy-tracking leader arms and touch-triggered takeover to enable coordinated corrections across the body parts, while iterative deployment and retraining allow operators to target failures of the updated policy. We evaluate I3L across three robot embodiments and eight simulated and real-world tasks, including four long-horizon whole-body mobile manipulation tasks. Controlled simulation experiments show that four-round HG-DAgger achieves the highest final success on both tasks. Under this protocol, I3L improves autonomous success over the base policies by an average of 68.3 percentage points and achieves at least 90% success on every task, outperforming demonstration-only training by 35.6 percentage points on average with the same number of training trajectories. Averaged across tasks, takeover duration per episode decreases by 72% over four rounds. Together, these results show that I3L helps close the last-mile gap between offline training and reliable deployment and provides practical insights into collecting and using corrections for long-horizon whole-body mobile manipulation. Videos, visualizations, and appendix are at https://i-3l.github.io/.",
-              "categories": [
-                "cs.RO",
-                "cs.AI"
-              ],
-              "published": "2026-10-13T05:28:59Z",
-              "url": "https://arxiv.org/abs/2610.17748",
-              "pdf_url": "https://arxiv.org/pdf/2610.17748v2",
-              "comment": "Project website: https://i-3l.github.io/",
-              "figure_url": "https://arxiv.org/html/2610.17748v1/figures/pull2.jpg",
-              "figure_caption": "Fig. 1: I3L combines interactive correction with iterative policy refinement. Left: 1) the policy approaches a failure, prompting the operator to take over with JoyLo+ and provide targeted corrections, 2) the operator uses JoyLo+ to take over during autonomous execution. Center: corrections are aggr",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://i-3l.github.io/"
-              }
             }
           ]
         }
       ],
-      "total": 51
+      "total": 48
     },
     {
       "name": "Carnegie Mellon University",
@@ -6716,32 +6603,6 @@
               "links": {
                 "project": "https://leggedrobotics.github.io/rubik-skills/"
               }
-            },
-            {
-              "id": "2610.18147",
-              "title": "Walk Like This: Stylized Locomotion for Physics-Based Characters through Example-Driven Diffusion",
-              "authors": [
-                "Joshua Aurand",
-                "Agon Serifi",
-                "Sammy Christen",
-                "Ruben Grandia",
-                "Espen Knoop",
-                "Marco Hutter",
-                "Moritz Bächer"
-              ],
-              "abstract": "We present a real-time framework for expressive legged locomotion that enables independent control over velocity and style. Unlike existing data-driven controllers, which typically require explicit style labels for training, our method efficiently leverages large-scale unstructured motion data and generalizes to unseen styles. We disentangle style from functional locomotion through a tailored sampling strategy used to train a style encoder whose output conditions an autoregressive diffusion model. During inference, the user provides a style reference clip and a joystick velocity command. The diffusion model then generates a kinematic reference tracked by a reinforcement learning controller. To improve user controllability and stylization strength, we propose an attention biasing mechanism and a velocity command correction strategy. We demonstrate our method on a physics-based humanoid character in simulation and on a physical robot, showcasing robust real-time control and continuous style modulation. The results can be best seen in our supplemental video (https://www.youtube.com/watch?v=roFnS6N7nJ4).",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-10-13T10:53:25Z",
-              "url": "https://arxiv.org/abs/2610.18147",
-              "pdf_url": "https://arxiv.org/pdf/2610.18147v1",
-              "comment": "CoRL 2026",
-              "figure_url": "https://arxiv.org/html/2610.18147v1/teaser-clean_recolored-2_compressed.png",
-              "figure_caption": "Figure 1: We introduce a real-time controller for physics-based characters that lets users steer the character with joystick commands while conditioning on style from unseen examples of arbitrary duration and various sources (e.g., MoCap, video).",
-              "figure_source": "html",
-              "video_url": "https://www.youtube.com/watch?v=roFnS6N7nJ4",
-              "links": {}
             }
           ]
         },
@@ -7250,7 +7111,7 @@
           ]
         }
       ],
-      "total": 40
+      "total": 39
     },
     {
       "name": "清华 / 北大 / 上交",
@@ -9006,31 +8867,6 @@
               "links": {
                 "project": "https://ctp-robotics.github.io/project_page"
               }
-            },
-            {
-              "id": "2610.18374",
-              "title": "SchemaPose: RGB-Based Category-Level Pose Estimation with Parametric Category Schema",
-              "authors": [
-                "Shuang Wu",
-                "Jiude Wei",
-                "Cewu Lu",
-                "Jianhua Sun"
-              ],
-              "abstract": "RGB-based category-level 9D pose estimation remains highly challenging because a monocular system must generalize across unseen object instances while jointly inferring 3D translation, 3D rotation, and 3D size. Unlike instance-level pose estimation, the category-level setting requires the network to learn both what is shared across objects within a category and how individual instances vary in structure. This challenge is amplified in the RGB-only setting, where pose cues, category-level commonality, and instance-specific variation are entangled in appearance without direct geometric constraints, making it difficult for existing frameworks to learn a representation that is truly aligned with the category-level estimation objective. To address this problem, we propose SchemaPose, a schema-guided framework for RGB-based category-level pose estimation. SchemaPose equips the estimation pipeline with an explicit parametric schema for modeling category-level regularities together with structured instance variation, and uses the inferred schema variables to guide pose-related prediction in an end-to-end query-based framework. The same formulation also supports template instantiation, synthetic annotation, and pose learning within a unified framework. Experiments on synthetic and real data show that SchemaPose achieves state-of-the-art performance among RGB-based methods for category-level 9D pose estimation.",
-              "categories": [
-                "cs.CV"
-              ],
-              "published": "2026-10-13T13:29:04Z",
-              "url": "https://arxiv.org/abs/2610.18374",
-              "pdf_url": "https://arxiv.org/pdf/2610.18374v1",
-              "comment": "Accepted at NeurIPS 2026. Project page: https://souglad21.github.io/SchemaPose/",
-              "figure_url": "https://arxiv.org/html/2610.18374v1/figure1_050720.png",
-              "figure_caption": "Figure 1: Overview of the parametric category schema, compact representation, and data generation pipeline. (a) Parametric Category Schema. For category c c , the schema comprises discrete part choices d c d_{c} and continuous geometric parameters x c x_{c} , which define a valid object structure vi",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {
-                "project": "https://souglad21.github.io/SchemaPose/"
-              }
             }
           ]
         },
@@ -9163,7 +8999,7 @@
           ]
         }
       ],
-      "total": 61
+      "total": 60
     },
     {
       "name": "工业界研究团队",
@@ -9788,38 +9624,11 @@
               "links": {
                 "project": "https://worldoracle-benchmark.github.io/"
               }
-            },
-            {
-              "id": "2610.17593",
-              "title": "Training Generalist Navigation Policies via Action Self-Distillation",
-              "authors": [
-                "Bowen Feng",
-                "Keqin Wang",
-                "Yulong Yang",
-                "Amogh Joshi",
-                "Christine Allen-Blanchette",
-                "Dhruv Shah",
-                "Felix Heide"
-              ],
-              "abstract": "Language provides a natural interface for humans to specify and reason about goals, but training language-conditioned robotic policies and reasoning typically requires expensive manual annotations. We propose Action Self-Distillation (ASD), a method for learning language-conditioned reasoning for robotic navigation without human-annotated language or reasoning labels. ASD uses an open-source VLM, which contains broad world knowledge and reasoning capabilities, as both a teacher network and a student policy. During training, the self-teacher receives privileged trajectory feedback and infers the underlying navigation goal together with goal-oriented reasoning. The student is then trained to condition on the inferred navigation goal, predict future ego-frame trajectory, and provide a description of the scene semantics, plan, and reasoning, from onboard observations alone. Across 13 challenging indoor and outdoor real-world navigation tasks, our method improves success rate over the strongest baseline by $30%$ in indoor settings, $30%$ on multi-stage tasks, and achieves $95%$ success rate on outdoor tasks, validating that privileged trajectory feedback can enable self-distillation for scalable generalist navigation policies without human annotations.",
-              "categories": [
-                "cs.RO",
-                "cs.LG"
-              ],
-              "published": "2026-10-13T02:11:39Z",
-              "url": "https://arxiv.org/abs/2610.17593",
-              "pdf_url": "https://arxiv.org/pdf/2610.17593v1",
-              "comment": "Accepted to the 10th Conference on Robot Learning (CoRL 2026)",
-              "figure_url": "https://arxiv.org/html/2610.17593v1/ASD_MotivationCartoon_V4.png",
-              "figure_caption": "Figure 1: Action self-distillation. The self-teacher uses privileged ground-truth trajectory feedback to extract scene semantics, infer a language goal, and generate reasoning traces explaining the demonstrated behavior. Blue arrows denote the feedback-conditioned information flow to the self-teache",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 11
+      "total": 10
     },
     {
       "name": "AMP / SMP 合作作者",
@@ -10884,44 +10693,11 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2610.17208",
-              "title": "DexNinja: Learning Robust Dexterous Cutting Policy with a Real-to-Sim-to-Real Data Engine",
-              "authors": [
-                "Haozhe Lou",
-                "Runyi Yang",
-                "Wanqi Zhong",
-                "Caiyun Liu",
-                "Yicheng Liu",
-                "Wenhao Liu",
-                "Wenlong Ma",
-                "Jiawei Xia",
-                "Kanzhi Wu",
-                "Danda Pani Paudel",
-                "Luc Van Gool",
-                "Hang Zhao",
-                "Yiming Li"
-              ],
-              "abstract": "Cutting a piece of food looks effortless in human hands. For a robot, however, every cut is a high-contact interaction with a deformable, elasto-plastic object whose behavior changes with pose, contact mode, and cutting stage. Collecting real-world data is expensive and wasteful: each trial typically contaminates or damages the food, so obtaining scalable real world data for dexterous cutting is expensive and difficult. Simulation is an appealing alternative, but a large sim-to-real gap exists in both physics and perception. This gap is especially severe for topology-changing interactions like cutting, where small errors in contact, friction, or material and elasticity responses quickly compound. We propose DexNinja, a real2sim2real framework that turns a handful of real demonstrations into a dense and realistic training distribution. DexNinja (i) reconstructs object instances from real captures, (ii) randomizes physically meaningful parameters under category-level constraints, and (iii) produces augmented dexterous manipulation episodes using a custom differentiable simulator that couples robot dynamics, tactile contact, and deformable cutting. We evaluate DexNinja on a dexterous food-slicing task and show that (1) with tens of real demonstrations and hundreds of augmented simulator data, the success rate could reach more than 60%. (2) the augmented data consistently improves success rates when only using real data with more than 20% via sim-to-real, and (3) the resulting policies generalize to out-of-distribution objects with varying shapes and sizes.",
-              "categories": [
-                "cs.RO",
-                "cs.CV"
-              ],
-              "published": "2026-10-12T17:59:51Z",
-              "url": "https://arxiv.org/abs/2610.17208",
-              "pdf_url": "https://arxiv.org/pdf/2610.17208v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.17208v1/teaser_v4.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         }
       ],
-      "total": 8
+      "total": 7
     },
     {
       "name": "BFM-Zero 合作作者",
@@ -11701,71 +11477,6 @@
               "figure_url": "https://arxiv.org/html/2610.30537v2/figures/task_3d/input_model.png",
               "figure_caption": "",
               "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2610.18167",
-              "title": "Beyond Planning: Differentiable Control-in-the-loop End-to-End Autonomous Driving",
-              "authors": [
-                "Zhidong Wang",
-                "Zirui Li",
-                "Zitong Shan",
-                "Zhiqi Mao",
-                "Qihang Huang",
-                "Zhan Chen",
-                "Jingsong Liang",
-                "Han Yu",
-                "Chen Lv"
-              ],
-              "abstract": "End-to-end autonomous driving has achieved remarkable progress by planning trajectories directly from raw sensor data. Yet the step from planning to control still relies on hand-tuned tracking controllers that block the gradient path from vehicle motion back to the network. This gap stems from non-differentiable vehicle dynamics, aliased supervision from coarsely sampled expert labels, rate mismatch between high-rate control and low-rate re-planning, and vehicle model discrepancies between training and deployment. This paper proposes DIVA (Differentiable Identified Vehicle dynamics for end-to-end Autonomous driving) to close this gap. An identified actuator-level vehicle model is embedded in the training loop of the end-to-end driving network, forming a differentiable chain from perception to vehicle states. A learning-based control decoder replaces the external controller and is supervised on the rolled-out vehicle states, bypassing the aliased control-input labels. A rate-consistent control-input parameterization reconciles the heterogeneous sampling rates and enables asynchronous execution with a 3.8 ms control-only cycle. On-policy re-identification and an online disturbance observer address training-time distribution shift and deployment-time model mismatch respectively. On the closed-loop Bench2Drive benchmark, DIVA achieves a driving score of 86.7, surpassing the widely adopted state-of-the-art approach by 3.3 points while nearly halving mean jerk and reducing brake switching by 64%, and maintains superior path tracking accuracy under significant vehicle model mismatch at deployment.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-10-13T11:12:38Z",
-              "url": "https://arxiv.org/abs/2610.18167",
-              "pdf_url": "https://arxiv.org/pdf/2610.18167v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.18167v1/framework.png",
-              "figure_caption": "Fig. 1: Overview of DIVA: the control decoder cross-attends to memory tokens that combine the scene and planning features, the explicit route and target-speed reference, the state feedback and the disturbance estimate, and its control-input knots pass through a first-order hold into the identified d",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            },
-            {
-              "id": "2610.17338",
-              "title": "Budgeted KV-Cache Repair for Evolving Contexts",
-              "authors": [
-                "Han Yu",
-                "Wenhui Zhu",
-                "Jincheng Cao",
-                "Rui Cai",
-                "Yuanda Xu",
-                "Zhengze Zhou",
-                "Xiwen Chen",
-                "Hao Wang",
-                "Xuanzhao Dong",
-                "Han Shi",
-                "Menglin Zhou",
-                "Shayan Mohajer Hamidi",
-                "Lin Su",
-                "Mina Razghandi",
-                "Sayan Ghosh",
-                "Qing Lan",
-                "Rohit Jain",
-                "Alborz Geramifard"
-              ],
-              "abstract": "Language-model agents revise their working context as information becomes obsolete, but deleting text does not erase its influence on cached computation. Later key-value (KV) states remain conditioned on the deleted content, while recomputing the entire retained suffix can be costly. We introduce budgeted KV-cache repair: recovering task performance by recomputing a user-chosen fraction of the retained suffix. Comparing repair allocations under identical relevance scores and token budgets, we find that refreshing coherent regions can substantially outperform refreshing isolated tokens. This finding motivates Semantic-Unit Refresh (SUR), which allocates the budget to query-relevant text regions using inexpensive embedding scores, without training or an auxiliary transformer forward. To execute these repairs efficiently, a layer-packed executor processes selected states together at each layer while preserving full causal cache access. Across five models, SUR achieves strong recovery in controlled deletion tasks while recomputing only 2-5% of the suffix. On four natural multi-hop QA datasets, it achieves near-full-recompute exact match at a 5% budget with lower post-edit latency. The executor accelerates fragmented refresh by up to 16.1x over interval-wise execution.",
-              "categories": [
-                "cs.AI"
-              ],
-              "published": "2026-10-12T19:44:57Z",
-              "url": "https://arxiv.org/abs/2610.17338",
-              "pdf_url": "https://arxiv.org/pdf/2610.17338v1",
-              "comment": "",
-              "figure_url": "thumbs/2610.17338.jpg",
-              "figure_caption": "论文首页预览",
-              "figure_source": "pdf",
               "video_url": null,
               "links": {}
             }
@@ -12675,33 +12386,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2610.18482",
-              "title": "Lifting: Quantum State Discrimination Framework for Mid-Circuit Measurements",
-              "authors": [
-                "Chi Zhang",
-                "Neel Vora",
-                "Yilun Xu",
-                "Gang Huang",
-                "Fan Chen",
-                "Lei Jiang"
-              ],
-              "abstract": "Quantum computing promises new capabilities beyond classical computation. Mid-circuit measurements (MCMs) enable error correction and outcome-dependent control, but their reliability is limited by noise on superconducting hardware. These operations depend on accurate quantum state discrimination (QSD), which assigns measured signals to state labels. Neural network-based (NN-based) QSD improves this assignment, yet its error remains bounded below by the Bayes risk of the available readout distributions. A complementary challenge is state deterioration as successive measurements accumulate and circuit execution advances, making static calibration less representative of the workload. We present Lifting, a QSD framework that addresses both challenges through repetition encoding, neural decoding, and in situ calibration. Encoding supplies joint in-phase and quadrature (I-Q) readout signals from the target and auxiliary qubits, while contextual calibration trains the decoder for the conditions encountered during execution. Our theoretical analysis shows that retaining additional channels from a fixed joint distribution cannot increase Bayes risk and establishes sufficient conditions for contraction of an overlap-based upper bound. Experiments across three IBM processors evaluate the framework on repeated stabilizer measurement, parity-check, and teleportation workloads.",
-              "categories": [
-                "quant-ph",
-                "cs.ET",
-                "cs.LG"
-              ],
-              "published": "2026-10-13T14:43:40Z",
-              "url": "https://arxiv.org/abs/2610.18482",
-              "pdf_url": "https://arxiv.org/pdf/2610.18482v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.18482v1/panel_c.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -12711,37 +12395,7 @@
         },
         {
           "name": "Boyang Xing",
-          "papers": [
-            {
-              "id": "2610.17638",
-              "title": "Acting Through Registers",
-              "authors": [
-                "Yiwei Zhang",
-                "Yantai Yang",
-                "Jin Gao",
-                "Jin Lou",
-                "Andong Chen",
-                "Yufei Liu",
-                "Boyang Xing",
-                "Yuchen Zhu",
-                "Weiming Hu",
-                "Zhipeng Zhang"
-              ],
-              "abstract": "World Action Models (WAMs) use generative visual representations to condition robot actions, yet how these representations organize action-relevant information remains poorly understood. We identify persistent high-norm spatial outliers in WAM representations and find that their action relevance persists even after normalization and K/V projection attenuate their extreme magnitude. Motivated by this observation, we introduce RegisterWAM, which adds learnable non-spatial registers to the world model and uses them directly for action conditioning. Registers alone do not fully eliminate spatial outliers; pairing them with observation flow-matching (FM) loss supervision suppresses spatial outliers while concentrating high-norm responses in registers. Beyond this reorganization, observation FM loss supervision also improves action learning without registers, motivating an additional noised-observation FM objective that learns current-scene recovery from corrupted inputs. The resulting model achieves 81.64% success on LIBERO-Plus without additional embodied pretraining data or foundation models, reaches 93.0% average success on RoboTwin 2.0, and improves real-world manipulation performance.",
-              "categories": [
-                "cs.RO"
-              ],
-              "published": "2026-10-13T03:06:52Z",
-              "url": "https://arxiv.org/abs/2610.17638",
-              "pdf_url": "https://arxiv.org/pdf/2610.17638v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.17638v1/figures/outliers_analysis/paper_outlier_curves_fastwam_std_5_polished.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
-            }
-          ]
+          "papers": []
         },
         {
           "name": "Xuemei Ren",
@@ -12752,7 +12406,7 @@
           "papers": []
         }
       ],
-      "total": 38
+      "total": 34
     },
     {
       "name": "PGMT 合作作者",
@@ -14174,31 +13828,6 @@
               "figure_source": "html",
               "video_url": null,
               "links": {}
-            },
-            {
-              "id": "2610.17456",
-              "title": "Compositional RL: Evaluating and Training LLMs for Collaborative Reasoning",
-              "authors": [
-                "Shangbin Feng",
-                "Yulia Tsvetkov",
-                "Jan Kautz",
-                "David Acuna"
-              ],
-              "abstract": "Language models are often evaluated alone but increasingly deployed together, routed between, made to debate, ensembled, or collaboratively trained. For a model inside a system, what matters most is not how well it performs on its own, but how much the system gains from its presence. We call this a model's compositional strength and formalize it using the Shapley value of a cooperative game over coalitions of a model pool, and use a model's leave-one-out contribution to the full coalition as a tractable proxy, requiring n+1 rather than 2^n system evaluations. Evaluating individual vs. compositional strengths across five model pools, twelve collaboration methods, and twelve datasets, we find them largely uncorrelated: in 12 of 15 (pool, method-family) settings, individual strength does not translate into compositional advantages, and the coupling is weakest among general-purpose models that practitioners are most likely to deploy. Standalone benchmarks are therefore often poor proxies for models' value in collaborative systems. We then propose compositional reinforcement learning (C-RL), which trains a policy inside a live multi-model system and rewards the outcome produced by the system as a whole, rather than the policy's correctness in isolation. The leave-one-out baseline in Shapley values cancels under a group policy gradient, so this needs no additional rollout cost beyond RL on the collaborative system's outcome and never requires running a coalition without the policy. Across three collaboration protocols and eight tasks spanning reasoning, coding, and scientific discovery, C-RL produces the strongest collaborator in 21 of 24 settings, lifting collaborative performance by +4.0 to +5.4 pts on average (~3x the gain of baselines), up to +13.1 pts.",
-              "categories": [
-                "cs.CL",
-                "cs.AI",
-                "cs.LG"
-              ],
-              "published": "2026-10-12T22:16:45Z",
-              "url": "https://arxiv.org/abs/2610.17456",
-              "pdf_url": "https://arxiv.org/pdf/2610.17456v1",
-              "comment": "",
-              "figure_url": "https://arxiv.org/html/2610.17456v1/gain_consistency.png",
-              "figure_caption": "",
-              "figure_source": "html",
-              "video_url": null,
-              "links": {}
             }
           ]
         },
@@ -14803,7 +14432,7 @@
           ]
         }
       ],
-      "total": 52
+      "total": 51
     }
   ]
 }
